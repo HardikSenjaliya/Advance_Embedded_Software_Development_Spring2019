@@ -1,0 +1,97 @@
+This is the output file of the script
+User Information
+uid=1000(hardyk) gid=1000(hardyk) groups=1000(hardyk),4(adm),24(cdrom),27(sudo),30(dip),46(plugdev),116(lpadmin),126(sambashare)
+OS Information
+Linux superuser 4.15.0-29-generic #31-Ubuntu SMP Tue Jul 17 15:39:52 UTC 2018 x86_64 x86_64 x86_64 GNU/Linux
+OS Distribution
+Distributor ID:	Ubuntu
+Description:	Ubuntu 18.04.1 LTS
+Release:	18.04
+Codename:	bionic
+OS Version
+4.15.0-29-generic
+Kernel Version
+Linux superuser 4.15.0-29-generic #31-Ubuntu SMP Tue Jul 17 15:39:52 UTC 2018 x86_64 x86_64 x86_64 GNU/Linux
+gcc version
+gcc (Ubuntu 7.3.0-27ubuntu1~18.04) 7.3.0
+Copyright (C) 2017 Free Software Foundation, Inc.
+This is free software; see the source for copying conditions.  There is NO
+warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+
+Kernel build time
+#31-Ubuntu SMP Tue Jul 17 15:39:52 UTC 2018
+CPU Architecture Information
+Architecture:        x86_64
+CPU op-mode(s):      32-bit, 64-bit
+Byte Order:          Little Endian
+CPU(s):              4
+On-line CPU(s) list: 0-3
+Thread(s) per core:  2
+Core(s) per socket:  2
+Socket(s):           1
+NUMA node(s):        1
+Vendor ID:           GenuineIntel
+CPU family:          6
+Model:               142
+Model name:          Intel(R) Core(TM) i5-7200U CPU @ 2.50GHz
+Stepping:            9
+CPU MHz:             3100.056
+CPU max MHz:         3100.0000
+CPU min MHz:         400.0000
+BogoMIPS:            5424.00
+Virtualization:      VT-x
+L1d cache:           32K
+L1i cache:           32K
+L2 cache:            256K
+L3 cache:            3072K
+NUMA node0 CPU(s):   0-3
+Flags:               fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx pdpe1gb rdtscp lm constant_tsc art arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc cpuid aperfmperf tsc_known_freq pni pclmulqdq dtes64 monitor ds_cpl vmx est tm2 ssse3 sdbg fma cx16 xtpr pdcm pcid sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm abm 3dnowprefetch cpuid_fault invpcid_single pti ibrs ibpb stibp tpr_shadow vnmi flexpriority ept vpid fsgsbase tsc_adjust bmi1 avx2 smep bmi2 erms invpcid mpx rdseed adx smap clflushopt intel_pt xsaveopt xsavec xgetbv1 xsaves dtherm ida arat pln pts hwp hwp_notify hwp_act_window hwp_epp
+Information on FIle system memory
+MemTotal:        8065784 kB
+MemFree:         2340872 kB
+MemAvailable:    5530660 kB
+Buffers:          181100 kB
+Cached:          3268148 kB
+SwapCached:        44824 kB
+Active:          2376276 kB
+Inactive:        2694540 kB
+Active(anon):    1351512 kB
+Inactive(anon):   658724 kB
+Active(file):    1024764 kB
+Inactive(file):  2035816 kB
+Unevictable:          32 kB
+Mlocked:              32 kB
+SwapTotal:       7812092 kB
+SwapFree:        7585592 kB
+Dirty:               328 kB
+Writeback:             0 kB
+AnonPages:       1578576 kB
+Mapped:           436884 kB
+Shmem:            388668 kB
+Slab:             498708 kB
+SReclaimable:     439072 kB
+SUnreclaim:        59636 kB
+KernelStack:       13452 kB
+PageTables:        50880 kB
+NFS_Unstable:          0 kB
+Bounce:                0 kB
+WritebackTmp:          0 kB
+CommitLimit:    11844984 kB
+Committed_AS:    7002872 kB
+VmallocTotal:   34359738367 kB
+VmallocUsed:           0 kB
+VmallocChunk:          0 kB
+HardwareCorrupted:     0 kB
+AnonHugePages:         0 kB
+ShmemHugePages:        0 kB
+ShmemPmdMapped:        0 kB
+CmaTotal:              0 kB
+CmaFree:               0 kB
+HugePages_Total:       0
+HugePages_Free:        0
+HugePages_Rsvd:        0
+HugePages_Surp:        0
+Hugepagesize:       2048 kB
+DirectMap4k:      461428 kB
+DirectMap2M:     7825408 kB
+DirectMap1G:           0 kB
