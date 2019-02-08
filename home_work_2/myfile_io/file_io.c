@@ -18,7 +18,8 @@ int main(int argc, char** argv){
 		printf("Unable to open file\n");
 	
 	/*Change the permission of the file to write*/
-	const char* filePath = "/home/hardyk/Documents/CU_Boulder/APES/Advance_Practical_Embedded_Software_Development_Spring2019/home_work_2/test_file.txt";
+	const char* filePath = "/test_file.txt";
+	
 
 	chmod(filePath, S_IWUSR);
 
@@ -44,7 +45,7 @@ int main(int argc, char** argv){
 	fputs(pMemory, pFile);
 
 	/*Flush file output*/
-	fflush(stdin);
+	fflush(pFile);
 
 	/*Close the file*/
 	fclose(pFile);
@@ -65,8 +66,9 @@ int main(int argc, char** argv){
 	fgets(string, 20, pFile);
 	printf("%s\n", string); 
 
-	/*Change file permission to read mode before reading it*/
-	chmod(filePath, S_IRUSR);
+	/*Change file permission to read mode before reading it
+	again without building and deleting the file fron the directory*/
+	chmod(filePath, S_IRUSR | S_IWUSR);
 
 	/*Close the file*/
 	fclose(pFile);
