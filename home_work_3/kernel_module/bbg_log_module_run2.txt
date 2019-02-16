@@ -1,0 +1,752 @@
+clear
+[H[J# lsmod
+Module                  Size  Used by    Tainted: G  
+# insmod my[J[J/us# insmod /usr/[Jb# insmod /usr/bin/[Jmy# insmod /usr/bin/my_[Jmo# insmod /usr/bin/my_module.ko [JmyName=""S"e"n"j"a"l"i"y"a"" timerExpiry=1000
+[  260.486135] Initalizing my module - myTimerModule
+# [  261.529077] My Timer Handler called
+[  261.532885] Name = Senjaliya
+[  261.535907] Number of times the timer has fired = 1
+[  262.568613] My Timer Handler called
+[  262.577387] Name = Senjaliya
+[  262.580400] Number of times the timer has fired = 2
+[  263.608605] My Timer Handler called
+[  263.617373] Name = Senjaliya
+[  263.620386] Number of times the timer has fired = 3
+[  264.648607] My Timer Handler called
+[  264.657376] Name = Senjaliya
+[  264.660392] Number of times the timer has fired = 4
+[  265.688601] My Timer Handler called
+[  265.697367] Name = Senjaliya
+[  265.700384] Number of times the timer has fired = 5
+[  266.728608] My Timer Handler called
+[  266.737392] Name = Senjaliya
+[  266.740408] Number of times the timer has fired = 6
+[  267.768598] My Timer Handler called
+[  267.777364] Name = Senjaliya
+[  267.780378] Number of times the timer has fired = 7
+[  268.808597] My Timer Handler called
+[  268.817364] Name = Senjaliya
+[  268.820378] Number of times the timer has fired = 8
+[  269.848600] My Timer Handler called
+[  269.857362] Name = Senjaliya
+[  269.860371] Number of times the timer has fired = 9
+[  270.888602] My Timer Handler called
+[  270.897365] Name = Senjaliya
+[  270.900379] Number of times the timer has fired = 10
+[  271.928602] My Timer Handler called
+[  271.937460] Name = Senjaliya
+[  271.940475] Number of times the timer has fired = 11
+[  272.968604] My Timer Handler called
+[  272.977471] Name = Senjaliya
+[  272.980488] Number of times the timer has fired = 12
+[  274.008597] My Timer Handler called
+[  274.017455] Name = Senjaliya
+[  274.020475] Number of times the timer has fired = 13
+[  275.048598] My Timer Handler called
+[  275.057455] Name = Senjaliya
+[  275.060469] Number of times the timer has fired = 14
+[  276.088649] My Timer Handler called
+[  276.097514] Name = Senjaliya
+[  276.100526] Number of times the timer has fired = 15
+[  277.128605] My Timer Handler called
+[  277.137466] Name = Senjaliya
+[  277.140486] Number of times the timer has fired = 16
+[  278.168620] My Timer Handler called
+[  278.177514] Name = Senjaliya
+[  278.180538] Number of times the timer has fired = 17
+[  279.208606] My Timer Handler called
+[  279.217467] Name = Senjaliya
+[  279.220482] Number of times the timer has fired = 18
+[  280.248606] My Timer Handler called
+[  280.257474] Name = Senjaliya
+[  280.260490] Number of times the timer has fired = 19
+[  281.288599] My Timer Handler called
+[  281.297460] Name = Senjaliya
+[  281.300476] Number of times the timer has fired = 20
+[  282.328594] My Timer Handler called
+[  282.337442] Name = Senjaliya
+[  282.340461] Number of times the timer has fired = 21
+[  283.368651] My Timer Handler called
+[  283.377501] Name = Senjaliya
+[  283.380516] Number of times the timer has fired = 22
+[  284.408649] My Timer Handler called
+[  284.417511] Name = Senjaliya
+[  284.420527] Number of times the timer has fired = 23
+[  285.352027] Exiting my module - myTimerModule
+cat mw[Jes# cat messages [J[J
+Jan  1 00:00:02 hardyk syslog.info syslogd started: BusyBox v1.29.3
+Jan  1 00:00:02 hardyk kern.notice kernel: klogd started: BusyBox v1.29.3 (2019-02-05 02:05:01 MST)
+Jan  1 00:00:02 hardyk kern.info kernel: [    0.000000] Booting Linux on physical CPU 0x0
+Jan  1 00:00:02 hardyk kern.notice kernel: [    0.000000] Linux version 4.14.40 (root@superuser) (gcc version 7.3.0 (Buildroot 2018.11.1)) #27 SMP Mon Feb 11 23:50:20 MST 2019
+Jan  1 00:00:02 hardyk kern.info kernel: [    0.000000] CPU: ARMv7 Processor [413fc082] revision 2 (ARMv7), cr=10c5387d
+Jan  1 00:00:02 hardyk kern.info kernel: [    0.000000] CPU: PIPT / VIPT nonaliasing data cache, VIPT aliasing instruction cache
+Jan  1 00:00:02 hardyk kern.info kernel: [    0.000000] OF: fdt: Machine model: TI AM335x BeagleBone Green
+Jan  1 00:00:02 hardyk kern.info kernel: [    0.000000] Memory policy: Data cache writeback
+Jan  1 00:00:02 hardyk kern.info kernel: [    0.000000] cma: Reserved 16 MiB at 0x9e800000
+Jan  1 00:00:02 hardyk kern.debug kernel: [    0.000000] On node 0 totalpages: 130560
+Jan  1 00:00:02 hardyk kern.debug kernel: [    0.000000] free_area_init_node: node 0, pgdat c0dc5780, node_mem_map df971000
+Jan  1 00:00:02 hardyk kern.debug kernel: [    0.000000]   Normal zone: 1148 pages used for memmap
+Jan  1 00:00:02 hardyk kern.debug kernel: [    0.000000]   Normal zone: 0 pages reserved
+Jan  1 00:00:02 hardyk kern.debug kernel: [    0.000000]   Normal zone: 130560 pages, LIFO batch:31
+Jan  1 00:00:02 hardyk kern.info kernel: [    0.000000] CPU: All CPU(s) started in SVC mode.
+Jan  1 00:00:02 hardyk kern.info kernel: [    0.000000] AM335X ES2.1 (sgx neon)
+Jan  1 00:00:02 hardyk kern.info kernel: [    0.000000] percpu: Embedded 17 pages/cpu @df93e000 s40872 r8192 d20568 u69632
+Jan  1 00:00:02 hardyk kern.debug kernel: [    0.000000] pcpu-alloc: s40872 r8192 d20568 u69632 alloc=17*4096
+Jan  1 00:00:02 hardyk kern.debug kernel: [    0.000000] pcpu-alloc: [0] 0 
+Jan  1 00:00:02 hardyk kern.info kernel: [    0.000000] Built 1 zonelists, mobility grouping on.  Total pages: 129412
+Jan  1 00:00:02 hardyk kern.notice kernel: [    0.000000] Kernel command line: console=ttyO0,115200n8 root=/dev/mmcblk0p2 rw rootfstype=ext4 rootwait
+Jan  1 00:00:02 hardyk kern.info kernel: [    0.000000] PID hash table entries: 2048 (order: 1, 8192 bytes)
+Jan  1 00:00:02 hardyk kern.info kernel: [    0.000000] Dentry cache hash table entries: 65536 (order: 6, 262144 bytes)
+Jan  1 00:00:02 hardyk kern.info kernel: [    0.000000] Inode-cache hash table entries: 32768 (order: 5, 131072 bytes)
+Jan  1 00:00:02 hardyk kern.info kernel: [    0.000000] Memory: 479880K/522240K available (8192K kernel code, 818K rwdata, 2428K rodata, 1024K init, 7548K bss, 25976K reserved, 16384K cma-reserved, 0K highmem)
+Jan  1 00:00:02 hardyk kern.notice kernel: [    0.000000] Virtual kernel memory layout:
+Jan  1 00:00:02 hardyk kern.notice kernel: [    0.000000]     vector  : 0xffff0000 - 0xffff1000   (   4 kB)
+Jan  1 00:00:02 hardyk kern.notice kernel: [    0.000000]     fixmap  : 0xffc00000 - 0xfff00000   (3072 kB)
+Jan  1 00:00:02 hardyk kern.notice kernel: [    0.000000]     vmalloc : 0xe0000000 - 0xff800000   ( 504 MB)
+Jan  1 00:00:02 hardyk kern.notice kernel: [    0.000000]     lowmem  : 0xc0000000 - 0xdfe00000   ( 510 MB)
+Jan  1 00:00:02 hardyk kern.notice kernel: [    0.000000]     pkmap   : 0xbfe00000 - 0xc0000000   (   2 MB)
+Jan  1 00:00:02 hardyk kern.notice kernel: [    0.000000]     modules : 0xbf000000 - 0xbfe00000   (  14 MB)
+Jan  1 00:00:02 hardyk kern.notice kernel: [    0.000000]       .text : 0xc0008000 - 0xc0900000   (9184 kB)
+Jan  1 00:00:02 hardyk kern.notice kernel: [    0.000000]       .init : 0xc0c00000 - 0xc0d00000   (1024 kB)
+Jan  1 00:00:02 hardyk kern.notice kernel: [    0.000000]       .data : 0xc0d00000 - 0xc0dccb38   ( 819 kB)
+Jan  1 00:00:02 hardyk kern.notice kernel: [    0.000000]        .bss : 0xc0dce000 - 0xc152d0d4   (7549 kB)
+Jan  1 00:00:02 hardyk kern.info kernel: [    0.000000] Running RCU self tests
+Jan  1 00:00:02 hardyk kern.info kernel: [    0.000000] Hierarchical RCU implementation.
+Jan  1 00:00:02 hardyk kern.info kernel: [    0.000000] 	RCU event tracing is enabled.
+Jan  1 00:00:02 hardyk kern.info kernel: [    0.000000] 	RCU lockdep checking is enabled.
+Jan  1 00:00:02 hardyk kern.info kernel: [    0.000000] 	RCU restricting CPUs from NR_CPUS=2 to nr_cpu_ids=1.
+Jan  1 00:00:02 hardyk kern.info kernel: [    0.000000] RCU: Adjusting geometry for rcu_fanout_leaf=16, nr_cpu_ids=1
+Jan  1 00:00:02 hardyk kern.info kernel: [    0.000000] NR_IRQS: 16, nr_irqs: 16, preallocated irqs: 16
+Jan  1 00:00:02 hardyk kern.info kernel: [    0.000000] IRQ: Found an INTC at 0xfa200000 (revision 5.0) with 128 interrupts
+Jan  1 00:00:02 hardyk kern.info kernel: [    0.000000] OMAP clockevent source: timer2 at 24000000 Hz
+Jan  1 00:00:02 hardyk kern.info kernel: [    0.000016] sched_clock: 32 bits at 24MHz, resolution 41ns, wraps every 89478484971ns
+Jan  1 00:00:02 hardyk kern.info kernel: [    0.000044] clocksource: timer1: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 79635851949 ns
+Jan  1 00:00:02 hardyk kern.info kernel: [    0.000096] OMAP clocksource: timer1 at 24000000 Hz
+Jan  1 00:00:02 hardyk kern.crit kernel: [    0.000618] timer_probe: no matching timers found
+Jan  1 00:00:02 hardyk kern.info kernel: [    0.001520] Console: colour dummy device 80x30
+Jan  1 00:00:02 hardyk kern.warn kernel: [    0.001570] Lock dependency validator: Copyright (c) 2006 Red Hat, Inc., Ingo Molnar
+Jan  1 00:00:02 hardyk kern.warn kernel: [    0.001584] ... MAX_LOCKDEP_SUBCLASSES:  8
+Jan  1 00:00:02 hardyk kern.warn kernel: [    0.001596] ... MAX_LOCK_DEPTH:          48
+Jan  1 00:00:02 hardyk kern.warn kernel: [    0.001608] ... MAX_LOCKDEP_KEYS:        8191
+Jan  1 00:00:02 hardyk kern.warn kernel: [    0.001621] ... CLASSHASH_SIZE:          4096
+Jan  1 00:00:02 hardyk kern.warn kernel: [    0.001633] ... MAX_LOCKDEP_ENTRIES:     32768
+Jan  1 00:00:02 hardyk kern.warn kernel: [    0.001645] ... MAX_LOCKDEP_CHAINS:      65536
+Jan  1 00:00:02 hardyk kern.warn kernel: [    0.001657] ... CHAINHASH_SIZE:          32768
+Jan  1 00:00:02 hardyk kern.warn kernel: [    0.001669]  memory used by lock dependency info: 4655 kB
+Jan  1 00:00:02 hardyk kern.warn kernel: [    0.001682]  per task-struct memory footprint: 1536 bytes
+Jan  1 00:00:02 hardyk kern.info kernel: [    0.001716] Calibrating delay loop... 996.14 BogoMIPS (lpj=4980736)
+Jan  1 00:00:02 hardyk kern.info kernel: [    0.078628] pid_max: default: 32768 minimum: 301
+Jan  1 00:00:02 hardyk kern.info kernel: [    0.079025] Security Framework initialized
+Jan  1 00:00:02 hardyk kern.info kernel: [    0.079166] Mount-cache hash table entries: 1024 (order: 0, 4096 bytes)
+Jan  1 00:00:02 hardyk kern.info kernel: [    0.079188] Mountpoint-cache hash table entries: 1024 (order: 0, 4096 bytes)
+Jan  1 00:00:02 hardyk kern.info kernel: [    0.082300] CPU: Testing write buffer coherency: ok
+Jan  1 00:00:02 hardyk kern.info kernel: [    0.083794] CPU0: thread -1, cpu 0, socket -1, mpidr 0
+Jan  1 00:00:02 hardyk kern.info kernel: [    0.085339] Setting up static identity map for 0x80100000 - 0x80100078
+Jan  1 00:00:02 hardyk kern.info kernel: [    0.085916] Hierarchical SRCU implementation.
+Jan  1 00:00:02 hardyk kern.info kernel: [    0.087529] smp: Bringing up secondary CPUs ...
+Jan  1 00:00:02 hardyk kern.info kernel: [    0.087553] smp: Brought up 1 node, 1 CPU
+Jan  1 00:00:02 hardyk kern.info kernel: [    0.087570] SMP: Total of 1 processors activated (996.14 BogoMIPS).
+Jan  1 00:00:02 hardyk kern.info kernel: [    0.087585] CPU: All CPU(s) started in SVC mode.
+Jan  1 00:00:02 hardyk kern.info kernel: [    0.091535] devtmpfs: initialized
+Jan  1 00:00:02 hardyk kern.notice kernel: [    0.115547] random: get_random_u32 called from bucket_table_alloc+0xe4/0x23c with crng_init=0
+Jan  1 00:00:02 hardyk kern.info kernel: [    0.116536] VFP support v0.3: implementor 41 architecture 3 part 30 variant c rev 3
+Jan  1 00:00:02 hardyk kern.info kernel: [    0.117303] clocksource: jiffies: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 19112604462750000 ns
+Jan  1 00:00:02 hardyk kern.info kernel: [    0.117372] futex hash table entries: 256 (order: 2, 16384 bytes)
+Jan  1 00:00:02 hardyk kern.info kernel: [    0.119240] pinctrl core: initialized pinctrl subsystem
+Jan  1 00:00:02 hardyk kern.info kernel: [    0.123728] NET: Registered protocol family 16
+Jan  1 00:00:02 hardyk kern.info kernel: [    0.130752] DMA: preallocated 256 KiB pool for atomic coherent allocations
+Jan  1 00:00:02 hardyk kern.info kernel: [    0.227434] cpuidle: using governor menu
+Jan  1 00:00:02 hardyk kern.debug kernel: [    0.238819] gpio gpiochip0: (gpio): added GPIO chardev (254:0)
+Jan  1 00:00:02 hardyk kern.debug kernel: [    0.239277] gpiochip_setup_dev: registered GPIOs 0 to 31 on device: gpiochip0 (gpio)
+Jan  1 00:00:02 hardyk kern.info kernel: [    0.239510] OMAP GPIO hardware version 0.1
+Jan  1 00:00:02 hardyk kern.debug kernel: [    0.241597] gpio gpiochip1: (gpio): added GPIO chardev (254:1)
+Jan  1 00:00:02 hardyk kern.debug kernel: [    0.241838] gpiochip_setup_dev: registered GPIOs 32 to 63 on device: gpiochip1 (gpio)
+Jan  1 00:00:02 hardyk kern.debug kernel: [    0.243840] gpio gpiochip2: (gpio): added GPIO chardev (254:2)
+Jan  1 00:00:02 hardyk kern.debug kernel: [    0.244063] gpiochip_setup_dev: registered GPIOs 64 to 95 on device: gpiochip2 (gpio)
+Jan  1 00:00:02 hardyk kern.debug kernel: [    0.245940] gpio gpiochip3: (gpio): added GPIO chardev (254:3)
+Jan  1 00:00:02 hardyk kern.debug kernel: [    0.246159] gpiochip_setup_dev: registered GPIOs 96 to 127 on device: gpiochip3 (gpio)
+Jan  1 00:00:02 hardyk kern.info kernel: [    0.262497] No ATAGs?
+Jan  1 00:00:02 hardyk kern.info kernel: [    0.262522] hw-breakpoint: debug architecture 0x4 unsupported.
+Jan  1 00:00:02 hardyk kern.warn kernel: [    0.262820] omap4_sram_init:Unable to allocate sram needed to handle errata I688
+Jan  1 00:00:02 hardyk kern.warn kernel: [    0.262841] omap4_sram_init:Unable to get sram pool needed to handle errata I688
+Jan  1 00:00:02 hardyk kern.info kernel: [    0.297685] edma 49000000.edma: TI EDMA DMA engine driver
+Jan  1 00:00:02 hardyk kern.debug kernel: [    0.298376] of_get_named_gpiod_flags: can't parse 'gpio' property of node '/fixedregulator0[0]'
+Jan  1 00:00:02 hardyk kern.notice kernel: [    0.302900] SCSI subsystem initialized
+Jan  1 00:00:02 hardyk kern.debug kernel: [    0.303845] libata version 3.00 loaded.
+Jan  1 00:00:02 hardyk kern.info kernel: [    0.304593] omap_i2c 44e0b000.i2c: could not find pctldev for node /ocp/l4_wkup@44c00000/scm@210000/pinmux@800/pinmux_i2c0_pins, deferring probe
+Jan  1 00:00:02 hardyk kern.info kernel: [    0.304717] omap_i2c 4819c000.i2c: could not find pctldev for node /ocp/l4_wkup@44c00000/scm@210000/pinmux@800/pinmux_i2c2_pins, deferring probe
+Jan  1 00:00:02 hardyk kern.info kernel: [    0.304958] pps_core: LinuxPPS API ver. 1 registered
+Jan  1 00:00:02 hardyk kern.info kernel: [    0.304974] pps_core: Software ver. 5.3.6 - Copyright 2005-2007 Rodolfo Giometti <giometti@linux.it>
+Jan  1 00:00:02 hardyk kern.info kernel: [    0.305025] PTP clock support registered
+Jan  1 00:00:02 hardyk kern.info kernel: [    0.309046] clocksource: Switched to clocksource timer1
+Jan  1 00:00:02 hardyk kern.notice kernel: [    0.443731] VFS: Disk quotas dquot_6.6.0
+Jan  1 00:00:02 hardyk kern.info kernel: [    0.443919] VFS: Dquot-cache hash table entries: 1024 (order 0, 4096 bytes)
+Jan  1 00:00:02 hardyk kern.info kernel: [    0.467930] NET: Registered protocol family 2
+Jan  1 00:00:02 hardyk kern.info kernel: [    0.469965] TCP established hash table entries: 4096 (order: 2, 16384 bytes)
+Jan  1 00:00:02 hardyk kern.info kernel: [    0.470072] TCP bind hash table entries: 4096 (order: 5, 147456 bytes)
+Jan  1 00:00:02 hardyk kern.info kernel: [    0.471244] TCP: Hash tables configured (established 4096 bind 4096)
+Jan  1 00:00:02 hardyk kern.info kernel: [    0.471645] UDP hash table entries: 256 (order: 2, 20480 bytes)
+Jan  1 00:00:02 hardyk kern.info kernel: [    0.471837] UDP-Lite hash table entries: 256 (order: 2, 20480 bytes)
+Jan  1 00:00:02 hardyk kern.info kernel: [    0.472611] NET: Registered protocol family 1
+Jan  1 00:00:02 hardyk kern.info kernel: [    0.474726] RPC: Registered named UNIX socket transport module.
+Jan  1 00:00:02 hardyk kern.info kernel: [    0.474773] RPC: Registered udp transport module.
+Jan  1 00:00:02 hardyk kern.info kernel: [    0.474788] RPC: Registered tcp transport module.
+Jan  1 00:00:02 hardyk kern.info kernel: [    0.474802] RPC: Registered tcp NFSv4.1 backchannel transport module.
+Jan  1 00:00:02 hardyk kern.warn kernel: [    0.477213] hw perfevents: no interrupt-affinity property for /pmu, guessing.
+Jan  1 00:00:02 hardyk kern.info kernel: [    0.478183] hw perfevents: enabled with armv7_cortex_a8 PMU driver, 5 counters available
+Jan  1 00:00:02 hardyk kern.info kernel: [    0.480736] audit: initializing netlink subsys (disabled)
+Jan  1 00:00:02 hardyk kern.notice kernel: [    0.483308] audit: type=2000 audit(0.470:1): state=initialized audit_enabled=0 res=1
+Jan  1 00:00:02 hardyk kern.info kernel: [    0.483653] workingset: timestamp_bits=14 max_order=17 bucket_order=3
+Jan  1 00:00:02 hardyk kern.notice kernel: [    0.486368] NFS: Registering the id_resolver key type
+Jan  1 00:00:02 hardyk kern.notice kernel: [    0.486735] Key type id_resolver registered
+Jan  1 00:00:02 hardyk kern.notice kernel: [    0.486776] Key type id_legacy registered
+Jan  1 00:00:02 hardyk kern.info kernel: [    0.486918] jffs2: version 2.2. (NAND) (SUMMARY)  © 2001-2006 Red Hat, Inc.
+Jan  1 00:00:02 hardyk kern.info kernel: [    0.493639] io scheduler noop registered
+Jan  1 00:00:02 hardyk kern.info kernel: [    0.493670] io scheduler deadline registered
+Jan  1 00:00:02 hardyk kern.info kernel: [    0.493799] io scheduler cfq registered (default)
+Jan  1 00:00:02 hardyk kern.info kernel: [    0.493818] io scheduler mq-deadline registered
+Jan  1 00:00:02 hardyk kern.info kernel: [    0.493834] io scheduler kyber registered
+Jan  1 00:00:02 hardyk kern.info kernel: [    0.495893] pinctrl-single 44e10800.pinmux: 142 pins at pa f9e10800 size 568
+Jan  1 00:00:02 hardyk kern.info kernel: [    0.500393] Serial: 8250/16550 driver, 6 ports, IRQ sharing enabled
+Jan  1 00:00:02 hardyk kern.info kernel: [    0.505885] omap_uart 44e09000.serial: no wakeirq for uart0
+Jan  1 00:00:02 hardyk kern.debug kernel: [    0.505929] of_get_named_gpiod_flags: can't parse 'rts-gpio' property of node '/ocp/serial@44e09000[0]'
+Jan  1 00:00:02 hardyk kern.info kernel: [    0.506335] 44e09000.serial: ttyO0 at MMIO 0x44e09000 (irq = 30, base_baud = 3000000) is a OMAP UART0
+Jan  1 00:00:02 hardyk kern.info kernel: [    1.230040] console [ttyO0] enabled
+Jan  1 00:00:02 hardyk kern.info kernel: [    1.235264] omap_uart 48024000.serial: no wakeirq for uart2
+Jan  1 00:00:02 hardyk kern.debug kernel: [    1.241297] of_get_named_gpiod_flags: can't parse 'rts-gpio' property of node '/ocp/serial@48024000[0]'
+Jan  1 00:00:02 hardyk kern.info kernel: [    1.241666] 48024000.serial: ttyO2 at MMIO 0x48024000 (irq = 31, base_baud = 3000000) is a OMAP UART2
+Jan  1 00:00:02 hardyk kern.info kernel: [    1.279386] brd: module loaded
+Jan  1 00:00:02 hardyk kern.info kernel: [    1.307735] loop: module loaded
+Jan  1 00:00:02 hardyk kern.err kernel: [    1.313546] mtdoops: mtd device (mtddev=name/number) must be supplied
+Jan  1 00:00:02 hardyk kern.debug kernel: [    1.322881] mdio_bus fixed-0: GPIO lookup for consumer reset
+Jan  1 00:00:02 hardyk kern.debug kernel: [    1.322900] mdio_bus fixed-0: using lookup tables for GPIO lookup
+Jan  1 00:00:02 hardyk kern.debug kernel: [    1.322993] mdio_bus fixed-0: lookup for GPIO reset failed
+Jan  1 00:00:02 hardyk kern.info kernel: [    1.323196] libphy: Fixed MDIO Bus: probed
+Jan  1 00:00:02 hardyk kern.debug kernel: [    1.345093] mdio_bus 4a101000.mdio: GPIO lookup for consumer reset
+Jan  1 00:00:02 hardyk kern.debug kernel: [    1.345119] mdio_bus 4a101000.mdio: using lookup tables for GPIO lookup
+Jan  1 00:00:02 hardyk kern.debug kernel: [    1.345135] mdio_bus 4a101000.mdio: lookup for GPIO reset failed
+Jan  1 00:00:02 hardyk kern.info kernel: [    1.398746] davinci_mdio 4a101000.mdio: davinci mdio revision 1.6, bus freq 1000000
+Jan  1 00:00:02 hardyk kern.info kernel: [    1.406776] davinci_mdio 4a101000.mdio: detected phy mask fffffffe
+Jan  1 00:00:02 hardyk kern.info kernel: [    1.417451] libphy: 4a101000.mdio: probed
+Jan  1 00:00:02 hardyk kern.info kernel: [    1.421898] davinci_mdio 4a101000.mdio: phy[0]: device 4a101000.mdio:00, driver SMSC LAN8710/LAN8720
+Jan  1 00:00:02 hardyk kern.info kernel: [    1.432902] cpsw 4a100000.ethernet: Detected MACID = 38:d2:69:5d:04:95
+Jan  1 00:00:02 hardyk kern.info kernel: [    1.440310] cpsw 4a100000.ethernet: initialized cpsw ale version 1.4
+Jan  1 00:00:02 hardyk kern.info kernel: [    1.446955] cpsw 4a100000.ethernet: ALE Table size 1024
+Jan  1 00:00:02 hardyk kern.info kernel: [    1.452622] cpsw 4a100000.ethernet: cpts: overflow check period 500 (jiffies)
+Jan  1 00:00:02 hardyk kern.info kernel: [    1.463218] i2c /dev entries driver
+Jan  1 00:00:02 hardyk kern.debug kernel: [    1.470513] omap_hsmmc 48060000.mmc: GPIO lookup for consumer cd
+Jan  1 00:00:02 hardyk kern.debug kernel: [    1.470533] omap_hsmmc 48060000.mmc: using device tree for GPIO lookup
+Jan  1 00:00:02 hardyk kern.debug kernel: [    1.470581] of_get_named_gpiod_flags: parsed 'cd-gpios' property of node '/ocp/mmc@48060000[0]' - status (0)
+Jan  1 00:00:02 hardyk kern.info kernel: [    1.470706] omap_hsmmc 48060000.mmc: Got CD GPIO
+Jan  1 00:00:02 hardyk kern.debug kernel: [    1.475573] omap_hsmmc 48060000.mmc: GPIO lookup for consumer wp
+Jan  1 00:00:02 hardyk kern.debug kernel: [    1.475585] omap_hsmmc 48060000.mmc: using device tree for GPIO lookup
+Jan  1 00:00:02 hardyk kern.debug kernel: [    1.475601] of_get_named_gpiod_flags: can't parse 'wp-gpios' property of node '/ocp/mmc@48060000[0]'
+Jan  1 00:00:02 hardyk kern.debug kernel: [    1.475616] of_get_named_gpiod_flags: can't parse 'wp-gpio' property of node '/ocp/mmc@48060000[0]'
+Jan  1 00:00:02 hardyk kern.debug kernel: [    1.475628] omap_hsmmc 48060000.mmc: using lookup tables for GPIO lookup
+Jan  1 00:00:02 hardyk kern.debug kernel: [    1.475644] omap_hsmmc 48060000.mmc: lookup for GPIO wp failed
+Jan  1 00:00:02 hardyk kern.debug kernel: [    1.530755] omap_hsmmc 481d8000.mmc: GPIO lookup for consumer cd
+Jan  1 00:00:02 hardyk kern.debug kernel: [    1.530776] omap_hsmmc 481d8000.mmc: using device tree for GPIO lookup
+Jan  1 00:00:02 hardyk kern.debug kernel: [    1.530799] of_get_named_gpiod_flags: can't parse 'cd-gpios' property of node '/ocp/mmc@481d8000[0]'
+Jan  1 00:00:02 hardyk kern.debug kernel: [    1.530814] of_get_named_gpiod_flags: can't parse 'cd-gpio' property of node '/ocp/mmc@481d8000[0]'
+Jan  1 00:00:02 hardyk kern.debug kernel: [    1.530827] omap_hsmmc 481d8000.mmc: using lookup tables for GPIO lookup
+Jan  1 00:00:02 hardyk kern.debug kernel: [    1.530843] omap_hsmmc 481d8000.mmc: lookup for GPIO cd failed
+Jan  1 00:00:02 hardyk kern.debug kernel: [    1.530862] omap_hsmmc 481d8000.mmc: GPIO lookup for consumer wp
+Jan  1 00:00:02 hardyk kern.debug kernel: [    1.530873] omap_hsmmc 481d8000.mmc: using device tree for GPIO lookup
+Jan  1 00:00:02 hardyk kern.debug kernel: [    1.530887] of_get_named_gpiod_flags: can't parse 'wp-gpios' property of node '/ocp/mmc@481d8000[0]'
+Jan  1 00:00:02 hardyk kern.debug kernel: [    1.530901] of_get_named_gpiod_flags: can't parse 'wp-gpio' property of node '/ocp/mmc@481d8000[0]'
+Jan  1 00:00:02 hardyk kern.debug kernel: [    1.530913] omap_hsmmc 481d8000.mmc: using lookup tables for GPIO lookup
+Jan  1 00:00:02 hardyk kern.debug kernel: [    1.530926] omap_hsmmc 481d8000.mmc: lookup for GPIO wp failed
+Jan  1 00:00:02 hardyk kern.info kernel: [    1.589599] ledtrig-cpu: registered to indicate activity on CPUs
+Jan  1 00:00:02 hardyk kern.info kernel: [    1.598853] oprofile: using arm/armv7
+Jan  1 00:00:02 hardyk kern.info kernel: [    1.603492] ip_tables: (C) 2000-2006 Netfilter Core Team
+Jan  1 00:00:02 hardyk kern.info kernel: [    1.609639] Initializing XFRM netlink socket
+Jan  1 00:00:02 hardyk kern.info kernel: [    1.614537] NET: Registered protocol family 10
+Jan  1 00:00:02 hardyk kern.info kernel: [    1.626782] Segment Routing with IPv6
+Jan  1 00:00:02 hardyk kern.info kernel: [    1.630905] sit: IPv6, IPv4 and MPLS over IPv4 tunneling driver
+Jan  1 00:00:02 hardyk kern.info kernel: [    1.639111] NET: Registered protocol family 17
+Jan  1 00:00:02 hardyk kern.info kernel: [    1.643827] NET: Registered protocol family 15
+Jan  1 00:00:02 hardyk kern.notice kernel: [    1.648942] Key type dns_resolver registered
+Jan  1 00:00:02 hardyk kern.err kernel: [    1.653575] omap_voltage_late_init: Voltage driver support not added
+Jan  1 00:00:02 hardyk kern.err kernel: [    1.660321] sr_dev_init: No voltage domain specified for smartreflex0. Cannot initialize
+Jan  1 00:00:02 hardyk kern.err kernel: [    1.668836] sr_dev_init: No voltage domain specified for smartreflex1. Cannot initialize
+Jan  1 00:00:02 hardyk kern.info kernel: [    1.677739] ThumbEE CPU extension supported.
+Jan  1 00:00:02 hardyk kern.notice kernel: [    1.682328] Registering SWP/SWPB emulation handler
+Jan  1 00:00:02 hardyk kern.info kernel: [    1.687337] SmartReflex Class3 initialized
+Jan  1 00:00:02 hardyk kern.warn kernel: [    1.725705] mmc0: host does not support reading read-only switch, assuming write-enable
+Jan  1 00:00:02 hardyk kern.info kernel: [    1.738730] mmc0: new high speed SDHC card at address aaaa
+Jan  1 00:00:02 hardyk kern.info kernel: [    1.746948] mmcblk0: mmc0:aaaa SU16G 14.8 GiB 
+Jan  1 00:00:02 hardyk kern.info kernel: [    1.758323]  mmcblk0: p1 p2
+Jan  1 00:00:02 hardyk kern.notice kernel: [    1.768844] random: fast init done
+Jan  1 00:00:02 hardyk kern.info kernel: [    1.784879] mmc1: new high speed MMC card at address 0001
+Jan  1 00:00:02 hardyk kern.info kernel: [    1.792778] mmcblk1: mmc1:0001 P1XXXX 3.60 GiB 
+Jan  1 00:00:02 hardyk kern.info kernel: [    1.799189] mmcblk1boot0: mmc1:0001 P1XXXX partition 1 2.00 MiB
+Jan  1 00:00:02 hardyk kern.info kernel: [    1.807058] mmcblk1boot1: mmc1:0001 P1XXXX partition 2 2.00 MiB
+Jan  1 00:00:02 hardyk kern.info kernel: [    1.815808] mmcblk1rpmb: mmc1:0001 P1XXXX partition 3 128 KiB
+Jan  1 00:00:02 hardyk kern.info kernel: [    1.826035]  mmcblk1: p1
+Jan  1 00:00:02 hardyk kern.info kernel: [    1.835318] tps65217 0-0024: TPS65217 ID 0xe version 1.2
+Jan  1 00:00:02 hardyk kern.info kernel: [    1.841818] omap_i2c 44e0b000.i2c: bus 0 rev0.11 at 400 kHz
+Jan  1 00:00:02 hardyk kern.info kernel: [    1.852462] omap_i2c 4819c000.i2c: bus 2 rev0.11 at 100 kHz
+Jan  1 00:00:02 hardyk kern.info kernel: [    1.859931] hctosys: unable to open rtc device (rtc0)
+Jan  1 00:00:02 hardyk kern.warn kernel: [    1.865224] sr_init: No PMIC hook to init smartreflex
+Jan  1 00:00:02 hardyk kern.err kernel: [    1.870954] sr_init: platform driver register failed for SR
+Jan  1 00:00:02 hardyk kern.info kernel: [    1.964447] EXT4-fs (mmcblk0p2): recovery complete
+Jan  1 00:00:02 hardyk kern.info kernel: [    1.992470] EXT4-fs (mmcblk0p2): mounted filesystem with ordered data mode. Opts: (null)
+Jan  1 00:00:02 hardyk kern.info kernel: [    2.001252] VFS: Mounted root (ext4 filesystem) on device 179:2.
+Jan  1 00:00:02 hardyk kern.info kernel: [    2.011809] devtmpfs: mounted
+Jan  1 00:00:02 hardyk kern.info kernel: [    2.016945] Freeing unused kernel memory: 1024K
+Jan  1 00:00:02 hardyk kern.info kernel: [    2.158373] EXT4-fs (mmcblk0p2): re-mounted. Opts: data=ordered
+Jan  1 00:00:02 hardyk kern.notice kernel: [    2.438923] random: dd: uninitialized urandom read (512 bytes read)
+Jan  1 00:00:02 hardyk kern.notice kernel: [    2.523421] random: dbus-uuidgen: uninitialized urandom read (12 bytes read)
+Jan  1 00:00:02 hardyk kern.notice kernel: [    2.531335] random: dbus-uuidgen: uninitialized urandom read (8 bytes read)
+Jan  1 00:00:02 hardyk kern.info kernel: [    2.840612] net eth0: initializing cpsw version 1.12 (0)
+Jan  1 00:00:02 hardyk kern.info kernel: [    2.950096] SMSC LAN8710/LAN8720 4a101000.mdio:00: attached PHY driver [SMSC LAN8710/LAN8720] (mii_bus:phy_addr=4a101000.mdio:00, irq=POLL)
+Jan  1 00:00:02 hardyk kern.info kernel: [    2.973173] IPv6: ADDRCONF(NETDEV_UP): eth0: link is not ready
+Jan  1 00:00:05 hardyk kern.info kernel: [    5.050698] cpsw 4a100000.ethernet eth0: Link is Up - 100Mbps/Full - flow control rx/tx
+Jan  1 00:00:05 hardyk kern.info kernel: [    5.059629] IPv6: ADDRCONF(NETDEV_CHANGE): eth0: link becomes ready
+Jan  1 00:00:07 hardyk kern.warn kernel: [    7.154324] urandom_read: 3 callbacks suppressed
+Jan  1 00:00:07 hardyk kern.notice kernel: [    7.154337] random: mktemp: uninitialized urandom read (6 bytes read)
+Jan  1 00:00:07 hardyk kern.notice kernel: [    7.334950] random: dropbear: uninitialized urandom read (32 bytes read)
+Jan  1 00:00:07 hardyk authpriv.info dropbear[129]: Running in background
+Jan  1 00:00:07 hardyk daemon.info connmand[126]: Connection Manager version 1.36
+Jan  1 00:00:07 hardyk kern.notice kernel: [    7.432126] random: connmand: uninitialized urandom read (8 bytes read)
+Jan  1 00:00:07 hardyk daemon.notice rpc.statd[137]: Version 1.3.3 starting
+Jan  1 00:00:07 hardyk daemon.notice sm-notify[138]: Version 1.3.3 starting
+Jan  1 00:00:07 hardyk daemon.notice rpc.statd[137]: Initializing NSM state
+Jan  1 00:00:07 hardyk daemon.warn rpc.statd[137]: Running as root.  chown /run/nfs to choose different user
+Jan  1 00:00:07 hardyk daemon.err rpc.nfsd[142]: error starting threads: errno 38 (Function not implemented)
+Jan  1 00:00:07 hardyk daemon.warn rpc.mountd[147]: Kernel does not have pseudo root support.
+Jan  1 00:00:07 hardyk daemon.warn rpc.mountd[147]: NFS v4 mounts will be disabled unless fsid=0
+Jan  1 00:00:07 hardyk daemon.warn rpc.mountd[147]: is specfied in /etc/exports file.
+Jan  1 00:00:07 hardyk daemon.err connmand[126]: iptables support missing error 2 (No such file or directory)
+Jan  1 00:00:07 hardyk daemon.warn connmand[126]: Failed to flush table 'mangle': Invalid argument
+Jan  1 00:00:08 hardyk local7.info dhcpd: Internet Systems Consortium DHCP Server 4.3.6
+Jan  1 00:00:08 hardyk daemon.err connmand[126]: iptables support missing error 2 (No such file or directory)
+Jan  1 00:00:08 hardyk daemon.warn connmand[126]: Failed to flush table 'nat': Invalid argument
+Jan  1 00:00:08 hardyk local7.info dhcpd: Copyright 2004-2017 Internet Systems Consortium.
+Jan  1 00:00:08 hardyk local7.info dhcpd: All rights reserved.
+Jan  1 00:00:08 hardyk local7.info dhcpd: For info, please visit https://www.isc.org/software/dhcp/
+Jan  1 00:00:08 hardyk local7.info dhcpd: Wrote 0 leases to leases file.
+Jan  1 00:00:08 hardyk local7.info dhcpd: 
+Jan  1 00:00:08 hardyk local7.err dhcpd: Not configured to listen on any interfaces!
+Jan  1 00:00:08 hardyk local7.err dhcpd: 
+Jan  1 00:00:08 hardyk local7.err dhcpd: If you think you have received this message due to a bug rather
+Jan  1 00:00:08 hardyk local7.err dhcpd: than a configuration issue please read the section on submitting
+Jan  1 00:00:08 hardyk local7.err dhcpd: bugs on either our web page at www.isc.org or in the README file
+Jan  1 00:00:08 hardyk local7.err dhcpd: before submitting a bug.  These pages explain the proper
+Jan  1 00:00:08 hardyk local7.err dhcpd: process and the information we find helpful for debugging.
+Jan  1 00:00:08 hardyk local7.err dhcpd: 
+Jan  1 00:00:08 hardyk local7.err dhcpd: exiting.
+Jan  1 00:00:08 hardyk daemon.warn connmand[126]: Cannot create /var/run/connman/resolv.conf falling back to /etc/resolv.conf
+Jan  1 00:00:08 hardyk daemon.err connmand[126]: Failed to open RFKILL control device
+Jan  1 00:00:08 hardyk daemon.info connmand[126]: lo {newlink} index 1 address 00:00:00:00:00:00 mtu 65536
+Jan  1 00:00:08 hardyk daemon.info connmand[126]: lo {newlink} index 1 operstate 0 <UNKNOWN>
+Jan  1 00:00:08 hardyk daemon.info connmand[126]: eth0 {create} index 2 type 1 <ETHER>
+Jan  1 00:00:08 hardyk daemon.info connmand[126]: eth0 {RX} 4 packets 976 bytes
+Jan  1 00:00:08 hardyk daemon.info connmand[126]: eth0 {TX} 8 packets 1200 bytes
+Jan  1 00:00:08 hardyk daemon.info connmand[126]: eth0 {update} flags 36866 <DOWN>
+Jan  1 00:00:08 hardyk daemon.info connmand[126]: eth0 {newlink} index 2 address 38:D2:69:5D:04:95 mtu 1500
+Jan  1 00:00:08 hardyk daemon.info connmand[126]: eth0 {newlink} index 2 operstate 2 <DOWN>
+Jan  1 00:00:08 hardyk daemon.info : starting pid 162, tty '/dev/ttyO0': '/sbin/getty -L  ttyO0 0 vt100 '
+Jan  1 00:00:08 hardyk kern.info kernel: [    8.104541] net eth0: initializing cpsw version 1.12 (0)
+Jan  1 00:00:08 hardyk kern.info kernel: [    8.229932] SMSC LAN8710/LAN8720 4a101000.mdio:00: attached PHY driver [SMSC LAN8710/LAN8720] (mii_bus:phy_addr=4a101000.mdio:00, irq=POLL)
+Jan  1 00:00:08 hardyk daemon.info connmand[126]: Adding interface eth0 [ ethernet ]
+Jan  1 00:00:08 hardyk daemon.info connmand[126]: sit0 {newlink} index 3 address 00:00:00:00:08:00 mtu 1480
+Jan  1 00:00:08 hardyk daemon.info connmand[126]: sit0 {newlink} index 3 operstate 2 <DOWN>
+Jan  1 00:00:08 hardyk daemon.info connmand[126]: eth0 {RX} 4 packets 976 bytes
+Jan  1 00:00:08 hardyk daemon.info connmand[126]: eth0 {TX} 8 packets 1200 bytes
+Jan  1 00:00:08 hardyk daemon.info connmand[126]: eth0 {update} flags 36867 <UP>
+Jan  1 00:00:08 hardyk daemon.info connmand[126]: eth0 {newlink} index 2 address 38:D2:69:5D:04:95 mtu 1500
+Jan  1 00:00:08 hardyk daemon.info connmand[126]: eth0 {newlink} index 2 operstate 2 <DOWN>
+Jan  1 00:00:08 hardyk kern.info kernel: [    8.253909] IPv6: ADDRCONF(NETDEV_UP): eth0: link is not ready
+Jan  1 00:00:10 hardyk kern.info kernel: [   10.330072] cpsw 4a100000.ethernet eth0: Link is Up - 100Mbps/Full - flow control rx/tx
+Jan  1 00:00:10 hardyk kern.info kernel: [   10.339439] IPv6: ADDRCONF(NETDEV_CHANGE): eth0: link becomes ready
+Jan  1 00:00:10 hardyk daemon.info connmand[126]: eth0 {add} route ff00:: gw :: scope 0 <UNIVERSE>
+Jan  1 00:00:10 hardyk daemon.info connmand[126]: eth0 {add} route fe80:: gw :: scope 0 <UNIVERSE>
+Jan  1 00:00:10 hardyk daemon.info connmand[126]: eth0 {RX} 4 packets 976 bytes
+Jan  1 00:00:10 hardyk daemon.info connmand[126]: eth0 {TX} 8 packets 1200 bytes
+Jan  1 00:00:10 hardyk daemon.info connmand[126]: eth0 {update} flags 102467 <UP,RUNNING,LOWER_UP>
+Jan  1 00:00:10 hardyk daemon.info connmand[126]: eth0 {newlink} index 2 address 38:D2:69:5D:04:95 mtu 1500
+Jan  1 00:00:10 hardyk daemon.info connmand[126]: eth0 {newlink} index 2 operstate 6 <UP>
+Jan  1 00:00:11 hardyk daemon.info connmand[126]: eth0 {add} address 192.168.0.9/24 label eth0 family 2
+Jan  1 00:00:11 hardyk daemon.info connmand[126]: eth0 {add} route 192.168.0.0 gw 0.0.0.0 scope 253 <LINK>
+Jan  1 00:00:11 hardyk daemon.info connmand[126]: eth0 {add} route 192.168.0.1 gw 0.0.0.0 scope 253 <LINK>
+Jan  1 00:00:11 hardyk daemon.info connmand[126]: eth0 {add} route 75.75.75.75 gw 192.168.0.1 scope 0 <UNIVERSE>
+Jan  1 00:00:11 hardyk daemon.info connmand[126]: eth0 {add} route 75.75.76.76 gw 192.168.0.1 scope 0 <UNIVERSE>
+Jan  1 00:00:11 hardyk daemon.info connmand[126]: eth0 {add} route 0.0.0.0 gw 192.168.0.1 scope 0 <UNIVERSE>
+Jan  1 00:00:11 hardyk daemon.err connmand[126]: Failed to find URL:http://ipv4.connman.net/online/status.html
+Jan  1 00:00:11 hardyk daemon.info connmand[126]: eth0 {add} route 212.227.81.55 gw 192.168.0.1 scope 0 <UNIVERSE>
+Jan  1 00:00:11 hardyk daemon.info connmand[126]: eth0 {del} route 212.227.81.55 gw 192.168.0.1 scope 0 <UNIVERSE>
+Jan  1 00:00:12 hardyk daemon.info connmand[126]: eth0 {add} route 2601:281:8000:dfd0:: gw :: scope 0 <UNIVERSE>
+Jan  1 00:00:14 hardyk daemon.info connmand[126]: eth0 {add} address 2601:281:8000:dfd0:3ad2:69ff:fe5d:495/64 label (null) family 10
+Jan  1 00:00:14 hardyk daemon.err connmand[126]: Failed to find URL:http://ipv6.connman.net/online/status.html
+Jan  1 00:00:16 hardyk daemon.info connmand[126]: eth0 {add} address 2601:281:8000:dfd0::c/64 label (null) family 10
+Jan  1 00:00:20 hardyk auth.info login[162]: root login on 'ttyO0'
+Feb 16 13:26:56 hardyk kern.warn kernel: [   74.186681] my_module: loading out-of-tree module taints kernel.
+Feb 16 13:26:56 hardyk kern.info kernel: [   74.194890] Initalizing my module - myTimerModule
+Feb 16 13:26:56 hardyk kern.info kernel: [   74.708972] My Timer Handler called
+Feb 16 13:26:56 hardyk kern.info kernel: [   74.712793] Name = Hardik
+Feb 16 13:26:57 hardyk kern.info kernel: [   74.715541] Number of times the timer has fired = 1
+Feb 16 13:26:57 hardyk kern.info kernel: [   75.218616] My Timer Handler called
+Feb 16 13:26:57 hardyk kern.info kernel: [   75.227394] Name = Hardik
+Feb 16 13:26:57 hardyk kern.info kernel: [   75.230135] Number of times the timer has fired = 2
+Feb 16 13:26:57 hardyk kern.info kernel: [   75.728603] My Timer Handler called
+Feb 16 13:26:57 hardyk kern.info kernel: [   75.737367] Name = Hardik
+Feb 16 13:26:58 hardyk kern.info kernel: [   75.740108] Number of times the timer has fired = 3
+Feb 16 13:26:58 hardyk kern.info kernel: [   76.238596] My Timer Handler called
+Feb 16 13:26:58 hardyk kern.info kernel: [   76.247357] Name = Hardik
+Feb 16 13:26:58 hardyk kern.info kernel: [   76.250105] Number of times the timer has fired = 4
+Feb 16 13:26:58 hardyk kern.info kernel: [   76.748599] My Timer Handler called
+Feb 16 13:26:58 hardyk kern.info kernel: [   76.757368] Name = Hardik
+Feb 16 13:26:59 hardyk kern.info kernel: [   76.760112] Number of times the timer has fired = 5
+Feb 16 13:26:59 hardyk kern.info kernel: [   77.258600] My Timer Handler called
+Feb 16 13:26:59 hardyk kern.info kernel: [   77.267376] Name = Hardik
+Feb 16 13:26:59 hardyk kern.info kernel: [   77.270123] Number of times the timer has fired = 6
+Feb 16 13:26:59 hardyk kern.info kernel: [   77.768598] My Timer Handler called
+Feb 16 13:26:59 hardyk kern.info kernel: [   77.777347] Name = Hardik
+Feb 16 13:27:00 hardyk kern.info kernel: [   77.780091] Number of times the timer has fired = 7
+Feb 16 13:27:00 hardyk kern.info kernel: [   78.278595] My Timer Handler called
+Feb 16 13:27:00 hardyk kern.info kernel: [   78.287342] Name = Hardik
+Feb 16 13:27:00 hardyk kern.info kernel: [   78.290082] Number of times the timer has fired = 8
+Feb 16 13:27:00 hardyk kern.info kernel: [   78.788600] My Timer Handler called
+Feb 16 13:27:00 hardyk kern.info kernel: [   78.797355] Name = Hardik
+Feb 16 13:27:01 hardyk kern.info kernel: [   78.800098] Number of times the timer has fired = 9
+Feb 16 13:27:01 hardyk kern.info kernel: [   79.298647] My Timer Handler called
+Feb 16 13:27:01 hardyk kern.info kernel: [   79.307431] Name = Hardik
+Feb 16 13:27:01 hardyk kern.info kernel: [   79.310171] Number of times the timer has fired = 10
+Feb 16 13:27:01 hardyk kern.info kernel: [   79.808605] My Timer Handler called
+Feb 16 13:27:01 hardyk kern.info kernel: [   79.817468] Name = Hardik
+Feb 16 13:27:02 hardyk kern.info kernel: [   79.820210] Number of times the timer has fired = 11
+Feb 16 13:27:02 hardyk kern.info kernel: [   80.318630] My Timer Handler called
+Feb 16 13:27:02 hardyk kern.info kernel: [   80.327494] Name = Hardik
+Feb 16 13:27:02 hardyk kern.info kernel: [   80.330231] Number of times the timer has fired = 12
+Feb 16 13:27:02 hardyk kern.info kernel: [   80.828609] My Timer Handler called
+Feb 16 13:27:02 hardyk kern.info kernel: [   80.837473] Name = Hardik
+Feb 16 13:27:03 hardyk kern.info kernel: [   80.840214] Number of times the timer has fired = 13
+Feb 16 13:27:03 hardyk kern.info kernel: [   81.338601] My Timer Handler called
+Feb 16 13:27:03 hardyk kern.info kernel: [   81.347454] Name = Hardik
+Feb 16 13:27:03 hardyk kern.info kernel: [   81.350191] Number of times the timer has fired = 14
+Feb 16 13:27:03 hardyk kern.info kernel: [   81.848597] My Timer Handler called
+Feb 16 13:27:03 hardyk kern.info kernel: [   81.857439] Name = Hardik
+Feb 16 13:27:04 hardyk kern.info kernel: [   81.860183] Number of times the timer has fired = 15
+Feb 16 13:27:04 hardyk kern.info kernel: [   82.358602] My Timer Handler called
+Feb 16 13:27:04 hardyk kern.info kernel: [   82.367465] Name = Hardik
+Feb 16 13:27:04 hardyk kern.info kernel: [   82.370203] Number of times the timer has fired = 16
+Feb 16 13:27:04 hardyk kern.info kernel: [   82.868601] My Timer Handler called
+Feb 16 13:27:04 hardyk kern.info kernel: [   82.877459] Name = Hardik
+Feb 16 13:27:05 hardyk kern.info kernel: [   82.880196] Number of times the timer has fired = 17
+Feb 16 13:27:05 hardyk kern.info kernel: [   83.378596] My Timer Handler called
+Feb 16 13:27:05 hardyk kern.info kernel: [   83.387443] Name = Hardik
+Feb 16 13:27:05 hardyk kern.info kernel: [   83.390184] Number of times the timer has fired = 18
+Feb 16 13:27:05 hardyk kern.info kernel: [   83.888600] My Timer Handler called
+Feb 16 13:27:05 hardyk kern.info kernel: [   83.897455] Name = Hardik
+Feb 16 13:27:06 hardyk kern.info kernel: [   83.900201] Number of times the timer has fired = 19
+Feb 16 13:27:06 hardyk kern.info kernel: [   84.398611] My Timer Handler called
+Feb 16 13:27:06 hardyk kern.info kernel: [   84.407459] Name = Hardik
+Feb 16 13:27:06 hardyk kern.info kernel: [   84.410194] Number of times the timer has fired = 20
+Feb 16 13:27:06 hardyk kern.info kernel: [   84.908605] My Timer Handler called
+Feb 16 13:27:06 hardyk kern.info kernel: [   84.917466] Name = Hardik
+Feb 16 13:27:07 hardyk kern.info kernel: [   84.920212] Number of times the timer has fired = 21
+Feb 16 13:27:07 hardyk kern.info kernel: [   85.418595] My Timer Handler called
+Feb 16 13:27:07 hardyk kern.info kernel: [   85.427444] Name = Hardik
+Feb 16 13:27:07 hardyk kern.info kernel: [   85.430187] Number of times the timer has fired = 22
+Feb 16 13:27:07 hardyk kern.info kernel: [   85.928597] My Timer Handler called
+Feb 16 13:27:07 hardyk kern.info kernel: [   85.937440] Name = Hardik
+Feb 16 13:27:08 hardyk kern.info kernel: [   85.940176] Number of times the timer has fired = 23
+Feb 16 13:27:08 hardyk kern.info kernel: [   86.438599] My Timer Handler called
+Feb 16 13:27:08 hardyk kern.info kernel: [   86.447449] Name = Hardik
+Feb 16 13:27:08 hardyk kern.info kernel: [   86.450192] Number of times the timer has fired = 24
+Feb 16 13:27:08 hardyk kern.info kernel: [   86.948596] My Timer Handler called
+Feb 16 13:27:08 hardyk kern.info kernel: [   86.957448] Name = Hardik
+Feb 16 13:27:09 hardyk kern.info kernel: [   86.960188] Number of times the timer has fired = 25
+Feb 16 13:27:09 hardyk kern.info kernel: [   87.458602] My Timer Handler called
+Feb 16 13:27:09 hardyk kern.info kernel: [   87.467458] Name = Hardik
+Feb 16 13:27:09 hardyk kern.info kernel: [   87.470193] Number of times the timer has fired = 26
+Feb 16 13:27:09 hardyk kern.info kernel: [   87.968600] My Timer Handler called
+Feb 16 13:27:09 hardyk kern.info kernel: [   87.977446] Name = Hardik
+Feb 16 13:27:10 hardyk kern.info kernel: [   87.980189] Number of times the timer has fired = 27
+Feb 16 13:27:10 hardyk kern.info kernel: [   88.478596] My Timer Handler called
+Feb 16 13:27:10 hardyk kern.info kernel: [   88.487448] Name = Hardik
+Feb 16 13:27:10 hardyk kern.info kernel: [   88.490188] Number of times the timer has fired = 28
+Feb 16 13:27:10 hardyk kern.info kernel: [   88.988598] My Timer Handler called
+Feb 16 13:27:10 hardyk kern.info kernel: [   88.997451] Name = Hardik
+Feb 16 13:27:11 hardyk kern.info kernel: [   89.000259] Number of times the timer has fired = 29
+Feb 16 13:27:11 hardyk kern.info kernel: [   89.498599] My Timer Handler called
+Feb 16 13:27:11 hardyk kern.info kernel: [   89.507462] Name = Hardik
+Feb 16 13:27:11 hardyk kern.info kernel: [   89.510272] Number of times the timer has fired = 30
+Feb 16 13:27:11 hardyk kern.info kernel: [   90.008601] My Timer Handler called
+Feb 16 13:27:11 hardyk kern.info kernel: [   90.017460] Name = Hardik
+Feb 16 13:27:12 hardyk kern.info kernel: [   90.020202] Number of times the timer has fired = 31
+Feb 16 13:27:12 hardyk kern.info kernel: [   90.518623] My Timer Handler called
+Feb 16 13:27:12 hardyk kern.info kernel: [   90.527479] Name = Hardik
+Feb 16 13:27:12 hardyk kern.info kernel: [   90.530221] Number of times the timer has fired = 32
+Feb 16 13:27:12 hardyk kern.info kernel: [   91.028599] My Timer Handler called
+Feb 16 13:27:12 hardyk kern.info kernel: [   91.037453] Name = Hardik
+Feb 16 13:27:13 hardyk kern.info kernel: [   91.040194] Number of times the timer has fired = 33
+Feb 16 13:27:13 hardyk kern.info kernel: [   91.538608] My Timer Handler called
+Feb 16 13:27:13 hardyk kern.info kernel: [   91.547461] Name = Hardik
+Feb 16 13:27:13 hardyk kern.info kernel: [   91.550202] Number of times the timer has fired = 34
+Feb 16 13:27:13 hardyk kern.info kernel: [   92.048598] My Timer Handler called
+Feb 16 13:27:13 hardyk kern.info kernel: [   92.057439] Name = Hardik
+Feb 16 13:27:14 hardyk kern.info kernel: [   92.060182] Number of times the timer has fired = 35
+Feb 16 13:27:14 hardyk kern.info kernel: [   92.558602] My Timer Handler called
+Feb 16 13:27:14 hardyk kern.info kernel: [   92.567443] Name = Hardik
+Feb 16 13:27:14 hardyk kern.info kernel: [   92.570184] Number of times the timer has fired = 36
+Feb 16 13:27:14 hardyk kern.info kernel: [   93.068605] My Timer Handler called
+Feb 16 13:27:14 hardyk kern.info kernel: [   93.077454] Name = Hardik
+Feb 16 13:27:15 hardyk kern.info kernel: [   93.080195] Number of times the timer has fired = 37
+Feb 16 13:27:15 hardyk kern.info kernel: [   93.578597] My Timer Handler called
+Feb 16 13:27:15 hardyk kern.info kernel: [   93.587444] Name = Hardik
+Feb 16 13:27:15 hardyk kern.info kernel: [   93.590187] Number of times the timer has fired = 38
+Feb 16 13:27:15 hardyk kern.info kernel: [   94.088652] My Timer Handler called
+Feb 16 13:27:15 hardyk kern.info kernel: [   94.097513] Name = Hardik
+Feb 16 13:27:16 hardyk kern.info kernel: [   94.100256] Number of times the timer has fired = 39
+Feb 16 13:27:16 hardyk kern.info kernel: [   94.598604] My Timer Handler called
+Feb 16 13:27:16 hardyk kern.info kernel: [   94.607464] Name = Hardik
+Feb 16 13:27:16 hardyk kern.info kernel: [   94.610204] Number of times the timer has fired = 40
+Feb 16 13:27:17 hardyk kern.info kernel: [   95.108601] My Timer Handler called
+Feb 16 13:27:17 hardyk kern.info kernel: [   95.117451] Name = Hardik
+Feb 16 13:27:17 hardyk kern.info kernel: [   95.120193] Number of times the timer has fired = 41
+Feb 16 13:27:17 hardyk kern.info kernel: [   95.618596] My Timer Handler called
+Feb 16 13:27:17 hardyk kern.info kernel: [   95.627447] Name = Hardik
+Feb 16 13:27:18 hardyk kern.info kernel: [   95.630251] Number of times the timer has fired = 42
+Feb 16 13:27:18 hardyk kern.info kernel: [   96.128609] My Timer Handler called
+Feb 16 13:27:18 hardyk kern.info kernel: [   96.137463] Name = Hardik
+Feb 16 13:27:18 hardyk kern.info kernel: [   96.140206] Number of times the timer has fired = 43
+Feb 16 13:27:18 hardyk kern.info kernel: [   96.638631] My Timer Handler called
+Feb 16 13:27:18 hardyk kern.info kernel: [   96.647487] Name = Hardik
+Feb 16 13:27:19 hardyk kern.info kernel: [   96.650227] Number of times the timer has fired = 44
+Feb 16 13:27:19 hardyk kern.info kernel: [   97.148606] My Timer Handler called
+Feb 16 13:27:19 hardyk kern.info kernel: [   97.157454] Name = Hardik
+Feb 16 13:27:19 hardyk kern.info kernel: [   97.160198] Number of times the timer has fired = 45
+Feb 16 13:27:19 hardyk kern.info kernel: [   97.658612] My Timer Handler called
+Feb 16 13:27:19 hardyk kern.info kernel: [   97.667468] Name = Hardik
+Feb 16 13:27:20 hardyk kern.info kernel: [   97.670208] Number of times the timer has fired = 46
+Feb 16 13:27:20 hardyk kern.info kernel: [   98.168613] My Timer Handler called
+Feb 16 13:27:20 hardyk kern.info kernel: [   98.177461] Name = Hardik
+Feb 16 13:27:20 hardyk kern.info kernel: [   98.180204] Number of times the timer has fired = 47
+Feb 16 13:27:20 hardyk kern.info kernel: [   98.678616] My Timer Handler called
+Feb 16 13:27:20 hardyk kern.info kernel: [   98.687471] Name = Hardik
+Feb 16 13:27:21 hardyk kern.info kernel: [   98.690211] Number of times the timer has fired = 48
+Feb 16 13:27:21 hardyk kern.info kernel: [   99.188598] My Timer Handler called
+Feb 16 13:27:21 hardyk kern.info kernel: [   99.197451] Name = Hardik
+Feb 16 13:27:21 hardyk kern.info kernel: [   99.200189] Number of times the timer has fired = 49
+Feb 16 13:27:21 hardyk kern.info kernel: [   99.698614] My Timer Handler called
+Feb 16 13:27:21 hardyk kern.info kernel: [   99.707459] Name = Hardik
+Feb 16 13:27:22 hardyk kern.info kernel: [   99.710205] Number of times the timer has fired = 50
+Feb 16 13:27:22 hardyk kern.info kernel: [  100.208594] My Timer Handler called
+Feb 16 13:27:22 hardyk kern.info kernel: [  100.217435] Name = Hardik
+Feb 16 13:27:22 hardyk kern.info kernel: [  100.220178] Number of times the timer has fired = 51
+Feb 16 13:27:22 hardyk kern.info kernel: [  100.718608] My Timer Handler called
+Feb 16 13:27:22 hardyk kern.info kernel: [  100.727465] Name = Hardik
+Feb 16 13:27:23 hardyk kern.info kernel: [  100.730210] Number of times the timer has fired = 52
+Feb 16 13:27:23 hardyk kern.info kernel: [  101.228652] My Timer Handler called
+Feb 16 13:27:23 hardyk kern.info kernel: [  101.237509] Name = Hardik
+Feb 16 13:27:23 hardyk kern.info kernel: [  101.240251] Number of times the timer has fired = 53
+Feb 16 13:27:23 hardyk kern.info kernel: [  101.738615] My Timer Handler called
+Feb 16 13:27:23 hardyk kern.info kernel: [  101.747460] Name = Hardik
+Feb 16 13:27:24 hardyk kern.info kernel: [  101.750199] Number of times the timer has fired = 54
+Feb 16 13:27:24 hardyk kern.info kernel: [  102.248616] My Timer Handler called
+Feb 16 13:27:24 hardyk kern.info kernel: [  102.257465] Name = Hardik
+Feb 16 13:27:24 hardyk kern.info kernel: [  102.260209] Number of times the timer has fired = 55
+Feb 16 13:27:24 hardyk kern.info kernel: [  102.758615] My Timer Handler called
+Feb 16 13:27:24 hardyk kern.info kernel: [  102.767472] Name = Hardik
+Feb 16 13:27:25 hardyk kern.info kernel: [  102.770215] Number of times the timer has fired = 56
+Feb 16 13:27:25 hardyk kern.info kernel: [  103.268604] My Timer Handler called
+Feb 16 13:27:25 hardyk kern.info kernel: [  103.277450] Name = Hardik
+Feb 16 13:27:25 hardyk kern.info kernel: [  103.280195] Number of times the timer has fired = 57
+Feb 16 13:27:25 hardyk kern.info kernel: [  103.778615] My Timer Handler called
+Feb 16 13:27:25 hardyk kern.info kernel: [  103.787460] Name = Hardik
+Feb 16 13:27:26 hardyk authpriv.info dropbear[178]: Child connection from 192.168.0.4:50742
+Feb 16 13:27:26 hardyk kern.info kernel: [  103.790202] Number of times the timer has fired = 58
+Feb 16 13:27:26 hardyk kern.info kernel: [  104.288615] My Timer Handler called
+Feb 16 13:27:26 hardyk kern.info kernel: [  104.297482] Name = Hardik
+Feb 16 13:27:26 hardyk kern.info kernel: [  104.300305] Number of times the timer has fired = 59
+Feb 16 13:27:26 hardyk kern.info kernel: [  104.798611] My Timer Handler called
+Feb 16 13:27:26 hardyk kern.info kernel: [  104.807473] Name = Hardik
+Feb 16 13:27:27 hardyk kern.info kernel: [  104.810217] Number of times the timer has fired = 60
+Feb 16 13:27:27 hardyk kern.info kernel: [  105.308616] My Timer Handler called
+Feb 16 13:27:27 hardyk kern.info kernel: [  105.317470] Name = Hardik
+Feb 16 13:27:27 hardyk kern.info kernel: [  105.320213] Number of times the timer has fired = 61
+Feb 16 13:27:27 hardyk kern.info kernel: [  105.818599] My Timer Handler called
+Feb 16 13:27:27 hardyk kern.info kernel: [  105.827448] Name = Hardik
+Feb 16 13:27:28 hardyk kern.info kernel: [  105.830192] Number of times the timer has fired = 62
+Feb 16 13:27:28 hardyk kern.info kernel: [  106.328626] My Timer Handler called
+Feb 16 13:27:28 hardyk kern.info kernel: [  106.337481] Name = Hardik
+Feb 16 13:27:28 hardyk kern.info kernel: [  106.340224] Number of times the timer has fired = 63
+Feb 16 13:27:28 hardyk kern.info kernel: [  106.838602] My Timer Handler called
+Feb 16 13:27:28 hardyk kern.info kernel: [  106.847457] Name = Hardik
+Feb 16 13:27:28 hardyk authpriv.notice dropbear[178]: Password auth succeeded for 'root' from 192.168.0.4:50742
+Feb 16 13:27:29 hardyk kern.info kernel: [  106.850200] Number of times the timer has fired = 64
+Feb 16 13:27:29 hardyk kern.info kernel: [  107.348613] My Timer Handler called
+Feb 16 13:27:29 hardyk kern.info kernel: [  107.357482] Name = Hardik
+Feb 16 13:27:29 hardyk kern.info kernel: [  107.360221] Number of times the timer has fired = 65
+Feb 16 13:27:29 hardyk kern.info kernel: [  107.858600] My Timer Handler called
+Feb 16 13:27:29 hardyk kern.info kernel: [  107.867449] Name = Hardik
+Feb 16 13:27:30 hardyk kern.info kernel: [  107.870192] Number of times the timer has fired = 66
+Feb 16 13:27:30 hardyk kern.info kernel: [  108.368621] My Timer Handler called
+Feb 16 13:27:30 hardyk kern.info kernel: [  108.377482] Name = Hardik
+Feb 16 13:27:30 hardyk kern.info kernel: [  108.380219] Number of times the timer has fired = 67
+Feb 16 13:27:30 hardyk kern.info kernel: [  108.878601] My Timer Handler called
+Feb 16 13:27:30 hardyk kern.info kernel: [  108.887448] Name = Hardik
+Feb 16 13:27:31 hardyk kern.info kernel: [  108.890187] Number of times the timer has fired = 68
+Feb 16 13:27:31 hardyk kern.info kernel: [  109.388668] My Timer Handler called
+Feb 16 13:27:31 hardyk kern.info kernel: [  109.397529] Name = Hardik
+Feb 16 13:27:31 hardyk kern.info kernel: [  109.400272] Number of times the timer has fired = 69
+Feb 16 13:27:31 hardyk kern.info kernel: [  109.898596] My Timer Handler called
+Feb 16 13:27:31 hardyk kern.info kernel: [  109.907451] Name = Hardik
+Feb 16 13:27:32 hardyk kern.info kernel: [  109.910192] Number of times the timer has fired = 70
+Feb 16 13:27:32 hardyk kern.info kernel: [  110.408658] My Timer Handler called
+Feb 16 13:27:32 hardyk kern.info kernel: [  110.417527] Name = Hardik
+Feb 16 13:27:32 hardyk kern.info kernel: [  110.420267] Number of times the timer has fired = 71
+Feb 16 13:27:32 hardyk kern.info kernel: [  110.918609] My Timer Handler called
+Feb 16 13:27:32 hardyk kern.info kernel: [  110.927468] Name = Hardik
+Feb 16 13:27:33 hardyk kern.info kernel: [  110.930208] Number of times the timer has fired = 72
+Feb 16 13:27:33 hardyk kern.info kernel: [  111.428612] My Timer Handler called
+Feb 16 13:27:33 hardyk kern.info kernel: [  111.437474] Name = Hardik
+Feb 16 13:27:33 hardyk kern.info kernel: [  111.440218] Number of times the timer has fired = 73
+Feb 16 13:27:33 hardyk kern.info kernel: [  111.938597] My Timer Handler called
+Feb 16 13:27:33 hardyk kern.info kernel: [  111.947467] Name = Hardik
+Feb 16 13:27:34 hardyk kern.info kernel: [  111.950207] Number of times the timer has fired = 74
+Feb 16 13:27:34 hardyk kern.info kernel: [  112.448617] My Timer Handler called
+Feb 16 13:27:34 hardyk kern.info kernel: [  112.457480] Name = Hardik
+Feb 16 13:27:34 hardyk kern.info kernel: [  112.460223] Number of times the timer has fired = 75
+Feb 16 13:27:34 hardyk kern.info kernel: [  112.958597] My Timer Handler called
+Feb 16 13:27:34 hardyk kern.info kernel: [  112.967453] Name = Hardik
+Feb 16 13:27:35 hardyk kern.info kernel: [  112.970195] Number of times the timer has fired = 76
+Feb 16 13:27:35 hardyk kern.info kernel: [  113.468617] My Timer Handler called
+Feb 16 13:27:35 hardyk kern.info kernel: [  113.477479] Name = Hardik
+Feb 16 13:27:35 hardyk kern.info kernel: [  113.480220] Number of times the timer has fired = 77
+Feb 16 13:27:35 hardyk kern.info kernel: [  113.978625] My Timer Handler called
+Feb 16 13:27:35 hardyk kern.info kernel: [  113.987489] Name = Hardik
+Feb 16 13:27:36 hardyk kern.info kernel: [  113.990230] Number of times the timer has fired = 78
+Feb 16 13:27:36 hardyk kern.info kernel: [  114.488640] My Timer Handler called
+Feb 16 13:27:36 hardyk kern.info kernel: [  114.497513] Name = Hardik
+Feb 16 13:27:36 hardyk kern.info kernel: [  114.500343] Number of times the timer has fired = 79
+Feb 16 13:27:36 hardyk kern.info kernel: [  114.998598] My Timer Handler called
+Feb 16 13:27:36 hardyk kern.info kernel: [  115.007471] Name = Hardik
+Feb 16 13:27:37 hardyk kern.info kernel: [  115.010207] Number of times the timer has fired = 80
+Feb 16 13:27:37 hardyk kern.info kernel: [  115.508599] My Timer Handler called
+Feb 16 13:27:37 hardyk kern.info kernel: [  115.517467] Name = Hardik
+Feb 16 13:27:37 hardyk kern.info kernel: [  115.520211] Number of times the timer has fired = 81
+Feb 16 13:27:37 hardyk kern.info kernel: [  116.018598] My Timer Handler called
+Feb 16 13:27:37 hardyk kern.info kernel: [  116.027464] Name = Hardik
+Feb 16 13:27:38 hardyk kern.info kernel: [  116.030210] Number of times the timer has fired = 82
+Feb 16 13:27:38 hardyk kern.info kernel: [  116.528623] My Timer Handler called
+Feb 16 13:27:38 hardyk kern.info kernel: [  116.537482] Name = Hardik
+Feb 16 13:27:38 hardyk kern.info kernel: [  116.540300] Number of times the timer has fired = 83
+Feb 16 13:27:38 hardyk kern.info kernel: [  117.038604] My Timer Handler called
+Feb 16 13:27:38 hardyk kern.info kernel: [  117.047471] Name = Hardik
+Feb 16 13:27:39 hardyk kern.info kernel: [  117.050279] Number of times the timer has fired = 84
+Feb 16 13:27:39 hardyk kern.info kernel: [  117.548623] My Timer Handler called
+Feb 16 13:27:39 hardyk kern.info kernel: [  117.557489] Name = Hardik
+Feb 16 13:27:39 hardyk kern.info kernel: [  117.560236] Number of times the timer has fired = 85
+Feb 16 13:27:39 hardyk kern.info kernel: [  118.058601] My Timer Handler called
+Feb 16 13:27:39 hardyk kern.info kernel: [  118.067466] Name = Hardik
+Feb 16 13:27:40 hardyk kern.info kernel: [  118.070206] Number of times the timer has fired = 86
+Feb 16 13:27:40 hardyk kern.info kernel: [  118.568626] My Timer Handler called
+Feb 16 13:27:40 hardyk kern.info kernel: [  118.577480] Name = Hardik
+Feb 16 13:27:40 hardyk kern.info kernel: [  118.580301] Number of times the timer has fired = 87
+Feb 16 13:27:40 hardyk kern.info kernel: [  119.078594] My Timer Handler called
+Feb 16 13:27:40 hardyk kern.info kernel: [  119.087451] Name = Hardik
+Feb 16 13:27:41 hardyk kern.info kernel: [  119.090195] Number of times the timer has fired = 88
+Feb 16 13:27:41 hardyk kern.info kernel: [  119.588606] My Timer Handler called
+Feb 16 13:27:41 hardyk kern.info kernel: [  119.597455] Name = Hardik
+Feb 16 13:27:41 hardyk kern.info kernel: [  119.600196] Number of times the timer has fired = 89
+Feb 16 13:27:41 hardyk kern.info kernel: [  120.098627] My Timer Handler called
+Feb 16 13:27:41 hardyk kern.info kernel: [  120.107484] Name = Hardik
+Feb 16 13:27:42 hardyk kern.info kernel: [  120.110220] Number of times the timer has fired = 90
+Feb 16 13:27:42 hardyk kern.info kernel: [  120.608596] My Timer Handler called
+Feb 16 13:27:42 hardyk kern.info kernel: [  120.617449] Name = Hardik
+Feb 16 13:27:43 hardyk kern.info kernel: [  120.620187] Number of times the timer has fired = 91
+Feb 16 13:27:43 hardyk kern.info kernel: [  121.118624] My Timer Handler called
+Feb 16 13:27:43 hardyk kern.info kernel: [  121.127484] Name = Hardik
+Feb 16 13:27:43 hardyk kern.info kernel: [  121.130315] Number of times the timer has fired = 92
+Feb 16 13:27:43 hardyk kern.info kernel: [  121.628605] My Timer Handler called
+Feb 16 13:27:43 hardyk kern.info kernel: [  121.637468] Name = Hardik
+Feb 16 13:27:44 hardyk kern.info kernel: [  121.640211] Number of times the timer has fired = 93
+Feb 16 13:27:44 hardyk kern.info kernel: [  122.138639] My Timer Handler called
+Feb 16 13:27:44 hardyk kern.info kernel: [  122.147492] Name = Hardik
+Feb 16 13:27:44 hardyk kern.info kernel: [  122.150235] Number of times the timer has fired = 94
+Feb 16 13:27:44 hardyk kern.info kernel: [  122.648642] My Timer Handler called
+Feb 16 13:27:44 hardyk kern.info kernel: [  122.657494] Name = Hardik
+Feb 16 13:27:45 hardyk kern.info kernel: [  122.660239] Number of times the timer has fired = 95
+Feb 16 13:27:45 hardyk kern.info kernel: [  123.158605] My Timer Handler called
+Feb 16 13:27:45 hardyk kern.info kernel: [  123.167464] Name = Hardik
+Feb 16 13:27:45 hardyk kern.info kernel: [  123.170202] Number of times the timer has fired = 96
+Feb 16 13:27:45 hardyk kern.info kernel: [  123.473221] Exiting my module - myTimerModule
+Feb 16 13:28:05 hardyk kern.notice kernel: [  143.376483] random: crng init done
+Feb 16 13:28:05 hardyk kern.notice kernel: [  143.383626] random: 1 urandom warning(s) missed due to ratelimiting
+Feb 16 13:28:09 hardyk daemon.err connmand[126]: Failed to find URL:http://ipv6.connman.net/online/status.html
+Feb 16 13:30:02 hardyk kern.info kernel: [  260.486135] Initalizing my module - myTimerModule
+Feb 16 13:30:03 hardyk kern.info kernel: [  261.529077] My Timer Handler called
+Feb 16 13:30:03 hardyk kern.info kernel: [  261.532885] Name = Senjaliya
+Feb 16 13:30:04 hardyk kern.info kernel: [  261.535907] Number of times the timer has fired = 1
+Feb 16 13:30:04 hardyk kern.info kernel: [  262.568613] My Timer Handler called
+Feb 16 13:30:04 hardyk kern.info kernel: [  262.577387] Name = Senjaliya
+Feb 16 13:30:05 hardyk kern.info kernel: [  262.580400] Number of times the timer has fired = 2
+Feb 16 13:30:05 hardyk kern.info kernel: [  263.608605] My Timer Handler called
+Feb 16 13:30:05 hardyk kern.info kernel: [  263.617373] Name = Senjaliya
+Feb 16 13:30:06 hardyk kern.info kernel: [  263.620386] Number of times the timer has fired = 3
+Feb 16 13:30:06 hardyk kern.info kernel: [  264.648607] My Timer Handler called
+Feb 16 13:30:06 hardyk kern.info kernel: [  264.657376] Name = Senjaliya
+Feb 16 13:30:07 hardyk kern.info kernel: [  264.660392] Number of times the timer has fired = 4
+Feb 16 13:30:07 hardyk kern.info kernel: [  265.688601] My Timer Handler called
+Feb 16 13:30:07 hardyk kern.info kernel: [  265.697367] Name = Senjaliya
+Feb 16 13:30:08 hardyk kern.info kernel: [  265.700384] Number of times the timer has fired = 5
+Feb 16 13:30:08 hardyk kern.info kernel: [  266.728608] My Timer Handler called
+Feb 16 13:30:08 hardyk kern.info kernel: [  266.737392] Name = Senjaliya
+Feb 16 13:30:09 hardyk kern.info kernel: [  266.740408] Number of times the timer has fired = 6
+Feb 16 13:30:09 hardyk kern.info kernel: [  267.768598] My Timer Handler called
+Feb 16 13:30:09 hardyk kern.info kernel: [  267.777364] Name = Senjaliya
+Feb 16 13:30:10 hardyk kern.info kernel: [  267.780378] Number of times the timer has fired = 7
+Feb 16 13:30:10 hardyk kern.info kernel: [  268.808597] My Timer Handler called
+Feb 16 13:30:10 hardyk kern.info kernel: [  268.817364] Name = Senjaliya
+Feb 16 13:30:11 hardyk kern.info kernel: [  268.820378] Number of times the timer has fired = 8
+Feb 16 13:30:11 hardyk kern.info kernel: [  269.848600] My Timer Handler called
+Feb 16 13:30:11 hardyk kern.info kernel: [  269.857362] Name = Senjaliya
+Feb 16 13:30:12 hardyk kern.info kernel: [  269.860371] Number of times the timer has fired = 9
+Feb 16 13:30:12 hardyk kern.info kernel: [  270.888602] My Timer Handler called
+Feb 16 13:30:12 hardyk kern.info kernel: [  270.897365] Name = Senjaliya
+Feb 16 13:30:13 hardyk kern.info kernel: [  270.900379] Number of times the timer has fired = 10
+Feb 16 13:30:13 hardyk kern.info kernel: [  271.928602] My Timer Handler called
+Feb 16 13:30:13 hardyk kern.info kernel: [  271.937460] Name = Senjaliya
+Feb 16 13:30:14 hardyk kern.info kernel: [  271.940475] Number of times the timer has fired = 11
+Feb 16 13:30:14 hardyk kern.info kernel: [  272.968604] My Timer Handler called
+Feb 16 13:30:14 hardyk kern.info kernel: [  272.977471] Name = Senjaliya
+Feb 16 13:30:15 hardyk kern.info kernel: [  272.980488] Number of times the timer has fired = 12
+Feb 16 13:30:15 hardyk kern.info kernel: [  274.008597] My Timer Handler called
+Feb 16 13:30:15 hardyk kern.info kernel: [  274.017455] Name = Senjaliya
+Feb 16 13:30:16 hardyk kern.info kernel: [  274.020475] Number of times the timer has fired = 13
+Feb 16 13:30:16 hardyk kern.info kernel: [  275.048598] My Timer Handler called
+Feb 16 13:30:16 hardyk kern.info kernel: [  275.057455] Name = Senjaliya
+Feb 16 13:30:17 hardyk kern.info kernel: [  275.060469] Number of times the timer has fired = 14
+Feb 16 13:30:17 hardyk kern.info kernel: [  276.088649] My Timer Handler called
+Feb 16 13:30:17 hardyk kern.info kernel: [  276.097514] Name = Senjaliya
+Feb 16 13:30:19 hardyk kern.info kernel: [  276.100526] Number of times the timer has fired = 15
+Feb 16 13:30:19 hardyk kern.info kernel: [  277.128605] My Timer Handler called
+Feb 16 13:30:19 hardyk kern.info kernel: [  277.137466] Name = Senjaliya
+Feb 16 13:30:20 hardyk kern.info kernel: [  277.140486] Number of times the timer has fired = 16
+Feb 16 13:30:20 hardyk kern.info kernel: [  278.168620] My Timer Handler called
+Feb 16 13:30:20 hardyk kern.info kernel: [  278.177514] Name = Senjaliya
+Feb 16 13:30:21 hardyk kern.info kernel: [  278.180538] Number of times the timer has fired = 17
+Feb 16 13:30:21 hardyk kern.info kernel: [  279.208606] My Timer Handler called
+Feb 16 13:30:21 hardyk kern.info kernel: [  279.217467] Name = Senjaliya
+Feb 16 13:30:21 hardyk daemon.warn connmand[126]: IPv6 online check failed for 0xa3318 Wired
+Feb 16 13:30:22 hardyk kern.info kernel: [  279.220482] Number of times the timer has fired = 18
+Feb 16 13:30:22 hardyk kern.info kernel: [  280.248606] My Timer Handler called
+Feb 16 13:30:22 hardyk kern.info kernel: [  280.257474] Name = Senjaliya
+Feb 16 13:30:23 hardyk kern.info kernel: [  280.260490] Number of times the timer has fired = 19
+Feb 16 13:30:23 hardyk kern.info kernel: [  281.288599] My Timer Handler called
+Feb 16 13:30:23 hardyk kern.info kernel: [  281.297460] Name = Senjaliya
+Feb 16 13:30:24 hardyk kern.info kernel: [  281.300476] Number of times the timer has fired = 20
+Feb 16 13:30:24 hardyk kern.info kernel: [  282.328594] My Timer Handler called
+Feb 16 13:30:24 hardyk kern.info kernel: [  282.337442] Name = Senjaliya
+Feb 16 13:30:25 hardyk kern.info kernel: [  282.340461] Number of times the timer has fired = 21
+Feb 16 13:30:25 hardyk kern.info kernel: [  283.368651] My Timer Handler called
+Feb 16 13:30:25 hardyk kern.info kernel: [  283.377501] Name = Senjaliya
+Feb 16 13:30:26 hardyk kern.info kernel: [  283.380516] Number of times the timer has fired = 22
+Feb 16 13:30:26 hardyk kern.info kernel: [  284.408649] My Timer Handler called
+Feb 16 13:30:26 hardyk kern.info kernel: [  284.417511] Name = Senjaliya
+Feb 16 13:30:27 hardyk kern.info kernel: [  284.420527] Number of times the timer has fired = 23
+Feb 16 13:30:27 hardyk kern.info kernel: [  285.352027] Exiting my module - myTimerModule
+# 

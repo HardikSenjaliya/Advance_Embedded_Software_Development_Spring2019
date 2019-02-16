@@ -1,0 +1,3 @@
+/home/hardyk/Documents/CU_Boulder/APES/Advance_Practical_Embedded_Software_Development_Spring2019/home_work_3/kernel_module/my_module.ko
+/home/hardyk/Documents/CU_Boulder/APES/Advance_Practical_Embedded_Software_Development_Spring2019/home_work_3/kernel_module/my_module.o
+
