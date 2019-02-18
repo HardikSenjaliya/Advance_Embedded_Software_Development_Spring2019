@@ -1,0 +1,226 @@
+d[J[J[6A
+# rmmod my_listModule.ko[J
+# insmod /usr/bin/my_listModule.ko listAnimals="Albatross","Alligator","Armadill
+
+o","Baboon","Bat","Bear","Butterfly","Camel","Cat","Cheetah","Dog","Eagle","Elep
+
+hant","Emu","Fish","Flamingo","Gecko","Gorilla","Jaguar","Lion","Eagle","Butterf
+
+ly","Cat","Fish","Flamingo","Gecko","Gorilla","Baboon","Fish","Gorilla","Elephan
+
+t","Jaguar","Jaguar","Lion","Eagle","Butterfly","Elephant","Gecko","Gorilla","Ba
+
+boon","Panda","Fish","Panda","Elephant","Lion","Bear","Eagle","Eagle","Bat","But
+
+terfly" requiredFilter="typeandcount" requiredType="fish" requiredCount=3[J
+[  178.790074] Initalizing my module - myListModule
+[  178.794928] Data Structure used - Linked List
+[  178.799709] Entries in the Animal list
+[  178.803633] Albatross 
+[  178.803643] Alligator 
+[  178.806111] Armadillo 
+[  178.808650] Baboon 
+[  178.811115] Bat 
+[  178.813302] Bear 
+[  178.815226] Butterfly 
+[  178.817238] Camel 
+[  178.819749] Cat 
+[  178.821847] Cheetah 
+[  178.823770] Dog 
+[  178.826050] Eagle 
+[  178.827972] Elephant 
+[  178.830118] Emu 
+[  178.832494] Fish 
+[  178.834414] Flamingo 
+[  178.836424] Gecko 
+[  178.838849] Gorilla 
+[  178.840949] Jaguar 
+[  178.843230] Lion 
+[  178.845419] Eagle 
+[  178.847429] Butterfly 
+[  178.849573] Cat 
+[  178.852050] Fish 
+[  178.853970] Flamingo 
+[  178.855981] Gecko 
+[  178.858397] Gorilla 
+[  178.860497] Baboon 
+[  178.862780] Fish 
+[  178.864970] Gorilla 
+[  178.866980] Elephant 
+[  178.869308] Jaguar 
+[  178.871685] Jaguar 
+[  178.873882] Lion 
+[  178.876071] Eagle 
+[  178.878082] Butterfly 
+[  178.880239] Elephant 
+[  178.882704] Gecko 
+[  178.885072] Gorilla 
+[  178.887174] Baboon 
+[  178.889506] Panda 
+[  178.891700] Fish 
+[  178.893799] Panda 
+[  178.895810] Elephant 
+[  178.897907] Lion 
+[  178.900323] Bear 
+[  178.902335] Eagle 
+[  178.904344] Eagle 
+[  178.906447] Bat 
+[  178.908594] Butterfly 
+[  178.910544] Duplicates present in the list
+[  178.917284] Baboon 
+[  178.917295] Bat 
+[  178.919554] Bear 
+[  178.921482] Butterfly 
+[  178.923492] Cat 
+[  178.925959] Eagle 
+[  178.927878] Elephant 
+[  178.930033] Fish 
+[  178.932408] Flamingo 
+[  178.934418] Gecko 
+[  178.936795] Gorilla 
+[  178.938944] Jaguar 
+[  178.941232] Lion 
+[  178.943426] Panda 
+[  178.945442] The Unique List is:
+[  178.950864] Animal Type = Albatross 	 and 	 Frequency = 1
+[  178.956501] Animal Type = Alligator 	 and 	 Frequency = 1
+[  178.962178] Animal Type = Armadillo 	 and 	 Frequency = 1
+[  178.967831] Animal Type = Baboon 	 and 	 Frequency = 3
+[  178.973238] Animal Type = Bat 	 and 	 Frequency = 2
+[  178.978388] Animal Type = Bear 	 and 	 Frequency = 2
+[  178.983569] Animal Type = Butterfly 	 and 	 Frequency = 3
+[  178.989249] Animal Type = Camel 	 and 	 Frequency = 1
+[  178.994519] Animal Type = Cat 	 and 	 Frequency = 2
+[  178.999656] Animal Type = Cheetah 	 and 	 Frequency = 1
+[  179.005109] Animal Type = Dog 	 and 	 Frequency = 1
+[  179.010242] Animal Type = Eagle 	 and 	 Frequency = 5
+[  179.015517] Animal Type = Elephant 	 and 	 Frequency = 4
+[  179.021108] Animal Type = Emu 	 and 	 Frequency = 1
+[  179.026195] Animal Type = Fish 	 and 	 Frequency = 4
+[  179.031419] Animal Type = Flamingo 	 and 	 Frequency = 2
+[  179.036969] Animal Type = Gecko 	 and 	 Frequency = 3
+[  179.042292] Animal Type = Gorilla 	 and 	 Frequency = 4
+[  179.047744] Animal Type = Jaguar 	 and 	 Frequency = 3
+[  179.053157] Animal Type = Lion 	 and 	 Frequency = 3
+[  179.058387] Animal Type = Panda 	 and 	 Frequency = 2
+[  179.063668] Total Number of Node in the uniqueList = 21
+[  179.069167] Total Memory allocated in the uniqueList = 672
+[  179.074892] Filter Criteria - Type and Count
+[  179.079390] Data Structure used - Linked List
+[  179.083945] Contents of the list after filtering with type = fish and count = 3
+[  179.091623] Fish 
+[  179.091634] Total number of nodes in the filtered list = 1
+[  179.099412] Total memory allocated in the filtered list = 32
+# rmmod my_listModule.ko
+[  191.379367] Freeeing allocated memory
+[  191.383246] Amount of memory freed from the uniqueAnimalsList = 672
+[  191.389982] Amount of memory freed from the filteredAnimalsList = 32
+[  191.396612] Exiting my module - myListModule
+# cd va[J[J/v
+# cd /var/[Jlog
+# cd /var/log/[J
+# cat mes
+# cat messages [J[J
+Feb 17 15:36:50 hardyk kern.info kernel: [  178.790074] Initalizing my module - myListModule
+Feb 17 15:36:50 hardyk kern.info kernel: [  178.794928] Data Structure used - Linked List
+Feb 17 15:36:50 hardyk kern.info kernel: [  178.799709] Entries in the Animal list
+Feb 17 15:36:50 hardyk kern.info kernel: [  178.803633] Albatross 
+Feb 17 15:36:50 hardyk kern.info kernel: [  178.803643] Alligator 
+Feb 17 15:36:50 hardyk kern.info kernel: [  178.806111] Armadillo 
+Feb 17 15:36:50 hardyk kern.info kernel: [  178.808650] Baboon 
+Feb 17 15:36:50 hardyk kern.info kernel: [  178.811115] Bat 
+Feb 17 15:36:50 hardyk kern.info kernel: [  178.813302] Bear 
+Feb 17 15:36:50 hardyk kern.info kernel: [  178.815226] Butterfly 
+Feb 17 15:36:50 hardyk kern.info kernel: [  178.817238] Camel 
+Feb 17 15:36:50 hardyk kern.info kernel: [  178.819749] Cat 
+Feb 17 15:36:50 hardyk kern.info kernel: [  178.821847] Cheetah 
+Feb 17 15:36:50 hardyk kern.info kernel: [  178.823770] Dog 
+Feb 17 15:36:50 hardyk kern.info kernel: [  178.826050] Eagle 
+Feb 17 15:36:50 hardyk kern.info kernel: [  178.827972] Elephant 
+Feb 17 15:36:50 hardyk kern.info kernel: [  178.830118] Emu 
+Feb 17 15:36:50 hardyk kern.info kernel: [  178.832494] Fish 
+Feb 17 15:36:50 hardyk kern.info kernel: [  178.834414] Flamingo 
+Feb 17 15:36:50 hardyk kern.info kernel: [  178.836424] Gecko 
+Feb 17 15:36:50 hardyk kern.info kernel: [  178.838849] Gorilla 
+Feb 17 15:36:50 hardyk kern.info kernel: [  178.840949] Jaguar 
+Feb 17 15:36:50 hardyk kern.info kernel: [  178.843230] Lion 
+Feb 17 15:36:50 hardyk kern.info kernel: [  178.845419] Eagle 
+Feb 17 15:36:50 hardyk kern.info kernel: [  178.847429] Butterfly 
+Feb 17 15:36:50 hardyk kern.info kernel: [  178.849573] Cat 
+Feb 17 15:36:50 hardyk kern.info kernel: [  178.852050] Fish 
+Feb 17 15:36:50 hardyk kern.info kernel: [  178.853970] Flamingo 
+Feb 17 15:36:50 hardyk kern.info kernel: [  178.855981] Gecko 
+Feb 17 15:36:50 hardyk kern.info kernel: [  178.858397] Gorilla 
+Feb 17 15:36:50 hardyk kern.info kernel: [  178.860497] Baboon 
+Feb 17 15:36:50 hardyk kern.info kernel: [  178.862780] Fish 
+Feb 17 15:36:50 hardyk kern.info kernel: [  178.864970] Gorilla 
+Feb 17 15:36:50 hardyk kern.info kernel: [  178.866980] Elephant 
+Feb 17 15:36:50 hardyk kern.info kernel: [  178.869308] Jaguar 
+Feb 17 15:36:50 hardyk kern.info kernel: [  178.871685] Jaguar 
+Feb 17 15:36:50 hardyk kern.info kernel: [  178.873882] Lion 
+Feb 17 15:36:50 hardyk kern.info kernel: [  178.876071] Eagle 
+Feb 17 15:36:50 hardyk kern.info kernel: [  178.878082] Butterfly 
+Feb 17 15:36:50 hardyk kern.info kernel: [  178.880239] Elephant 
+Feb 17 15:36:50 hardyk kern.info kernel: [  178.882704] Gecko 
+Feb 17 15:36:50 hardyk kern.info kernel: [  178.885072] Gorilla 
+Feb 17 15:36:50 hardyk kern.info kernel: [  178.887174] Baboon 
+Feb 17 15:36:50 hardyk kern.info kernel: [  178.889506] Panda 
+Feb 17 15:36:50 hardyk kern.info kernel: [  178.891700] Fish 
+Feb 17 15:36:50 hardyk kern.info kernel: [  178.893799] Panda 
+Feb 17 15:36:50 hardyk kern.info kernel: [  178.895810] Elephant 
+Feb 17 15:36:50 hardyk kern.info kernel: [  178.897907] Lion 
+Feb 17 15:36:50 hardyk kern.info kernel: [  178.900323] Bear 
+Feb 17 15:36:50 hardyk kern.info kernel: [  178.902335] Eagle 
+Feb 17 15:36:50 hardyk kern.info kernel: [  178.904344] Eagle 
+Feb 17 15:36:50 hardyk kern.info kernel: [  178.906447] Bat 
+Feb 17 15:36:50 hardyk kern.info kernel: [  178.908594] Butterfly 
+Feb 17 15:36:50 hardyk kern.info kernel: [  178.910544] Duplicates present in the list
+Feb 17 15:36:50 hardyk kern.info kernel: [  178.917284] Baboon 
+Feb 17 15:36:50 hardyk kern.info kernel: [  178.917295] Bat 
+Feb 17 15:36:50 hardyk kern.info kernel: [  178.919554] Bear 
+Feb 17 15:36:50 hardyk kern.info kernel: [  178.921482] Butterfly 
+Feb 17 15:36:50 hardyk kern.info kernel: [  178.923492] Cat 
+Feb 17 15:36:50 hardyk kern.info kernel: [  178.925959] Eagle 
+Feb 17 15:36:50 hardyk kern.info kernel: [  178.927878] Elephant 
+Feb 17 15:36:50 hardyk kern.info kernel: [  178.930033] Fish 
+Feb 17 15:36:50 hardyk kern.info kernel: [  178.932408] Flamingo 
+Feb 17 15:36:50 hardyk kern.info kernel: [  178.934418] Gecko 
+Feb 17 15:36:50 hardyk kern.info kernel: [  178.936795] Gorilla 
+Feb 17 15:36:50 hardyk kern.info kernel: [  178.938944] Jaguar 
+Feb 17 15:36:50 hardyk kern.info kernel: [  178.941232] Lion 
+Feb 17 15:36:50 hardyk kern.info kernel: [  178.943426] Panda 
+Feb 17 15:36:50 hardyk kern.info kernel: [  178.945442] The Unique List is:
+Feb 17 15:36:50 hardyk kern.warn kernel: [  178.950864] Animal Type = Albatross 	 and 	 Frequency = 1
+Feb 17 15:36:50 hardyk kern.warn kernel: [  178.956501] Animal Type = Alligator 	 and 	 Frequency = 1
+Feb 17 15:36:50 hardyk kern.warn kernel: [  178.962178] Animal Type = Armadillo 	 and 	 Frequency = 1
+Feb 17 15:36:50 hardyk kern.warn kernel: [  178.967831] Animal Type = Baboon 	 and 	 Frequency = 3
+Feb 17 15:36:50 hardyk kern.warn kernel: [  178.973238] Animal Type = Bat 	 and 	 Frequency = 2
+Feb 17 15:36:50 hardyk kern.warn kernel: [  178.978388] Animal Type = Bear 	 and 	 Frequency = 2
+Feb 17 15:36:50 hardyk kern.warn kernel: [  178.983569] Animal Type = Butterfly 	 and 	 Frequency = 3
+Feb 17 15:36:50 hardyk kern.warn kernel: [  178.989249] Animal Type = Camel 	 and 	 Frequency = 1
+Feb 17 15:36:50 hardyk kern.warn kernel: [  178.994519] Animal Type = Cat 	 and 	 Frequency = 2
+Feb 17 15:36:50 hardyk kern.warn kernel: [  178.999656] Animal Type = Cheetah 	 and 	 Frequency = 1
+Feb 17 15:36:50 hardyk kern.warn kernel: [  179.005109] Animal Type = Dog 	 and 	 Frequency = 1
+Feb 17 15:36:50 hardyk kern.warn kernel: [  179.010242] Animal Type = Eagle 	 and 	 Frequency = 5
+Feb 17 15:36:50 hardyk kern.warn kernel: [  179.015517] Animal Type = Elephant 	 and 	 Frequency = 4
+Feb 17 15:36:50 hardyk kern.warn kernel: [  179.021108] Animal Type = Emu 	 and 	 Frequency = 1
+Feb 17 15:36:50 hardyk kern.warn kernel: [  179.026195] Animal Type = Fish 	 and 	 Frequency = 4
+Feb 17 15:36:50 hardyk kern.warn kernel: [  179.031419] Animal Type = Flamingo 	 and 	 Frequency = 2
+Feb 17 15:36:50 hardyk kern.warn kernel: [  179.036969] Animal Type = Gecko 	 and 	 Frequency = 3
+Feb 17 15:36:50 hardyk kern.warn kernel: [  179.042292] Animal Type = Gorilla 	 and 	 Frequency = 4
+Feb 17 15:36:50 hardyk kern.warn kernel: [  179.047744] Animal Type = Jaguar 	 and 	 Frequency = 3
+Feb 17 15:36:50 hardyk kern.warn kernel: [  179.053157] Animal Type = Lion 	 and 	 Frequency = 3
+Feb 17 15:36:50 hardyk kern.warn kernel: [  179.058387] Animal Type = Panda 	 and 	 Frequency = 2
+Feb 17 15:36:50 hardyk kern.info kernel: [  179.063668] Total Number of Node in the uniqueList = 21
+Feb 17 15:36:50 hardyk kern.info kernel: [  179.069167] Total Memory allocated in the uniqueList = 672
+Feb 17 15:36:50 hardyk kern.info kernel: [  179.074892] Filter Criteria - Type and Count
+Feb 17 15:36:50 hardyk kern.info kernel: [  179.079390] Data Structure used - Linked List
+Feb 17 15:36:50 hardyk kern.info kernel: [  179.083945] Contents of the list after filtering with type = fish and count = 3
+Feb 17 15:36:50 hardyk kern.warn kernel: [  179.091623] Fish 
+Feb 17 15:36:50 hardyk kern.info kernel: [  179.091634] Total number of nodes in the filtered list = 1
+Feb 17 15:36:50 hardyk kern.info kernel: [  179.099412] Total memory allocated in the filtered list = 32
+Feb 17 15:37:02 hardyk kern.info kernel: [  191.379367] Freeeing allocated memory
+Feb 17 15:37:02 hardyk kern.info kernel: [  191.383246] Amount of memory freed from the uniqueAnimalsList = 672
+Feb 17 15:37:02 hardyk kern.info kernel: [  191.389982] Amount of memory freed from the filteredAnimalsList = 32
+Feb 17 15:37:02 hardyk kern.info kernel: [  191.396612] Exiting my module - myListModule
+# 

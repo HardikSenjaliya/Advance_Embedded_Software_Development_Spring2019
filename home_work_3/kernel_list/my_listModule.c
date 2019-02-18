@@ -29,7 +29,7 @@ MODULE_DESCRIPTION("A kernel list module");
 /*Global Variables*/
 int i = 0;
 static int countArrayElements;
-static char *listAnimals[SIZE_LIST_ANIMALS];
+static char *listAnimals[countArrayElements];
 module_param_array(listAnimals, charp, &countArrayElements, S_IRUSR | S_IWUSR | S_IRGRP | S_IROTH);
 MODULE_PARM_DESC(myName,"A char array to store animals");
 

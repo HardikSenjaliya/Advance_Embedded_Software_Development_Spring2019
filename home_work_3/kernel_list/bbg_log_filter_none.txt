@@ -1,0 +1,701 @@
+ requiredType=""n"o"n"e"" requiredCount="""[J[J0 rrequiredType="none" requiredCount=0 [36DerequiredType="none" requiredCount=0 [36DqrequiredType="none" requiredCount=0 [36DurequiredType="none" requiredCount=0 [36DirequiredType="none" requiredCount=0 [36DrrequiredType="none" requiredCount=0 [36DerequiredType="none" requiredCount=0 [36DdrequiredType="none" requiredCount=0 [36DFrequiredType="none" requiredCount=0 [36DirequiredType="none" requiredCount=0 [36DlrequiredType="none" requiredCount=0 [36DtrequiredType="none" requiredCount=0 [36DerequiredType="none" requiredCount=0 [36DrrequiredType="none" requiredCount=0 [36D=requiredType="none" requiredCount=0 [36D requiredType="none" requiredCount=0 [36DrequiredType="none" requiredCount=0 [J[36D"requiredType="none" requiredCount=0 [36D"requiredType="none" requiredCount=0 [36Dn"requiredType="none" requiredCount=0 [37Do"requiredType="none" requiredCount=0 [37Df"requiredType="none" requiredCount=0 [37Di"requiredType="none" requiredCount=0 [37Dl"requiredType="none" requiredCount=0 [37Dt"requiredType="none" requiredCount=0 [37De"requiredType="none" requiredCount=0 [37Dr"requiredType="none" requiredCount=0 [37D" requiredType="none" requiredCount=0 [36DrequiredType="none" requiredCount=0  
+[  354.506061] Initalizing my module - myListModule
+[  354.511164] Data Structure used - Linked List
+[  354.515718] Entries in the Animal list
+[  354.519739] Albatross 
+[  354.519750] Alligator 
+[  354.522218] Armadillo 
+[  354.524684] Baboon 
+[  354.527147] Bat 
+[  354.529390] Bear 
+[  354.531310] Butterfly 
+[  354.533323] Camel 
+[  354.535786] Cat 
+[  354.537884] Cheetah 
+[  354.539854] Dog 
+[  354.542140] Eagle 
+[  354.544061] Elephant 
+[  354.546159] Emu 
+[  354.548578] Fish 
+[  354.550497] Flamingo 
+[  354.552509] Gecko 
+[  354.554881] Gorilla 
+[  354.556984] Jaguar 
+[  354.559313] Lion 
+[  354.561506] Eagle 
+[  354.563516] Butterfly 
+[  354.565613] Cat 
+[  354.568080] Fish 
+[  354.570083] Flamingo 
+[  354.572095] Gecko 
+[  354.574471] Gorilla 
+[  354.576567] Baboon 
+[  354.578901] Fish 
+[  354.581094] Gorilla 
+[  354.583104] Elephant 
+[  354.585387] Jaguar 
+[  354.587760] Jaguar 
+[  354.590004] Lion 
+[  354.592201] Eagle 
+[  354.594214] Butterfly 
+[  354.596315] Elephant 
+[  354.598824] Gecko 
+[  354.601204] Gorilla 
+[  354.603309] Baboon 
+[  354.605590] Panda 
+[  354.607780] Fish 
+[  354.609927] Panda 
+[  354.611939] Elephant 
+[  354.614042] Lion 
+[  354.616419] Bear 
+[  354.618478] Eagle 
+[  354.620489] Eagle 
+[  354.622588] Bat 
+[  354.624692] Butterfly 
+[  354.626639] Duplicates present in the list
+[  354.633431] Baboon 
+[  354.633442] Bat 
+[  354.635637] Bear 
+[  354.637560] Butterfly 
+[  354.639622] Cat 
+[  354.642098] Eagle 
+[  354.644025] Elephant 
+[  354.646127] Fish 
+[  354.648552] Flamingo 
+[  354.650569] Gecko 
+[  354.652943] Gorilla 
+[  354.655042] Jaguar 
+[  354.657329] Lion 
+[  354.659579] Panda 
+[  354.661596] The Unique List is:
+[  354.666969] Animal Type = Albatross 	 and 	 Frequency = 1
+[  354.672659] Animal Type = Alligator 	 and 	 Frequency = 1
+[  354.678334] Animal Type = Armadillo 	 and 	 Frequency = 1
+[  354.683968] Animal Type = Baboon 	 and 	 Frequency = 3
+[  354.689375] Animal Type = Bat 	 and 	 Frequency = 2
+[  354.694476] Animal Type = Bear 	 and 	 Frequency = 2
+[  354.699707] Animal Type = Butterfly 	 and 	 Frequency = 3
+[  354.705339] Animal Type = Camel 	 and 	 Frequency = 1
+[  354.710659] Animal Type = Cat 	 and 	 Frequency = 2
+[  354.715753] Animal Type = Cheetah 	 and 	 Frequency = 1
+[  354.721256] Animal Type = Dog 	 and 	 Frequency = 1
+[  354.726352] Animal Type = Eagle 	 and 	 Frequency = 5
+[  354.731668] Animal Type = Elephant 	 and 	 Frequency = 4
+[  354.737220] Animal Type = Emu 	 and 	 Frequency = 1
+[  354.742356] Animal Type = Fish 	 and 	 Frequency = 4
+[  354.747537] Animal Type = Flamingo 	 and 	 Frequency = 2
+[  354.753128] Animal Type = Gecko 	 and 	 Frequency = 3
+[  354.758445] Animal Type = Gorilla 	 and 	 Frequency = 4
+[  354.763898] Animal Type = Jaguar 	 and 	 Frequency = 3
+[  354.769310] Animal Type = Lion 	 and 	 Frequency = 3
+[  354.774495] Animal Type = Panda 	 and 	 Frequency = 2
+[  354.779811] Total Number of Node in the uniqueList = 21
+[  354.785262] Total Memory allocated in the uniqueList = 672
+[  354.791031] Filter Criteria - No Filter
+[  354.795033] Data Structure used - Linked List
+[  354.799656] Contents of the list after filtering with type = none
+[  354.806014] Albatross 
+[  354.806023] Alligator 
+[  354.808531] Armadillo 
+[  354.811000] Baboon 
+[  354.813470] Bat 
+[  354.815663] Bear 
+[  354.817580] Butterfly 
+[  354.819638] Camel 
+[  354.822104] Cat 
+[  354.824210] Cheetah 
+[  354.826131] Dog 
+[  354.828462] Eagle 
+[  354.830381] Elephant 
+[  354.832479] Emu 
+[  354.834851] Fish 
+[  354.836772] Flamingo 
+[  354.838828] Gecko 
+[  354.841198] Gorilla 
+[  354.843296] Jaguar 
+[  354.845585] Lion 
+[  354.847778] Panda 
+[  354.849836] Total number of nodes in the filtered list = 21
+[  354.857744] Total memory allocated in the filtered list = 672
+# rmmodule my_listMou[Jdule.ko
+-sh: rmmodule: not found
+# rmmod my_listModule.ko
+[  498.710384] Freeeing allocated memory
+[  498.714265] Amount of memory freed from the uniqueAnimalsList = 672
+[  498.721061] Amount of memory freed from the filteredAnimalsList = 672
+[  498.727787] Exiting my module - myListModule
+# cd /va# cd /var/[Jlog/
+# cat messages
+Jan  1 00:00:02 hardyk syslog.info syslogd started: BusyBox v1.29.3
+Jan  1 00:00:02 hardyk kern.notice kernel: klogd started: BusyBox v1.29.3 (2019-02-05 02:05:01 MST)
+Jan  1 00:00:02 hardyk kern.info kernel: [    0.000000] Booting Linux on physical CPU 0x0
+Jan  1 00:00:02 hardyk kern.notice kernel: [    0.000000] Linux version 4.14.40 (root@superuser) (gcc version 7.3.0 (Buildroot 2018.11.1)) #27 SMP Mon Feb 11 23:50:20 MST 2019
+Jan  1 00:00:02 hardyk kern.info kernel: [    0.000000] CPU: ARMv7 Processor [413fc082] revision 2 (ARMv7), cr=10c5387d
+Jan  1 00:00:02 hardyk kern.info kernel: [    0.000000] CPU: PIPT / VIPT nonaliasing data cache, VIPT aliasing instruction cache
+Jan  1 00:00:02 hardyk kern.info kernel: [    0.000000] OF: fdt: Machine model: TI AM335x BeagleBone Green
+Jan  1 00:00:02 hardyk kern.info kernel: [    0.000000] Memory policy: Data cache writeback
+Jan  1 00:00:02 hardyk kern.info kernel: [    0.000000] cma: Reserved 16 MiB at 0x9e800000
+Jan  1 00:00:02 hardyk kern.debug kernel: [    0.000000] On node 0 totalpages: 130560
+Jan  1 00:00:02 hardyk kern.debug kernel: [    0.000000] free_area_init_node: node 0, pgdat c0dc5780, node_mem_map df971000
+Jan  1 00:00:02 hardyk kern.debug kernel: [    0.000000]   Normal zone: 1148 pages used for memmap
+Jan  1 00:00:02 hardyk kern.debug kernel: [    0.000000]   Normal zone: 0 pages reserved
+Jan  1 00:00:02 hardyk kern.debug kernel: [    0.000000]   Normal zone: 130560 pages, LIFO batch:31
+Jan  1 00:00:02 hardyk kern.info kernel: [    0.000000] CPU: All CPU(s) started in SVC mode.
+Jan  1 00:00:02 hardyk kern.info kernel: [    0.000000] AM335X ES2.1 (sgx neon)
+Jan  1 00:00:02 hardyk kern.info kernel: [    0.000000] percpu: Embedded 17 pages/cpu @df93e000 s40872 r8192 d20568 u69632
+Jan  1 00:00:02 hardyk kern.debug kernel: [    0.000000] pcpu-alloc: s40872 r8192 d20568 u69632 alloc=17*4096
+Jan  1 00:00:02 hardyk kern.debug kernel: [    0.000000] pcpu-alloc: [0] 0 
+Jan  1 00:00:02 hardyk kern.info kernel: [    0.000000] Built 1 zonelists, mobility grouping on.  Total pages: 129412
+Jan  1 00:00:02 hardyk kern.notice kernel: [    0.000000] Kernel command line: console=ttyO0,115200n8 root=/dev/mmcblk0p2 rw rootfstype=ext4 rootwait
+Jan  1 00:00:02 hardyk kern.info kernel: [    0.000000] PID hash table entries: 2048 (order: 1, 8192 bytes)
+Jan  1 00:00:02 hardyk kern.info kernel: [    0.000000] Dentry cache hash table entries: 65536 (order: 6, 262144 bytes)
+Jan  1 00:00:02 hardyk kern.info kernel: [    0.000000] Inode-cache hash table entries: 32768 (order: 5, 131072 bytes)
+Jan  1 00:00:02 hardyk kern.info kernel: [    0.000000] Memory: 479880K/522240K available (8192K kernel code, 818K rwdata, 2428K rodata, 1024K init, 7548K bss, 25976K reserved, 16384K cma-reserved, 0K highmem)
+Jan  1 00:00:02 hardyk kern.notice kernel: [    0.000000] Virtual kernel memory layout:
+Jan  1 00:00:02 hardyk kern.notice kernel: [    0.000000]     vector  : 0xffff0000 - 0xffff1000   (   4 kB)
+Jan  1 00:00:02 hardyk kern.notice kernel: [    0.000000]     fixmap  : 0xffc00000 - 0xfff00000   (3072 kB)
+Jan  1 00:00:02 hardyk kern.notice kernel: [    0.000000]     vmalloc : 0xe0000000 - 0xff800000   ( 504 MB)
+Jan  1 00:00:02 hardyk kern.notice kernel: [    0.000000]     lowmem  : 0xc0000000 - 0xdfe00000   ( 510 MB)
+Jan  1 00:00:02 hardyk kern.notice kernel: [    0.000000]     pkmap   : 0xbfe00000 - 0xc0000000   (   2 MB)
+Jan  1 00:00:02 hardyk kern.notice kernel: [    0.000000]     modules : 0xbf000000 - 0xbfe00000   (  14 MB)
+Jan  1 00:00:02 hardyk kern.notice kernel: [    0.000000]       .text : 0xc0008000 - 0xc0900000   (9184 kB)
+Jan  1 00:00:02 hardyk kern.notice kernel: [    0.000000]       .init : 0xc0c00000 - 0xc0d00000   (1024 kB)
+Jan  1 00:00:02 hardyk kern.notice kernel: [    0.000000]       .data : 0xc0d00000 - 0xc0dccb38   ( 819 kB)
+Jan  1 00:00:02 hardyk kern.notice kernel: [    0.000000]        .bss : 0xc0dce000 - 0xc152d0d4   (7549 kB)
+Jan  1 00:00:02 hardyk kern.info kernel: [    0.000000] Running RCU self tests
+Jan  1 00:00:02 hardyk kern.info kernel: [    0.000000] Hierarchical RCU implementation.
+Jan  1 00:00:02 hardyk kern.info kernel: [    0.000000] 	RCU event tracing is enabled.
+Jan  1 00:00:02 hardyk kern.info kernel: [    0.000000] 	RCU lockdep checking is enabled.
+Jan  1 00:00:02 hardyk kern.info kernel: [    0.000000] 	RCU restricting CPUs from NR_CPUS=2 to nr_cpu_ids=1.
+Jan  1 00:00:02 hardyk kern.info kernel: [    0.000000] RCU: Adjusting geometry for rcu_fanout_leaf=16, nr_cpu_ids=1
+Jan  1 00:00:02 hardyk kern.info kernel: [    0.000000] NR_IRQS: 16, nr_irqs: 16, preallocated irqs: 16
+Jan  1 00:00:02 hardyk kern.info kernel: [    0.000000] IRQ: Found an INTC at 0xfa200000 (revision 5.0) with 128 interrupts
+Jan  1 00:00:02 hardyk kern.info kernel: [    0.000000] OMAP clockevent source: timer2 at 24000000 Hz
+Jan  1 00:00:02 hardyk kern.info kernel: [    0.000018] sched_clock: 32 bits at 24MHz, resolution 41ns, wraps every 89478484971ns
+Jan  1 00:00:02 hardyk kern.info kernel: [    0.000049] clocksource: timer1: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 79635851949 ns
+Jan  1 00:00:02 hardyk kern.info kernel: [    0.000105] OMAP clocksource: timer1 at 24000000 Hz
+Jan  1 00:00:02 hardyk kern.crit kernel: [    0.000626] timer_probe: no matching timers found
+Jan  1 00:00:02 hardyk kern.info kernel: [    0.001526] Console: colour dummy device 80x30
+Jan  1 00:00:02 hardyk kern.warn kernel: [    0.001575] Lock dependency validator: Copyright (c) 2006 Red Hat, Inc., Ingo Molnar
+Jan  1 00:00:02 hardyk kern.warn kernel: [    0.001589] ... MAX_LOCKDEP_SUBCLASSES:  8
+Jan  1 00:00:02 hardyk kern.warn kernel: [    0.001601] ... MAX_LOCK_DEPTH:          48
+Jan  1 00:00:02 hardyk kern.warn kernel: [    0.001614] ... MAX_LOCKDEP_KEYS:        8191
+Jan  1 00:00:02 hardyk kern.warn kernel: [    0.001626] ... CLASSHASH_SIZE:          4096
+Jan  1 00:00:02 hardyk kern.warn kernel: [    0.001638] ... MAX_LOCKDEP_ENTRIES:     32768
+Jan  1 00:00:02 hardyk kern.warn kernel: [    0.001650] ... MAX_LOCKDEP_CHAINS:      65536
+Jan  1 00:00:02 hardyk kern.warn kernel: [    0.001662] ... CHAINHASH_SIZE:          32768
+Jan  1 00:00:02 hardyk kern.warn kernel: [    0.001675]  memory used by lock dependency info: 4655 kB
+Jan  1 00:00:02 hardyk kern.warn kernel: [    0.001687]  per task-struct memory footprint: 1536 bytes
+Jan  1 00:00:02 hardyk kern.info kernel: [    0.001722] Calibrating delay loop... 996.14 BogoMIPS (lpj=4980736)
+Jan  1 00:00:02 hardyk kern.info kernel: [    0.078643] pid_max: default: 32768 minimum: 301
+Jan  1 00:00:02 hardyk kern.info kernel: [    0.079041] Security Framework initialized
+Jan  1 00:00:02 hardyk kern.info kernel: [    0.079176] Mount-cache hash table entries: 1024 (order: 0, 4096 bytes)
+Jan  1 00:00:02 hardyk kern.info kernel: [    0.079197] Mountpoint-cache hash table entries: 1024 (order: 0, 4096 bytes)
+Jan  1 00:00:02 hardyk kern.info kernel: [    0.082285] CPU: Testing write buffer coherency: ok
+Jan  1 00:00:02 hardyk kern.info kernel: [    0.083781] CPU0: thread -1, cpu 0, socket -1, mpidr 0
+Jan  1 00:00:02 hardyk kern.info kernel: [    0.085290] Setting up static identity map for 0x80100000 - 0x80100078
+Jan  1 00:00:02 hardyk kern.info kernel: [    0.085856] Hierarchical SRCU implementation.
+Jan  1 00:00:02 hardyk kern.info kernel: [    0.087482] smp: Bringing up secondary CPUs ...
+Jan  1 00:00:02 hardyk kern.info kernel: [    0.087506] smp: Brought up 1 node, 1 CPU
+Jan  1 00:00:02 hardyk kern.info kernel: [    0.087522] SMP: Total of 1 processors activated (996.14 BogoMIPS).
+Jan  1 00:00:02 hardyk kern.info kernel: [    0.087536] CPU: All CPU(s) started in SVC mode.
+Jan  1 00:00:02 hardyk kern.info kernel: [    0.091473] devtmpfs: initialized
+Jan  1 00:00:02 hardyk kern.notice kernel: [    0.115474] random: get_random_u32 called from bucket_table_alloc+0xe4/0x23c with crng_init=0
+Jan  1 00:00:02 hardyk kern.info kernel: [    0.116449] VFP support v0.3: implementor 41 architecture 3 part 30 variant c rev 3
+Jan  1 00:00:02 hardyk kern.info kernel: [    0.117210] clocksource: jiffies: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 19112604462750000 ns
+Jan  1 00:00:02 hardyk kern.info kernel: [    0.117273] futex hash table entries: 256 (order: 2, 16384 bytes)
+Jan  1 00:00:02 hardyk kern.info kernel: [    0.119104] pinctrl core: initialized pinctrl subsystem
+Jan  1 00:00:02 hardyk kern.info kernel: [    0.123617] NET: Registered protocol family 16
+Jan  1 00:00:02 hardyk kern.info kernel: [    0.130645] DMA: preallocated 256 KiB pool for atomic coherent allocations
+Jan  1 00:00:02 hardyk kern.info kernel: [    0.227274] cpuidle: using governor menu
+Jan  1 00:00:02 hardyk kern.debug kernel: [    0.238492] gpio gpiochip0: (gpio): added GPIO chardev (254:0)
+Jan  1 00:00:02 hardyk kern.debug kernel: [    0.239088] gpiochip_setup_dev: registered GPIOs 0 to 31 on device: gpiochip0 (gpio)
+Jan  1 00:00:02 hardyk kern.info kernel: [    0.239326] OMAP GPIO hardware version 0.1
+Jan  1 00:00:02 hardyk kern.debug kernel: [    0.241411] gpio gpiochip1: (gpio): added GPIO chardev (254:1)
+Jan  1 00:00:02 hardyk kern.debug kernel: [    0.241648] gpiochip_setup_dev: registered GPIOs 32 to 63 on device: gpiochip1 (gpio)
+Jan  1 00:00:02 hardyk kern.debug kernel: [    0.243648] gpio gpiochip2: (gpio): added GPIO chardev (254:2)
+Jan  1 00:00:02 hardyk kern.debug kernel: [    0.243871] gpiochip_setup_dev: registered GPIOs 64 to 95 on device: gpiochip2 (gpio)
+Jan  1 00:00:02 hardyk kern.debug kernel: [    0.245718] gpio gpiochip3: (gpio): added GPIO chardev (254:3)
+Jan  1 00:00:02 hardyk kern.debug kernel: [    0.245936] gpiochip_setup_dev: registered GPIOs 96 to 127 on device: gpiochip3 (gpio)
+Jan  1 00:00:02 hardyk kern.info kernel: [    0.262282] No ATAGs?
+Jan  1 00:00:02 hardyk kern.info kernel: [    0.262308] hw-breakpoint: debug architecture 0x4 unsupported.
+Jan  1 00:00:02 hardyk kern.warn kernel: [    0.262609] omap4_sram_init:Unable to allocate sram needed to handle errata I688
+Jan  1 00:00:02 hardyk kern.warn kernel: [    0.262628] omap4_sram_init:Unable to get sram pool needed to handle errata I688
+Jan  1 00:00:02 hardyk kern.info kernel: [    0.297444] edma 49000000.edma: TI EDMA DMA engine driver
+Jan  1 00:00:02 hardyk kern.debug kernel: [    0.298122] of_get_named_gpiod_flags: can't parse 'gpio' property of node '/fixedregulator0[0]'
+Jan  1 00:00:02 hardyk kern.notice kernel: [    0.302591] SCSI subsystem initialized
+Jan  1 00:00:02 hardyk kern.debug kernel: [    0.303527] libata version 3.00 loaded.
+Jan  1 00:00:02 hardyk kern.info kernel: [    0.304284] omap_i2c 44e0b000.i2c: could not find pctldev for node /ocp/l4_wkup@44c00000/scm@210000/pinmux@800/pinmux_i2c0_pins, deferring probe
+Jan  1 00:00:02 hardyk kern.info kernel: [    0.304408] omap_i2c 4819c000.i2c: could not find pctldev for node /ocp/l4_wkup@44c00000/scm@210000/pinmux@800/pinmux_i2c2_pins, deferring probe
+Jan  1 00:00:02 hardyk kern.info kernel: [    0.304645] pps_core: LinuxPPS API ver. 1 registered
+Jan  1 00:00:02 hardyk kern.info kernel: [    0.304662] pps_core: Software ver. 5.3.6 - Copyright 2005-2007 Rodolfo Giometti <giometti@linux.it>
+Jan  1 00:00:02 hardyk kern.info kernel: [    0.304710] PTP clock support registered
+Jan  1 00:00:02 hardyk kern.info kernel: [    0.308361] clocksource: Switched to clocksource timer1
+Jan  1 00:00:02 hardyk kern.notice kernel: [    0.442975] VFS: Disk quotas dquot_6.6.0
+Jan  1 00:00:02 hardyk kern.info kernel: [    0.443162] VFS: Dquot-cache hash table entries: 1024 (order 0, 4096 bytes)
+Jan  1 00:00:02 hardyk kern.info kernel: [    0.467370] NET: Registered protocol family 2
+Jan  1 00:00:02 hardyk kern.info kernel: [    0.469397] TCP established hash table entries: 4096 (order: 2, 16384 bytes)
+Jan  1 00:00:02 hardyk kern.info kernel: [    0.469501] TCP bind hash table entries: 4096 (order: 5, 147456 bytes)
+Jan  1 00:00:02 hardyk kern.info kernel: [    0.470674] TCP: Hash tables configured (established 4096 bind 4096)
+Jan  1 00:00:02 hardyk kern.info kernel: [    0.471063] UDP hash table entries: 256 (order: 2, 20480 bytes)
+Jan  1 00:00:02 hardyk kern.info kernel: [    0.471255] UDP-Lite hash table entries: 256 (order: 2, 20480 bytes)
+Jan  1 00:00:02 hardyk kern.info kernel: [    0.472037] NET: Registered protocol family 1
+Jan  1 00:00:02 hardyk kern.info kernel: [    0.474127] RPC: Registered named UNIX socket transport module.
+Jan  1 00:00:02 hardyk kern.info kernel: [    0.474174] RPC: Registered udp transport module.
+Jan  1 00:00:02 hardyk kern.info kernel: [    0.474189] RPC: Registered tcp transport module.
+Jan  1 00:00:02 hardyk kern.info kernel: [    0.474204] RPC: Registered tcp NFSv4.1 backchannel transport module.
+Jan  1 00:00:02 hardyk kern.warn kernel: [    0.476605] hw perfevents: no interrupt-affinity property for /pmu, guessing.
+Jan  1 00:00:02 hardyk kern.info kernel: [    0.477575] hw perfevents: enabled with armv7_cortex_a8 PMU driver, 5 counters available
+Jan  1 00:00:02 hardyk kern.info kernel: [    0.480141] audit: initializing netlink subsys (disabled)
+Jan  1 00:00:02 hardyk kern.notice kernel: [    0.482696] audit: type=2000 audit(0.470:1): state=initialized audit_enabled=0 res=1
+Jan  1 00:00:02 hardyk kern.info kernel: [    0.483034] workingset: timestamp_bits=14 max_order=17 bucket_order=3
+Jan  1 00:00:02 hardyk kern.notice kernel: [    0.485755] NFS: Registering the id_resolver key type
+Jan  1 00:00:02 hardyk kern.notice kernel: [    0.486124] Key type id_resolver registered
+Jan  1 00:00:02 hardyk kern.notice kernel: [    0.486162] Key type id_legacy registered
+Jan  1 00:00:02 hardyk kern.info kernel: [    0.486311] jffs2: version 2.2. (NAND) (SUMMARY)  © 2001-2006 Red Hat, Inc.
+Jan  1 00:00:02 hardyk kern.info kernel: [    0.492994] io scheduler noop registered
+Jan  1 00:00:02 hardyk kern.info kernel: [    0.493027] io scheduler deadline registered
+Jan  1 00:00:02 hardyk kern.info kernel: [    0.493155] io scheduler cfq registered (default)
+Jan  1 00:00:02 hardyk kern.info kernel: [    0.493174] io scheduler mq-deadline registered
+Jan  1 00:00:02 hardyk kern.info kernel: [    0.493190] io scheduler kyber registered
+Jan  1 00:00:02 hardyk kern.info kernel: [    0.495225] pinctrl-single 44e10800.pinmux: 142 pins at pa f9e10800 size 568
+Jan  1 00:00:02 hardyk kern.info kernel: [    0.499694] Serial: 8250/16550 driver, 6 ports, IRQ sharing enabled
+Jan  1 00:00:02 hardyk kern.info kernel: [    0.505133] omap_uart 44e09000.serial: no wakeirq for uart0
+Jan  1 00:00:02 hardyk kern.debug kernel: [    0.505177] of_get_named_gpiod_flags: can't parse 'rts-gpio' property of node '/ocp/serial@44e09000[0]'
+Jan  1 00:00:02 hardyk kern.info kernel: [    0.505576] 44e09000.serial: ttyO0 at MMIO 0x44e09000 (irq = 30, base_baud = 3000000) is a OMAP UART0
+Jan  1 00:00:02 hardyk kern.info kernel: [    1.229207] console [ttyO0] enabled
+Jan  1 00:00:02 hardyk kern.info kernel: [    1.234407] omap_uart 48024000.serial: no wakeirq for uart2
+Jan  1 00:00:02 hardyk kern.debug kernel: [    1.240433] of_get_named_gpiod_flags: can't parse 'rts-gpio' property of node '/ocp/serial@48024000[0]'
+Jan  1 00:00:02 hardyk kern.info kernel: [    1.240798] 48024000.serial: ttyO2 at MMIO 0x48024000 (irq = 31, base_baud = 3000000) is a OMAP UART2
+Jan  1 00:00:02 hardyk kern.info kernel: [    1.278143] brd: module loaded
+Jan  1 00:00:02 hardyk kern.info kernel: [    1.306645] loop: module loaded
+Jan  1 00:00:02 hardyk kern.err kernel: [    1.312386] mtdoops: mtd device (mtddev=name/number) must be supplied
+Jan  1 00:00:02 hardyk kern.debug kernel: [    1.321677] mdio_bus fixed-0: GPIO lookup for consumer reset
+Jan  1 00:00:02 hardyk kern.debug kernel: [    1.321696] mdio_bus fixed-0: using lookup tables for GPIO lookup
+Jan  1 00:00:02 hardyk kern.debug kernel: [    1.321788] mdio_bus fixed-0: lookup for GPIO reset failed
+Jan  1 00:00:02 hardyk kern.info kernel: [    1.321991] libphy: Fixed MDIO Bus: probed
+Jan  1 00:00:02 hardyk kern.debug kernel: [    1.343834] mdio_bus 4a101000.mdio: GPIO lookup for consumer reset
+Jan  1 00:00:02 hardyk kern.debug kernel: [    1.343860] mdio_bus 4a101000.mdio: using lookup tables for GPIO lookup
+Jan  1 00:00:02 hardyk kern.debug kernel: [    1.343876] mdio_bus 4a101000.mdio: lookup for GPIO reset failed
+Jan  1 00:00:02 hardyk kern.info kernel: [    1.398400] davinci_mdio 4a101000.mdio: davinci mdio revision 1.6, bus freq 1000000
+Jan  1 00:00:02 hardyk kern.info kernel: [    1.406427] davinci_mdio 4a101000.mdio: detected phy mask fffffffe
+Jan  1 00:00:02 hardyk kern.info kernel: [    1.417070] libphy: 4a101000.mdio: probed
+Jan  1 00:00:02 hardyk kern.info kernel: [    1.421508] davinci_mdio 4a101000.mdio: phy[0]: device 4a101000.mdio:00, driver SMSC LAN8710/LAN8720
+Jan  1 00:00:02 hardyk kern.info kernel: [    1.432506] cpsw 4a100000.ethernet: Detected MACID = 38:d2:69:5d:04:95
+Jan  1 00:00:02 hardyk kern.info kernel: [    1.439945] cpsw 4a100000.ethernet: initialized cpsw ale version 1.4
+Jan  1 00:00:02 hardyk kern.info kernel: [    1.446589] cpsw 4a100000.ethernet: ALE Table size 1024
+Jan  1 00:00:02 hardyk kern.info kernel: [    1.452249] cpsw 4a100000.ethernet: cpts: overflow check period 500 (jiffies)
+Jan  1 00:00:02 hardyk kern.info kernel: [    1.462827] i2c /dev entries driver
+Jan  1 00:00:02 hardyk kern.debug kernel: [    1.470098] omap_hsmmc 48060000.mmc: GPIO lookup for consumer cd
+Jan  1 00:00:02 hardyk kern.debug kernel: [    1.470118] omap_hsmmc 48060000.mmc: using device tree for GPIO lookup
+Jan  1 00:00:02 hardyk kern.debug kernel: [    1.470167] of_get_named_gpiod_flags: parsed 'cd-gpios' property of node '/ocp/mmc@48060000[0]' - status (0)
+Jan  1 00:00:02 hardyk kern.info kernel: [    1.470288] omap_hsmmc 48060000.mmc: Got CD GPIO
+Jan  1 00:00:02 hardyk kern.debug kernel: [    1.475155] omap_hsmmc 48060000.mmc: GPIO lookup for consumer wp
+Jan  1 00:00:02 hardyk kern.debug kernel: [    1.475167] omap_hsmmc 48060000.mmc: using device tree for GPIO lookup
+Jan  1 00:00:02 hardyk kern.debug kernel: [    1.475184] of_get_named_gpiod_flags: can't parse 'wp-gpios' property of node '/ocp/mmc@48060000[0]'
+Jan  1 00:00:02 hardyk kern.debug kernel: [    1.475199] of_get_named_gpiod_flags: can't parse 'wp-gpio' property of node '/ocp/mmc@48060000[0]'
+Jan  1 00:00:02 hardyk kern.debug kernel: [    1.475211] omap_hsmmc 48060000.mmc: using lookup tables for GPIO lookup
+Jan  1 00:00:02 hardyk kern.debug kernel: [    1.475227] omap_hsmmc 48060000.mmc: lookup for GPIO wp failed
+Jan  1 00:00:02 hardyk kern.debug kernel: [    1.530419] omap_hsmmc 481d8000.mmc: GPIO lookup for consumer cd
+Jan  1 00:00:02 hardyk kern.debug kernel: [    1.530440] omap_hsmmc 481d8000.mmc: using device tree for GPIO lookup
+Jan  1 00:00:02 hardyk kern.debug kernel: [    1.530462] of_get_named_gpiod_flags: can't parse 'cd-gpios' property of node '/ocp/mmc@481d8000[0]'
+Jan  1 00:00:02 hardyk kern.debug kernel: [    1.530478] of_get_named_gpiod_flags: can't parse 'cd-gpio' property of node '/ocp/mmc@481d8000[0]'
+Jan  1 00:00:02 hardyk kern.debug kernel: [    1.530490] omap_hsmmc 481d8000.mmc: using lookup tables for GPIO lookup
+Jan  1 00:00:02 hardyk kern.debug kernel: [    1.530506] omap_hsmmc 481d8000.mmc: lookup for GPIO cd failed
+Jan  1 00:00:02 hardyk kern.debug kernel: [    1.530525] omap_hsmmc 481d8000.mmc: GPIO lookup for consumer wp
+Jan  1 00:00:02 hardyk kern.debug kernel: [    1.530537] omap_hsmmc 481d8000.mmc: using device tree for GPIO lookup
+Jan  1 00:00:02 hardyk kern.debug kernel: [    1.530551] of_get_named_gpiod_flags: can't parse 'wp-gpios' property of node '/ocp/mmc@481d8000[0]'
+Jan  1 00:00:02 hardyk kern.debug kernel: [    1.530565] of_get_named_gpiod_flags: can't parse 'wp-gpio' property of node '/ocp/mmc@481d8000[0]'
+Jan  1 00:00:02 hardyk kern.debug kernel: [    1.530576] omap_hsmmc 481d8000.mmc: using lookup tables for GPIO lookup
+Jan  1 00:00:02 hardyk kern.debug kernel: [    1.530589] omap_hsmmc 481d8000.mmc: lookup for GPIO wp failed
+Jan  1 00:00:02 hardyk kern.info kernel: [    1.589275] ledtrig-cpu: registered to indicate activity on CPUs
+Jan  1 00:00:02 hardyk kern.info kernel: [    1.598474] oprofile: using arm/armv7
+Jan  1 00:00:02 hardyk kern.info kernel: [    1.603132] ip_tables: (C) 2000-2006 Netfilter Core Team
+Jan  1 00:00:02 hardyk kern.info kernel: [    1.609273] Initializing XFRM netlink socket
+Jan  1 00:00:02 hardyk kern.info kernel: [    1.614175] NET: Registered protocol family 10
+Jan  1 00:00:02 hardyk kern.info kernel: [    1.626412] Segment Routing with IPv6
+Jan  1 00:00:02 hardyk kern.info kernel: [    1.630537] sit: IPv6, IPv4 and MPLS over IPv4 tunneling driver
+Jan  1 00:00:02 hardyk kern.info kernel: [    1.638695] NET: Registered protocol family 17
+Jan  1 00:00:02 hardyk kern.info kernel: [    1.643408] NET: Registered protocol family 15
+Jan  1 00:00:02 hardyk kern.notice kernel: [    1.648480] Key type dns_resolver registered
+Jan  1 00:00:02 hardyk kern.err kernel: [    1.653112] omap_voltage_late_init: Voltage driver support not added
+Jan  1 00:00:02 hardyk kern.err kernel: [    1.659843] sr_dev_init: No voltage domain specified for smartreflex0. Cannot initialize
+Jan  1 00:00:02 hardyk kern.err kernel: [    1.668357] sr_dev_init: No voltage domain specified for smartreflex1. Cannot initialize
+Jan  1 00:00:02 hardyk kern.info kernel: [    1.677254] ThumbEE CPU extension supported.
+Jan  1 00:00:02 hardyk kern.notice kernel: [    1.681835] Registering SWP/SWPB emulation handler
+Jan  1 00:00:02 hardyk kern.info kernel: [    1.686850] SmartReflex Class3 initialized
+Jan  1 00:00:02 hardyk kern.warn kernel: [    1.725194] mmc0: host does not support reading read-only switch, assuming write-enable
+Jan  1 00:00:02 hardyk kern.info kernel: [    1.738590] mmc0: new high speed SDHC card at address aaaa
+Jan  1 00:00:02 hardyk kern.info kernel: [    1.746807] mmcblk0: mmc0:aaaa SU16G 14.8 GiB 
+Jan  1 00:00:02 hardyk kern.info kernel: [    1.758157]  mmcblk0: p1 p2
+Jan  1 00:00:02 hardyk kern.notice kernel: [    1.768948] random: fast init done
+Jan  1 00:00:02 hardyk kern.info kernel: [    1.784223] mmc1: new high speed MMC card at address 0001
+Jan  1 00:00:02 hardyk kern.info kernel: [    1.792146] mmcblk1: mmc1:0001 P1XXXX 3.60 GiB 
+Jan  1 00:00:02 hardyk kern.info kernel: [    1.798379] mmcblk1boot0: mmc1:0001 P1XXXX partition 1 2.00 MiB
+Jan  1 00:00:02 hardyk kern.info kernel: [    1.805790] mmcblk1boot1: mmc1:0001 P1XXXX partition 2 2.00 MiB
+Jan  1 00:00:02 hardyk kern.info kernel: [    1.813255] mmcblk1rpmb: mmc1:0001 P1XXXX partition 3 128 KiB
+Jan  1 00:00:02 hardyk kern.info kernel: [    1.824107]  mmcblk1: p1
+Jan  1 00:00:02 hardyk kern.info kernel: [    1.835812] tps65217 0-0024: TPS65217 ID 0xe version 1.2
+Jan  1 00:00:02 hardyk kern.info kernel: [    1.842304] omap_i2c 44e0b000.i2c: bus 0 rev0.11 at 400 kHz
+Jan  1 00:00:02 hardyk kern.info kernel: [    1.852045] omap_i2c 4819c000.i2c: bus 2 rev0.11 at 100 kHz
+Jan  1 00:00:02 hardyk kern.info kernel: [    1.859543] hctosys: unable to open rtc device (rtc0)
+Jan  1 00:00:02 hardyk kern.warn kernel: [    1.864844] sr_init: No PMIC hook to init smartreflex
+Jan  1 00:00:02 hardyk kern.err kernel: [    1.870577] sr_init: platform driver register failed for SR
+Jan  1 00:00:02 hardyk kern.info kernel: [    2.131119] EXT4-fs (mmcblk0p2): mounted filesystem with ordered data mode. Opts: (null)
+Jan  1 00:00:02 hardyk kern.info kernel: [    2.140051] VFS: Mounted root (ext4 filesystem) on device 179:2.
+Jan  1 00:00:02 hardyk kern.info kernel: [    2.150839] devtmpfs: mounted
+Jan  1 00:00:02 hardyk kern.info kernel: [    2.156039] Freeing unused kernel memory: 1024K
+Jan  1 00:00:02 hardyk kern.info kernel: [    2.304586] EXT4-fs (mmcblk0p2): re-mounted. Opts: data=ordered
+Jan  1 00:00:02 hardyk kern.notice kernel: [    2.585882] random: dd: uninitialized urandom read (512 bytes read)
+Jan  1 00:00:02 hardyk kern.notice kernel: [    2.670389] random: dbus-uuidgen: uninitialized urandom read (12 bytes read)
+Jan  1 00:00:02 hardyk kern.notice kernel: [    2.677947] random: dbus-uuidgen: uninitialized urandom read (8 bytes read)
+Jan  1 00:00:02 hardyk kern.info kernel: [    2.987641] net eth0: initializing cpsw version 1.12 (0)
+Jan  1 00:00:03 hardyk kern.info kernel: [    3.089760] SMSC LAN8710/LAN8720 4a101000.mdio:00: attached PHY driver [SMSC LAN8710/LAN8720] (mii_bus:phy_addr=4a101000.mdio:00, irq=POLL)
+Jan  1 00:00:03 hardyk kern.info kernel: [    3.112837] IPv6: ADDRCONF(NETDEV_UP): eth0: link is not ready
+Jan  1 00:00:05 hardyk kern.info kernel: [    5.209785] cpsw 4a100000.ethernet eth0: Link is Up - 100Mbps/Full - flow control rx/tx
+Jan  1 00:00:05 hardyk kern.info kernel: [    5.218691] IPv6: ADDRCONF(NETDEV_CHANGE): eth0: link becomes ready
+Jan  1 00:00:07 hardyk kern.warn kernel: [    7.303194] urandom_read: 3 callbacks suppressed
+Jan  1 00:00:07 hardyk kern.notice kernel: [    7.303209] random: mktemp: uninitialized urandom read (6 bytes read)
+Jan  1 00:00:07 hardyk kern.notice kernel: [    7.526692] random: dropbear: uninitialized urandom read (32 bytes read)
+Jan  1 00:00:07 hardyk daemon.info connmand[127]: Connection Manager version 1.36
+Jan  1 00:00:07 hardyk authpriv.info dropbear[132]: Running in background
+Jan  1 00:00:07 hardyk kern.notice kernel: [    7.576816] random: connmand: uninitialized urandom read (8 bytes read)
+Jan  1 00:00:07 hardyk daemon.notice rpc.statd[141]: Version 1.3.3 starting
+Jan  1 00:00:07 hardyk daemon.notice sm-notify[143]: Version 1.3.3 starting
+Jan  1 00:00:07 hardyk daemon.err connmand[127]: iptables support missing error 2 (No such file or directory)
+Jan  1 00:00:07 hardyk daemon.warn connmand[127]: Failed to flush table 'mangle': Invalid argument
+Jan  1 00:00:07 hardyk daemon.notice rpc.statd[141]: Initializing NSM state
+Jan  1 00:00:07 hardyk daemon.warn rpc.statd[141]: Running as root.  chown /run/nfs to choose different user
+Jan  1 00:00:07 hardyk daemon.err connmand[127]: iptables support missing error 2 (No such file or directory)
+Jan  1 00:00:07 hardyk daemon.warn connmand[127]: Failed to flush table 'nat': Invalid argument
+Jan  1 00:00:07 hardyk daemon.warn connmand[127]: Cannot create /var/run/connman/resolv.conf falling back to /etc/resolv.conf
+Jan  1 00:00:07 hardyk daemon.err connmand[127]: Failed to open RFKILL control device
+Jan  1 00:00:07 hardyk daemon.info connmand[127]: lo {newlink} index 1 address 00:00:00:00:00:00 mtu 65536
+Jan  1 00:00:07 hardyk daemon.info connmand[127]: lo {newlink} index 1 operstate 0 <UNKNOWN>
+Jan  1 00:00:07 hardyk daemon.info connmand[127]: eth0 {create} index 2 type 1 <ETHER>
+Jan  1 00:00:07 hardyk daemon.info connmand[127]: eth0 {RX} 8 packets 1336 bytes
+Jan  1 00:00:07 hardyk daemon.info connmand[127]: eth0 {TX} 9 packets 1286 bytes
+Jan  1 00:00:07 hardyk daemon.info connmand[127]: eth0 {update} flags 36866 <DOWN>
+Jan  1 00:00:07 hardyk daemon.info connmand[127]: eth0 {newlink} index 2 address 38:D2:69:5D:04:95 mtu 1500
+Jan  1 00:00:07 hardyk daemon.info connmand[127]: eth0 {newlink} index 2 operstate 2 <DOWN>
+Jan  1 00:00:07 hardyk daemon.err rpc.nfsd[151]: error starting threads: errno 38 (Function not implemented)
+Jan  1 00:00:08 hardyk kern.info kernel: [    8.081790] net eth0: initializing cpsw version 1.12 (0)
+Jan  1 00:00:08 hardyk daemon.warn rpc.mountd[154]: Kernel does not have pseudo root support.
+Jan  1 00:00:08 hardyk daemon.warn rpc.mountd[154]: NFS v4 mounts will be disabled unless fsid=0
+Jan  1 00:00:08 hardyk daemon.warn rpc.mountd[154]: is specfied in /etc/exports file.
+Jan  1 00:00:08 hardyk kern.info kernel: [    8.200306] SMSC LAN8710/LAN8720 4a101000.mdio:00: attached PHY driver [SMSC LAN8710/LAN8720] (mii_bus:phy_addr=4a101000.mdio:00, irq=POLL)
+Jan  1 00:00:08 hardyk daemon.info connmand[127]: Adding interface eth0 [ ethernet ]
+Jan  1 00:00:08 hardyk daemon.info connmand[127]: sit0 {newlink} index 3 address 00:00:00:00:08:00 mtu 1480
+Jan  1 00:00:08 hardyk daemon.info connmand[127]: sit0 {newlink} index 3 operstate 2 <DOWN>
+Jan  1 00:00:08 hardyk daemon.info connmand[127]: eth0 {RX} 8 packets 1336 bytes
+Jan  1 00:00:08 hardyk daemon.info connmand[127]: eth0 {TX} 9 packets 1286 bytes
+Jan  1 00:00:08 hardyk daemon.info connmand[127]: eth0 {update} flags 36867 <UP>
+Jan  1 00:00:08 hardyk daemon.info connmand[127]: eth0 {newlink} index 2 address 38:D2:69:5D:04:95 mtu 1500
+Jan  1 00:00:08 hardyk daemon.info connmand[127]: eth0 {newlink} index 2 operstate 2 <DOWN>
+Jan  1 00:00:08 hardyk kern.info kernel: [    8.223083] IPv6: ADDRCONF(NETDEV_UP): eth0: link is not ready
+Jan  1 00:00:08 hardyk local7.info dhcpd: Internet Systems Consortium DHCP Server 4.3.6
+Jan  1 00:00:08 hardyk local7.info dhcpd: Copyright 2004-2017 Internet Systems Consortium.
+Jan  1 00:00:08 hardyk local7.info dhcpd: All rights reserved.
+Jan  1 00:00:08 hardyk local7.info dhcpd: For info, please visit https://www.isc.org/software/dhcp/
+Jan  1 00:00:08 hardyk local7.info dhcpd: Wrote 0 leases to leases file.
+Jan  1 00:00:08 hardyk local7.err dhcpd: 
+Jan  1 00:00:08 hardyk local7.err dhcpd: No subnet declaration for eth0 (no IPv4 addresses).
+Jan  1 00:00:08 hardyk local7.err dhcpd: ** Ignoring requests on eth0.  If this is not what
+Jan  1 00:00:08 hardyk local7.err dhcpd:    you want, please write a subnet declaration
+Jan  1 00:00:08 hardyk local7.err dhcpd:    in your dhcpd.conf file for the network segment
+Jan  1 00:00:08 hardyk local7.err dhcpd:    to which interface eth0 is attached. **
+Jan  1 00:00:08 hardyk local7.err dhcpd: 
+Jan  1 00:00:08 hardyk local7.info dhcpd: 
+Jan  1 00:00:08 hardyk local7.err dhcpd: Not configured to listen on any interfaces!
+Jan  1 00:00:08 hardyk local7.err dhcpd: 
+Jan  1 00:00:08 hardyk local7.err dhcpd: If you think you have received this message due to a bug rather
+Jan  1 00:00:08 hardyk local7.err dhcpd: than a configuration issue please read the section on submitting
+Jan  1 00:00:08 hardyk local7.err dhcpd: bugs on either our web page at www.isc.org or in the README file
+Jan  1 00:00:08 hardyk local7.err dhcpd: before submitting a bug.  These pages explain the proper
+Jan  1 00:00:08 hardyk local7.err dhcpd: process and the information we find helpful for debugging.
+Jan  1 00:00:08 hardyk local7.err dhcpd: 
+Jan  1 00:00:08 hardyk local7.err dhcpd: exiting.
+Jan  1 00:00:08 hardyk daemon.info : starting pid 165, tty '/dev/ttyO0': '/sbin/getty -L  ttyO0 0 vt100 '
+Jan  1 00:00:08 hardyk kern.notice kernel: [    8.362149] random: crond: uninitialized urandom read (6 bytes read)
+Jan  1 00:00:10 hardyk daemon.info connmand[127]: eth0 {add} route ff00:: gw :: scope 0 <UNIVERSE>
+Jan  1 00:00:10 hardyk daemon.info connmand[127]: eth0 {add} route fe80:: gw :: scope 0 <UNIVERSE>
+Jan  1 00:00:10 hardyk daemon.info connmand[127]: eth0 {RX} 8 packets 1336 bytes
+Jan  1 00:00:10 hardyk daemon.info connmand[127]: eth0 {TX} 9 packets 1286 bytes
+Jan  1 00:00:10 hardyk daemon.info connmand[127]: eth0 {update} flags 102467 <UP,RUNNING,LOWER_UP>
+Jan  1 00:00:10 hardyk daemon.info connmand[127]: eth0 {newlink} index 2 address 38:D2:69:5D:04:95 mtu 1500
+Jan  1 00:00:10 hardyk daemon.info connmand[127]: eth0 {newlink} index 2 operstate 6 <UP>
+Jan  1 00:00:10 hardyk kern.info kernel: [   10.329865] cpsw 4a100000.ethernet eth0: Link is Up - 100Mbps/Full - flow control rx/tx
+Jan  1 00:00:10 hardyk kern.info kernel: [   10.338488] IPv6: ADDRCONF(NETDEV_CHANGE): eth0: link becomes ready
+Jan  1 00:00:11 hardyk daemon.info connmand[127]: eth0 {add} address 192.168.0.9/24 label eth0 family 2
+Jan  1 00:00:11 hardyk daemon.info connmand[127]: eth0 {add} route 192.168.0.0 gw 0.0.0.0 scope 253 <LINK>
+Jan  1 00:00:11 hardyk daemon.info connmand[127]: eth0 {add} route 192.168.0.1 gw 0.0.0.0 scope 253 <LINK>
+Jan  1 00:00:11 hardyk daemon.info connmand[127]: eth0 {add} route 75.75.75.75 gw 192.168.0.1 scope 0 <UNIVERSE>
+Jan  1 00:00:11 hardyk daemon.info connmand[127]: eth0 {add} route 75.75.76.76 gw 192.168.0.1 scope 0 <UNIVERSE>
+Jan  1 00:00:11 hardyk daemon.info connmand[127]: eth0 {add} route 0.0.0.0 gw 192.168.0.1 scope 0 <UNIVERSE>
+Jan  1 00:00:11 hardyk daemon.err connmand[127]: Failed to find URL:http://ipv4.connman.net/online/status.html
+Jan  1 00:00:11 hardyk daemon.info connmand[127]: eth0 {add} route 212.227.81.55 gw 192.168.0.1 scope 0 <UNIVERSE>
+Jan  1 00:00:11 hardyk daemon.info connmand[127]: eth0 {add} route 2601:281:8000:dfd0:: gw :: scope 0 <UNIVERSE>
+Jan  1 00:00:12 hardyk daemon.info connmand[127]: eth0 {del} route 212.227.81.55 gw 192.168.0.1 scope 0 <UNIVERSE>
+Jan  1 00:00:13 hardyk daemon.info connmand[127]: eth0 {add} address 2601:281:8000:dfd0:3ad2:69ff:fe5d:495/64 label (null) family 10
+Jan  1 00:00:13 hardyk daemon.err connmand[127]: Failed to find URL:http://ipv6.connman.net/online/status.html
+Jan  1 00:00:13 hardyk auth.info login[165]: root login on 'ttyO0'
+Jan  1 00:00:15 hardyk daemon.info connmand[127]: eth0 {add} address 2601:281:8000:dfd0::a/64 label (null) family 10
+Feb 17 14:39:04 hardyk authpriv.info dropbear[184]: Child connection from 192.168.0.4:33876
+Feb 17 14:39:04 hardyk authpriv.info dropbear[184]: Generated hostkey /etc/dropbear/dropbear_ecdsa_host_key, fingerprint is sha1!! a3:a0:ba:af:b7:e4:fe:37:1f:8c:1a:68:6f:33:0e:68:51:f7:e5:94
+Feb 17 14:39:04 hardyk authpriv.info dropbear[184]: Exit before auth: Exited normally
+Feb 17 14:39:32 hardyk authpriv.info dropbear[185]: Child connection from 192.168.0.4:33878
+Feb 17 14:39:36 hardyk authpriv.notice dropbear[185]: Password auth succeeded for 'root' from 192.168.0.4:33878
+Feb 17 14:40:06 hardyk authpriv.info dropbear[189]: Child connection from 192.168.0.4:33880
+Feb 17 14:40:09 hardyk authpriv.notice dropbear[189]: Password auth succeeded for 'root' from 192.168.0.4:33880
+Feb 17 14:40:09 hardyk authpriv.info dropbear[189]: Exit (root): Disconnect received
+Feb 17 14:40:13 hardyk daemon.err connmand[127]: Failed to find URL:http://ipv6.connman.net/online/status.html
+Feb 17 14:40:39 hardyk kern.notice kernel: [  173.874109] random: crng init done
+Feb 17 14:41:44 hardyk kern.warn kernel: [  238.313056] my_listModule: loading out-of-tree module taints kernel.
+Feb 17 14:41:44 hardyk kern.info kernel: [  238.322164] Initalizing my module - myListModule
+Feb 17 14:41:44 hardyk kern.info kernel: [  238.327006] Data Structure used - Linked List
+Feb 17 14:41:44 hardyk kern.info kernel: [  238.331817] Entries in the Animal list
+Feb 17 14:41:44 hardyk kern.info kernel: [  238.335741] Albatross 
+Feb 17 14:41:44 hardyk kern.info kernel: [  238.335752] Alligator 
+Feb 17 14:41:44 hardyk kern.info kernel: [  238.338293] Armadillo 
+Feb 17 14:41:44 hardyk kern.info kernel: [  238.340763] Baboon 
+Feb 17 14:41:44 hardyk kern.info kernel: [  238.343228] Bat 
+Feb 17 14:41:44 hardyk kern.info kernel: [  238.345419] Bear 
+Feb 17 14:41:44 hardyk kern.info kernel: [  238.347337] Butterfly 
+Feb 17 14:41:44 hardyk kern.info kernel: [  238.349399] Camel 
+Feb 17 14:41:44 hardyk kern.info kernel: [  238.351866] Cat 
+Feb 17 14:41:44 hardyk kern.info kernel: [  238.353962] Cheetah 
+Feb 17 14:41:44 hardyk kern.info kernel: [  238.355878] Dog 
+Feb 17 14:41:44 hardyk kern.info kernel: [  238.358157] Eeagle 
+Feb 17 14:41:44 hardyk kern.info kernel: [  238.360131] Elephant 
+Feb 17 14:41:44 hardyk kern.info kernel: [  238.362327] Emu 
+Feb 17 14:41:44 hardyk kern.info kernel: [  238.364703] Fish 
+Feb 17 14:41:44 hardyk kern.info kernel: [  238.366617] Flamingo 
+Feb 17 14:41:44 hardyk kern.info kernel: [  238.368674] Gecko 
+Feb 17 14:41:44 hardyk kern.info kernel: [  238.371049] Gorilla 
+Feb 17 14:41:44 hardyk kern.info kernel: [  238.373145] Jaguar 
+Feb 17 14:41:44 hardyk kern.info kernel: [  238.375428] Lion 
+Feb 17 14:41:44 hardyk kern.info kernel: [  238.377619] Eagle 
+Feb 17 14:41:44 hardyk kern.info kernel: [  238.379673] Butterfly 
+Feb 17 14:41:44 hardyk kern.info kernel: [  238.381778] Cat 
+Feb 17 14:41:44 hardyk kern.info kernel: [  238.384241] Fish 
+Feb 17 14:41:44 hardyk kern.info kernel: [  238.386162] Flamingo 
+Feb 17 14:41:44 hardyk kern.info kernel: [  238.388175] Gecko 
+Feb 17 14:41:44 hardyk kern.info kernel: [  238.390592] Gorilla 
+Feb 17 14:41:44 hardyk kern.info kernel: [  238.392693] Baboon 
+Feb 17 14:41:44 hardyk kern.info kernel: [  238.394971] Fish 
+Feb 17 14:41:44 hardyk kern.info kernel: [  238.397164] Gorilla 
+Feb 17 14:41:44 hardyk kern.info kernel: [  238.399213] Elephant 
+Feb 17 14:41:44 hardyk kern.info kernel: [  238.401493] Jaguar 
+Feb 17 14:41:44 hardyk kern.info kernel: [  238.403864] Jaguar 
+Feb 17 14:41:44 hardyk kern.info kernel: [  238.406054] Lion 
+Feb 17 14:41:44 hardyk kern.info kernel: [  238.408294] Eagle 
+Feb 17 14:41:44 hardyk kern.info kernel: [  238.410303] Butterfly 
+Feb 17 14:41:44 hardyk kern.info kernel: [  238.412401] Elephant 
+Feb 17 14:41:44 hardyk kern.info kernel: [  238.414868] Gecko 
+Feb 17 14:41:44 hardyk kern.info kernel: [  238.417244] Gorilla 
+Feb 17 14:41:44 hardyk kern.info kernel: [  238.419385] Baboon 
+Feb 17 14:41:44 hardyk kern.info kernel: [  238.421668] Panda 
+Feb 17 14:41:44 hardyk kern.info kernel: [  238.423862] Fish 
+Feb 17 14:41:44 hardyk kern.info kernel: [  238.425962] Panda 
+Feb 17 14:41:44 hardyk kern.info kernel: [  238.427972] Elephant 
+Feb 17 14:41:44 hardyk kern.info kernel: [  238.430114] Lion 
+Feb 17 14:41:44 hardyk kern.info kernel: [  238.432488] Bear 
+Feb 17 14:41:44 hardyk kern.info kernel: [  238.434498] Eagle 
+Feb 17 14:41:44 hardyk kern.info kernel: [  238.436509] Eagle 
+Feb 17 14:41:44 hardyk kern.info kernel: [  238.438652] Bat 
+Feb 17 14:41:44 hardyk kern.info kernel: [  238.440755] Butterfly 
+Feb 17 14:41:44 hardyk kern.info kernel: [  238.442699] Duplicates present in the list
+Feb 17 14:41:44 hardyk kern.info kernel: [  238.449487] Baboon 
+Feb 17 14:41:44 hardyk kern.info kernel: [  238.449498] Bat 
+Feb 17 14:41:44 hardyk kern.info kernel: [  238.451690] Bear 
+Feb 17 14:41:44 hardyk kern.info kernel: [  238.453616] Butterfly 
+Feb 17 14:41:44 hardyk kern.info kernel: [  238.455631] Cat 
+Feb 17 14:41:44 hardyk kern.info kernel: [  238.458099] Eagle 
+Feb 17 14:41:44 hardyk kern.info kernel: [  238.460070] Elephant 
+Feb 17 14:41:44 hardyk kern.info kernel: [  238.462177] Fish 
+Feb 17 14:41:44 hardyk kern.info kernel: [  238.464550] Flamingo 
+Feb 17 14:41:44 hardyk kern.info kernel: [  238.466558] Gecko 
+Feb 17 14:41:44 hardyk kern.info kernel: [  238.468974] Gorilla 
+Feb 17 14:41:44 hardyk kern.info kernel: [  238.471077] Jaguar 
+Feb 17 14:41:44 hardyk kern.info kernel: [  238.473361] Lion 
+Feb 17 14:41:44 hardyk kern.info kernel: [  238.475551] Panda 
+Feb 17 14:41:44 hardyk kern.info kernel: [  238.477560] The Unique List is:
+Feb 17 14:41:44 hardyk kern.warn kernel: [  238.482974] Animal Type = Albatross 	 and 	 Frequency = 1
+Feb 17 14:41:44 hardyk kern.warn kernel: [  238.488652] Animal Type = Alligator 	 and 	 Frequency = 1
+Feb 17 14:41:44 hardyk kern.warn kernel: [  238.494289] Animal Type = Armadillo 	 and 	 Frequency = 1
+Feb 17 14:41:44 hardyk kern.warn kernel: [  238.499971] Animal Type = Baboon 	 and 	 Frequency = 3
+Feb 17 14:41:44 hardyk kern.warn kernel: [  238.505336] Animal Type = Bat 	 and 	 Frequency = 2
+Feb 17 14:41:44 hardyk kern.warn kernel: [  238.510470] Animal Type = Bear 	 and 	 Frequency = 2
+Feb 17 14:41:44 hardyk kern.warn kernel: [  238.515646] Animal Type = Butterfly 	 and 	 Frequency = 3
+Feb 17 14:41:44 hardyk kern.warn kernel: [  238.521325] Animal Type = Camel 	 and 	 Frequency = 1
+Feb 17 14:41:44 hardyk kern.warn kernel: [  238.526593] Animal Type = Cat 	 and 	 Frequency = 2
+Feb 17 14:41:44 hardyk kern.warn kernel: [  238.531729] Animal Type = Cheetah 	 and 	 Frequency = 1
+Feb 17 14:41:44 hardyk kern.warn kernel: [  238.537183] Animal Type = Dog 	 and 	 Frequency = 1
+Feb 17 14:41:44 hardyk kern.warn kernel: [  238.542313] Animal Type = Eagle 	 and 	 Frequency = 4
+Feb 17 14:41:44 hardyk kern.warn kernel: [  238.547593] Animal Type = Eeagle 	 and 	 Frequency = 1
+Feb 17 14:41:44 hardyk kern.warn kernel: [  238.552997] Animal Type = Elephant 	 and 	 Frequency = 4
+Feb 17 14:41:44 hardyk kern.warn kernel: [  238.558589] Animal Type = Emu 	 and 	 Frequency = 1
+Feb 17 14:41:44 hardyk kern.warn kernel: [  238.563686] Animal Type = Fish 	 and 	 Frequency = 4
+Feb 17 14:41:44 hardyk kern.warn kernel: [  238.568912] Animal Type = Flamingo 	 and 	 Frequency = 2
+Feb 17 14:41:44 hardyk kern.warn kernel: [  238.574456] Animal Type = Gecko 	 and 	 Frequency = 3
+Feb 17 14:41:44 hardyk kern.warn kernel: [  238.579770] Animal Type = Gorilla 	 and 	 Frequency = 4
+Feb 17 14:41:44 hardyk kern.warn kernel: [  238.585231] Animal Type = Jaguar 	 and 	 Frequency = 3
+Feb 17 14:41:44 hardyk kern.warn kernel: [  238.590641] Animal Type = Lion 	 and 	 Frequency = 3
+Feb 17 14:41:44 hardyk kern.warn kernel: [  238.595825] Animal Type = Panda 	 and 	 Frequency = 2
+Feb 17 14:41:44 hardyk kern.info kernel: [  238.601145] Total Number of Node in the uniqueList = 22
+Feb 17 14:41:44 hardyk kern.info kernel: [  238.606603] Total Memory allocated in the uniqueList = 704
+Feb 17 14:41:44 hardyk kern.info kernel: [  238.612380] Filter Criteria - No Filter
+Feb 17 14:41:44 hardyk kern.info kernel: [  238.616384] Data Structure used - Linked List
+Feb 17 14:41:44 hardyk kern.info kernel: [  238.621002] Contents of the list after filtering with type = none
+Feb 17 14:41:44 hardyk kern.warn kernel: [  238.627359] Albatross 
+Feb 17 14:41:44 hardyk kern.warn kernel: [  238.627368] Alligator 
+Feb 17 14:41:44 hardyk kern.warn kernel: [  238.629879] Armadillo 
+Feb 17 14:41:44 hardyk kern.warn kernel: [  238.632346] Baboon 
+Feb 17 14:41:44 hardyk kern.warn kernel: [  238.634810] Bat 
+Feb 17 14:41:44 hardyk kern.warn kernel: [  238.636996] Bear 
+Feb 17 14:41:44 hardyk kern.warn kernel: [  238.638962] Butterfly 
+Feb 17 14:41:44 hardyk kern.warn kernel: [  238.640969] Camel 
+Feb 17 14:41:44 hardyk kern.warn kernel: [  238.643436] Cat 
+Feb 17 14:41:44 hardyk kern.warn kernel: [  238.645538] Cheetah 
+Feb 17 14:41:44 hardyk kern.warn kernel: [  238.647457] Dog 
+Feb 17 14:41:44 hardyk kern.warn kernel: [  238.649786] Eagle 
+Feb 17 14:41:44 hardyk kern.warn kernel: [  238.651708] Eeagle 
+Feb 17 14:41:44 hardyk kern.warn kernel: [  238.653808] Elephant 
+Feb 17 14:41:44 hardyk kern.warn kernel: [  238.656001] Emu 
+Feb 17 14:41:44 hardyk kern.warn kernel: [  238.658425] Fish 
+Feb 17 14:41:44 hardyk kern.warn kernel: [  238.660345] Flamingo 
+Feb 17 14:41:44 hardyk kern.warn kernel: [  238.662356] Gecko 
+Feb 17 14:41:44 hardyk kern.warn kernel: [  238.664727] Gorilla 
+Feb 17 14:41:44 hardyk kern.warn kernel: [  238.666824] Jaguar 
+Feb 17 14:41:44 hardyk kern.warn kernel: [  238.669150] Lion 
+Feb 17 14:41:44 hardyk kern.warn kernel: [  238.671339] Panda 
+Feb 17 14:41:44 hardyk kern.info kernel: [  238.673354] Total number of nodes in the filtered list = 22
+Feb 17 14:41:44 hardyk kern.info kernel: [  238.681305] Total memory allocated in the filtered list = 704
+Feb 17 14:42:10 hardyk kern.info kernel: [  264.765193] Freeeing allocated memory
+Feb 17 14:42:10 hardyk kern.info kernel: [  264.769319] Amount of memory freed from the uniqueAnimalsList = 704
+Feb 17 14:42:10 hardyk kern.info kernel: [  264.775891] Amount of memory freed from the filteredAnimalsList = 704
+Feb 17 14:42:10 hardyk kern.info kernel: [  264.782715] Exiting my module - myListModule
+Feb 17 14:42:25 hardyk daemon.warn connmand[127]: IPv6 online check failed for 0xa3258 Wired
+Feb 17 14:43:40 hardyk kern.info kernel: [  354.506061] Initalizing my module - myListModule
+Feb 17 14:43:40 hardyk kern.info kernel: [  354.511164] Data Structure used - Linked List
+Feb 17 14:43:40 hardyk kern.info kernel: [  354.515718] Entries in the Animal list
+Feb 17 14:43:40 hardyk kern.info kernel: [  354.519739] Albatross 
+Feb 17 14:43:40 hardyk kern.info kernel: [  354.519750] Alligator 
+Feb 17 14:43:40 hardyk kern.info kernel: [  354.522218] Armadillo 
+Feb 17 14:43:40 hardyk kern.info kernel: [  354.524684] Baboon 
+Feb 17 14:43:40 hardyk kern.info kernel: [  354.527147] Bat 
+Feb 17 14:43:40 hardyk kern.info kernel: [  354.529390] Bear 
+Feb 17 14:43:40 hardyk kern.info kernel: [  354.531310] Butterfly 
+Feb 17 14:43:40 hardyk kern.info kernel: [  354.533323] Camel 
+Feb 17 14:43:40 hardyk kern.info kernel: [  354.535786] Cat 
+Feb 17 14:43:40 hardyk kern.info kernel: [  354.537884] Cheetah 
+Feb 17 14:43:40 hardyk kern.info kernel: [  354.539854] Dog 
+Feb 17 14:43:40 hardyk kern.info kernel: [  354.542140] Eagle 
+Feb 17 14:43:40 hardyk kern.info kernel: [  354.544061] Elephant 
+Feb 17 14:43:40 hardyk kern.info kernel: [  354.546159] Emu 
+Feb 17 14:43:40 hardyk kern.info kernel: [  354.548578] Fish 
+Feb 17 14:43:40 hardyk kern.info kernel: [  354.550497] Flamingo 
+Feb 17 14:43:40 hardyk kern.info kernel: [  354.552509] Gecko 
+Feb 17 14:43:40 hardyk kern.info kernel: [  354.554881] Gorilla 
+Feb 17 14:43:40 hardyk kern.info kernel: [  354.556984] Jaguar 
+Feb 17 14:43:40 hardyk kern.info kernel: [  354.559313] Lion 
+Feb 17 14:43:40 hardyk kern.info kernel: [  354.561506] Eagle 
+Feb 17 14:43:40 hardyk kern.info kernel: [  354.563516] Butterfly 
+Feb 17 14:43:40 hardyk kern.info kernel: [  354.565613] Cat 
+Feb 17 14:43:40 hardyk kern.info kernel: [  354.568080] Fish 
+Feb 17 14:43:40 hardyk kern.info kernel: [  354.570083] Flamingo 
+Feb 17 14:43:40 hardyk kern.info kernel: [  354.572095] Gecko 
+Feb 17 14:43:40 hardyk kern.info kernel: [  354.574471] Gorilla 
+Feb 17 14:43:40 hardyk kern.info kernel: [  354.576567] Baboon 
+Feb 17 14:43:40 hardyk kern.info kernel: [  354.578901] Fish 
+Feb 17 14:43:40 hardyk kern.info kernel: [  354.581094] Gorilla 
+Feb 17 14:43:40 hardyk kern.info kernel: [  354.583104] Elephant 
+Feb 17 14:43:40 hardyk kern.info kernel: [  354.585387] Jaguar 
+Feb 17 14:43:40 hardyk kern.info kernel: [  354.587760] Jaguar 
+Feb 17 14:43:40 hardyk kern.info kernel: [  354.590004] Lion 
+Feb 17 14:43:40 hardyk kern.info kernel: [  354.592201] Eagle 
+Feb 17 14:43:40 hardyk kern.info kernel: [  354.594214] Butterfly 
+Feb 17 14:43:40 hardyk kern.info kernel: [  354.596315] Elephant 
+Feb 17 14:43:40 hardyk kern.info kernel: [  354.598824] Gecko 
+Feb 17 14:43:40 hardyk kern.info kernel: [  354.601204] Gorilla 
+Feb 17 14:43:40 hardyk kern.info kernel: [  354.603309] Baboon 
+Feb 17 14:43:40 hardyk kern.info kernel: [  354.605590] Panda 
+Feb 17 14:43:40 hardyk kern.info kernel: [  354.607780] Fish 
+Feb 17 14:43:40 hardyk kern.info kernel: [  354.609927] Panda 
+Feb 17 14:43:40 hardyk kern.info kernel: [  354.611939] Elephant 
+Feb 17 14:43:40 hardyk kern.info kernel: [  354.614042] Lion 
+Feb 17 14:43:40 hardyk kern.info kernel: [  354.616419] Bear 
+Feb 17 14:43:40 hardyk kern.info kernel: [  354.618478] Eagle 
+Feb 17 14:43:40 hardyk kern.info kernel: [  354.620489] Eagle 
+Feb 17 14:43:40 hardyk kern.info kernel: [  354.622588] Bat 
+Feb 17 14:43:40 hardyk kern.info kernel: [  354.624692] Butterfly 
+Feb 17 14:43:40 hardyk kern.info kernel: [  354.626639] Duplicates present in the list
+Feb 17 14:43:40 hardyk kern.info kernel: [  354.633431] Baboon 
+Feb 17 14:43:40 hardyk kern.info kernel: [  354.633442] Bat 
+Feb 17 14:43:40 hardyk kern.info kernel: [  354.635637] Bear 
+Feb 17 14:43:40 hardyk kern.info kernel: [  354.637560] Butterfly 
+Feb 17 14:43:40 hardyk kern.info kernel: [  354.639622] Cat 
+Feb 17 14:43:40 hardyk kern.info kernel: [  354.642098] Eagle 
+Feb 17 14:43:40 hardyk kern.info kernel: [  354.644025] Elephant 
+Feb 17 14:43:40 hardyk kern.info kernel: [  354.646127] Fish 
+Feb 17 14:43:40 hardyk kern.info kernel: [  354.648552] Flamingo 
+Feb 17 14:43:40 hardyk kern.info kernel: [  354.650569] Gecko 
+Feb 17 14:43:40 hardyk kern.info kernel: [  354.652943] Gorilla 
+Feb 17 14:43:40 hardyk kern.info kernel: [  354.655042] Jaguar 
+Feb 17 14:43:40 hardyk kern.info kernel: [  354.657329] Lion 
+Feb 17 14:43:40 hardyk kern.info kernel: [  354.659579] Panda 
+Feb 17 14:43:40 hardyk kern.info kernel: [  354.661596] The Unique List is:
+Feb 17 14:43:40 hardyk kern.warn kernel: [  354.666969] Animal Type = Albatross 	 and 	 Frequency = 1
+Feb 17 14:43:40 hardyk kern.warn kernel: [  354.672659] Animal Type = Alligator 	 and 	 Frequency = 1
+Feb 17 14:43:40 hardyk kern.warn kernel: [  354.678334] Animal Type = Armadillo 	 and 	 Frequency = 1
+Feb 17 14:43:40 hardyk kern.warn kernel: [  354.683968] Animal Type = Baboon 	 and 	 Frequency = 3
+Feb 17 14:43:40 hardyk kern.warn kernel: [  354.689375] Animal Type = Bat 	 and 	 Frequency = 2
+Feb 17 14:43:40 hardyk kern.warn kernel: [  354.694476] Animal Type = Bear 	 and 	 Frequency = 2
+Feb 17 14:43:40 hardyk kern.warn kernel: [  354.699707] Animal Type = Butterfly 	 and 	 Frequency = 3
+Feb 17 14:43:40 hardyk kern.warn kernel: [  354.705339] Animal Type = Camel 	 and 	 Frequency = 1
+Feb 17 14:43:40 hardyk kern.warn kernel: [  354.710659] Animal Type = Cat 	 and 	 Frequency = 2
+Feb 17 14:43:40 hardyk kern.warn kernel: [  354.715753] Animal Type = Cheetah 	 and 	 Frequency = 1
+Feb 17 14:43:40 hardyk kern.warn kernel: [  354.721256] Animal Type = Dog 	 and 	 Frequency = 1
+Feb 17 14:43:40 hardyk kern.warn kernel: [  354.726352] Animal Type = Eagle 	 and 	 Frequency = 5
+Feb 17 14:43:40 hardyk kern.warn kernel: [  354.731668] Animal Type = Elephant 	 and 	 Frequency = 4
+Feb 17 14:43:40 hardyk kern.warn kernel: [  354.737220] Animal Type = Emu 	 and 	 Frequency = 1
+Feb 17 14:43:40 hardyk kern.warn kernel: [  354.742356] Animal Type = Fish 	 and 	 Frequency = 4
+Feb 17 14:43:40 hardyk kern.warn kernel: [  354.747537] Animal Type = Flamingo 	 and 	 Frequency = 2
+Feb 17 14:43:40 hardyk kern.warn kernel: [  354.753128] Animal Type = Gecko 	 and 	 Frequency = 3
+Feb 17 14:43:40 hardyk kern.warn kernel: [  354.758445] Animal Type = Gorilla 	 and 	 Frequency = 4
+Feb 17 14:43:40 hardyk kern.warn kernel: [  354.763898] Animal Type = Jaguar 	 and 	 Frequency = 3
+Feb 17 14:43:40 hardyk kern.warn kernel: [  354.769310] Animal Type = Lion 	 and 	 Frequency = 3
+Feb 17 14:43:40 hardyk kern.warn kernel: [  354.774495] Animal Type = Panda 	 and 	 Frequency = 2
+Feb 17 14:43:40 hardyk kern.info kernel: [  354.779811] Total Number of Node in the uniqueList = 21
+Feb 17 14:43:40 hardyk kern.info kernel: [  354.785262] Total Memory allocated in the uniqueList = 672
+Feb 17 14:43:40 hardyk kern.info kernel: [  354.791031] Filter Criteria - No Filter
+Feb 17 14:43:40 hardyk kern.info kernel: [  354.795033] Data Structure used - Linked List
+Feb 17 14:43:40 hardyk kern.info kernel: [  354.799656] Contents of the list after filtering with type = none
+Feb 17 14:43:40 hardyk kern.warn kernel: [  354.806014] Albatross 
+Feb 17 14:43:40 hardyk kern.warn kernel: [  354.806023] Alligator 
+Feb 17 14:43:40 hardyk kern.warn kernel: [  354.808531] Armadillo 
+Feb 17 14:43:40 hardyk kern.warn kernel: [  354.811000] Baboon 
+Feb 17 14:43:40 hardyk kern.warn kernel: [  354.813470] Bat 
+Feb 17 14:43:40 hardyk kern.warn kernel: [  354.815663] Bear 
+Feb 17 14:43:40 hardyk kern.warn kernel: [  354.817580] Butterfly 
+Feb 17 14:43:40 hardyk kern.warn kernel: [  354.819638] Camel 
+Feb 17 14:43:40 hardyk kern.warn kernel: [  354.822104] Cat 
+Feb 17 14:43:40 hardyk kern.warn kernel: [  354.824210] Cheetah 
+Feb 17 14:43:40 hardyk kern.warn kernel: [  354.826131] Dog 
+Feb 17 14:43:40 hardyk kern.warn kernel: [  354.828462] Eagle 
+Feb 17 14:43:40 hardyk kern.warn kernel: [  354.830381] Elephant 
+Feb 17 14:43:40 hardyk kern.warn kernel: [  354.832479] Emu 
+Feb 17 14:43:40 hardyk kern.warn kernel: [  354.834851] Fish 
+Feb 17 14:43:40 hardyk kern.warn kernel: [  354.836772] Flamingo 
+Feb 17 14:43:40 hardyk kern.warn kernel: [  354.838828] Gecko 
+Feb 17 14:43:40 hardyk kern.warn kernel: [  354.841198] Gorilla 
+Feb 17 14:43:40 hardyk kern.warn kernel: [  354.843296] Jaguar 
+Feb 17 14:43:40 hardyk kern.warn kernel: [  354.845585] Lion 
+Feb 17 14:43:40 hardyk kern.warn kernel: [  354.847778] Panda 
+Feb 17 14:43:40 hardyk kern.info kernel: [  354.849836] Total number of nodes in the filtered list = 21
+Feb 17 14:43:40 hardyk kern.info kernel: [  354.857744] Total memory allocated in the filtered list = 672
+Feb 17 14:46:04 hardyk kern.info kernel: [  498.710384] Freeeing allocated memory
+Feb 17 14:46:04 hardyk kern.info kernel: [  498.714265] Amount of memory freed from the uniqueAnimalsList = 672
+Feb 17 14:46:04 hardyk kern.info kernel: [  498.721061] Amount of memory freed from the filteredAnimalsList = 672
+Feb 17 14:46:04 hardyk kern.info kernel: [  498.727787] Exiting my module - myListModule
+# 
