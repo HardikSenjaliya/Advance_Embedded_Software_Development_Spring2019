@@ -19,3 +19,4 @@ run:
 clean:
 	-rm -f *.o
 	-rm -f pthreads
+	-rm -f log*.txt
