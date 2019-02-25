@@ -1,6 +1,8 @@
 CC = gcc
 #CC = arm-buildroot-linux-uclibcgnueabihf-gcc
-CFLAGS = -O0 -g -W
+CFLAGS = -g -W
+PATH := $(PATH):/home/hardyk/buildroot/output/host/usr/bin
+
 
 CFILES = pthreads.c
 OBJS = ${CFILES:.c=.o}
