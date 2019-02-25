@@ -7,30 +7,34 @@
 
 
 #include <stdio.h>
-#include <time.h>
-#include <pthread.h>
 #include <unistd.h>
 #include <stdlib.h>
 #include <ctype.h>
 #include <string.h>
-#include <stdint.h>
+#include <pthread.h>
+#include <semaphore.h>
+#include <sys/signal.h>
+#include <sys/time.h>
 #include <sys/types.h>
 #include <sys/syscall.h>
 
-
-//#define NSEC_PER_SEC (1000000000)
-//#define NSEC_PER_MSEC (1000000)
-#define NSEC_PER_MICROSEC 					(1000)
 #define	NUMBER_OF_THREADS 					(2)
 #define SIZE_ROW							(256)
 #define SIZE_COL							(2)
+#define MSEC_100							(100)
+#define MSEC_TO_NSEC						(1000000)
+#define NSEC_TO_SEC							(1000000000)
 #define MDT									(-7)
 
 /*Function prototype*/
 void readMapChars(FILE *fp, int array[SIZE_ROW][SIZE_COL]);
+void createPeriodicThread(void);
+void timerHandler(union sigval);
 
-/*Mutex for synchronized operation to write into logfile*/
+/*Mutex and semaphore for synchronized operation to write into logfile*/
 pthread_mutex_t mFile, mTime;
+sem_t sFile;
+
 
 /*Structure to pass data for thread function*/
 typedef struct threadData
@@ -45,6 +49,46 @@ FILE *pLogFile;
 /*global: clock/time related variables*/
 time_t currentTime;
 struct tm *cTime;
+
+
+void timerHandler(union sigval arg){
+
+	printf("Inside timer handler\n");
+	/*timer expired, run thread1*/
+	sem_post(&sFile);
+}
+
+
+void createPeriodicThread(){
+
+	timer_t idTimer;
+	struct itimerspec ts;
+	struct sigevent se;
+
+	/*Initialize the segevent structure to cause the
+	 * signal to handle the event by creating a new thread*/
+	se.sigev_notify = SIGEV_THREAD;
+	se.sigev_value.sival_ptr = &idTimer;
+	se.sigev_notify_function = timerHandler;
+	se.sigev_notify_attributes = NULL;
+
+	/*Initialize the timerspec structure for required
+	 * period of 100ms*/
+	long long int nanoSec = MSEC_100 * MSEC_TO_NSEC;
+	ts.it_value.tv_sec = nanoSec / NSEC_TO_SEC;
+	ts.it_value.tv_nsec =  nanoSec % NSEC_TO_SEC;
+	ts.it_interval.tv_sec = ts.it_value.tv_sec;
+	ts.it_interval.tv_nsec = ts.it_value.tv_nsec;
+
+	/*create a new timer*/
+	if((timer_create(CLOCK_MONOTONIC, &se, &idTimer)) == -1)
+		printf("ERROR - creating a new timer failed\n");
+
+	/*Set the timer to be periodic at 100msec*/
+	if((timer_settime(idTimer, 0, &ts, 0)) == -1)
+		printf("ERROR - setting up a period of the timer\n");
+}
+
 
 void readMapChars(FILE *fp, int array[SIZE_ROW][SIZE_COL]){
 
@@ -127,6 +171,9 @@ void *funThread0(void *arg){
 
 void *funThread1(void *arg){
 
+	long int cpuStat[10];
+	char name[5];
+
 	/*Get an exclusive access of a global clock/time variabels*/
 	pthread_mutex_lock(&mTime);
 	time(&currentTime);
@@ -139,6 +186,12 @@ void *funThread1(void *arg){
 
 	printf("thread1 %lu and %d \n", posixID, linuxID);
 
+	/*Wait till timer expires*/
+	sem_wait(&sFile);
+
+	printf("semaphore released\n");
+
+	/*get the exclusive access to logfile*/
 	pthread_mutex_lock(&mFile);
 	pLogFile = fopen(data->fileName, "a");
 	if(pLogFile == NULL)
@@ -148,8 +201,15 @@ void *funThread1(void *arg){
 	fprintf(pLogFile, "Thread1 Starting time : %02d:%02d:%02d\n", (cTime->tm_hour), cTime->tm_min, cTime->tm_sec);
 	fprintf(pLogFile, "Thread1 POSIX id is %lu and LINUX id is %d\n", posixID, linuxID);
 
-	FILE *pStat = fopen("/proc/stat", "r");
-
+	/*open stat file to read cpu usage and log the usage into logfile*/
+	FILE *pStatFile = fopen("/proc/stat", "r");
+	fscanf(pStatFile, "%s %ld %ld %ld %ld %ld %ld %ld %ld %ld %ld",
+						name, &cpuStat[0], &cpuStat[1], &cpuStat[2], &cpuStat[3], &cpuStat[4],
+						&cpuStat[5], &cpuStat[6], &cpuStat[7], &cpuStat[8], &cpuStat[9]);
+	fclose(pStatFile);
+	fprintf(pLogFile, "CPU Utilization\n %s\t%ld\t%ld\t%ld\t%ld\t%ld\t%ld\t%ld\t%ld\t%ld\t%ld\n",
+						name, cpuStat[0], cpuStat[1], cpuStat[2], cpuStat[3], cpuStat[4],
+						cpuStat[5], cpuStat[6], cpuStat[7], cpuStat[8], cpuStat[9]);
 
 	time(&currentTime);
 	cTime = gmtime(&currentTime);
@@ -169,8 +229,16 @@ int main(int argc, char **argv){
 	threadData_t threadData[NUMBER_OF_THREADS];
 	pthread_t threads[NUMBER_OF_THREADS];
 
-	pthread_mutex_init(&mFile, NULL);
-	pthread_mutex_init(&mTime, NULL);
+	/*Initialize mutex and semaphore*/
+	if(pthread_mutex_init(&mFile, NULL))
+		printf("ERROR - initializing mFile mutex\n");
+
+	if(pthread_mutex_init(&mTime, NULL))
+		printf("ERROR - initializing mTime mutex\n");
+
+	if((sem_init(&sFile, 0, 0)) == -1)
+		printf("ERROR - initializing a sFile semaphore\n");
+
 
 	int index = 0;
 
@@ -186,19 +254,22 @@ int main(int argc, char **argv){
 		threadData[index].fileName = logFile;
 	}
 
+	/*Create and set the timer*/
+	createPeriodicThread();
+
 	/*Create two threads*/
 	if(pthread_create(&threads[0], NULL, funThread0, (void*)&threadData[0]))
-		printf("Error while spawning a thread\n");
-	//sleep(1);
+		printf("ERROR - spawning a thread0\n");
+
 	if(pthread_create(&threads[1], NULL, funThread1, (void*)&threadData[1]))
-		printf("Error while spawning a thread\n");
-	//sleep(1);
+		printf("ERROR - spawning a thread1\n");
+
 
 	/*Main threads waits for two child threads to complete the execution*/
 	for(index = 0; index < NUMBER_OF_THREADS; index++){
 
 		if(pthread_join(threads[index], NULL)){
-			printf("Error in pthread join");
+			printf("ERROR - pthread join\n");
 		}
 	}
 
