@@ -1,0 +1,52 @@
+[9348965938369]IPC - Sockets
+Client Process ID: 5574
+Allocated File Descriptor: 3
+[9348965982954] Client Sending: String - uOPVkrNoCy stringLength - 10, LED status - 0
+[9349966379291] Client Sending: String - sAXVHLhFamhPi stringLength - 13, LED status - 0
+[9350967068347] Client Sending: String - gf stringLength - 2, LED status - 0
+[9351967751026] Client Sending: String - lARFpHBzYpOBOu stringLength - 14, LED status - 0
+[9352968433842] Client Sending: String - osQVdXBejIUsdbxd stringLength - 16, LED status - 0
+[9353968652611] Client Sending: String - YUSnCtNAIBcwWWLoMHsJiwTRrlUsJX stringLength - 30, LED status - 0
+[9354969285159] Client Sending: String -  stringLength - 0, LED status - 0
+[9355969971966] Client Sending: String - SwWuQJVzlXVhTHwG stringLength - 16, LED status - 0
+[9356970640807] Client Sending: String - OpxljoCviVfgzNZWJtMtpmEmhMg stringLength - 27, LED status - 0
+[9357970878649] Client Sending: String - iMdXcBjmPMIYHNehBedkx stringLength - 21, LED status - 0
+[9339959889534]IPC - Sockets
+Client Process ID: 5574
+Allocated File Descriptor: 3
+[9339959943183] Client Receiving: String - uOPVkrNoCy stringLength - 10, LED status - 0
+[9340960707682] Client Receiving: String - sAXVHLhFamhPi stringLength - 13, LED status - 0
+[9341961392173] Client Receiving: String - gf stringLength - 2, LED status - 0
+[9342961919558] Client Receiving: String - lARFpHBzYpOBOu stringLength - 14, LED status - 0
+[9343962496178] Client Receiving: String - osQVdXBejIUsdbxd stringLength - 16, LED status - 0
+[9344963198308] Client Receiving: String - YUSnCtNAIBcwWWLoMHsJiwTRrlUsJX stringLength - 30, LED status - 0
+[9345963859474] Client Receiving: String -  stringLength - 0, LED status - 0
+[9346964541088] Client Receiving: String - SwWuQJVzlXVhTHwG stringLength - 16, LED status - 0
+[9347965184854] Client Receiving: String - OpxljoCviVfgzNZWJtMtpmEmhMg stringLength - 27, LED status - 0
+[9348965878700] Client Receiving: String - iMdXcBjmPMIYHNehBedkx stringLength - 21, LED status - 0
+[9349966430192]IPC - Sockets
+Server Process ID: 5573
+Allocated File Descriptor: 4
+[9349966497424]Server Receiving: String - uOPVkrNoCy stringLength - 10, LED status - 0
+[9350967256098]Server Receiving: String - gf stringLength - 2, LED status - 0
+[9351967948310]Server Receiving: String - lARFpHBzYpOBOu stringLength - 14, LED status - 0
+[9352968635452]Server Receiving: String - osQVdXBejIUsdbxd stringLength - 16, LED status - 0
+[9353968776275]Server Receiving: String - YUSnCtNAIBcwWWLoMHsJiwTRrlUsJX stringLength - 30, LED status - 0
+[9354969482714]Server Receiving: String -  stringLength - 0, LED status - 0
+[9355970168713]Server Receiving: String - SwWuQJVzlXVhTHwG stringLength - 16, LED status - 0
+[9356970842320]Server Receiving: String - OpxljoCviVfgzNZWJtMtpmEmhMg stringLength - 27, LED status - 0
+[9357971005766]Server Receiving: String - iMdXcBjmPMIYHNehBedkx stringLength - 21, LED status - 0
+[9358971675549]Server Receiving: String - iMdXcBjmPMIYHNehBedkx stringLength - 21, LED status - 0
+[9339959918055]IPC - Sockets
+Server Process ID: 5573
+Allocated File Descriptor: 4
+[9339959928495]Server Sending: String - uOPVkrNoCy stringLength - 10, LED status - 0
+[9340960513924]Server Sending: String - sAXVHLhFamhPi stringLength - 13, LED status - 0
+[9341961200547]Server Sending: String - gf stringLength - 2, LED status - 0
+[9342961721561]Server Sending: String - lARFpHBzYpOBOu stringLength - 14, LED status - 0
+[9343962324092]Server Sending: String - osQVdXBejIUsdbxd stringLength - 16, LED status - 0
+[9344963003029]Server Sending: String - YUSnCtNAIBcwWWLoMHsJiwTRrlUsJX stringLength - 30, LED status - 0
+[9345963678422]Server Sending: String -  stringLength - 0, LED status - 0
+[9346964361214]Server Sending: String - SwWuQJVzlXVhTHwG stringLength - 16, LED status - 0
+[9347964995808]Server Sending: String - OpxljoCviVfgzNZWJtMtpmEmhMg stringLength - 27, LED status - 0
+[9348965684666]Server Sending: String - iMdXcBjmPMIYHNehBedkx stringLength - 21, LED status - 0
