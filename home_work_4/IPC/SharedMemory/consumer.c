@@ -82,13 +82,13 @@ int main(void){
 	sem_t *semaphoreP = sem_open(semNameP, 0);
 	if(semaphoreP == SEM_FAILED){
 		perror("ERROR: sem_open producer");
-		//exit(1);
+		exit(1);
 	}
 
 	sem_t *semaphoreC = sem_open(semNameC, 0);
 	if(semaphoreC == SEM_FAILED){
 		perror("ERROR: sem_open consumer");
-		//exit(1);
+		exit(1);
 	}
 	
 	if(0 > sem_wait(semaphoreP))

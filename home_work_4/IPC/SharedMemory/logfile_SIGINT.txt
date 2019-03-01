@@ -1,0 +1,3 @@
+[0]SIGINT signal Received...EXITING...[43138036929018]IPC - Shared Memory
+Producer Process ID: 32032
+[43138037316059]Produucer Sending: String - uOPVkrNoCy stringLength - 10, LED status - 1

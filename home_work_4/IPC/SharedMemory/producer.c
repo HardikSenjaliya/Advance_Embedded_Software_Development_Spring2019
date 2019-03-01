@@ -9,6 +9,9 @@
 #include <semaphore.h>
 #include <string.h>
 #include <time.h>
+#include <signal.h>
+#include <sys/types.h>
+#include <sys/syscall.h>
 
 #define NSEC_PER_SEC			(1000000000)
 
@@ -17,6 +20,9 @@ const char *semNameP = "semaProducer";
 const char *semNameC = "semaConsumer";
 
 void randomStringGenerator(char *, int stringLength);
+int setupSigactionHandler(void);
+void signalHandler(int, siginfo_t *, void *);
+int setSignalMask(void);
 
 typedef enum{
 	LED_OFF,
@@ -31,6 +37,59 @@ typedef struct{
 
 }processData_t;
 
+
+/*int setSignalMask(){
+
+	sigset_t signalSet;
+	sigemptyset(&signalSet);
+	sigaddset(&signalSet, SIGINT);
+	//sigaddset(&signalSet, SIGUSR2);
+
+	pthread_sigmask(SIG_BLOCK, &signalSet, NULL);
+
+	return 0;
+
+}*/
+
+
+void signalHandler(int signal, siginfo_t *siginfo, void *ucontext){
+
+	if(signal == SIGINT){
+		
+		struct timespec currentTime = { 0, 0 };
+
+		FILE *pLogFile = fopen("logfile.txt", "a");
+		pLogFile = fopen("logfile.txt", "a");
+		if (pLogFile == NULL) {
+			perror("ERROR: fopen");
+			exit(1);
+		}
+
+		clock_gettime(CLOCK_MONOTONIC, &currentTime);
+		fprintf(pLogFile, "[%ld]SIGINT signal Received...EXITING...", (currentTime.tv_sec*NSEC_PER_SEC) + (currentTime.tv_nsec));
+
+		exit(1);
+	}
+	
+
+}
+
+int setupSigactionHandler(){
+
+	struct sigaction act;
+
+	memset(&act, 0, sizeof(act));
+
+	act.sa_sigaction = signalHandler;
+	act.sa_flags = SA_SIGINFO;
+
+	if((sigaction(SIGINT, &act, NULL)) < 0){
+			printf("ERROR - Registering USR1\n");
+			return 1;
+	}
+
+	return 0;
+}
 
 void randomStringGenerator(char *randomString, int stringLength){
 
@@ -50,6 +109,8 @@ void randomStringGenerator(char *randomString, int stringLength){
 int main(void){
 
 	const int SIZE = 4096;
+
+	setupSigactionHandler();
 
 	struct timespec currentTime = { 0, 0 };
 
