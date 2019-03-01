@@ -1,0 +1,2999 @@
+Thread0 is writing to the file
+Thread0 Starting time : 06:30:59
+Thread0 POSIX id is 139686050006784 and LINUX id is 28985
+!	 3	
+"	 18	
+#	 9	
+$	 16	
+%	 11	
+'	 9	
+(	 44	
+)	 44	
+*	 3	
++	 7	
+0	 93	
+1	 61	
+2	 50	
+3	 32	
+4	 31	
+5	 14	
+6	 22	
+7	 9	
+8	 18	
+9	 14	
+;	 13	
+<	 18	
+=	 20	
+>	 25	
+?	 3	
+[	 20	
+\	 1	
+]	 20	
+_	 66	
+`	 1	
+j	 26	
+q	 4	
+x	 84	
+z	 12	
+{	 1	
+|	 11	
+Thread0 Task Completed 
+ Thread0 Exiting time : 06:30:59
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	773976	2115	207600	12556784	77808	0	18568	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	773976	2115	207601	12556821	77808	0	18568	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	773982	2115	207602	12556851	77808	0	18568	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	773984	2115	207603	12556889	77808	0	18568	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	773988	2115	207604	12556924	77808	0	18568	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	773990	2115	207605	12556958	77810	0	18568	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	773992	2115	207605	12556996	77810	0	18569	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	773994	2115	207605	12557033	77810	0	18569	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	773995	2115	207605	12557070	77810	0	18569	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	773995	2115	207606	12557109	77810	0	18569	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	773996	2115	207606	12557147	77810	0	18569	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	773998	2115	207606	12557184	77810	0	18569	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	773999	2115	207609	12557220	77810	0	18569	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	774000	2115	207610	12557257	77810	0	18569	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	774004	2115	207610	12557293	77810	0	18569	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	774005	2115	207611	12557330	77810	0	18569	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	774008	2115	207611	12557367	77810	0	18569	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	774010	2115	207611	12557404	77810	0	18569	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	774011	2115	207612	12557441	77810	0	18569	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	774013	2115	207612	12557478	77810	0	18569	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	774014	2115	207612	12557516	77810	0	18569	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	774015	2115	207613	12557554	77810	0	18569	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	774016	2115	207614	12557591	77810	0	18569	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	774019	2115	207614	12557628	77810	0	18569	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	774020	2115	207615	12557665	77810	0	18570	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	774022	2115	207615	12557702	77810	0	18570	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	774024	2115	207616	12557739	77810	0	18570	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	774024	2115	207616	12557778	77810	0	18570	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	774026	2115	207617	12557815	77810	0	18570	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	774028	2115	207618	12557852	77810	0	18570	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	774028	2115	207618	12557891	77810	0	18570	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	774030	2115	207618	12557928	77810	0	18570	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	774031	2115	207619	12557965	77810	0	18570	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	774032	2115	207620	12558003	77810	0	18570	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	774035	2115	207620	12558040	77810	0	18570	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	774038	2115	207620	12558076	77810	0	18570	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	774039	2115	207622	12558113	77810	0	18570	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	774041	2115	207622	12558150	77810	0	18570	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	774043	2115	207622	12558187	77810	0	18570	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	774044	2115	207622	12558226	77810	0	18570	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	774045	2115	207622	12558264	77810	0	18570	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	774048	2115	207623	12558300	77810	0	18570	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	774052	2115	207625	12558335	77810	0	18570	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	774061	2115	207626	12558365	77810	0	18570	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	774069	2115	207627	12558396	77810	0	18570	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	774076	2115	207628	12558428	77810	0	18570	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	774081	2115	207628	12558462	77810	0	18570	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	774084	2115	207629	12558497	77810	0	18570	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	774092	2115	207629	12558529	77810	0	18570	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	774099	2115	207629	12558561	77810	0	18570	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	774104	2115	207629	12558590	77814	0	18570	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	774106	2115	207630	12558627	77814	0	18570	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	774113	2115	207630	12558659	77814	0	18570	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	774119	2115	207631	12558693	77814	0	18570	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	774123	2115	207632	12558728	77814	0	18570	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	774125	2115	207633	12558765	77814	0	18570	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	774126	2115	207633	12558803	77814	0	18570	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	774130	2115	207633	12558837	77814	0	18570	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	774141	2115	207635	12558864	77814	0	18571	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	774148	2115	207635	12558896	77814	0	18571	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	774151	2115	207636	12558932	77814	0	18571	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	774153	2115	207638	12558969	77814	0	18571	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	774154	2115	207639	12559006	77814	0	18571	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	774156	2115	207639	12559043	77814	0	18571	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	774158	2115	207642	12559077	77814	0	18571	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	774159	2115	207642	12559115	77814	0	18571	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	774161	2115	207643	12559152	77814	0	18571	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	774166	2115	207644	12559186	77814	0	18572	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	774167	2115	207645	12559224	77814	0	18572	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	774169	2115	207645	12559261	77814	0	18572	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	774170	2115	207646	12559297	77814	0	18572	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	774171	2115	207646	12559336	77814	0	18572	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	774174	2115	207646	12559373	77814	0	18572	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	774175	2115	207646	12559410	77814	0	18572	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	774175	2115	207646	12559448	77814	0	18572	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	774177	2115	207646	12559485	77814	0	18572	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	774184	2115	207647	12559517	77814	0	18572	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	774186	2115	207648	12559552	77814	0	18572	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	774190	2115	207649	12559587	77814	0	18572	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	774196	2115	207651	12559619	77814	0	18572	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	774197	2115	207651	12559658	77814	0	18572	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	774199	2115	207652	12559695	77814	0	18572	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	774200	2115	207653	12559731	77814	0	18572	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	774201	2115	207653	12559768	77814	0	18572	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	774206	2115	207655	12559801	77814	0	18573	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	774210	2115	207656	12559835	77814	0	18573	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	774211	2115	207657	12559873	77814	0	18573	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	774212	2115	207657	12559910	77814	0	18573	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	774214	2115	207658	12559948	77814	0	18573	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	774216	2115	207658	12559985	77814	0	18573	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	774220	2115	207658	12560021	77814	0	18573	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	774223	2115	207659	12560056	77814	0	18573	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	774226	2115	207660	12560091	77814	0	18573	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	774228	2115	207661	12560128	77814	0	18573	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	774230	2115	207662	12560164	77814	0	18573	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	774231	2115	207663	12560201	77814	0	18573	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	774233	2115	207664	12560238	77814	0	18573	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	774236	2115	207665	12560275	77814	0	18573	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	774237	2115	207667	12560312	77814	0	18573	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	774239	2115	207667	12560350	77814	0	18573	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	774241	2115	207668	12560387	77814	0	18573	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	774242	2115	207668	12560423	77817	0	18573	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	774244	2115	207668	12560459	77817	0	18573	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	774246	2115	207669	12560496	77817	0	18573	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	774247	2115	207669	12560534	77817	0	18573	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	774249	2115	207670	12560570	77817	0	18573	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	774254	2115	207671	12560603	77817	0	18573	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	774255	2115	207671	12560640	77817	0	18573	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	774258	2115	207672	12560678	77817	0	18573	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	774260	2115	207674	12560715	77817	0	18573	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	774260	2115	207674	12560754	77817	0	18573	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	774262	2115	207674	12560791	77817	0	18573	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	774267	2115	207676	12560823	77817	0	18573	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	774270	2115	207678	12560855	77817	0	18573	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	774272	2115	207680	12560892	77817	0	18573	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	774280	2115	207681	12560920	77819	0	18573	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	774284	2115	207682	12560954	77820	0	18573	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	774288	2115	207684	12560989	77820	0	18574	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	774289	2115	207684	12561026	77820	0	18574	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	774290	2115	207685	12561064	77820	0	18574	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	774296	2115	207686	12561096	77820	0	18574	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	774297	2115	207686	12561134	77820	0	18574	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	774298	2115	207687	12561171	77820	0	18574	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	774302	2115	207688	12561206	77820	0	18574	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	774302	2115	207688	12561244	77820	0	18574	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	774305	2115	207689	12561278	77820	0	18574	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	774310	2115	207690	12561311	77820	0	18574	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	774312	2115	207690	12561348	77820	0	18574	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	774316	2115	207692	12561383	77820	0	18574	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	774318	2115	207692	12561419	77820	0	18574	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	774319	2115	207692	12561458	77820	0	18574	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	774322	2115	207693	12561495	77820	0	18574	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	774323	2115	207694	12561531	77820	0	18574	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	774325	2115	207696	12561567	77820	0	18574	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	774327	2115	207696	12561604	77820	0	18574	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	774329	2115	207697	12561638	77820	0	18574	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	774332	2115	207697	12561676	77820	0	18574	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	774336	2115	207698	12561712	77820	0	18574	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	774338	2115	207698	12561747	77820	0	18574	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	774339	2115	207699	12561786	77820	0	18574	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	774340	2115	207699	12561824	77820	0	18574	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	774343	2115	207700	12561860	77820	0	18574	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	774344	2115	207700	12561898	77820	0	18574	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	774346	2115	207701	12561936	77820	0	18574	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	774350	2115	207702	12561972	77820	0	18574	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	774356	2115	207702	12562004	77820	0	18575	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	774364	2115	207703	12562034	77820	0	18575	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	774368	2115	207706	12562067	77820	0	18575	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	774368	2115	207706	12562105	77820	0	18575	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	774370	2115	207707	12562140	77820	0	18575	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	774373	2115	207708	12562175	77820	0	18575	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	774376	2115	207708	12562212	77820	0	18575	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	774380	2115	207708	12562242	77823	0	18575	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	774385	2115	207709	12562275	77823	0	18576	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	774388	2115	207711	12562311	77823	0	18576	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	774390	2115	207712	12562348	77823	0	18576	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	774392	2115	207712	12562384	77823	0	18576	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	774394	2115	207713	12562421	77823	0	18576	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	774401	2115	207714	12562452	77823	0	18576	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	774412	2115	207714	12562479	77823	0	18576	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	774416	2115	207715	12562513	77823	0	18577	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	774424	2115	207716	12562543	77823	0	18577	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	774429	2115	207717	12562576	77823	0	18577	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	774434	2115	207718	12562609	77823	0	18578	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	774440	2115	207719	12562642	77823	0	18578	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	774446	2115	207720	12562676	77823	0	18578	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	774455	2115	207721	12562706	77823	0	18578	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	774460	2115	207721	12562738	77823	0	18578	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	774462	2115	207721	12562775	77823	0	18578	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	774470	2115	207721	12562807	77823	0	18578	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	774471	2115	207722	12562844	77823	0	18578	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	774473	2115	207722	12562881	77823	0	18578	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	774476	2115	207723	12562918	77823	0	18578	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	774478	2115	207723	12562954	77823	0	18578	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	774482	2115	207724	12562989	77823	0	18578	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	774485	2115	207725	12563025	77823	0	18578	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	774488	2115	207725	12563062	77823	0	18578	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	774488	2115	207726	12563100	77823	0	18578	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	774498	2115	207728	12563127	77823	0	18578	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	774508	2115	207730	12563156	77823	0	18578	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	774521	2115	207736	12563178	77823	0	18578	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	774527	2115	207738	12563208	77823	0	18579	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	774531	2115	207740	12563242	77823	0	18579	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	774533	2115	207742	12563277	77823	0	18579	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	774538	2115	207744	12563310	77823	0	18579	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	774547	2115	207745	12563340	77823	0	18580	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	774553	2115	207746	12563374	77823	0	18580	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	774556	2115	207746	12563410	77823	0	18580	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	774557	2115	207746	12563448	77823	0	18580	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	774558	2115	207746	12563487	77823	0	18580	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	774558	2115	207747	12563524	77823	0	18580	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	774560	2115	207747	12563562	77823	0	18580	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	774560	2115	207748	12563599	77823	0	18580	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	774562	2115	207748	12563636	77823	0	18580	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	774565	2115	207750	12563672	77823	0	18580	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	774570	2115	207750	12563706	77823	0	18580	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	774572	2115	207750	12563743	77823	0	18580	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	774574	2115	207751	12563779	77823	0	18580	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	774575	2115	207751	12563817	77823	0	18580	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	774577	2115	207751	12563855	77823	0	18580	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	774578	2115	207751	12563892	77823	0	18580	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	774580	2115	207752	12563928	77823	0	18580	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	774581	2115	207753	12563966	77823	0	18580	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	774582	2115	207754	12563998	77827	0	18580	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	774586	2115	207754	12564032	77827	0	18580	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	774590	2115	207755	12564066	77827	0	18580	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	774594	2115	207756	12564100	77827	0	18580	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	774595	2115	207756	12564138	77827	0	18580	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	774599	2115	207757	12564173	77827	0	18580	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	774602	2115	207758	12564210	77827	0	18580	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	774602	2115	207758	12564249	77827	0	18580	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	774605	2115	207760	12564284	77827	0	18580	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	774606	2115	207760	12564321	77827	0	18580	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	774606	2115	207760	12564360	77827	0	18580	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	774607	2115	207760	12564396	77827	0	18580	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	774610	2115	207762	12564427	77832	0	18580	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	774612	2115	207762	12564463	77832	0	18580	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	774614	2115	207763	12564498	77832	0	18580	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	774617	2115	207765	12564533	77832	0	18580	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	774618	2115	207765	12564571	77832	0	18580	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	774622	2115	207765	12564606	77832	0	18580	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	774624	2115	207765	12564643	77832	0	18580	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	774640	2115	207768	12564665	77832	0	18581	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	774647	2115	207769	12564695	77832	0	18581	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	774651	2115	207770	12564729	77832	0	18581	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	774655	2115	207770	12564764	77832	0	18581	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	774658	2115	207770	12564798	77832	0	18581	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	774660	2115	207772	12564834	77832	0	18581	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	774662	2115	207772	12564870	77832	0	18581	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	774668	2115	207773	12564902	77832	0	18581	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	774672	2115	207774	12564938	77832	0	18581	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	774676	2115	207777	12564971	77832	0	18581	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	774683	2115	207778	12565002	77832	0	18581	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	774690	2115	207778	12565035	77832	0	18581	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	774692	2115	207779	12565072	77832	0	18581	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	774694	2115	207779	12565108	77832	0	18581	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	774696	2115	207779	12565145	77832	0	18581	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	774697	2115	207780	12565182	77832	0	18581	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	774699	2115	207780	12565218	77832	0	18581	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	774699	2115	207780	12565257	77832	0	18581	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	774700	2115	207780	12565294	77832	0	18581	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	774702	2115	207781	12565331	77832	0	18581	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	774702	2115	207782	12565370	77832	0	18581	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	774706	2115	207783	12565404	77832	0	18582	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	774709	2115	207784	12565440	77832	0	18582	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	774713	2115	207785	12565473	77832	0	18582	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	774717	2115	207786	12565507	77832	0	18583	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	774723	2115	207786	12565542	77832	0	18583	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	774726	2115	207786	12565577	77832	0	18583	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	774731	2115	207786	12565611	77832	0	18583	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	774733	2115	207787	12565649	77832	0	18583	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	774734	2115	207788	12565686	77832	0	18583	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	774742	2115	207789	12565717	77832	0	18583	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	774744	2115	207790	12565753	77832	0	18583	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	774747	2115	207790	12565785	77836	0	18583	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	774754	2115	207791	12565816	77836	0	18584	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	774756	2115	207792	12565853	77836	0	18584	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	774764	2115	207792	12565885	77836	0	18584	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	774768	2115	207792	12565921	77836	0	18584	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	774768	2115	207792	12565960	77836	0	18584	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	774770	2115	207793	12565998	77836	0	18584	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	774773	2115	207794	12566033	77836	0	18584	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	774774	2115	207794	12566071	77836	0	18584	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	774776	2115	207795	12566109	77836	0	18584	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	774778	2115	207795	12566146	77836	0	18584	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	774784	2115	207799	12566176	77836	0	18584	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	774792	2115	207799	12566208	77836	0	18584	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	774796	2115	207800	12566243	77836	0	18584	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	774798	2115	207800	12566281	77836	0	18584	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	774800	2115	207800	12566318	77836	0	18584	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	774806	2115	207800	12566352	77836	0	18584	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	774812	2115	207801	12566383	77836	0	18584	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	774812	2115	207802	12566421	77836	0	18584	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	774814	2115	207802	12566458	77836	0	18584	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	774816	2115	207802	12566494	77836	0	18584	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	774818	2115	207802	12566532	77836	0	18584	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	774822	2115	207803	12566567	77836	0	18584	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	774824	2115	207806	12566603	77836	0	18584	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	774824	2115	207807	12566641	77836	0	18584	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	774826	2115	207807	12566678	77836	0	18584	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	774829	2115	207807	12566716	77836	0	18584	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	774829	2115	207807	12566755	77836	0	18584	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	774831	2115	207807	12566792	77836	0	18584	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	774833	2115	207808	12566827	77836	0	18584	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	774834	2115	207808	12566866	77836	0	18584	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	774842	2115	207812	12566893	77836	0	18584	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	774847	2115	207813	12566927	77836	0	18584	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	774847	2115	207813	12566965	77836	0	18584	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	774850	2115	207814	12567002	77836	0	18584	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	774852	2115	207814	12567039	77836	0	18584	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	774852	2115	207814	12567078	77836	0	18584	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	774855	2115	207815	12567114	77836	0	18584	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	774857	2115	207816	12567151	77836	0	18584	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	774858	2115	207816	12567190	77836	0	18584	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	774859	2115	207817	12567227	77836	0	18584	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	774863	2115	207819	12567260	77836	0	18584	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	774864	2115	207820	12567298	77836	0	18584	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	774866	2115	207821	12567334	77836	0	18584	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	774867	2115	207822	12567371	77836	0	18584	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	774868	2115	207823	12567409	77836	0	18584	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	774872	2115	207824	12567444	77836	0	18584	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	774874	2115	207824	12567481	77836	0	18584	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	774874	2115	207824	12567520	77836	0	18584	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	774878	2115	207826	12567555	77836	0	18584	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	774880	2115	207827	12567591	77836	0	18584	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	774880	2115	207828	12567625	77840	0	18584	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	774882	2115	207829	12567661	77840	0	18584	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	774884	2115	207830	12567698	77840	0	18584	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	774884	2115	207830	12567737	77840	0	18584	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	774886	2115	207832	12567774	77840	0	18584	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	774887	2115	207832	12567811	77840	0	18584	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	774887	2115	207832	12567850	77840	0	18584	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	774889	2115	207832	12567887	77840	0	18584	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	774891	2115	207833	12567924	77840	0	18584	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	774891	2115	207834	12567962	77840	0	18584	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	774894	2115	207834	12567998	77840	0	18585	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	774897	2115	207834	12568026	77847	0	18585	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	774898	2115	207834	12568065	77847	0	18585	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	774898	2115	207836	12568103	77847	0	18585	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	774900	2115	207836	12568140	77847	0	18585	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	774900	2115	207836	12568179	77847	0	18585	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	774902	2115	207836	12568216	77847	0	18585	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	774903	2115	207837	12568254	77847	0	18585	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	774905	2115	207838	12568291	77847	0	18585	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	774908	2115	207839	12568328	77847	0	18585	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	774908	2115	207839	12568365	77847	0	18585	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	774910	2115	207840	12568402	77847	0	18585	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	774912	2115	207840	12568438	77847	0	18585	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	774915	2115	207840	12568474	77847	0	18585	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	774923	2115	207841	12568505	77847	0	18586	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	774929	2115	207841	12568539	77847	0	18586	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	774930	2115	207842	12568578	77847	0	18586	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	774932	2115	207842	12568614	77847	0	18586	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	774934	2115	207843	12568650	77847	0	18586	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	774935	2115	207843	12568689	77847	0	18586	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	774938	2115	207844	12568726	77847	0	18586	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	774950	2115	207844	12568754	77847	0	18586	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	774950	2115	207844	12568792	77847	0	18586	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	774958	2115	207847	12568821	77847	0	18586	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	774965	2115	207849	12568850	77847	0	18586	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	774967	2115	207851	12568886	77847	0	18587	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	774972	2115	207852	12568919	77847	0	18587	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	774974	2115	207852	12568956	77847	0	18587	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	774976	2115	207852	12568995	77847	0	18587	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	774978	2115	207852	12569030	77847	0	18587	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	774982	2115	207853	12569066	77847	0	18587	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	774991	2115	207853	12569096	77847	0	18587	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	774992	2115	207853	12569134	77847	0	18587	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	774995	2115	207853	12569171	77847	0	18587	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	774996	2115	207854	12569209	77847	0	18587	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	774998	2115	207855	12569246	77847	0	18587	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	775002	2115	207856	12569281	77847	0	18587	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	775004	2115	207856	12569319	77847	0	18587	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	775005	2115	207857	12569356	77847	0	18587	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	775007	2115	207858	12569393	77847	0	18587	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	775007	2115	207858	12569431	77847	0	18587	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	775010	2115	207859	12569468	77847	0	18587	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	775012	2115	207860	12569502	77847	0	18587	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	775013	2115	207862	12569539	77847	0	18587	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	775015	2115	207862	12569577	77847	0	18587	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	775017	2115	207863	12569614	77847	0	18587	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	775017	2115	207863	12569653	77847	0	18587	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	775019	2115	207864	12569690	77847	0	18587	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	775022	2115	207864	12569726	77847	0	18587	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	775022	2115	207864	12569764	77847	0	18587	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	775025	2115	207864	12569800	77847	0	18587	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	775030	2115	207866	12569835	77847	0	18587	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	775031	2115	207868	12569869	77851	0	18587	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	775032	2115	207868	12569906	77851	0	18587	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	775035	2115	207869	12569942	77851	0	18587	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	775035	2115	207870	12569980	77851	0	18587	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	775036	2115	207870	12570018	77851	0	18587	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	775039	2115	207871	12570054	77851	0	18587	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	775040	2115	207871	12570093	77851	0	18587	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	775042	2115	207871	12570130	77851	0	18587	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	775044	2115	207872	12570165	77851	0	18587	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	775045	2115	207872	12570203	77851	0	18587	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	775046	2115	207872	12570241	77851	0	18587	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	775048	2115	207874	12570278	77851	0	18587	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	775050	2115	207874	12570317	77851	0	18587	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	775052	2115	207875	12570355	77851	0	18587	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	775055	2115	207875	12570391	77851	0	18587	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	775057	2115	207875	12570429	77851	0	18587	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	775059	2115	207876	12570467	77851	0	18587	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	775062	2115	207876	12570503	77851	0	18587	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	775063	2115	207876	12570541	77851	0	18587	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	775065	2115	207878	12570578	77851	0	18588	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	775067	2115	207879	12570614	77851	0	18588	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	775068	2115	207879	12570653	77851	0	18588	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	775070	2115	207879	12570691	77851	0	18588	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	775073	2115	207880	12570728	77851	0	18588	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	775073	2115	207880	12570767	77851	0	18588	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	775075	2115	207880	12570804	77851	0	18588	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	775077	2115	207881	12570840	77851	0	18588	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	775078	2115	207882	12570879	77851	0	18588	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	775080	2115	207882	12570916	77851	0	18588	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	775083	2115	207882	12570952	77851	0	18588	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	775084	2115	207882	12570990	77851	0	18588	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	775084	2115	207883	12571028	77851	0	18588	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	775086	2115	207883	12571064	77851	0	18588	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	775087	2115	207884	12571103	77851	0	18588	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	775088	2115	207884	12571141	77851	0	18588	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	775092	2115	207885	12571174	77851	0	18588	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	775094	2115	207885	12571212	77851	0	18588	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	775096	2115	207886	12571250	77851	0	18588	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	775103	2115	207887	12571281	77851	0	18588	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	775112	2115	207888	12571312	77851	0	18588	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	775114	2115	207888	12571350	77851	0	18588	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	775115	2115	207889	12571387	77851	0	18588	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	775116	2115	207890	12571426	77851	0	18588	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	775118	2115	207890	12571464	77851	0	18588	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	775121	2115	207890	12571501	77851	0	18588	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	775122	2115	207890	12571538	77851	0	18588	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	775124	2115	207892	12571574	77851	0	18588	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	775126	2115	207892	12571611	77851	0	18588	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	775126	2115	207893	12571649	77851	0	18588	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	775129	2115	207894	12571686	77851	0	18588	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	775134	2115	207894	12571720	77851	0	18588	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	775136	2115	207894	12571752	77856	0	18588	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	775140	2115	207895	12571785	77856	0	18588	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	775147	2115	207896	12571817	77856	0	18588	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	775150	2115	207896	12571855	77856	0	18588	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	775155	2115	207898	12571888	77856	0	18588	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	775160	2115	207898	12571922	77856	0	18588	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	775163	2115	207899	12571959	77856	0	18588	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	775166	2115	207900	12571993	77856	0	18588	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	775168	2115	207900	12572029	77856	0	18588	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	775169	2115	207900	12572067	77856	0	18588	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	775170	2115	207901	12572105	77856	0	18588	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	775173	2115	207901	12572142	77856	0	18588	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	775174	2115	207901	12572180	77856	0	18588	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	775176	2115	207901	12572216	77856	0	18588	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	775179	2115	207902	12572253	77856	0	18588	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	775180	2115	207902	12572292	77856	0	18588	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	775182	2115	207902	12572329	77856	0	18588	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	775184	2115	207902	12572365	77856	0	18588	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	775185	2115	207902	12572402	77856	0	18588	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	775189	2115	207902	12572437	77856	0	18588	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	775192	2115	207902	12572474	77856	0	18588	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	775192	2115	207903	12572512	77856	0	18588	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	775194	2115	207904	12572549	77856	0	18588	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	775196	2115	207904	12572587	77856	0	18588	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	775196	2115	207904	12572624	77856	0	18588	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	775198	2115	207905	12572661	77856	0	18588	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	775200	2115	207905	12572698	77856	0	18588	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	775204	2115	207907	12572731	77856	0	18588	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	775208	2115	207910	12572765	77856	0	18588	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	775210	2115	207910	12572801	77856	0	18588	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	775210	2115	207910	12572840	77856	0	18588	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	775212	2115	207910	12572877	77856	0	18588	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	775215	2115	207910	12572913	77856	0	18588	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	775217	2115	207910	12572950	77856	0	18588	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	775218	2115	207912	12572986	77856	0	18588	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	775219	2115	207912	12573024	77856	0	18588	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	775221	2115	207912	12573061	77856	0	18588	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	775224	2115	207912	12573097	77856	0	18588	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	775226	2115	207913	12573134	77856	0	18588	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	775228	2115	207914	12573171	77856	0	18588	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	775229	2115	207914	12573208	77856	0	18588	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	775229	2115	207914	12573247	77856	0	18588	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	775230	2115	207914	12573286	77856	0	18588	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	775232	2115	207914	12573323	77856	0	18588	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	775235	2115	207915	12573359	77856	0	18589	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	775236	2115	207917	12573395	77856	0	18589	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	775239	2115	207918	12573432	77856	0	18589	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	775239	2115	207918	12573470	77856	0	18589	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	775250	2115	207919	12573498	77856	0	18589	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	775253	2115	207920	12573532	77856	0	18589	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	775256	2115	207920	12573568	77856	0	18589	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	775261	2115	207921	12573601	77860	0	18589	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	775262	2115	207921	12573638	77860	0	18589	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	775262	2115	207921	12573677	77860	0	18589	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	775267	2115	207922	12573711	77860	0	18589	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	775272	2115	207922	12573747	77860	0	18589	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	775273	2115	207922	12573784	77860	0	18589	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	775276	2115	207922	12573819	77860	0	18589	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	775278	2115	207922	12573856	77860	0	18589	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	775280	2115	207924	12573894	77860	0	18589	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	775282	2115	207924	12573931	77860	0	18589	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	775282	2115	207924	12573969	77860	0	18589	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	775286	2115	207925	12574004	77860	0	18589	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	775288	2115	207925	12574040	77860	0	18589	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	775289	2115	207925	12574078	77860	0	18589	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	775292	2115	207926	12574112	77860	0	18590	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	775294	2115	207927	12574146	77860	0	18590	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	775295	2115	207928	12574183	77860	0	18590	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	775298	2115	207929	12574219	77860	0	18590	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	775301	2115	207929	12574255	77860	0	18590	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	775301	2115	207930	12574293	77860	0	18590	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	775306	2115	207932	12574328	77860	0	18590	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	775308	2115	207932	12574364	77860	0	18590	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	775310	2115	207932	12574401	77860	0	18590	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	775315	2115	207932	12574434	77860	0	18591	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	775318	2115	207933	12574471	77860	0	18591	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	775320	2115	207933	12574507	77860	0	18591	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	775321	2115	207935	12574544	77860	0	18591	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	775322	2115	207935	12574581	77860	0	18591	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	775329	2115	207936	12574614	77860	0	18591	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	775331	2115	207938	12574650	77860	0	18591	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	775332	2115	207938	12574688	77860	0	18591	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	775333	2115	207939	12574726	77860	0	18591	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	775336	2115	207939	12574761	77860	0	18591	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	775339	2115	207940	12574798	77860	0	18591	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	775344	2115	207943	12574831	77860	0	18591	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	775347	2115	207944	12574866	77860	0	18591	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	775348	2115	207944	12574902	77860	0	18591	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	775351	2115	207944	12574939	77860	0	18591	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	775352	2115	207944	12574976	77860	0	18591	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	775355	2115	207944	12575011	77860	0	18591	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	775358	2115	207944	12575048	77860	0	18591	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	775360	2115	207945	12575085	77860	0	18591	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	775363	2115	207945	12575120	77860	0	18591	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	775367	2115	207946	12575156	77860	0	18591	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	775368	2115	207947	12575193	77860	0	18591	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	775370	2115	207948	12575229	77860	0	18591	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	775374	2115	207950	12575263	77860	0	18592	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	775378	2115	207951	12575296	77860	0	18592	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	775381	2115	207954	12575332	77860	0	18592	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	775384	2115	207954	12575368	77860	0	18592	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	775387	2115	207955	12575404	77860	0	18592	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	775390	2115	207958	12575435	77864	0	18592	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	775391	2115	207959	12575472	77864	0	18592	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	775392	2115	207960	12575510	77864	0	18592	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	775393	2115	207962	12575546	77864	0	18592	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	775395	2115	207962	12575583	77864	0	18592	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	775402	2115	207963	12575616	77864	0	18592	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	775404	2115	207964	12575652	77864	0	18592	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	775406	2115	207965	12575689	77864	0	18592	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	775406	2115	207965	12575728	77864	0	18592	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	775410	2115	207966	12575762	77864	0	18593	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	775410	2115	207967	12575799	77864	0	18593	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	775411	2115	207967	12575837	77864	0	18593	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	775412	2115	207967	12575873	77864	0	18593	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	775414	2115	207968	12575910	77864	0	18593	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	775414	2115	207968	12575949	77864	0	18593	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	775418	2115	207968	12575984	77864	0	18593	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	775420	2115	207968	12576020	77864	0	18593	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	775424	2115	207968	12576055	77864	0	18593	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	775426	2115	207969	12576093	77864	0	18593	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	775428	2115	207969	12576130	77864	0	18593	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	775429	2115	207969	12576169	77864	0	18593	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	775430	2115	207970	12576206	77864	0	18593	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	775433	2115	207971	12576242	77864	0	18593	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	775434	2115	207972	12576281	77864	0	18593	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	775434	2115	207972	12576318	77864	0	18593	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	775436	2115	207973	12576354	77864	0	18593	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	775438	2115	207973	12576392	77864	0	18593	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	775441	2115	207973	12576427	77864	0	18593	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	775443	2115	207974	12576464	77864	0	18593	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	775444	2115	207974	12576502	77864	0	18593	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	775446	2115	207974	12576539	77864	0	18593	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	775448	2115	207975	12576576	77864	0	18593	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	775449	2115	207976	12576614	77864	0	18593	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	775452	2115	207976	12576650	77864	0	18593	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	775453	2115	207976	12576687	77864	0	18593	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	775454	2115	207978	12576725	77864	0	18593	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	775456	2115	207978	12576762	77864	0	18593	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	775458	2115	207979	12576799	77864	0	18593	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	775459	2115	207979	12576837	77864	0	18593	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	775460	2115	207980	12576874	77864	0	18593	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	775462	2115	207980	12576911	77864	0	18593	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	775462	2115	207980	12576950	77864	0	18593	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	775468	2115	207980	12576982	77864	0	18593	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	775470	2115	207982	12577019	77864	0	18593	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	775473	2115	207982	12577054	77864	0	18593	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	775475	2115	207984	12577089	77864	0	18594	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	775480	2115	207984	12577122	77864	0	18594	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	775481	2115	207985	12577158	77864	0	18594	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	775483	2115	207986	12577195	77864	0	18594	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	775490	2115	207986	12577228	77864	0	18594	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	775496	2115	207986	12577262	77864	0	18594	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	775498	2115	207986	12577294	77868	0	18594	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	775501	2115	207986	12577331	77868	0	18594	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	775502	2115	207986	12577369	77868	0	18594	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	775504	2115	207986	12577405	77868	0	18594	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	775508	2115	207988	12577438	77868	0	18594	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	775510	2115	207989	12577475	77868	0	18594	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	775512	2115	207989	12577511	77868	0	18594	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	775514	2115	207989	12577548	77868	0	18594	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	775514	2115	207989	12577587	77868	0	18594	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	775516	2115	207989	12577624	77868	0	18594	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	775518	2115	207990	12577660	77868	0	18594	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	775518	2115	207990	12577698	77868	0	18594	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	775519	2115	207991	12577735	77868	0	18594	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	775520	2115	207992	12577772	77868	0	18594	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	775521	2115	207993	12577810	77868	0	18594	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	775533	2115	207993	12577838	77868	0	18595	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	775536	2115	207994	12577874	77868	0	18595	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	775536	2115	207994	12577913	77868	0	18595	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	775536	2115	207996	12577950	77868	0	18595	0	0	0
+Thread1 is writing to the file
+Thread1 Starting time : 06:30:59
+Thread1 POSIX id is 139686041614080 and LINUX id is 28986
+CPU Utilization
+cpu	775541	2115	207998	12577983	77868	0	18595	0	0	0
+Thread1 USR2 Signal Received 
+Thread1 Exiting time : 06:31:59
+Main thread - Exiting
