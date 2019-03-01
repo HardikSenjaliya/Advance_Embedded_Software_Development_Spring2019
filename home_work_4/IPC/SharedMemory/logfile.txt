@@ -1,40 +1,44 @@
-[38261499580324]Produucer Receiving: String - uOPVkrNoCy stringLength - 10, LED status - 1
-[38261499663914]Produucer Sending: String - uOPVkrNoCy stringLength - 10, LED status - 1
-[38261499695977]Produucer Receiving: String - uOPVkrNoCy stringLength - 10, LED status - 1
-[38261499713740]Produucer Sending: String - sAXVHLhFamhPi stringLength - 13, LED status - 1
-[38261499720576]Produucer Receiving: String - sAXVHLhFamhPi stringLength - 13, LED status - 1
-[38261499743295]Produucer Sending: String - gf stringLength - 2, LED status - 1
-[38261499746402]Produucer Receiving: String - gf stringLength - 2, LED status - 1
-[38261499780460]Produucer Sending: String - lARFpHBzYpOBOu stringLength - 14, LED status - 1
-[38261499783381]Produucer Receiving: String - lARFpHBzYpOBOu stringLength - 14, LED status - 1
-[38261499800393]Produucer Sending: String - osQVdXBejIUsdbxd stringLength - 16, LED status - 1
-[38261499803503]Produucer Receiving: String - osQVdXBejIUsdbxd stringLength - 16, LED status - 1
-[38261499832185]Produucer Sending: String - YUSnCtNAIBcwWWLoMHsJiwTRrlUsJX stringLength - 30, LED status - 1
-[38261499835073]Produucer Receiving: String - YUSnCtNAIBcwWWLoMHsJiwTRrlUsJX stringLength - 30, LED status - 1
-[38261499861643]Produucer Sending: String -  stringLength - 0, LED status - 1
-[38261499865274]Produucer Receiving: String -  stringLength - 0, LED status - 1
-[38261499893664]Produucer Sending: String - SwWuQJVzlXVhTHwG stringLength - 16, LED status - 1
-[38261499895928]Produucer Receiving: String - SwWuQJVzlXVhTHwG stringLength - 16, LED status - 1
-[38261499919842]Produucer Sending: String - OpxljoCviVfgzNZWJtMtpmEmhMg stringLength - 27, LED status - 1
-[38261499922536]Produucer Receiving: String - OpxljoCviVfgzNZWJtMtpmEmhMg stringLength - 27, LED status - 1
-[38261499952815]Produucer Sending: String - iMdXcBjmPMIYHNehBedkx stringLength - 21, LED status - 1
-[38257120219879]Produucer Sending: String - uOPVkrNoCy stringLength - 10, LED status - 1
-[38261499725628]Produucer Receiving: String - sAXVHLhFamhPi stringLength - 13, LED status - 1
-[38261499785390]Produucer Sending: String - sAXVHLhFamhPi stringLength - 13, LED status - 1
-[38261499790735]Produucer Receiving: String - sAXVHLhFamhPi stringLength - 13, LED status - 1
-[38261499825793]Produucer Sending: String - gf stringLength - 2, LED status - 1
-[38261499829573]Produucer Receiving: String - gf stringLength - 2, LED status - 1
-[38261499849431]Produucer Sending: String - lARFpHBzYpOBOu stringLength - 14, LED status - 1
-[38261499852661]Produucer Receiving: String - lARFpHBzYpOBOu stringLength - 14, LED status - 1
-[38261499879173]Produucer Sending: String - osQVdXBejIUsdbxd stringLength - 16, LED status - 1
-[38261499881518]Produucer Receiving: String - osQVdXBejIUsdbxd stringLength - 16, LED status - 1
-[38261499907839]Produucer Sending: String - YUSnCtNAIBcwWWLoMHsJiwTRrlUsJX stringLength - 30, LED status - 1
-[38261499910518]Produucer Receiving: String - YUSnCtNAIBcwWWLoMHsJiwTRrlUsJX stringLength - 30, LED status - 1
-[38261499927476]Produucer Sending: String -  stringLength - 0, LED status - 1
-[38261499931351]Produucer Receiving: String -  stringLength - 0, LED status - 1
-[38261499955518]Produucer Sending: String - SwWuQJVzlXVhTHwG stringLength - 16, LED status - 1
-[38261499958006]Produucer Receiving: String - SwWuQJVzlXVhTHwG stringLength - 16, LED status - 1
-[38261499975620]Produucer Sending: String - OpxljoCviVfgzNZWJtMtpmEmhMg stringLength - 27, LED status - 1
-[38261499978235]Produucer Receiving: String - OpxljoCviVfgzNZWJtMtpmEmhMg stringLength - 27, LED status - 1
-[38261500041309]Produucer Sending: String - iMdXcBjmPMIYHNehBedkx stringLength - 21, LED status - 1
-[38261500045494]Produucer Receiving: String - iMdXcBjmPMIYHNehBedkx stringLength - 21, LED status - 1
+[38563352621418]IPC - Shared Memory
+Server Process ID: 31092
+[38563352766249]Consumer Receiving: String - uOPVkrNoCy stringLength - 10, LED status - 1
+[38563352797684]Consumer Sending: String - uOPVkrNoCy stringLength - 10, LED status - 1
+[38563352822972]Consumer Receiving: String - uOPVkrNoCy stringLength - 10, LED status - 1
+[38563352847051]Consumer Sending: String - sAXVHLhFamhPi stringLength - 13, LED status - 1
+[38563352852103]Consumer Receiving: String - sAXVHLhFamhPi stringLength - 13, LED status - 1
+[38563352867882]Consumer Sending: String - gf stringLength - 2, LED status - 1
+[38563352872404]Consumer Receiving: String - gf stringLength - 2, LED status - 1
+[38563352886497]Consumer Sending: String - lARFpHBzYpOBOu stringLength - 14, LED status - 1
+[38563352889281]Consumer Receiving: String - lARFpHBzYpOBOu stringLength - 14, LED status - 1
+[38563352903621]Consumer Sending: String - osQVdXBejIUsdbxd stringLength - 16, LED status - 1
+[38563352905954]Consumer Receiving: String - osQVdXBejIUsdbxd stringLength - 16, LED status - 1
+[38563352923543]Consumer Sending: String - YUSnCtNAIBcwWWLoMHsJiwTRrlUsJX stringLength - 30, LED status - 1
+[38563352925534]Consumer Receiving: String - YUSnCtNAIBcwWWLoMHsJiwTRrlUsJX stringLength - 30, LED status - 1
+[38563352937017]Consumer Sending: String -  stringLength - 0, LED status - 1
+[38563352939668]Consumer Receiving: String -  stringLength - 0, LED status - 1
+[38563352954385]Consumer Sending: String - SwWuQJVzlXVhTHwG stringLength - 16, LED status - 1
+[38563352957010]Consumer Receiving: String - SwWuQJVzlXVhTHwG stringLength - 16, LED status - 1
+[38563352971290]Consumer Sending: String - OpxljoCviVfgzNZWJtMtpmEmhMg stringLength - 27, LED status - 1
+[38563352973114]Consumer Receiving: String - OpxljoCviVfgzNZWJtMtpmEmhMg stringLength - 27, LED status - 1
+[38563352983942]Consumer Sending: String - iMdXcBjmPMIYHNehBedkx stringLength - 21, LED status - 1
+[38559283560574]IPC - Shared Memory
+Producer Process ID: 31089
+[38559284217896]Produucer Sending: String - uOPVkrNoCy stringLength - 10, LED status - 1
+[38563352886960]Produucer Receiving: String - gf stringLength - 2, LED status - 1
+[38563352927707]Produucer Sending: String - sAXVHLhFamhPi stringLength - 13, LED status - 1
+[38563352930734]Produucer Receiving: String - sAXVHLhFamhPi stringLength - 13, LED status - 1
+[38563352944007]Produucer Sending: String - gf stringLength - 2, LED status - 1
+[38563352946829]Produucer Receiving: String - gf stringLength - 2, LED status - 1
+[38563352959153]Produucer Sending: String - lARFpHBzYpOBOu stringLength - 14, LED status - 1
+[38563352961555]Produucer Receiving: String - lARFpHBzYpOBOu stringLength - 14, LED status - 1
+[38563352975128]Produucer Sending: String - osQVdXBejIUsdbxd stringLength - 16, LED status - 1
+[38563352977692]Produucer Receiving: String - osQVdXBejIUsdbxd stringLength - 16, LED status - 1
+[38563352990954]Produucer Sending: String - YUSnCtNAIBcwWWLoMHsJiwTRrlUsJX stringLength - 30, LED status - 1
+[38563352993326]Produucer Receiving: String - YUSnCtNAIBcwWWLoMHsJiwTRrlUsJX stringLength - 30, LED status - 1
+[38563353006085]Produucer Sending: String -  stringLength - 0, LED status - 1
+[38563353008192]Produucer Receiving: String -  stringLength - 0, LED status - 1
+[38563353026983]Produucer Sending: String - SwWuQJVzlXVhTHwG stringLength - 16, LED status - 1
+[38563353029090]Produucer Receiving: String - SwWuQJVzlXVhTHwG stringLength - 16, LED status - 1
+[38563353045653]Produucer Sending: String - OpxljoCviVfgzNZWJtMtpmEmhMg stringLength - 27, LED status - 1
+[38563353047725]Produucer Receiving: String - OpxljoCviVfgzNZWJtMtpmEmhMg stringLength - 27, LED status - 1
+[38563353062930]Produucer Sending: String - iMdXcBjmPMIYHNehBedkx stringLength - 21, LED status - 1
+[38563353065067]Produucer Receiving: String - iMdXcBjmPMIYHNehBedkx stringLength - 21, LED status - 1

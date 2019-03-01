@@ -58,6 +58,11 @@ int main(void){
 		exit(0);
 	}
 
+	clock_gettime(CLOCK_MONOTONIC, &currentTime);
+	fprintf(pLogFile,
+			"[%ld]IPC - Shared Memory\nServer Process ID: %d\n",
+			(currentTime.tv_sec*NSEC_PER_SEC) + (currentTime.tv_nsec),getpid());
+
 	int shmFD;
 
 	void *pSharedMemory;
@@ -99,7 +104,7 @@ int main(void){
 
 
 	clock_gettime(CLOCK_MONOTONIC, &currentTime);
-	fprintf(pLogFile, "[%ld]Produucer Receiving: String - %s stringLength - %d, LED status - %d\n", 
+	fprintf(pLogFile, "[%ld]Consumer Receiving: String - %s stringLength - %d, LED status - %d\n", 
 			(currentTime.tv_sec*NSEC_PER_SEC) + (currentTime.tv_nsec), receivedData.string, receivedData.stringLength, receivedData.ledStatus);
 
 	printf("Consumer Received Data string: %s, string length: %d, led status: %d\n", receivedData.string, 
@@ -116,7 +121,7 @@ int main(void){
 	sendingData.ledStatus = LED_ON;
 
 	clock_gettime(CLOCK_MONOTONIC, &currentTime);
-	fprintf(pLogFile, "[%ld]Produucer Sending: String - %s stringLength - %d, LED status - %d\n", 
+	fprintf(pLogFile, "[%ld]Consumer Sending: String - %s stringLength - %d, LED status - %d\n", 
 			(currentTime.tv_sec*NSEC_PER_SEC) + (currentTime.tv_nsec), sendingData.string, sendingData.stringLength, sendingData.ledStatus);
 
 	memcpy((processData_t*)pSharedMemory, &sendingData, sizeof(processData_t));

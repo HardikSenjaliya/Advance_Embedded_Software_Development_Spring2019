@@ -60,6 +60,11 @@ int main(void){
 		exit(0);
 	}
 
+	clock_gettime(CLOCK_MONOTONIC, &currentTime);
+	fprintf(pLogFile,
+			"[%ld]IPC - Shared Memory\nProducer Process ID: %d\n",
+			(currentTime.tv_sec*NSEC_PER_SEC) + (currentTime.tv_nsec),getpid());
+
 	int shmFD;
 
 	void *pSharedMemory;
