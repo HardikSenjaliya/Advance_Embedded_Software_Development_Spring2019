@@ -12,6 +12,7 @@
 #include <unistd.h>
 #include <netdb.h>
 #include <time.h>
+#include <signal.h>
 #include <sys/socket.h>
 
 #define SERVER_PORT				(2345)
@@ -39,6 +40,44 @@ typedef struct {
 	int ledStatus;
 
 } processData_t;
+
+void signalHandler(int signal, siginfo_t *siginfo, void *ucontext){
+
+	if(signal == SIGINT){
+
+		struct timespec currentTime = { 0, 0 };
+
+		FILE *pLogFile = fopen("logfile.txt", "a");
+		pLogFile = fopen("logfile.txt", "a");
+		if (pLogFile == NULL) {
+			perror("ERROR: fopen");
+			exit(1);
+		}
+		clock_gettime(CLOCK_MONOTONIC, &currentTime);
+		fprintf(pLogFile, "[%ld]SIGINT signal Received...EXITING...", (currentTime.tv_sec*NSEC_PER_SEC) + (currentTime.tv_nsec));
+
+		exit(1);
+	}
+	
+
+}
+
+int setupSigactionHandler(){
+
+	struct sigaction act;
+
+	memset(&act, 0, sizeof(act));
+
+	act.sa_sigaction = signalHandler;
+	act.sa_flags = SA_SIGINFO;
+
+	if((sigaction(SIGINT, &act, NULL)) < 0){
+			printf("ERROR - Registering USR1\n");
+			return 1;
+	}
+
+	return 0;
+}
 
 
 void randomStringGenerator(char *randomString, int stringLength){
@@ -144,6 +183,7 @@ int main(void){
 
 	socklen_t clientAddLen;
 
+	setupSigactionHandler();
 	/*Create a new socket
 	 * domain - IPv4, type - stream based socket, protocol - 0 a single type of
 	 * protocol of family IPv4
