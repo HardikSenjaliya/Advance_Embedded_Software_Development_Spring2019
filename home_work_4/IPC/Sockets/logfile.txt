@@ -1,0 +1,52 @@
+[44277767202109]IPC - Sockets
+Client Process ID: 32562
+Allocated File Descriptor: 3
+[44277767247934] Client Sending: String - uOPVkrNoCy stringLength - 10, LED status - 0
+[44278767680665] Client Sending: String - sAXVHLhFamhPi stringLength - 13, LED status - 0
+[44279767943861] Client Sending: String - gf stringLength - 2, LED status - 0
+[44280768187814] Client Sending: String - lARFpHBzYpOBOu stringLength - 14, LED status - 0
+[44281768805641] Client Sending: String - osQVdXBejIUsdbxd stringLength - 16, LED status - 0
+[44282769074352] Client Sending: String - YUSnCtNAIBcwWWLoMHsJiwTRrlUsJX stringLength - 30, LED status - 0
+[44283769762058] Client Sending: String -  stringLength - 0, LED status - 0
+[44284770441319] Client Sending: String - SwWuQJVzlXVhTHwG stringLength - 16, LED status - 0
+[44285770703341] Client Sending: String - OpxljoCviVfgzNZWJtMtpmEmhMg stringLength - 27, LED status - 0
+[44286771077216] Client Sending: String - iMdXcBjmPMIYHNehBedkx stringLength - 21, LED status - 0
+[44278767730007]IPC - Sockets
+Server Process ID: 32549
+Allocated File Descriptor: 4
+[44278767795084]Server Receiving: String - uOPVkrNoCy stringLength - 10, LED status - 0
+[44279768085156]Server Receiving: String - gf stringLength - 2, LED status - 0
+[44280768369812]Server Receiving: String - lARFpHBzYpOBOu stringLength - 14, LED status - 0
+[44281768985839]Server Receiving: String - osQVdXBejIUsdbxd stringLength - 16, LED status - 0
+[44282769270109]Server Receiving: String - YUSnCtNAIBcwWWLoMHsJiwTRrlUsJX stringLength - 30, LED status - 0
+[44283769935131]Server Receiving: String -  stringLength - 0, LED status - 0
+[44284770630159]Server Receiving: String - SwWuQJVzlXVhTHwG stringLength - 16, LED status - 0
+[44285770869921]Server Receiving: String - OpxljoCviVfgzNZWJtMtpmEmhMg stringLength - 27, LED status - 0
+[44286771148516]Server Receiving: String - iMdXcBjmPMIYHNehBedkx stringLength - 21, LED status - 0
+[44287771550179]Server Receiving: String - iMdXcBjmPMIYHNehBedkx stringLength - 21, LED status - 0
+[44268763716969]IPC - Sockets
+Client Process ID: 32562
+Allocated File Descriptor: 3
+[44268763780671] Client Receiving: String - uOPVkrNoCy stringLength - 10, LED status - 0
+[44269764479796] Client Receiving: String - sAXVHLhFamhPi stringLength - 13, LED status - 0
+[44270764520226] Client Receiving: String - gf stringLength - 2, LED status - 0
+[44271765266263] Client Receiving: String - lARFpHBzYpOBOu stringLength - 14, LED status - 0
+[44272765465956] Client Receiving: String - osQVdXBejIUsdbxd stringLength - 16, LED status - 0
+[44273765671716] Client Receiving: String - YUSnCtNAIBcwWWLoMHsJiwTRrlUsJX stringLength - 30, LED status - 0
+[44274766011736] Client Receiving: String -  stringLength - 0, LED status - 0
+[44275766167629] Client Receiving: String - SwWuQJVzlXVhTHwG stringLength - 16, LED status - 0
+[44276766442458] Client Receiving: String - OpxljoCviVfgzNZWJtMtpmEmhMg stringLength - 27, LED status - 0
+[44277767134151] Client Receiving: String - iMdXcBjmPMIYHNehBedkx stringLength - 21, LED status - 0
+[44268763725679]IPC - Sockets
+Server Process ID: 32549
+Allocated File Descriptor: 4
+[44268763737058]Server Sending: String - uOPVkrNoCy stringLength - 10, LED status - 0
+[44269764309545]Server Sending: String - sAXVHLhFamhPi stringLength - 13, LED status - 0
+[44270764484313]Server Sending: String - gf stringLength - 2, LED status - 0
+[44271765080318]Server Sending: String - lARFpHBzYpOBOu stringLength - 14, LED status - 0
+[44272765304444]Server Sending: String - osQVdXBejIUsdbxd stringLength - 16, LED status - 0
+[44273765578622]Server Sending: String - YUSnCtNAIBcwWWLoMHsJiwTRrlUsJX stringLength - 30, LED status - 0
+[44274765828785]Server Sending: String -  stringLength - 0, LED status - 0
+[44275766045594]Server Sending: String - SwWuQJVzlXVhTHwG stringLength - 16, LED status - 0
+[44276766315055]Server Sending: String - OpxljoCviVfgzNZWJtMtpmEmhMg stringLength - 27, LED status - 0
+[44277766993765]Server Sending: String - iMdXcBjmPMIYHNehBedkx stringLength - 21, LED status - 0
