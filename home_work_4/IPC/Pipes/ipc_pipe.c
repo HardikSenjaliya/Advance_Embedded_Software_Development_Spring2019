@@ -23,6 +23,8 @@
 void childProcess(void);
 void parentProcess(void);
 
+void randomStringGenerator(char *, int stringLength);
+
 /*Global variables*/
 
 /*declare pipe file descriptors
@@ -53,8 +55,25 @@ typedef struct {
 
 } processData_t;
 
+void randomStringGenerator(char *randomString, int stringLength){
+
+	 char characters[] = "abcdefghijklmnopqrstuvwxyz"
+                     "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+
+    while (stringLength-- > 0) {
+        int index = (double) rand() / RAND_MAX * (sizeof characters - 1);
+        *randomString++ = characters[index];
+    }
+
+    *randomString = '\0';
+
+}
+
+	
 void childProcess() {
 	struct timespec currentTime = { 0, 0 };
+
+	int count = 10;
 
 	pthread_mutex_lock(&mLogFile);
 	pLogFile = fopen("logfile.txt", "a");
@@ -64,42 +83,79 @@ void childProcess() {
 	}
 	clock_gettime(CLOCK_MONOTONIC, &currentTime);
 	fprintf(pLogFile,
-			"[%ld]IPC - PIPE\nChild Process ID: %d\nAllocated File Descriptor: pipe_c2p\n",
+			"[%ld]IPC - PIPE Child Process ID: %d Allocated File Descriptor: pipe_c2p \n",
 			(currentTime.tv_sec*NSEC_PER_SEC) + (currentTime.tv_nsec),getpid());
 	fclose(pLogFile);
 	pthread_mutex_unlock(&mLogFile);
 
 	/*Read from the Parent process*/
 
-	close(pipe_p2c[1]); /*close file descriptor for writing to parent process*/
+	//close(pipe_p2c[1]); /*close file descriptor for writing to parent process*/
 
-	char readMsg[sizeof(processData_t)] = { 0 };
-	read(pipe_p2c[0], readMsg, sizeof(processData_t));
+	for(int i=0; i<10; i++){
 
-	processData_t *pData = (processData_t*) readMsg;
+		char readMsg[sizeof(processData_t)] = { 0 };
+		read(pipe_p2c[0], readMsg, sizeof(processData_t));
 
-	pthread_mutex_lock(&mLogFile);
-	pLogFile = fopen("logfile.txt", "a");
-	if (pLogFile == NULL) {
+		processData_t *pData = (processData_t*) readMsg;
+
+		pthread_mutex_lock(&mLogFile);
+		pLogFile = fopen("logfile.txt", "a");
+		if (pLogFile == NULL) {
 		perror("ERROR: fopen");
-		exit(0);
-	}
-	clock_gettime(CLOCK_MONOTONIC, &currentTime);
-	fprintf(pLogFile,
-			"[%ld]Received String:%s\nMessage Length:%d\nLED status:%d\n",(currentTime.tv_sec*NSEC_PER_SEC) + (currentTime.tv_nsec)
-			,pData->string, pData->stringLength, pData->ledStatus);
-	fclose(pLogFile);
-	pthread_mutex_unlock(&mLogFile);
+			exit(0);
+		}
 
-	close(pipe_p2c[0]);
+		clock_gettime(CLOCK_MONOTONIC, &currentTime);
+		fprintf(pLogFile,
+			"[%ld]Child Process Received String: %s Message Length:%d LED status:%d\n",(currentTime.tv_sec*NSEC_PER_SEC) + (currentTime.tv_nsec)
+			,pData->string, pData->stringLength, pData->ledStatus);
+	
+		fclose(pLogFile);
+		pthread_mutex_unlock(&mLogFile);
+	}
+	//close(pipe_p2c[0]);
+
+	count = 10;
 
 	/*Send message to Parent Process*/
+	processData_t sendingData;
+
+	do{
+		int size = rand() % 31;
+		char writeMsg[size]; 
+		randomStringGenerator(writeMsg, size);
+
+		strcpy(sendingData.string, writeMsg);
+		sendingData.stringLength = strlen(writeMsg);
+		sendingData.ledStatus = LED_OFF;
+
+		pthread_mutex_lock(&mLogFile);
+		pLogFile = fopen("logfile.txt", "a");
+		if (pLogFile == NULL) {
+			perror("ERROR: fopen");
+			exit(0);
+		}
+		clock_gettime(CLOCK_MONOTONIC, &currentTime);
+		fprintf(pLogFile, "[%ld]Child Process Sending String: %s, String Length: %d LED status:%d\n",
+			(currentTime.tv_sec * NSEC_PER_SEC) + (currentTime.tv_nsec),
+			sendingData.string, sendingData.stringLength, sendingData.ledStatus);
+		fclose(pLogFile);
+		pthread_mutex_unlock(&mLogFile);
+
+		write(pipe_p2c[1], &sendingData, sizeof(sendingData));
+
+		count--;
+
+	}while(count);
 
 }
 
 void parentProcess() {
 
 	struct timespec currentTime = { 0, 0 };
+	
+	int count = 10;
 
 	pthread_mutex_lock(&mLogFile);
 	pLogFile = fopen("logfile.txt", "a");
@@ -109,7 +165,7 @@ void parentProcess() {
 	}
 	clock_gettime(CLOCK_MONOTONIC, &currentTime);
 	fprintf(pLogFile,
-			"[%ld] IPC - PIPE\nParent Process ID: %d\nAllocated File Descriptor: pipe_p2c\n",
+			"[%ld]IPC - PIPE Parent Process ID: %d Allocated File Descriptor: pipe_p2c\n",
 			(currentTime.tv_sec * NSEC_PER_SEC) + (currentTime.tv_nsec),
 			getpid());
 	fclose(pLogFile);
@@ -117,31 +173,62 @@ void parentProcess() {
 
 	/*Write to the child Process*/
 
-	close(pipe_p2c[0]);
+	//close(pipe_p2c[0]);
 
 	processData_t pData;
 
-	char writeMsg[] = "Hello from the Parent Process";
-	strcpy(pData.string, writeMsg);
-	pData.stringLength = strlen(writeMsg);
-	pData.ledStatus = LED_OFF;
+	for(int i=0; i < 10; i++){
+		int size = rand() % 31;
+		char writeMsg[size]; 
+		randomStringGenerator(writeMsg, size);
 
-	pthread_mutex_lock(&mLogFile);
-	pLogFile = fopen("logfile.txt", "a");
-	if (pLogFile == NULL) {
-		perror("ERROR: fopen");
-		exit(0);
-	}
-	clock_gettime(CLOCK_MONOTONIC, &currentTime);
-	fprintf(pLogFile, "[%ld] Sending String: %s, LED status:%d\n",
+		strcpy(pData.string, writeMsg);
+		pData.stringLength = strlen(writeMsg);
+		pData.ledStatus = LED_OFF;
+
+		pthread_mutex_lock(&mLogFile);
+		pLogFile = fopen("logfile.txt", "a");
+		if (pLogFile == NULL) {
+			perror("ERROR: fopen");
+			exit(0);
+		}
+		clock_gettime(CLOCK_MONOTONIC, &currentTime);
+		fprintf(pLogFile, "[%ld]Parent Process Sending String: %s, String Length: %d LED status:%d\n",
 			(currentTime.tv_sec * NSEC_PER_SEC) + (currentTime.tv_nsec),
-			pData.string, pData.ledStatus);
-	fclose(pLogFile);
-	pthread_mutex_unlock(&mLogFile);
+			pData.string, pData.stringLength, pData.ledStatus);
+		fclose(pLogFile);
+		pthread_mutex_unlock(&mLogFile);
 
-	write(pipe_p2c[1], &pData, sizeof(pData));
+		write(pipe_p2c[1], &pData, sizeof(pData));
+		sleep(1);
 
-	close(pipe_p2c[1]);
+	}
+	//close(pipe_p2c[1]);
+	count = 10;
+
+	do{
+		char readMsg[sizeof(processData_t)] = { 0 };
+		read(pipe_p2c[0], readMsg, sizeof(processData_t));
+
+		processData_t *pData = (processData_t*) readMsg;
+
+		pthread_mutex_lock(&mLogFile);
+		pLogFile = fopen("logfile.txt", "a");
+		if (pLogFile == NULL) {
+		perror("ERROR: fopen");
+			exit(0);
+		}
+
+		clock_gettime(CLOCK_MONOTONIC, &currentTime);
+		fprintf(pLogFile,
+			"[%ld]Parent Process Received String: %s Message Length:%d LED status:%d\n",(currentTime.tv_sec*NSEC_PER_SEC) + (currentTime.tv_nsec)
+			,pData->string, pData->stringLength, pData->ledStatus);
+		
+		fclose(pLogFile);
+		pthread_mutex_unlock(&mLogFile);
+		count--;
+
+	}while(count);
 
 }
 
