@@ -8,6 +8,9 @@
 #include <unistd.h>
 #include <semaphore.h>
 #include <string.h>
+#include <time.h>
+
+#define NSEC_PER_SEC			(1000000000)
 
 const char *name = "/mySharedMemory";
 const char *semNameP = "semaProducer";
@@ -47,6 +50,15 @@ void randomStringGenerator(char *randomString, int stringLength){
 int main(void){
 
 	const int SIZE = 4096;
+
+	struct timespec currentTime = { 0, 0 };
+
+	FILE *pLogFile = fopen("logfile.txt", "a");
+	pLogFile = fopen("logfile.txt", "a");
+	if (pLogFile == NULL) {
+		perror("ERROR: fopen");
+		exit(0);
+	}
 
 	int shmFD;
 
@@ -101,6 +113,10 @@ int main(void){
 	sendingData.stringLength = strlen(message);
 	sendingData.ledStatus = LED_ON;
 
+	clock_gettime(CLOCK_MONOTONIC, &currentTime);
+	fprintf(pLogFile, "[%ld]Produucer Sending: String - %s stringLength - %d, LED status - %d\n", 
+			(currentTime.tv_sec*NSEC_PER_SEC) + (currentTime.tv_nsec), sendingData.string, sendingData.stringLength, sendingData.ledStatus);
+
 	memcpy((processData_t*)pSharedMemory, &sendingData, sizeof(processData_t));
 
 	if(0 > sem_post(semaphoreP))
@@ -113,11 +129,15 @@ int main(void){
 
 	memcpy(&receivedData, (processData_t*)pSharedMemory, sizeof(processData_t));
 
+	clock_gettime(CLOCK_MONOTONIC, &currentTime);
+	fprintf(pLogFile, "[%ld]Produucer Receiving: String - %s stringLength - %d, LED status - %d\n", 
+			(currentTime.tv_sec*NSEC_PER_SEC) + (currentTime.tv_nsec), receivedData.string, receivedData.stringLength, receivedData.ledStatus);
+	
 	printf("Produucer Received Message string: %s, string length: %d, led status: %d\n", receivedData.string, 
 		receivedData.stringLength, receivedData.ledStatus);
-
-	printf("Producing Exiting\n");
 	}
+
+	//printf("Producing Exiting\n");
 
 	return 0;
 

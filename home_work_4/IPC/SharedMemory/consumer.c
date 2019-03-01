@@ -8,6 +8,9 @@
 #include <unistd.h>
 #include <semaphore.h>
 #include <string.h>
+#include <time.h>
+
+#define NSEC_PER_SEC			(1000000000)
 
 const char *name = "/mySharedMemory";
 const char *semNameP = "semaProducer";
@@ -46,6 +49,15 @@ int main(void){
 
 	const int SIZE = 4096;
 
+	struct timespec currentTime = { 0, 0 };
+
+	FILE *pLogFile = fopen("logfile.txt", "a");
+	pLogFile = fopen("logfile.txt", "a");
+	if (pLogFile == NULL) {
+		perror("ERROR: fopen");
+		exit(0);
+	}
+
 	int shmFD;
 
 	void *pSharedMemory;
@@ -77,11 +89,18 @@ int main(void){
 	if(0 > sem_wait(semaphoreP))
 		perror("ERROR: sem_wait");
 
+	for(int i = 0; i < 10; i++){
+
 	processData_t receivedData = {0};
 
 	char *streamData = (char*)&receivedData;
 
 	memcpy(streamData, (char*)pSharedMemory, sizeof(processData_t));
+
+
+	clock_gettime(CLOCK_MONOTONIC, &currentTime);
+	fprintf(pLogFile, "[%ld]Produucer Receiving: String - %s stringLength - %d, LED status - %d\n", 
+			(currentTime.tv_sec*NSEC_PER_SEC) + (currentTime.tv_nsec), receivedData.string, receivedData.stringLength, receivedData.ledStatus);
 
 	printf("Consumer Received Data string: %s, string length: %d, led status: %d\n", receivedData.string, 
 		receivedData.stringLength, receivedData.ledStatus);
@@ -96,10 +115,16 @@ int main(void){
 	sendingData.stringLength = strlen(message);
 	sendingData.ledStatus = LED_ON;
 
+	clock_gettime(CLOCK_MONOTONIC, &currentTime);
+	fprintf(pLogFile, "[%ld]Produucer Sending: String - %s stringLength - %d, LED status - %d\n", 
+			(currentTime.tv_sec*NSEC_PER_SEC) + (currentTime.tv_nsec), sendingData.string, sendingData.stringLength, sendingData.ledStatus);
+
 	memcpy((processData_t*)pSharedMemory, &sendingData, sizeof(processData_t));
 
 	if(0 > sem_post(semaphoreC))
 		perror("ERROR: sem_post consumer");
+
+	}
 
 	if(-1 == sem_unlink(semNameP))
 		perror("ERROR: sem_unlink");
