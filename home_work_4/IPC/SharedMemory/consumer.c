@@ -13,8 +13,7 @@ const char *name = "/mySharedMemory";
 const char *semNameP = "semaProducer";
 const char *semNameC = "semaConsumer";
 
-/*#define semNameP "/semaProducer"
-#define semNameC "/semaConsumer"*/
+void randomStringGenerator(char *, int stringLength);
 
 typedef enum{
 	LED_OFF,
@@ -28,6 +27,20 @@ typedef struct{
 	int ledStatus;
 }processData_t;
 
+
+void randomStringGenerator(char *randomString, int stringLength){
+
+	 char characters[] = "abcdefghijklmnopqrstuvwxyz"
+                     "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+
+    while (stringLength-- > 0) {
+        int index = (double) rand() / RAND_MAX * (sizeof characters - 1);
+        *randomString++ = characters[index];
+    }
+
+    *randomString = '\0';
+
+}
 
 int main(void){
 
@@ -75,7 +88,9 @@ int main(void){
 
 	processData_t sendingData;
 
-	char *message = "Hello from Consumer Process";
+	int size = rand() % 31;
+	char message[size];
+	randomStringGenerator(message, size);
 
 	strcpy(sendingData.string,message);
 	sendingData.stringLength = strlen(message);
