@@ -1,0 +1,44 @@
+[44199411695003]IPC - Shared Memory
+Server Process ID: 32521
+[44199411865955]Consumer Receiving: String - uOPVkrNoCy stringLength - 10, LED status - 1
+[44199411902608]Consumer Sending: String - uOPVkrNoCy stringLength - 10, LED status - 1
+[44199411931766]Consumer Receiving: String - uOPVkrNoCy stringLength - 10, LED status - 1
+[44199411942424]Consumer Sending: String - sAXVHLhFamhPi stringLength - 13, LED status - 1
+[44199411946441]Consumer Receiving: String - sAXVHLhFamhPi stringLength - 13, LED status - 1
+[44199411961714]Consumer Sending: String - gf stringLength - 2, LED status - 1
+[44199411964471]Consumer Receiving: String - gf stringLength - 2, LED status - 1
+[44199411977291]Consumer Sending: String - lARFpHBzYpOBOu stringLength - 14, LED status - 1
+[44199411979944]Consumer Receiving: String - lARFpHBzYpOBOu stringLength - 14, LED status - 1
+[44199412073523]Consumer Sending: String - osQVdXBejIUsdbxd stringLength - 16, LED status - 1
+[44199412077249]Consumer Receiving: String - osQVdXBejIUsdbxd stringLength - 16, LED status - 1
+[44199412092705]Consumer Sending: String - YUSnCtNAIBcwWWLoMHsJiwTRrlUsJX stringLength - 30, LED status - 1
+[44199412094642]Consumer Receiving: String - YUSnCtNAIBcwWWLoMHsJiwTRrlUsJX stringLength - 30, LED status - 1
+[44199412104547]Consumer Sending: String -  stringLength - 0, LED status - 1
+[44199412107170]Consumer Receiving: String -  stringLength - 0, LED status - 1
+[44199412121486]Consumer Sending: String - SwWuQJVzlXVhTHwG stringLength - 16, LED status - 1
+[44199412123672]Consumer Receiving: String - SwWuQJVzlXVhTHwG stringLength - 16, LED status - 1
+[44199412154797]Consumer Sending: String - OpxljoCviVfgzNZWJtMtpmEmhMg stringLength - 27, LED status - 1
+[44199412157451]Consumer Receiving: String - OpxljoCviVfgzNZWJtMtpmEmhMg stringLength - 27, LED status - 1
+[44199412178631]Consumer Sending: String - iMdXcBjmPMIYHNehBedkx stringLength - 21, LED status - 1
+[44191833035975]IPC - Shared Memory
+Producer Process ID: 32511
+[44191833466005]Produucer Sending: String - uOPVkrNoCy stringLength - 10, LED status - 1
+[44199411964122]Produucer Receiving: String - sAXVHLhFamhPi stringLength - 13, LED status - 1
+[44199412075413]Produucer Sending: String - sAXVHLhFamhPi stringLength - 13, LED status - 1
+[44199412079675]Produucer Receiving: String - sAXVHLhFamhPi stringLength - 13, LED status - 1
+[44199412096629]Produucer Sending: String - gf stringLength - 2, LED status - 1
+[44199412100235]Produucer Receiving: String - gf stringLength - 2, LED status - 1
+[44199412113695]Produucer Sending: String - lARFpHBzYpOBOu stringLength - 14, LED status - 1
+[44199412116670]Produucer Receiving: String - lARFpHBzYpOBOu stringLength - 14, LED status - 1
+[44199412152582]Produucer Sending: String - osQVdXBejIUsdbxd stringLength - 16, LED status - 1
+[44199412155704]Produucer Receiving: String - osQVdXBejIUsdbxd stringLength - 16, LED status - 1
+[44199412178560]Produucer Sending: String - YUSnCtNAIBcwWWLoMHsJiwTRrlUsJX stringLength - 30, LED status - 1
+[44199412181515]Produucer Receiving: String - iMdXcBjmPMIYHNehBedkx stringLength - 21, LED status - 1
+[44199412200400]Produucer Sending: String -  stringLength - 0, LED status - 1
+[44199412203680]Produucer Receiving: String -  stringLength - 0, LED status - 1
+[44199412223383]Produucer Sending: String - SwWuQJVzlXVhTHwG stringLength - 16, LED status - 1
+[44199412225878]Produucer Receiving: String - SwWuQJVzlXVhTHwG stringLength - 16, LED status - 1
+[44199412247371]Produucer Sending: String - OpxljoCviVfgzNZWJtMtpmEmhMg stringLength - 27, LED status - 1
+[44199412249675]Produucer Receiving: String - OpxljoCviVfgzNZWJtMtpmEmhMg stringLength - 27, LED status - 1
+[44199412268741]Produucer Sending: String - iMdXcBjmPMIYHNehBedkx stringLength - 21, LED status - 1
+[44199412270871]Produucer Receiving: String - iMdXcBjmPMIYHNehBedkx stringLength - 21, LED status - 1
