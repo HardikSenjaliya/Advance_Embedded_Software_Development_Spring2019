@@ -71,7 +71,9 @@ int setSignalMask(){
 
 }
 
-
+/*@brief: this function is a user define signal handler
+ *
+ * */
 void signalHandler(int signal, siginfo_t *siginfo, void *ucontext){
 
 	if(signal == SIGUSR1){
@@ -106,6 +108,10 @@ int setupSigactionHandler(){
 	return 0;
 }
 
+/*
+ * @brief: this function creates a timer to run thread 2 periodically every 100ms
+ * @return: 1 if unsuccesful else 0
+ * */
 int createPeriodicThread() {
 
 	timer_t idTimer;
@@ -141,6 +147,10 @@ int createPeriodicThread() {
 	return 0;
 }
 
+/*
+ * @brief: this function maps the characters from the test
+ * file into an array with the frequency of each character
+ * */
 void readMapChars(FILE *fp, int array[SIZE_ROW][SIZE_COL]) {
 
 	char c;
@@ -153,6 +163,12 @@ void readMapChars(FILE *fp, int array[SIZE_ROW][SIZE_COL]) {
 	}
 }
 
+/*
+ * @brief: this function is a thread function for thread0. It reads the test file
+ * and maps the characters of the file with its frequency into an arry and
+ * then logs the characters having frequency less than 100 into the logfile
+ *
+ * */
 void *funThread0(void *arg) {
 
 	/*Set signal mask*/
@@ -227,6 +243,9 @@ void *funThread0(void *arg) {
 	return NULL;
 }
 
+/*
+ * @brief: this function is a thread function for the thread 1, which runs periodically
+ * every 100 ms. It writes CPU usage to the logfile every time it runs*/
 void *funThread1(void *arg) {
 
 	long int cpuStat[10];
@@ -360,6 +379,10 @@ int main(int argc, char **argv) {
 	fprintf(pLogFile, "Main thread - Exiting\n");
 	fclose(pLogFile);
 	pthread_mutex_unlock(&mFile);
+
+
+	pthread_mutex_destroy(&mTime);
+	pthread_mutex_destroy(&mFile);
 	return 0;
 
 }

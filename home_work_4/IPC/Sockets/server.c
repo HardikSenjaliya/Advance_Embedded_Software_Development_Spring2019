@@ -5,7 +5,6 @@
  *      Author: hardyk
  */
 
-
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
@@ -57,9 +56,6 @@ void signalHandler(int signal, siginfo_t *siginfo, void *ucontext){
 		}
 
 		fprintf(pLogFile, "SIGINT signal Received...EXITING...");
-
-		if(close(socketFD))
-			perror("ERROR: close");
 
 		fclose(pLogFile);
 
