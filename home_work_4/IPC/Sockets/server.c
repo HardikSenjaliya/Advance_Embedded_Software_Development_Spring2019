@@ -18,7 +18,7 @@
 #define SERVER_PORT				(2345)
 #define NSEC_PER_SEC			(1000000000)
 
-
+/*function prototypes*/
 void sendDataToClient(int fd);
 void readDataFromClient(int fd);
 void randomStringGenerator(char *, int stringLength);
@@ -41,10 +41,12 @@ typedef struct {
 
 } processData_t;
 
+/*@brief: this function is a user defined signal handler
+ * */
 void signalHandler(int signal, siginfo_t *siginfo, void *ucontext){
 
 	if(signal == SIGINT){
-
+		
 		struct timespec currentTime = { 0, 0 };
 
 		FILE *pLogFile = fopen("logfile.txt", "a");
@@ -53,8 +55,13 @@ void signalHandler(int signal, siginfo_t *siginfo, void *ucontext){
 			perror("ERROR: fopen");
 			exit(1);
 		}
-		clock_gettime(CLOCK_MONOTONIC, &currentTime);
-		fprintf(pLogFile, "[%ld]SIGINT signal Received...EXITING...", (currentTime.tv_sec*NSEC_PER_SEC) + (currentTime.tv_nsec));
+
+		fprintf(pLogFile, "SIGINT signal Received...EXITING...");
+
+		if(close(socketFD))
+			perror("ERROR: close");
+
+		fclose(pLogFile);
 
 		exit(1);
 	}
@@ -79,6 +86,14 @@ int setupSigactionHandler(){
 	return 0;
 }
 
+/*
+ * @brief: this function generates random string from the predefined list of characters
+ * 			and given size of the string
+ * @param randomString: pointer to store generated random string
+ * @param stringLength: length of the string to be generated
+ * @return void
+ *
+ * */
 
 void randomStringGenerator(char *randomString, int stringLength){
 
@@ -94,6 +109,10 @@ void randomStringGenerator(char *randomString, int stringLength){
 
 }
 
+/*
+ * @brief: this data sends data to the client
+ * @param: fd: file descriptor for the socket
+ * */
 void sendDataToClient(int fd){
 
 	int freq = 10;
@@ -112,8 +131,10 @@ void sendDataToClient(int fd){
 	
 	processData_t data;
 
+	/*this loop sends data to the client*/
 	for(int i = 0; i < freq; i++){
 
+		/*generate a random string to be sent*/
 		int size = rand() % 31;
 		char dataString[size]; 
 		randomStringGenerator(dataString, size);
@@ -126,6 +147,7 @@ void sendDataToClient(int fd){
 		fprintf(pLogFile, "[%ld]Server Sending: String - %s stringLength - %d, LED status - %d\n", 
 			(currentTime.tv_sec*NSEC_PER_SEC) + (currentTime.tv_nsec), data.string, data.stringLength, data.ledStatus);
 
+		/*send data to the client*/
 		if(-1 == (send(fd, (const void*)&data, sizeof(data), 0))){
 			perror("ERROR: send");
 			exit(1);
@@ -134,8 +156,13 @@ void sendDataToClient(int fd){
 		sleep(1);
 	}
 
+	fclose(pLogFile);
 }
 
+/*
+ * @brief: this data reads data sent by the client
+ * @param: fd: file descriptor for the socket
+ * */
 void readDataFromClient(int fd){
 
 	int bytesReceived = 0; int count = 10;
@@ -156,6 +183,7 @@ void readDataFromClient(int fd){
 			(currentTime.tv_sec*NSEC_PER_SEC) + (currentTime.tv_nsec),getpid(), fd);
 
 	do{
+		/*read data*/
 		bytesReceived = read(fd, dataReceived, sizeof(dataReceived));
 
 		processData_t *data = (processData_t*)(dataReceived);
@@ -170,6 +198,9 @@ void readDataFromClient(int fd){
 
 	}while(count);
 
+
+	fclose(pLogFile);
+
 }
 
 int main(void){
@@ -183,7 +214,8 @@ int main(void){
 
 	socklen_t clientAddLen;
 
-	setupSigactionHandler();
+
+	//setupSigactionHandler();
 	/*Create a new socket
 	 * domain - IPv4, type - stream based socket, protocol - 0 a single type of
 	 * protocol of family IPv4

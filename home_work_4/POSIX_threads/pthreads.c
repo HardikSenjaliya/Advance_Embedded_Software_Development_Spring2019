@@ -196,7 +196,7 @@ void *funThread0(void *arg) {
 			linuxID);
 
 	/*Open the test file to read data*/
-	FILE *pTestFile = fopen("/usr/bin/gdb.txt", "r");
+	FILE *pTestFile = fopen("gdb.txt", "r");
 	if (pTestFile == NULL)
 		printf("Unable to open test file\n");
 

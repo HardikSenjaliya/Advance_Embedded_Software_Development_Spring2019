@@ -17,6 +17,7 @@
 #define SERVER_ADDRESS_PORT			2345
 #define NSEC_PER_SEC			(1000000000)
 
+/*function prototypes*/
 void readDatafromServer(int fd);
 void sendDatatoServer(int fd);
 void randomStringGenerator(char *, int stringLength);
@@ -40,6 +41,14 @@ typedef struct {
 
 } processData_t;
 
+/*
+ * @brief: this function generates random string from the predefined list of characters
+ * 			and given size of the string
+ * @param randomString: pointer to store generated random string
+ * @param stringLength: length of the string to be generated
+ * @return void
+ *
+ * */
 
 void randomStringGenerator(char *randomString, int stringLength){
 
@@ -55,6 +64,10 @@ void randomStringGenerator(char *randomString, int stringLength){
 
 }
 
+/*
+ * @brief: this data reads data sent by the server
+ * @param: fd: file descriptor for the socket
+ * */
 void readDatafromServer(int fd){
 
 	int bytesReceived = 0; int count = 10;
@@ -74,7 +87,9 @@ void readDatafromServer(int fd){
 			"[%ld]IPC - Sockets\nClient Process ID: %d\nAllocated File Descriptor: %d\n",
 			(currentTime.tv_sec*NSEC_PER_SEC) + (currentTime.tv_nsec),getpid(), fd);
 
+	/*read data from the server and logs it to the logfile*/
 	do{
+		/*read data*/
 		bytesReceived = read(fd, dataReceived, sizeof(dataReceived));
 
 		processData_t *data = (processData_t*)(dataReceived);
@@ -90,8 +105,14 @@ void readDatafromServer(int fd){
 		
 		count--;
 	}while(count);
+
+	fclose(pLogFile);
 }
 
+/*
+ * @brief: this data sends data to the server
+ * @param: fd: file descriptor for the socket
+ * */
 void sendDatatoServer(int fd){
 
 	int freq = 10;
@@ -110,8 +131,10 @@ void sendDatatoServer(int fd){
 	
 	processData_t data;
 
+	/*this loop sends data to ther server*/
 	for(int i = 0; i < freq; i++){
 
+		/*generate a random string to be sent*/
 		int size = rand() % 31;
 		char dataString[size]; 
 		randomStringGenerator(dataString, size);
@@ -124,6 +147,7 @@ void sendDatatoServer(int fd){
 		fprintf(pLogFile, "[%ld] Client Sending: String - %s stringLength - %d, LED status - %d\n", 
 			(currentTime.tv_sec*NSEC_PER_SEC) + (currentTime.tv_nsec), data.string, data.stringLength, data.ledStatus);
 
+		/*send data*/
 		if(-1 == (send(fd, (const void*)&data, sizeof(data), 0))){
 			perror("ERROR: send");
 			exit(1);
@@ -131,7 +155,10 @@ void sendDatatoServer(int fd){
 
 		sleep(1);
 	}
+
+	fclose(pLogFile);
 }
+
 
 int main(void) {
 
