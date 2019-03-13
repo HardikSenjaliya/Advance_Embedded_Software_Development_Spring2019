@@ -18,5 +18,6 @@
 
 /*function prototypes*/
 void *run_logger(void *params);
+void log_message(FILE *fp, long int time_stamp, unsigned int thread_id, int log_level, char *message);
 
 #endif /* LOGGER_H_ */
