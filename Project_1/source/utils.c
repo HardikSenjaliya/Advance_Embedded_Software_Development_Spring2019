@@ -7,6 +7,8 @@
 
 #include "../include/utils.h"
 
+pthread_mutex_t sendMutex = PTHREAD_MUTEX_INITIALIZER;
+
 /**
  * @brief this function writes error log messages to the logfile
  * @param fp - pointer to the logfile
@@ -41,7 +43,7 @@ mqd_t create_posix_mq(char *qName){
 	attr.mq_msgsize = sizeof(log_message_t);
 
 	/*Open a new posix queue*/
-	qDes = mq_open(qName, O_CREAT | O_RDWR, 0666, &attr);
+	qDes = mq_open(qName, O_CREAT | O_RDWR | O_NONBLOCK, 0666, &attr);
 
 	if(qDes == -1){
 
@@ -64,12 +66,14 @@ int send_message(mqd_t qDes, log_message_t message){
 
 	int bytes_sent = 0;
 
+	pthread_mutex_lock(&sendMutex);
 	bytes_sent = mq_send(qDes, (const char*)&message, sizeof(message), 0);
 
 	if(bytes_sent < 0){
-		perror("ERROR: mq_send\n");
+		perror("ERROR: mq_send");
 		return 1;
 	}
+	pthread_mutex_unlock(&sendMutex);
 
 	return 0;
 }

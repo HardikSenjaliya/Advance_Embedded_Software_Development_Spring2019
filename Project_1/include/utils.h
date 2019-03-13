@@ -13,12 +13,14 @@
 #include <stdint.h>
 #include <string.h>
 #include <mqueue.h>
+#include <pthread.h>
+#include <time.h>
 
 typedef struct{
 
-	pid_t thread_id;
 	int log_level;
 	struct timespec time_stamp;
+	char thread_name[20];
 	char message[100];
 
 }log_message_t;
