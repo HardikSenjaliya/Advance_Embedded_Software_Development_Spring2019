@@ -12,10 +12,24 @@
 #include <stdlib.h>
 #include <stdint.h>
 #include <string.h>
+#include <mqueue.h>
+
+typedef struct{
+
+	pid_t thread_id;
+	int log_level;
+	struct timespec time_stamp;
+	char message[100];
+
+}log_message_t;
 
 
 /*function prototypes*/
-void _log(FILE *fp, char *file, int line, char *message);
+
+void log_error(FILE *fp, char *file, int line, char *message);
+mqd_t create_posix_mq(char *qName);
+int send_message(mqd_t qDes, log_message_t message);
+int receive_message();
 
 
 #endif /* SOURCE_UTILS_H_ */
