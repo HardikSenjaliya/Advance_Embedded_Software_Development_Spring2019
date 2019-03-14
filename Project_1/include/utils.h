@@ -15,6 +15,11 @@
 #include <mqueue.h>
 #include <pthread.h>
 #include <time.h>
+#include <unistd.h>
+#include <sys/syscall.h>
+
+#define ERROR_STDOUT(error) fprintf(stdout, "%s:%d %s", __FILE__, __LINE__, error)
+#define INFO_STDOUT(message) fprintf(stdout, "%s:%d %s", __FILE__, __LINE__, message)
 
 typedef struct{
 
@@ -28,7 +33,7 @@ typedef struct{
 
 /*function prototypes*/
 
-void log_error(FILE *fp, char *file, int line, char *message);
+void _log(FILE *fp, char *file, int line, char *message);
 mqd_t create_posix_mq(char *qName);
 int send_message(mqd_t qDes, log_message_t message);
 int receive_message();

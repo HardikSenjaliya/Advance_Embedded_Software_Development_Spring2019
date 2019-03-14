@@ -17,14 +17,10 @@ pthread_mutex_t sendMutex = PTHREAD_MUTEX_INITIALIZER;
  * @param message - message to be logged in to the logfile
  * @return void
  */
-void log_error(FILE *fp, char *file, int line, char *message){
+/*void log(FILE *fp, char *file, int line, char *message){
 
 	fprintf(fp, "%s:%d %s", file, line, message);
-}
-
-
-
-
+}*/
 
 /**
  * @brief this function creates a new posix message queue OR opens already created
@@ -60,7 +56,6 @@ mqd_t create_posix_mq(char *qName){
  * @param message message to be logged into the logfile
  * @return 0 if successful, 1 otherwise
  */
-
 
 int send_message(mqd_t qDes, log_message_t message){
 
