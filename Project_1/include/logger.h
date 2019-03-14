@@ -8,16 +8,20 @@
 #ifndef LOGGER_H_
 #define LOGGER_H_
 
-#include <stdio.h>
-#include <stdlib.h>
-#include <stdint.h>
-#include <string.h>
-#include <pthread.h>
 
 #include "utils.h"
+
+typedef struct{
+
+	char file_name[10];
+	char file_path[50];
+
+}logfile_attr_t;
+
 
 /*function prototypes*/
 void *run_logger(void *params);
 void log_message(FILE *fp, long int time_stamp, char *thread_name, int log_level, char *message);
+void file_backup(char *source_file);
 
 #endif /* LOGGER_H_ */
