@@ -17,6 +17,8 @@
  */
 void *run_temperature_sensor(void *params) {
 
+	INFO_STDOUT("Temperature Sensor thread started running...\n");
+
 	mqd_t qDes = create_posix_mq(Q_NAME);
 
 	log_message_t msg;
@@ -25,7 +27,13 @@ void *run_temperature_sensor(void *params) {
 	strcpy(msg.thread_name, THREAD_NAME);
 	clock_gettime(CLOCK_MONOTONIC, &msg.time_stamp);
 
+	send_message(qDes, msg);
+
 	while (1) {
+		//INFO_STDOUT("Waiting for Temp semaphore\n");
+		sem_wait(&sem_temp);
+	//	INFO_STDOUT("sem_temp released...started executing...\n");
+
 		send_message(qDes, msg);
 	}
 

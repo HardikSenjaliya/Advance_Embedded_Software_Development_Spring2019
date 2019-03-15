@@ -9,14 +9,10 @@
 #define SOURCE_LIGHT_H_
 
 
-#include <stdio.h>
-#include <stdlib.h>
-#include <stdint.h>
-#include <string.h>
-#include <pthread.h>
 
 #include "utils.h"
 
 void *run_light_sensor(void *params);
+void timer_handler(union sigval arg);
 
 #endif /* SOURCE_LIGHT_H_ */

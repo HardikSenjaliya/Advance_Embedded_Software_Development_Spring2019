@@ -23,65 +23,57 @@ int main(int argc, char **argv) {
 
 	pthread_t light_sensor, temperature_sensor, logger_task, socket_task;
 
-	/*	if(argc < 3){
-	 printf("Invalid Commnad Line Arguments/No Arguments. Please provide two arguments"
-	 "required filename followed by filepath\n"
-	 "Usage: fileName.txt /directory/filepath");
-	 exit(1);
-	 }
+	if (argc < 2) {
+		printf(
+				"Invalid Commnad Line Arguments/No Arguments. Please provide required arguments"
+						"Usage: filepath/filename.txt");
+		exit(1);
+	}
 
-	 strcpy(logfile.file_name, argv[1]);
-	 strcpy(logfile.file_path, argv[2]);*/
+	strcpy(logfile.file_name, argv[1]);
+
+	if (initialize_semaphores()) {
+		ERROR_STDOUT("ERROR: initializing semaphores\n");
+		exit(1);
+	}
 
 	mqd_t qDes = create_posix_mq(Q_NAME);
 
+	msg.log_level = 0;
+	strcpy(msg.message, "Hello from main task");
+	strcpy(msg.thread_name, THREAD_NAME);
+	clock_gettime(CLOCK_MONOTONIC, &msg.time_stamp);
+
+	send_message(qDes, msg);
+
 	/*Spwan new threads*/
+	INFO_STDOUT("Creating new threads\n");
 
 	/*1. light sensor thread*/
 	if (pthread_create(&light_sensor, NULL, run_light_sensor, NULL)) {
-
-		msg.log_level = 0;
-		strcpy(msg.message, "ERROR: spawning light sensor thread");
-		strcpy(msg.thread_name, THREAD_NAME);
-		clock_gettime(CLOCK_MONOTONIC, &(msg.time_stamp));
-
-		send_message(qDes, msg);
+		ERROR_STDOUT("ERROR: creating light sensor thread\n");
 	}
 
 	/*2. temperature sensor task*/
 	if (pthread_create(&temperature_sensor, NULL, run_temperature_sensor,
 	NULL)) {
-
-		msg.log_level = 0;
-		strcpy(msg.message, "ERROR: spawning temp sensor thread");
-		strcpy(msg.thread_name, THREAD_NAME);
-		clock_gettime(CLOCK_MONOTONIC, &(msg.time_stamp));
-
-		send_message(qDes, msg);
+		ERROR_STDOUT("ERROR: creating temperature sensor thread\n");
 	}
 
 	/*3. Logger task*/
 	if (pthread_create(&logger_task, NULL, run_logger, (void*) &logfile)) {
-
-		msg.log_level = 0;
-		strcpy(msg.message, "ERROR: spawning logger thread");
-		strcpy(msg.thread_name, THREAD_NAME);
-		clock_gettime(CLOCK_MONOTONIC, &(msg.time_stamp));
-
-		send_message(qDes, msg);
+		ERROR_STDOUT("ERROR: creating logger task thread\n");
 	}
 
 	/*3. Socket task*/
 	if (pthread_create(&socket_task, NULL, run_socket, NULL)) {
-
-		msg.log_level = 0;
-		strcpy(msg.message, "ERROR: spawning socket thread");
-		strcpy(msg.thread_name, THREAD_NAME);
-		clock_gettime(CLOCK_MONOTONIC, &(msg.time_stamp));
-
-		send_message(qDes, msg);
+		ERROR_STDOUT("ERROR: creating socket task thread\n");
 	}
 
+	if (start_timer()) {
+		ERROR_STDOUT("ERROR: starting timer");
+		exit(1);
+	}
 
 	pthread_join(light_sensor, NULL);
 	pthread_join(temperature_sensor, NULL);

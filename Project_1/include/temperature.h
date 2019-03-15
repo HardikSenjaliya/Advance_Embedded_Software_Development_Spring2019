@@ -9,11 +9,6 @@
 #define SOURCE_TEMPERATURE_H_
 
 
-#include <stdio.h>
-#include <stdlib.h>
-#include <stdint.h>
-#include <string.h>
-#include <pthread.h>
 
 #include "utils.h"
 

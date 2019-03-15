@@ -7,7 +7,6 @@
 
 #include "../include/logger.h"
 
-
 #define NSEC_PER_SEC 			(1000000000)
 #define Q_NAME_MAIN				"/qMaintoLog"
 #define Q_NAME_LIGHT			"/qLightToLog"
@@ -21,30 +20,30 @@ pthread_mutex_t fileMutex = PTHREAD_MUTEX_INITIALIZER;
  * @return void
  */
 
-void file_backup(char *source_file){
+void file_backup(char *source_file) {
 
 	char c;
 
 	/*Open a new destination file*/
 	FILE *dest_file = fopen("backup.txt", "w");
-	if(dest_file == NULL){
+	if (dest_file == NULL) {
 		INFO_STDOUT("Error in opening backup file\n");
 		exit(1);
 	}
 
 	/*Open the source file*/
 	FILE *src_file = fopen(source_file, "r");
-	if(src_file == NULL){
+	if (src_file == NULL) {
 		INFO_STDOUT("Error in opening the source file\n");
 		exit(1);
 	}
 
 	/*Start copying the file*/
-	while ((c = fgetc(src_file)) != EOF && !feof(src_file)){
+	while ((c = fgetc(src_file)) != EOF && !feof(src_file)) {
 		fputc(c, dest_file);
 	}
 
-	if(0 != remove(source_file)){
+	if (0 != remove(source_file)) {
 		INFO_STDOUT("Error in deleting old file\n");
 	}
 
@@ -73,21 +72,23 @@ void log_message(FILE *fp, long int time_stamp, char *thread_name,
  */
 void *run_logger(void *params) {
 
+	INFO_STDOUT("Logger thread started running...\n");
+
 	//logfile_attr_t logfile = (logfile_attr_t*)params;
 
 	/*Check if logfile with the given name is already present or not.
 	 * if present -> create a backfile and write to the new file
 	 * if not present -> create a new file*/
-	if(0 == access("logfile.txt", F_OK)){
+	if (0 == access("logfile.txt", F_OK)) {
 		INFO_STDOUT("Given logfile name already present in the directory\n");
 		INFO_STDOUT("Started Back up...");
 		file_backup("logfile.txt");
-		INFO_STDOUT("Done\n");
+		INFO_STDOUT("Backup Done\n");
 	}
 
 	/*Create a new logfile*/
 	FILE *p_logfile = fopen("logfile.txt", "a");
-	if(p_logfile == NULL){
+	if (p_logfile == NULL) {
 		INFO_STDOUT("Error in opening new logfile\n");
 	}
 
@@ -107,10 +108,10 @@ void *run_logger(void *params) {
 				sizeof(read_message), 0);
 
 		if (bytes_read < 0) {
-			perror("ERROR: mq_receive main task");
+			//perror("ERROR: mq_receive main task");
 		} else {
 			pthread_mutex_lock(&fileMutex);
-			INFO_STDOUT("logging data from main task\n");
+			//INFO_STDOUT("logging data from main task\n");
 			log_message(p_logfile,
 					(read_message.time_stamp.tv_sec) * NSEC_PER_SEC
 							+ (read_message.time_stamp.tv_nsec),
@@ -125,10 +126,10 @@ void *run_logger(void *params) {
 				sizeof(read_message), 0);
 
 		if (bytes_read < 0) {
-			perror("ERROR: mq_receive light task");
+			//perror("ERROR: mq_receive light task");
 		} else {
 			pthread_mutex_lock(&fileMutex);
-			INFO_STDOUT("logging data from light task\n");
+			//INFO_STDOUT("logging data from light task\n");
 			log_message(p_logfile,
 					(read_message.time_stamp.tv_sec) * NSEC_PER_SEC
 							+ (read_message.time_stamp.tv_nsec),
@@ -142,10 +143,10 @@ void *run_logger(void *params) {
 				sizeof(read_message), 0);
 
 		if (bytes_read < 0) {
-			perror("ERROR: mq_receive temperature task");
+			//perror("ERROR: mq_receive temperature task");
 		} else {
 			pthread_mutex_lock(&fileMutex);
-			INFO_STDOUT("logging data from temperature task\n");
+			//INFO_STDOUT("logging data from temperature task\n");
 			log_message(p_logfile,
 					(read_message.time_stamp.tv_sec) * NSEC_PER_SEC
 							+ (read_message.time_stamp.tv_nsec),
