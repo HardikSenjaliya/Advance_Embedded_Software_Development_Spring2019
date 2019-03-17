@@ -9,39 +9,104 @@
 
 int heartbeat_request = 0;
 
+bool light_status = 0, temp_status = 0, logger_status = 0, socket_status = 0;
 
-int check_thread_heartbeats(mqd_t qDes) {
+/**
+ * @brief this function sends exit command to all the threads after one/more thread found
+ * to be not running as expected
+ * @param p_descriptors pointer to the structure which contains all the descriptors of
+ * POSIX message queues
+ * @return void
+ */
+void send_exit_command(queue_descriptors_t *p_descriptors) {
 
-	//INFO_STDOUT("Start sending requests for Hearbeats\n");
-	int send_status = 0, bytes_recevied = 0;
+	log_message_t request;
+	int send_status = 0;
+	request.req_type = TIME_TO_EXIT;
 
-	log_message_t request, response;
+	send_status = mq_send(p_descriptors->qDesLight, (const char*) &request,
+			sizeof(request), 1);
+	if (send_status < 0) {
+		//ERROR_STDOUT("ERROR: while sending request for the hearbeat\n");
+	}
+
+	send_status = mq_send(p_descriptors->qDesTemp, (const char*) &request,
+			sizeof(request), 1);
+	if (send_status < 0) {
+		//ERROR_STDOUT("ERROR: while sending request for the hearbeat\n");
+	}
+
+	send_status = mq_send(p_descriptors->qDesLogger, (const char*) &request,
+			sizeof(request), 1);
+	if (send_status < 0) {
+		//ERROR_STDOUT("ERROR: while sending request for the hearbeat\n");
+	}
+
+	send_status = mq_send(p_descriptors->qDesSocket, (const char*) &request,
+			sizeof(request), 1);
+	if (send_status < 0) {
+		//ERROR_STDOUT("ERROR: while sending request for the hearbeat\n");
+	}
+}
+
+/**
+ * @brief this function reads messages the POSIX message queue of the given child thread.
+ * @param qDesMain file descriptor of the message queue from which message is to be read
+ * @return 0 if successful
+ */
+int read_thread_status(mqd_t qDesMain) {
+
+	int bytes_recevied = 0;
+
+	log_message_t response;
+
+	bytes_recevied = mq_receive(qDesMain, (char*) &response, sizeof(response),
+			0);
+	if (bytes_recevied < 0) {
+		//ERROR_STDOUT("ERROR: while reading responses from the MAIN Q\n");
+	}
+	printf("Response Read from the MAIN Q: sent by Q - %s\n",
+			response.thread_name);
+
+	if (response.alive_status == LIGHT_THREAD_ALIVE) {
+		light_status = 1;
+	}
+
+	if (response.alive_status == TEMP_THREAD_ALIVE) {
+		temp_status = 1;
+	}
+
+	if (response.alive_status == LOGGER_THREAD_ALIVE) {
+		logger_status = 1;
+	}
+
+	if (response.alive_status == SOCKET_THREAD_ALIVE) {
+		socket_status = 1;
+	}
+
+	return 0;
+}
+
+/**
+ * @brief this function sends request to a given thread to check if the thread is alive or not
+ * @param qDes file descriptor of the message queue on which message is to be sent
+ * @return 0 if successful
+ */
+int check_thread_status(mqd_t qDes) {
+
+	int send_status = 0;
+
+	log_message_t request;
+
 	request.req_type = SEND_ALIVE_STATUS;
 
-	for (int i = 0; i < HEARTBEAT_REQUESTS; i++) {
-		INFO_STDOUT("Request Sent from main\n");
-		send_status = mq_send(qDes, (const char*) &request, sizeof(request), 2);
-		if (send_status < 0) {
-			ERROR_STDOUT("ERROR: while sending heartbeat request\n");
-		}
-		sleep(1);
+	send_status = mq_send(qDes, (const char*) &request, sizeof(request), 1);
+	if (send_status < 0) {
+		//ERROR_STDOUT("ERROR: while sending request for the hearbeat\n");
 	}
 
-	for (int i = 0; i < HEARTBEAT_REQUESTS; i++) {
-
-		bytes_recevied = mq_receive(qDes, (char *)&response, sizeof(response),
-				0);
-		if (bytes_recevied < 0) {
-			ERROR_STDOUT("ERRRO: while reading heartbeat response\n");
-		}
-
-		printf("Response Received from the thread %s with %d\n", response.thread_name, response.alive_status);
-
-		sleep(1);
-	}
-
-	//heartbeat_request = 0;
-
+	/*this sleep is not required, here for testing purposes*/
+	sleep(1);
 	return 0;
 }
 
@@ -57,6 +122,7 @@ int main(int argc, char **argv) {
 	log_message_t msg;
 
 	logfile_attr_t logfile;
+	queue_descriptors_t queue_descriptors;
 
 	pthread_t light_sensor, temperature_sensor, logger_task, socket_task;
 
@@ -74,15 +140,24 @@ int main(int argc, char **argv) {
 		exit(1);
 	}
 
-	mqd_t qDes = create_posix_mq(Q_NAME_MAIN);
-	mqd_t qDesHB = create_posix_mq(Q_NAME_HB);
+	mqd_t qDesMain = create_posix_mq(Q_NAME_MAIN);
+	mqd_t qDesLogger = create_posix_mq(Q_NAME_LOGGER);
+	mqd_t qDesLight = create_posix_mq(Q_NAME_LIGHT);
+	mqd_t qDesTemp = create_posix_mq(Q_NAME_TEMP);
+	mqd_t qDesSocket = create_posix_mq(Q_NAME_SOCKET);
+
+	queue_descriptors.qDesMain = qDesMain;
+	queue_descriptors.qDesLight = qDesLight;
+	queue_descriptors.qDesTemp = qDesTemp;
+	queue_descriptors.qDesLogger = qDesLogger;
+	queue_descriptors.qDesSocket = qDesSocket;
 
 	msg.log_level = 0;
 	strcpy(msg.message, "Hello from main task");
 	strcpy(msg.thread_name, MAIN_THREAD_NAME);
 	clock_gettime(CLOCK_MONOTONIC, &msg.time_stamp);
 
-	send_message(qDes, &msg);
+	send_message(qDesLogger, &msg);
 
 	/*Spwan new threads*/
 	INFO_STDOUT("Creating new threads\n");
@@ -113,20 +188,34 @@ int main(int argc, char **argv) {
 		exit(1);
 	}
 
-
-		while (heartbeat) {
+	while (heartbeat) {
 		sem_wait(&sem_heartbeat);
 		heartbeat_request = 1;
-		check_thread_heartbeats(qDesHB);
-		//check_thread_heartbeats(qDesTemp);
-		//check_thread_heartbeats(qDesSocket);
-		//check_thread_heartbeats(qDesLogger);
+		check_thread_status(qDesLight);
+		read_thread_status(qDesMain);
+		check_thread_status(qDesTemp);
+		read_thread_status(qDesMain);
+		check_thread_status(qDesLogger);
+		read_thread_status(qDesMain);
+		check_thread_status(qDesSocket);
+		read_thread_status(qDesMain);
+
+		if (light_status < 1 || temp_status < 1 || logger_status < 1
+				|| socket_status < 1) {
+			INFO_STDOUT("One or more thread died\n");
+			heartbeat = 0;
+			send_exit_command(&queue_descriptors);
+		} else {
+			INFO_STDOUT("All threads are running\n");
+		}
 	}
 
 	pthread_join(light_sensor, NULL);
 	pthread_join(temperature_sensor, NULL);
 	pthread_join(logger_task, NULL);
 	pthread_join(socket_task, NULL);
+
+	INFO_STDOUT("Main thread Exiting...Bye Bye...\n");
 
 	return 0;
 }

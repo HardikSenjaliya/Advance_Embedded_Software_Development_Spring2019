@@ -22,6 +22,11 @@ int initialize_semaphores(void) {
 		return 1;
 	}
 
+	if (-1 == sem_init(&sem_heartbeat, 0, 0)) {
+		ERROR_STDOUT("ERROR: initializing semaphore\n");
+		return 1;
+	}
+
 	return 0;
 }
 
@@ -38,6 +43,10 @@ void timer_handler(union sigval arg) {
 	static int count = 1;
 	//printf("Counter - %d\n", count);
 
+	static int heartbeat_count = 0;
+
+	heartbeat_count += 1;
+
 	count = (count + 1) % 50;
 
 	if ((count % 10) == 1) {
@@ -48,6 +57,12 @@ void timer_handler(union sigval arg) {
 	if ((count % 25) == 0) {
 		//INFO_STDOUT("Releasing Temp Semaphores\n");
 		sem_post(&sem_temp);
+	}
+
+	if (heartbeat_count == 10000) {
+		INFO_STDOUT("Releasing Heartbeat semaphore\n");
+		sem_post(&sem_heartbeat);
+		heartbeat_count = 0;
 	}
 
 }
@@ -132,12 +147,12 @@ mqd_t create_posix_mq(char *qName) {
  * @return 0 if successful, 1 otherwise
  */
 
-int send_message(mqd_t qDes, log_message_t message) {
+int send_message(mqd_t qDes, log_message_t *message) {
 
 	int bytes_sent = 0;
 
 	pthread_mutex_lock(&sendMutex);
-	bytes_sent = mq_send(qDes, (const char*) &message, sizeof(message), 0);
+	bytes_sent = mq_send(qDes, (const char*) message, sizeof(log_message_t), 0);
 
 	if (bytes_sent < 0) {
 		perror("ERROR: mq_send");

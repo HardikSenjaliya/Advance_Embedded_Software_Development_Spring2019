@@ -10,7 +10,7 @@ CFLAGS = $(INCLUDE_FLAGS) $(OPT_FLAGS)
 	@echo "compiling" $@ "using" $<
 	$(CC) $(CFLAGS) -c $< -o $@
 
-project1: main.o utils.o light.o temperature.o logger.o
+project1: main.o utils.o light.o temperature.o logger.o socket.o
 	@echo "Building target $@"
 	$(CC) $(CFLAGS) $^ -o $@ -lpthread -lrt
 

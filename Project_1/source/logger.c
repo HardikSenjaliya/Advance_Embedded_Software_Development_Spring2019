@@ -7,10 +7,6 @@
 
 #include "../include/logger.h"
 
-#define NSEC_PER_SEC 			(1000000000)
-#define Q_NAME_MAIN				"/qMaintoLog"
-#define Q_NAME_LIGHT			"/qLightToLog"
-#define Q_NAME_TEMP				"/qTemperatureToLog"
 
 pthread_mutex_t fileMutex = PTHREAD_MUTEX_INITIALIZER;
 
@@ -93,70 +89,62 @@ void *run_logger(void *params) {
 	}
 
 	/*Open message queues for reading the messages from all tasks*/
+	mqd_t qDesLogger = create_posix_mq(Q_NAME_LOGGER);
 	mqd_t qDesMain = create_posix_mq(Q_NAME_MAIN);
-	mqd_t qDesLight = create_posix_mq(Q_NAME_LIGHT);
-	mqd_t qDesTemp = create_posix_mq(Q_NAME_TEMP);
 
-	int bytes_read = 0;
-	log_message_t read_message;
+	int received_bytes = 0, send_status = 0;
+	log_message_t request, response;
 
 	/*Start reading messages*/
 	while (1) {
 
 		/*Read messages from the Main task and wrtie to the logfile*/
-		bytes_read = mq_receive(qDesMain, (char*) &read_message,
-				sizeof(read_message), 0);
+		received_bytes = mq_receive(qDesLogger, (char*) &request,
+				sizeof(request), 0);
 
-		if (bytes_read < 0) {
+		if (received_bytes < 0) {
 			//perror("ERROR: mq_receive main task");
 		} else {
+
+			received_bytes = mq_receive(qDesLogger, (char*) &request,
+					sizeof(request), 0);
+			if (received_bytes < 0) {
+				//ERROR_STDOUT("ERROR: while reading responses from the LIGHT Q\n");
+			}
+
+			if (request.req_type == SEND_ALIVE_STATUS) {
+				strcpy(response.thread_name, LOGGER_THREAD_NAME);
+				response.alive_status = LOGGER_THREAD_ALIVE;
+
+				send_status = mq_send(qDesMain, (const char*) &response,
+						sizeof(response), 1);
+				if (send_status < 0) {
+					//ERROR_STDOUT("ERROR: while sending responses to the MAIN Q from LIGHT THREAD\n");
+				}
+
+				request.req_type = 0;
+			}
+
+			if(request.req_type == TIME_TO_EXIT){
+				INFO_STDOUT("Request to Exit received\n");
+				goto EXIT;
+			}
+
 			pthread_mutex_lock(&fileMutex);
 			//INFO_STDOUT("logging data from main task\n");
 			log_message(p_logfile,
-					(read_message.time_stamp.tv_sec) * NSEC_PER_SEC
-							+ (read_message.time_stamp.tv_nsec),
-					read_message.thread_name, read_message.log_level,
-					read_message.message);
+					(request.time_stamp.tv_sec) * NSEC_TO_SEC
+							+ (request.time_stamp.tv_nsec), request.thread_name,
+					request.log_level, request.message);
 
-			pthread_mutex_unlock(&fileMutex);
-		}
-
-		/*Read messages from the light sensor task and wrtie to the logfile*/
-		bytes_read = mq_receive(qDesLight, (char*) &read_message,
-				sizeof(read_message), 0);
-
-		if (bytes_read < 0) {
-			//perror("ERROR: mq_receive light task");
-		} else {
-			pthread_mutex_lock(&fileMutex);
-			//INFO_STDOUT("logging data from light task\n");
-			log_message(p_logfile,
-					(read_message.time_stamp.tv_sec) * NSEC_PER_SEC
-							+ (read_message.time_stamp.tv_nsec),
-					read_message.thread_name, read_message.log_level,
-					read_message.message);
-			pthread_mutex_unlock(&fileMutex);
-		}
-
-		/*Read messages from the temperature sensor task and wrtie to the logfile*/
-		bytes_read = mq_receive(qDesTemp, (char*) &read_message,
-				sizeof(read_message), 0);
-
-		if (bytes_read < 0) {
-			//perror("ERROR: mq_receive temperature task");
-		} else {
-			pthread_mutex_lock(&fileMutex);
-			//INFO_STDOUT("logging data from temperature task\n");
-			log_message(p_logfile,
-					(read_message.time_stamp.tv_sec) * NSEC_PER_SEC
-							+ (read_message.time_stamp.tv_nsec),
-					read_message.thread_name, read_message.log_level,
-					read_message.message);
 			pthread_mutex_unlock(&fileMutex);
 		}
 	}
 
 	fclose(p_logfile);
 
+	EXIT:
+	fclose(p_logfile);
+	pthread_mutex_destroy(&fileMutex);
 	return NULL;
 }
