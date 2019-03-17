@@ -14,4 +14,8 @@
 #include "../include/logger.h"
 #include "../include/socket.h"
 
+#define HEARTBEAT_REQUESTS				(3)
+
+int check_thread_heartbeats(mqd_t qDes);
+
 #endif /* SOURCE_MAIN_H_ */
