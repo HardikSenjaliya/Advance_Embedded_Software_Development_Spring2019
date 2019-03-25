@@ -39,7 +39,7 @@ void *run_temperature_sensor(void *params) {
 
 		send_status = mq_send(qDesLogger, (const char*) &msg, sizeof(msg), 0);
 		if (send_status < 0) {
-			perror("TEMP THREAD");
+			//perror("TEMP THREAD");
 		} else {
 			//INFO_STDOUT("TEMP_THREAD: message to logger sent\n");
 		}
@@ -67,6 +67,7 @@ void *run_temperature_sensor(void *params) {
 
 			case TIME_TO_EXIT:
 				INFO_STDOUT("TEMP_THREAD: Request to Exit received\n");
+				goto EXIT;
 				break;
 			default:
 				break;
@@ -74,6 +75,11 @@ void *run_temperature_sensor(void *params) {
 			}
 		}
 	}
+
+	EXIT:
+
+	mq_unlink(Q_NAME_TEMP);
+	INFO_STDOUT("TEMP_THREAD...EXITING\n");
 
 	return NULL;
 }

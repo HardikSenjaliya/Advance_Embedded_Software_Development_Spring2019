@@ -54,11 +54,19 @@ typedef enum{
 
 }request_from_main;
 
+typedef enum{
+
+	INFO,
+	WARN,
+	ERROR,
+	CRTICAL
+}log_level_t;
+
 
 /*Structure to log the information in the logfile*/
 typedef struct {
 
-	int log_level;
+	log_level_t log_level;
 	struct timespec time_stamp;
 	char thread_name[THREAD_NAME_SIZE];
 	char message[MESSAGE_SIZE];
@@ -90,6 +98,8 @@ typedef struct{
 
 }request_type_t;
 
+
+
 /*function prototypes*/
 
 mqd_t create_light_mq(void);
@@ -97,6 +107,7 @@ mqd_t create_temp_mq(void);
 mqd_t create_logger_mq(void);
 mqd_t create_main_mq(void);
 int initialize_semaphores(void);
+int destroy_semaphores(void);
 int start_timer(void);
 int stop_timer(void);
 

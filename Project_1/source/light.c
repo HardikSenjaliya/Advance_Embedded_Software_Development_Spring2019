@@ -38,7 +38,7 @@ void *run_light_sensor(void *params) {
 
 		send_status = mq_send(qDesLogger, (const char*) &msg, sizeof(msg), 0);
 		if (send_status < 0) {
-			perror("LIGHT THREAD");
+			//perror("LIGHT THREAD");
 		} else {
 			//INFO_STDOUT("LIGHT_THREAD: message to logger sent\n");
 		}
@@ -67,12 +67,17 @@ void *run_light_sensor(void *params) {
 
 			case TIME_TO_EXIT:
 				INFO_STDOUT("LIGHT_THREAD: Request to Exit received\n");
+				goto EXIT;
 				break;
 			default:
 				break;
 			}
 		}
 	}
+
+	EXIT:
+	mq_unlink(Q_NAME_LIGHT);
+	INFO_STDOUT("LIGHT_THREAD...EXITING\n");
 
 	return NULL;
 }

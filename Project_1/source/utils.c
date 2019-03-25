@@ -10,6 +10,11 @@
 pthread_mutex_t sendMutex = PTHREAD_MUTEX_INITIALIZER;
 timer_t timer_id;
 
+/**
+ * @brief this function initializes all the semaphores to be used in the
+ * program at global level
+ * @return 0 if succesful, 1 otherwise
+ */
 int initialize_semaphores(void) {
 
 	INFO_STDOUT("initializing Semaphores\n");
@@ -29,6 +34,16 @@ int initialize_semaphores(void) {
 	}
 
 	return 0;
+}
+
+int destroy_semaphores(void){
+
+	sem_destroy(&sem_light);
+	sem_destroy(&sem_light);
+	sem_destroy(&sem_heartbeat);
+
+	return 0;
+
 }
 
 /**
@@ -68,6 +83,10 @@ void timer_handler(union sigval arg) {
 
 }
 
+/**
+ * @brief this function deletes the timer in case of error or exit
+ * @return 0 if succesfull, 1 otherwise
+ */
 int stop_timer() {
 
 	if (-1 == timer_delete(timer_id)) {
@@ -82,7 +101,6 @@ int stop_timer() {
 /**
  * @brief this function sets the period of the thread by adding a POSIX timer
  * and arming it to the specified period interval
- * @param period - period of the thread, spcified in ms
  * @return 0 if successful, 1 otherwise
  */
 int start_timer(void) {
@@ -124,6 +142,12 @@ int start_timer(void) {
 	return 0;
 }
 
+/**
+ * @brief this function creates a POSIX message queue for the light
+ * thread. The purpose of this queue is to receive any messages related to the light thread and
+ * send log messages to the logger thread via logger message queue
+ * @return message queue file descriptor
+ */
 mqd_t create_light_mq(void) {
 
 	mqd_t qDes;
@@ -145,6 +169,13 @@ mqd_t create_light_mq(void) {
 
 	return qDes;
 }
+
+/**
+ * @brief this function creates a POSIX message queue for the temp
+ * thread. The purpose of this queue is to receive any messages related to the temp thread
+ * and send log messages to logger thread via logger queue
+ * @return message queue file descriptor
+ */
 mqd_t create_temp_mq(void) {
 	mqd_t qDes;
 
@@ -165,6 +196,13 @@ mqd_t create_temp_mq(void) {
 
 	return qDes;
 }
+
+/**
+ * @brief this function creates a POSIX message queue for the logger thread
+ * thread. The purpose of this queue is to receive messages related from all the thread
+ * to log into the logfile
+ * @return message queue file descriptor
+ */
 mqd_t create_logger_mq(void) {
 	mqd_t qDes;
 
@@ -185,6 +223,13 @@ mqd_t create_logger_mq(void) {
 
 	return qDes;
 }
+
+/**
+ * @brief this function creates a POSIX message queue for the main
+ * thread. The purpose of this queue is to receive messages sent by all the child threads when
+ * heartbeat status is requested
+ * @return 0 if succesful, 1 otherwise
+ */
 mqd_t create_main_mq(void) {
 
 	mqd_t qDes;

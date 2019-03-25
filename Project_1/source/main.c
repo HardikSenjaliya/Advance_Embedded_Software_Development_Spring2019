@@ -93,13 +93,15 @@ int main(int argc, char **argv) {
 		INFO_STDOUT("MAIN_THREAD: message to logger sent\n");
 	}
 
+	/**TODO use mq_timedreceive() for reading heartbeat responses from all threads
+	 * which will not block the exection if a thread is died and not able to send the response*/
+
 	while (heartbeat) {
 
 		sem_wait(&sem_heartbeat);
 
 		request_type_t request;
 		heartbeat_response_t response;
-
 
 		/*Request status from light thread*/
 		request.req_type = SEND_ALIVE_STATUS;
@@ -129,8 +131,8 @@ int main(int argc, char **argv) {
 		request.req_type = SEND_ALIVE_STATUS;
 		clock_gettime(CLOCK_MONOTONIC, &request.time_stamp);
 
-		send_status = mq_send(qDesTemp, (const char*) &request,
-				sizeof(request), 1);
+		send_status = mq_send(qDesTemp, (const char*) &request, sizeof(request),
+				1);
 		if (send_status < 0) {
 			perror("MAIN_THREAD: heartbeat request");
 		} else {
@@ -174,26 +176,58 @@ int main(int argc, char **argv) {
 			}
 		}
 
-		if(light_status < 1 || temp_status < 1 || logger_status < 1){
+		/*Checking if response is not received from any thread and if not received then
+		 * send exit commnad to all the threads*/
+		if (light_status < 1 || temp_status < 1 || logger_status < 1) {
 			ERROR_STDOUT("One or More thread died...SENDING EXIT COMMNAD\n");
 
+			/*Request status from light thread*/
+			request.req_type = TIME_TO_EXIT;
+			clock_gettime(CLOCK_MONOTONIC, &request.time_stamp);
 
+			send_status = mq_send(qDesLight, (const char*) &request,
+					sizeof(request), 1);
+			if (send_status < 0) {
+				//perror("MAIN_THREAD: exit request");
+			} else {
+				INFO_STDOUT("EXIT request to Light thread sent\n");
+			}
 
+			/*Request status from temp thread*/
+			request.req_type = TIME_TO_EXIT;
+			clock_gettime(CLOCK_MONOTONIC, &request.time_stamp);
 
+			send_status = mq_send(qDesTemp, (const char*) &request,
+					sizeof(request), 1);
+			if (send_status < 0) {
+				//perror("MAIN_THREAD: exit request");
+			} else {
+				INFO_STDOUT("EXIT request to Temp thread sent\n");
+			}
 
+			/*Request status from Logger thread*/
+			log_message_t message;
+			message.req_type = TIME_TO_EXIT;
+			clock_gettime(CLOCK_MONOTONIC, &message.time_stamp);
+			message.log_level = CRTICAL;
+			strcpy(message.thread_name, MAIN_THREAD_NAME);
+			strcpy(message.message, "One or More thread died...Program is exiting...");
 
+			send_status = mq_send(qDesLogger, (const char*) &message,
+					sizeof(message), 1);
+			if (send_status < 0) {
+				//perror("MAIN_THREAD: exit request");
+			} else {
+				INFO_STDOUT("EXIT request to Logger thread sent\n");
+			}
 
+			heartbeat = 0;
+			destroy_semaphores();
+			stop_timer();
+			mq_unlink(Q_NAME_MAIN);
+			goto EXIT;
 
-
-
-
-
-
-
-
-
-
-		}else{
+		} else {
 			INFO_STDOUT("All threads are running...THANK GOD\n");
 		}
 	}
@@ -201,8 +235,10 @@ int main(int argc, char **argv) {
 	pthread_join(light_sensor, NULL);
 	pthread_join(temperature_sensor, NULL);
 	pthread_join(logger_task, NULL);
-	pthread_join(socket_task, NULL);
+	//pthread_join(socket_task, NULL);
 
+
+	EXIT:
 	INFO_STDOUT("Main thread Exiting...Bye Bye...\n");
 
 	return 0;

@@ -121,7 +121,15 @@ void *run_logger(void *params) {
 				break;
 
 			case TIME_TO_EXIT:
-				INFO_STDOUT("LOGGER_THREAD: Request to Exit received\n");
+				//INFO_STDOUT("LOGGER_THREAD: Request to Exit received\n");
+				fprintf(p_logfile,
+						"[%ld] *** From : %s *** Log Level : %d *** Received Message : %s\n",
+						(request.time_stamp.tv_sec) * NSEC_TO_SEC
+								+ (request.time_stamp.tv_nsec),
+						request.thread_name, request.log_level,
+						request.message);
+
+				goto EXIT;
 				break;
 			default:
 				break;
@@ -130,7 +138,8 @@ void *run_logger(void *params) {
 
 			pthread_mutex_lock(&fileMutex);
 			//INFO_STDOUT("logging data into logfile\n");
-			fprintf(p_logfile, "[%ld] *** From : %s *** Log Level : %d *** Received Message : %s\n",
+			fprintf(p_logfile,
+					"[%ld] *** From : %s *** Log Level : %d *** Received Message : %s\n",
 					(request.time_stamp.tv_sec) * NSEC_TO_SEC
 							+ (request.time_stamp.tv_nsec), request.thread_name,
 					request.log_level, request.message);
@@ -139,7 +148,11 @@ void *run_logger(void *params) {
 		}
 	}
 
-	fclose(p_logfile);
+	EXIT:
 
+	fclose(p_logfile);
+	mq_unlink(Q_NAME_LOGGER);
+	pthread_mutex_destroy(&fileMutex);
+	INFO_STDOUT("LOGGER_THREAD...EXITING\n");
 	return NULL;
 }
