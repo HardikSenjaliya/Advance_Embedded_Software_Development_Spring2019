@@ -65,12 +65,6 @@ void *run_socket(void *params) {
 
 	INFO_STDOUT("Socket Task started running\n");
 
-	log_message_t q_request, q_response;
-	int send_status = 0, received_bytes = 0;
-
-	mqd_t qDesMain = create_posix_mq(Q_NAME_MAIN);
-	mqd_t qDesSocket = create_posix_mq(Q_NAME_SOCKET);
-
 	client_request_t request = 0;
 	client_request_response_t response = { 0 };
 
@@ -123,34 +117,6 @@ void *run_socket(void *params) {
 		INFO_STDOUT("Server Started Listening on the port\n");
 	}
 
-	while (1) {
-		//INFO_STDOUT("INSIDE SOCKET WHILE\n");
-		received_bytes = mq_receive(qDesSocket, (char*) &q_request, sizeof(q_request),
-				0);
-		if (received_bytes < 0) {
-			//ERROR_STDOUT("ERROR: while reading responses from the LIGHT Q\n");
-		}
-
-		if (q_request.req_type == SEND_ALIVE_STATUS) {
-
-			strcpy(q_response.thread_name, SOCKET_THREAD_NAME);
-			q_response.alive_status = SOCKET_THREAD_ALIVE;
-
-			send_status = mq_send(qDesMain, (const char*) &q_response,
-					sizeof(q_response), 1);
-			if (send_status < 0) {
-				//ERROR_STDOUT("ERROR: while sending responses to the MAIN Q from LIGHT THREAD\n");
-			}
-
-			q_request.req_type = 0;
-		}
-
-		if(q_request.req_type == TIME_TO_EXIT){
-			goto EXIT;
-		}
-	}
-
-
 	client_address_len = sizeof(client);
 
 	/*Accept a new connection*/
@@ -180,8 +146,6 @@ void *run_socket(void *params) {
 		}
 	}
 
-
-	EXIT:
 	close(socket_fd);
 	return NULL;
 }

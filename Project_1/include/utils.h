@@ -37,6 +37,8 @@
 #define SOCKET_THREAD_ALIVE					(4444)
 #define MSEC_TO_NSEC						(1000000)
 #define NSEC_TO_SEC							(1000000000)
+#define MESSAGE_SIZE						(50)
+#define THREAD_NAME_SIZE					(13)
 
 
 /*Macro functions to print information and error messages on the console*/
@@ -48,7 +50,7 @@ sem_t sem_light, sem_temp, sem_heartbeat;
 typedef enum{
 
 	SEND_ALIVE_STATUS = 11,
-	TIME_TO_EXIT = 21,
+	TIME_TO_EXIT = 21
 
 }request_from_main;
 
@@ -58,18 +60,44 @@ typedef struct {
 
 	int log_level;
 	struct timespec time_stamp;
-	char thread_name[20];
-	char message[100];
+	char thread_name[THREAD_NAME_SIZE];
+	char message[MESSAGE_SIZE];
 	request_from_main req_type;
-	int alive_status;
 
 } log_message_t;
 
+typedef struct{
+
+	char thread_name[THREAD_NAME_SIZE];
+	int alive_status;
+
+}heartbeat_response_t;
+
+typedef struct{
+
+	mqd_t qDesMain;
+	mqd_t qDesLight;
+	mqd_t qDesTemp;
+	mqd_t qDesLogger;
+
+}queue_descriptors_t;
+
+
+typedef struct{
+
+	struct timespec time_stamp;
+	request_from_main req_type;
+
+}request_type_t;
+
 /*function prototypes*/
 
-mqd_t create_posix_mq(char *qName);
-int send_message(mqd_t qDes, log_message_t *message);
+mqd_t create_light_mq(void);
+mqd_t create_temp_mq(void);
+mqd_t create_logger_mq(void);
+mqd_t create_main_mq(void);
 int initialize_semaphores(void);
 int start_timer(void);
+int stop_timer(void);
 
 #endif /* SOURCE_UTILS_H_ */

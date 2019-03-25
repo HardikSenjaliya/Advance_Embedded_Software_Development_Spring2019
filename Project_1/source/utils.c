@@ -8,6 +8,7 @@
 #include "../include/utils.h"
 
 pthread_mutex_t sendMutex = PTHREAD_MUTEX_INITIALIZER;
+timer_t timer_id;
 
 int initialize_semaphores(void) {
 
@@ -59,12 +60,23 @@ void timer_handler(union sigval arg) {
 		sem_post(&sem_temp);
 	}
 
-	if (heartbeat_count == 10000) {
-		INFO_STDOUT("Releasing Heartbeat semaphore\n");
+	if (heartbeat_count == 5000) {
+		//INFO_STDOUT("Releasing Heartbeat semaphore\n");
 		sem_post(&sem_heartbeat);
 		heartbeat_count = 0;
 	}
 
+}
+
+int stop_timer() {
+
+	if (-1 == timer_delete(timer_id)) {
+		ERROR_STDOUT("ERRRO: while deleting the timer\n");
+	} else {
+		INFO_STDOUT("Timer deleted\n");
+	}
+
+	return 0;
 }
 
 /**
@@ -76,7 +88,7 @@ void timer_handler(union sigval arg) {
 int start_timer(void) {
 
 	INFO_STDOUT("Creating and Arming the timer\n");
-	timer_t timer_id;
+
 	struct itimerspec ts;
 	struct sigevent se;
 
@@ -88,7 +100,7 @@ int start_timer(void) {
 	se.sigev_notify_attributes = NULL;
 
 	/*Initialize the timerspec structure for required
-	 * period of 100ms*/
+	 * period of 1ms*/
 	long long int nanoSec = 1 * MSEC_TO_NSEC;
 	ts.it_value.tv_sec = nanoSec / NSEC_TO_SEC;
 	ts.it_value.tv_nsec = nanoSec % NSEC_TO_SEC;
@@ -112,13 +124,7 @@ int start_timer(void) {
 	return 0;
 }
 
-/**
- * @brief this function creates a new posix message queue OR opens already created
- *  		to sned and receive messages between threads
- * @param qName
- * @return 0 if successful, 1 otherwise
- */
-mqd_t create_posix_mq(char *qName) {
+mqd_t create_light_mq(void) {
 
 	mqd_t qDes;
 
@@ -126,10 +132,10 @@ mqd_t create_posix_mq(char *qName) {
 
 	attr.mq_flags = 0;
 	attr.mq_maxmsg = 10;
-	attr.mq_msgsize = sizeof(log_message_t);
+	attr.mq_msgsize = sizeof(request_type_t);
 
 	/*Open a new posix queue*/
-	qDes = mq_open(qName, O_CREAT | O_RDWR | O_NONBLOCK, 0666, &attr);
+	qDes = mq_open(Q_NAME_LIGHT, O_CREAT | O_RDWR | O_NONBLOCK , 0666, &attr);
 
 	if (qDes == -1) {
 
@@ -139,27 +145,64 @@ mqd_t create_posix_mq(char *qName) {
 
 	return qDes;
 }
+mqd_t create_temp_mq(void) {
+	mqd_t qDes;
 
-/**
- * @brief this function sends messages to the message queue identified by the qDes
- * @param qDes file descriptior for the posix queue
- * @param message message to be logged into the logfile
- * @return 0 if successful, 1 otherwise
- */
+	struct mq_attr attr;
 
-int send_message(mqd_t qDes, log_message_t *message) {
+	attr.mq_flags = 0;
+	attr.mq_maxmsg = 10;
+	attr.mq_msgsize = sizeof(request_type_t);
 
-	int bytes_sent = 0;
+	/*Open a new posix queue*/
+	qDes = mq_open(Q_NAME_TEMP, O_CREAT | O_RDWR | O_NONBLOCK , 0666, &attr);
 
-	pthread_mutex_lock(&sendMutex);
-	bytes_sent = mq_send(qDes, (const char*) message, sizeof(log_message_t), 0);
+	if (qDes == -1) {
 
-	if (bytes_sent < 0) {
-		perror("ERROR: mq_send");
-		return 1;
+		perror("ERROR: mq_open\n");
+		exit(1);
 	}
-	pthread_mutex_unlock(&sendMutex);
 
-	return 0;
+	return qDes;
 }
+mqd_t create_logger_mq(void) {
+	mqd_t qDes;
 
+	struct mq_attr attr;
+
+	attr.mq_flags = 0;
+	attr.mq_maxmsg = 10;
+	attr.mq_msgsize = sizeof(log_message_t);
+
+	/*Open a new posix queue*/
+	qDes = mq_open(Q_NAME_LOGGER, O_CREAT | O_RDWR | O_NONBLOCK, 0666, &attr);
+
+	if (qDes == -1) {
+
+		perror("ERROR: mq_open\n");
+		exit(1);
+	}
+
+	return qDes;
+}
+mqd_t create_main_mq(void) {
+
+	mqd_t qDes;
+
+	struct mq_attr attr;
+
+	attr.mq_flags = 0;
+	attr.mq_maxmsg = 10;
+	attr.mq_msgsize = sizeof(heartbeat_response_t);
+
+	/*Open a new posix queue*/
+	qDes = mq_open(Q_NAME_MAIN, O_CREAT | O_RDWR, 0666, &attr);
+
+	if (qDes == -1) {
+
+		perror("ERROR: mq_open\n");
+		exit(1);
+	}
+
+	return qDes;
+}

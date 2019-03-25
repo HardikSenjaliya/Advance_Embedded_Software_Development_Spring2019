@@ -7,7 +7,6 @@
 
 #include "../include/logger.h"
 
-
 pthread_mutex_t fileMutex = PTHREAD_MUTEX_INITIALIZER;
 
 /**
@@ -88,12 +87,13 @@ void *run_logger(void *params) {
 		INFO_STDOUT("Error in opening new logfile\n");
 	}
 
-	/*Open message queues for reading the messages from all tasks*/
-	mqd_t qDesLogger = create_posix_mq(Q_NAME_LOGGER);
-	mqd_t qDesMain = create_posix_mq(Q_NAME_MAIN);
+	/*Create a POSIX message queue to send requests to child threads*/
+	mqd_t qDesLogger = create_logger_mq();
+	mqd_t qDesMain = create_main_mq();
 
 	int received_bytes = 0, send_status = 0;
-	log_message_t request, response;
+	log_message_t request;
+	heartbeat_response_t response;
 
 	/*Start reading messages*/
 	while (1) {
@@ -103,36 +103,34 @@ void *run_logger(void *params) {
 				sizeof(request), 0);
 
 		if (received_bytes < 0) {
-			//perror("ERROR: mq_receive main task");
+			//perror("LOGGER THREAD");
 		} else {
-
-			received_bytes = mq_receive(qDesLogger, (char*) &request,
-					sizeof(request), 0);
-			if (received_bytes < 0) {
-				//ERROR_STDOUT("ERROR: while reading responses from the LIGHT Q\n");
-			}
-
-			if (request.req_type == SEND_ALIVE_STATUS) {
+			switch (request.req_type) {
+			case SEND_ALIVE_STATUS:
 				strcpy(response.thread_name, LOGGER_THREAD_NAME);
 				response.alive_status = LOGGER_THREAD_ALIVE;
 
 				send_status = mq_send(qDesMain, (const char*) &response,
 						sizeof(response), 1);
 				if (send_status < 0) {
-					//ERROR_STDOUT("ERROR: while sending responses to the MAIN Q from LIGHT THREAD\n");
+					//perror("LOGGER THREAD");
+				} else {
+					//INFO_STDOUT("LOGGER-response to hearbeat request sent\n");
+					request.req_type = 0;
 				}
+				break;
 
-				request.req_type = 0;
-			}
+			case TIME_TO_EXIT:
+				INFO_STDOUT("LOGGER_THREAD: Request to Exit received\n");
+				break;
+			default:
+				break;
 
-			if(request.req_type == TIME_TO_EXIT){
-				INFO_STDOUT("Request to Exit received\n");
-				goto EXIT;
 			}
 
 			pthread_mutex_lock(&fileMutex);
-			//INFO_STDOUT("logging data from main task\n");
-			log_message(p_logfile,
+			//INFO_STDOUT("logging data into logfile\n");
+			fprintf(p_logfile, "[%ld] *** From : %s *** Log Level : %d *** Received Message : %s\n",
 					(request.time_stamp.tv_sec) * NSEC_TO_SEC
 							+ (request.time_stamp.tv_nsec), request.thread_name,
 					request.log_level, request.message);
@@ -143,8 +141,5 @@ void *run_logger(void *params) {
 
 	fclose(p_logfile);
 
-	EXIT:
-	fclose(p_logfile);
-	pthread_mutex_destroy(&fileMutex);
 	return NULL;
 }
