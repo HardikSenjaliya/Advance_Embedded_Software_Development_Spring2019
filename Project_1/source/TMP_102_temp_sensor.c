@@ -397,7 +397,9 @@ double binary_to_decimal(int8_t binary_data[]) {
 	int8_t msb_byte = binary_data[0];
 	int8_t lsb_byte = binary_data[1];
 
+
 	temp = ((((uint16_t) msb_byte) << 4) | (lsb_byte >> 4)) & 0xFFF;
+
 
 	if (msb_byte & NEGATIVE_CHECK) {
 
@@ -421,7 +423,7 @@ double read_temperature_register(int i2c_fd) {
 
 	double temp_read = 0;
 
-	int8_t read_buffer[NBYTES_2];
+	int8_t read_buffer[NBYTES_2] = {0,0};
 	int8_t read_bytes = 0;
 
 	if (write_pointer_register(i2c_fd, TEMPERATURE_REGISTER)) {

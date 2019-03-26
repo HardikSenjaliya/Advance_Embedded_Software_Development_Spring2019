@@ -6,6 +6,7 @@
  */
 
 #include "../include/temperature.h"
+#include "../include/TMP_102_temp_sensor.h"
 
 /**
  * @brief this function is the thread function for the thread temperature_sensor
@@ -26,6 +27,7 @@ void *run_temperature_sensor(void *params) {
 	heartbeat_response_t response;
 
 	int send_status = 0, received_bytes = 0;
+	double temperature = 0;
 
 	msg.log_level = 0;
 	strcpy(msg.thread_name, TEMP_THREAD_NAME);
@@ -33,16 +35,19 @@ void *run_temperature_sensor(void *params) {
 
 	strcpy(msg.message, " Hello From Temp Sensor task");
 
+	int i2c_fd = init_temp_sensor();
+
+
+	send_status = mq_send(qDesLogger, (const char*) &msg, sizeof(msg), 0);
+	if (send_status < 0) {
+		//perror("TEMP THREAD");
+	} else {
+		//INFO_STDOUT("TEMP_THREAD: message to logger sent\n");
+	}
+
 	while (1) {
 
 		sem_wait(&sem_temp);
-
-		send_status = mq_send(qDesLogger, (const char*) &msg, sizeof(msg), 0);
-		if (send_status < 0) {
-			//perror("TEMP THREAD");
-		} else {
-			//INFO_STDOUT("TEMP_THREAD: message to logger sent\n");
-		}
 
 		received_bytes = mq_receive(qDesTemp, (char*) &request, sizeof(request),
 				0);
@@ -74,6 +79,20 @@ void *run_temperature_sensor(void *params) {
 
 			}
 		}
+
+		/*TODO send log message to logger*/
+		temperature = read_temperature_register(i2c_fd);
+		msg.log_level = L_INFO;
+		strcpy(msg.thread_name, TEMP_THREAD_NAME);
+		clock_gettime(CLOCK_MONOTONIC,  &msg.time_stamp);
+		snprintf(msg.message, MESSAGE_SIZE, "%s -> %f", "Current Temperature Reading", temperature);
+
+		send_status = mq_send(qDesLogger, (const char*) &msg, sizeof(msg), P_INFO);
+		if(send_status < 0){
+			perror("ERROR: sending temperature read log");
+		}
+		//printf("Temperature read - %f\n", temperature);
+
 	}
 
 	EXIT:
