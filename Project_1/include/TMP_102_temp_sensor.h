@@ -11,6 +11,8 @@
 #include "../include/utils.h"
 
 #include <stdbool.h>
+#include <stdint.h>
+#include <sys/types.h>
 #include <fcntl.h>
 #include <unistd.h>
 #include <sys/ioctl.h>
@@ -56,13 +58,13 @@
 
 
 /*Function Prototypes*/
-void init_temp_sensor(void);
+int init_temp_sensor(void);
 double read_temperature_register(int i2c_fd);
-double binary_to_decimal(int *binary_data);
-int write_pointer_register(int i2c_fd, int reg);
-int read_tlow_register(int i2c_fd);
-int read_thigh_register(int i2c_fd);
-int read_config_register(int i2c_fd);
+double convert_temp_kelvin(int i2c_fd);
+double convert_temp_farenheit(int i2c_fd);
+double binary_to_decimal(int8_t binary_data[]);
+int16_t read_config_register(int i2c_fd);
+int8_t write_pointer_register(int i2c_fd, int8_t reg);
 int8_t write_config_register(int i2c_fd, int16_t data);
 int8_t configure_shutdown_mode(int i2c_fd, bool required_mode);
 int8_t configure_sensor_resolution(int i2c_fd);
@@ -70,7 +72,10 @@ int8_t configure_EM_operation(int i2c_fd, bool required_operation);
 int8_t configure_conversion_rate(int i2c_fd, int8_t required_rate);
 int8_t configure_thermostate_mode(int i2c_fd, bool required_mode);
 int8_t configure_fault_bits(int i2c_fd, int8_t required_faults);
-
+int8_t write_thigh_register(int i2c_fd, int16_t t_value);
+int8_t write_tlow_register(int i2c_fd, int16_t t_value);
+int16_t read_thigh_register(int i2c_fd);
+int16_t read_tlow_register(int i2c_fd);
 
 
 
