@@ -56,10 +56,11 @@ typedef enum{
 
 typedef enum{
 
-	INFO,
-	WARN,
-	ERROR,
-	CRTICAL
+	L_INFO = 0,
+	L_WARN,
+	L_ERROR,
+	L_CRTICAL
+
 }log_level_t;
 
 
@@ -98,6 +99,14 @@ typedef struct{
 
 }request_type_t;
 
+typedef enum{
+
+	P_INFO = 0,
+	P_WARNING,
+	P_ERROR,
+	P_CRITICAL
+
+}message_priority;
 
 
 /*function prototypes*/
