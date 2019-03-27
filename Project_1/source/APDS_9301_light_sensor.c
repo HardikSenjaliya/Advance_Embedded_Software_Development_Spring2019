@@ -10,17 +10,148 @@
 #define I2C_SLAVE_ADDRESS					(0x39)
 #define SELECT_COMMAND_REGISTER				(0x80)
 
+/**
+ * @brief this function reads to the lower byte and uppper byte
+ * of the low interrupt threshold register
+ * @param i2c_fd
+ * @return read threshold value
+ */
+uint16_t read_low_interrupt_threshold_register(int i2c_fd) {
+
+	uint16_t low_threshold_value = 0;
+	uint8_t msb_byte = 0, lsb_byte = 0, ret = 0;
+
+	uint8_t command = SELECT_COMMAND_REGISTER | INTERRUPT_THRES_LOW_LOW;
+	write_command_register(i2c_fd, command);
+
+	ret = read(i2c_fd, &lsb_byte, NBYTES_1);
+	if (ret < 0) {
+		perror("ERROR: reading low interrupt low threshold");
+	}
+
+	command = SELECT_COMMAND_REGISTER | INTERRUPT_THRES_LOW_HIGH;
+	write_command_register(i2c_fd, command);
+
+	ret = read(i2c_fd, &msb_byte, NBYTES_1);
+	if (ret < 0) {
+		perror("ERROR: reading low interrupt high threshold");
+	}
+
+	low_threshold_value = (msb_byte << 8) | lsb_byte;
+
+	return low_threshold_value;
+}
+
+/**
+ * @brief this function writes lower byte and upper byte of
+ * the low interrupt threshold register
+ * @param i2c_fd
+ * @param th_value requried threshold value to be written
+ * @return no of bytes written
+ */
+uint8_t write_low_interrupt_threshold_register(int i2c_fd, uint16_t th_value) {
+
+	uint8_t msb_byte = 0, lsb_byte = 0, ret = 0;
+
+	msb_byte = (th_value & 0xFF00) >> 8;
+	lsb_byte = (th_value & 0x00FF);
+
+	uint8_t command = SELECT_COMMAND_REGISTER | INTERRUPT_THRES_LOW_LOW;
+	write_command_register(i2c_fd, command);
+
+	ret = write(i2c_fd, &lsb_byte, NBYTES_1);
+	if (ret < 0) {
+		perror("ERROR: writing low interrupt low threshold");
+	}
+
+	command = SELECT_COMMAND_REGISTER | INTERRUPT_THRES_LOW_HIGH;
+	write_command_register(i2c_fd, command);
+
+	ret = write(i2c_fd, &msb_byte, NBYTES_1);
+	if (ret < 0) {
+		perror("ERROR: writing low interrupt high threshold");
+	}
+
+	return ret;
+
+}
+
+/**
+ * @brief this function writes lower byte and upper byte of
+ * the high interrupt threshold register
+ * @param i2c_fd
+ * @param th_value requried threshold value to be written
+ * @return no of bytes written
+ */
+uint8_t write_high_interrupt_threshold_register(int i2c_fd, uint16_t th_value) {
+
+	uint8_t msb_byte = 0, lsb_byte = 0, ret = 0;
+
+	msb_byte = (th_value & 0xFF00) >> 8;
+	lsb_byte = (th_value & 0x00FF);
+
+	uint8_t command = SELECT_COMMAND_REGISTER | INTERRUPT_THRES_HIGH_LOW;
+	write_command_register(i2c_fd, command);
+
+	ret = write(i2c_fd, &lsb_byte, NBYTES_1);
+	if (ret < 0) {
+		perror("ERROR: writing low interrupt low threshold");
+	}
+
+	command = SELECT_COMMAND_REGISTER | INTERRUPT_THRES_HIGH_HIGH;
+	write_command_register(i2c_fd, command);
+
+	ret = write(i2c_fd, &msb_byte, NBYTES_1);
+	if (ret < 0) {
+		perror("ERROR: writing low interrupt high threshold");
+	}
+
+	return ret;
+
+}
+
+/**
+ * @brief this function reads to the lower byte and uppper byte
+ * of the high interrupt threshold register
+ * @param i2c_fd
+ * @return read threshold value
+ */
+uint16_t read_high_interrupt_threshold_register(int i2c_fd) {
+
+	uint16_t high_threshold_value = 0;
+	uint8_t msb_byte = 0, lsb_byte = 0, ret = 0;
+
+	uint8_t command = SELECT_COMMAND_REGISTER | INTERRUPT_THRES_HIGH_LOW;
+	write_command_register(i2c_fd, command);
+
+	ret = read(i2c_fd, &lsb_byte, NBYTES_1);
+	if (ret < 0) {
+		perror("ERROR: reading low interrupt low threshold");
+	}
+
+	command = SELECT_COMMAND_REGISTER | INTERRUPT_THRES_HIGH_HIGH;
+	write_command_register(i2c_fd, command);
+
+	ret = read(i2c_fd, &msb_byte, NBYTES_1);
+	if (ret < 0) {
+		perror("ERROR: reading low interrupt high threshold");
+	}
+
+	high_threshold_value = (msb_byte << 8) | lsb_byte;
+
+	return high_threshold_value;
+}
 
 /**
  * @brief this function checks for the stae of day as day or night
  * @param lux_value
  * @return returns enum as calculated
  */
-uint8_t day_or_night(double lux_value){
+uint8_t day_or_night(double lux_value) {
 
-	if(lux_value < 100){
+	if (lux_value < 100) {
 		return NIGHT;
-	}else{
+	} else {
 		return DAY;
 	}
 }
@@ -102,26 +233,27 @@ double read_lux_data(int i2c_fd) {
 
 	//printf("ADC1 : %d, ADC0 : %d", adc_channel1, adc_channle0);
 
-	double ratio = (double)adc_channel1/(double)adc_channle0;
+	double ratio = (double) adc_channel1 / (double) adc_channle0;
 	double lux_value = 0;
 
-	if(0 < ratio && ratio <= 0.50){
+	if (0 < ratio && ratio <= 0.50) {
 
-		lux_value = (0.0304 * adc_channle0) - (0.062 * adc_channle0 * pow(ratio, 1.4));
+		lux_value = (0.0304 * adc_channle0)
+				- (0.062 * adc_channle0 * pow(ratio, 1.4));
 
-	}else if(0.50 < ratio && ratio <= 0.61){
+	} else if (0.50 < ratio && ratio <= 0.61) {
 
 		lux_value = (0.024 * adc_channle0) - (0.031 * adc_channel1);
 
-	}else if(0.61 < ratio && ratio <= 0.80){
+	} else if (0.61 < ratio && ratio <= 0.80) {
 
 		lux_value = (0.0128 * adc_channle0) - (0.0153 * adc_channel1);
 
-	}else if(0.80 < ratio && ratio <= 1.30){
+	} else if (0.80 < ratio && ratio <= 1.30) {
 
 		lux_value = (0.00146 * adc_channle0) - (0.00112 * adc_channel1);
 
-	}else{
+	} else {
 
 		lux_value = 0;
 	}
@@ -275,7 +407,6 @@ uint8_t set_integration_time(int i2c_fd, uint8_t int_time) {
 	}
 	return ret;
 }
-
 
 /**
  * @brief this function sets ADC gain to high 16x
