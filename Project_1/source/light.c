@@ -25,6 +25,9 @@ void *run_light_sensor(void *params) {
 	request_type_t request;
 	heartbeat_response_t response;
 
+	static bool prev_state = NIGHT;
+	bool curr_state = NIGHT;
+
 	msg.log_level = 0;
 	strcpy(msg.thread_name, LIGHT_THREAD_NAME);
 	clock_gettime(CLOCK_MONOTONIC, &msg.time_stamp);
@@ -32,17 +35,43 @@ void *run_light_sensor(void *params) {
 
 	int send_status = 0, received_bytes = 0;
 
+	int i2c_fd = init_light_sensor();
+
+	send_status = mq_send(qDesLogger, (const char*) &msg, sizeof(msg), 0);
+	if (send_status < 0) {
+		//perror("LIGHT THREAD");
+	} else {
+		//INFO_STDOUT("LIGHT_THREAD: message to logger sent\n");
+	}
+
 	while (1) {
 
 		sem_wait(&sem_light);
 
-		send_status = mq_send(qDesLogger, (const char*) &msg, sizeof(msg), 0);
-		if (send_status < 0) {
-			//perror("LIGHT THREAD");
-		} else {
-			//INFO_STDOUT("LIGHT_THREAD: message to logger sent\n");
+		/*Read Light sensor data and log the data*/
+		double lux_value = read_lux_data(i2c_fd);
+		curr_state = day_or_night(lux_value);
+
+		if (curr_state != prev_state) {
+			prev_state = curr_state;
+			snprintf(msg.message, MESSAGE_SIZE, "%s %d",
+					"** State Changed ** Current State(0 = Day; 1 = NIGHT) = ", curr_state);
+		}else{
+			snprintf(msg.message, MESSAGE_SIZE, "%s -> %f", "Current Lux Reading",
+						lux_value);
 		}
 
+		msg.log_level = L_INFO;
+		strcpy(msg.thread_name, LIGHT_THREAD_NAME);
+		clock_gettime(CLOCK_MONOTONIC, &msg.time_stamp);
+
+		send_status = mq_send(qDesLogger, (const char*) &msg, sizeof(msg),
+				P_INFO);
+		if (send_status < 0) {
+			perror("ERROR: sending temperature read log");
+		}
+
+		/*Read any received request from other tasks and act accordingly*/
 		received_bytes = mq_receive(qDesLight, (char*) &request,
 				sizeof(request), 0);
 		if (received_bytes < 0) {
@@ -73,10 +102,10 @@ void *run_light_sensor(void *params) {
 				break;
 			}
 		}
+
 	}
 
-	EXIT:
-	mq_unlink(Q_NAME_LIGHT);
+	EXIT: mq_unlink(Q_NAME_LIGHT);
 	INFO_STDOUT("LIGHT_THREAD...EXITING\n");
 
 	return NULL;

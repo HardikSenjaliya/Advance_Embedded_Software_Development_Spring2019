@@ -11,6 +11,7 @@
 
 
 #include "utils.h"
+#include "../include/APDS_9301_light_sensor.h"
 
 void *run_light_sensor(void *params);
 
