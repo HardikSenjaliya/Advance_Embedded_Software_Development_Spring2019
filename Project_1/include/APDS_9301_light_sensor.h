@@ -67,16 +67,18 @@ uint8_t read_interrupt_control_register(int i2c_fd);
 uint8_t write_interrupt_control_register(int i2c_fd, uint8_t data);
 uint8_t enable_inerrupt(int i2c_fd);
 uint8_t disbale_interrupt(int i2c_fd);
+uint8_t clear_interrupt(int i2c_fd);
 uint8_t set_interrupt_persitentancy(int i2c_fd, uint8_t persist);
 uint8_t read_id_register(int i2c_fd);
 uint16_t read_low_interrupt_threshold_register(int i2c_fd);
 uint8_t write_low_interrupt_threshold_register(int i2c_fd, uint16_t th_value);
-uint8_t read_high_interrupt_threshold_register(int i2c_fd, uint16_t th_value);
+uint8_t write_high_interrupt_threshold_register(int i2c_fd, uint16_t th_value);
 uint16_t read_high_interrupt_threshold_register(int i2c_fd);
 uint16_t read_data0_register(int i2c_fd);
 uint16_t read_data1_register(int i2c_fd);
 double read_lux_data(int i2c_fd);
 uint8_t day_or_night(double lux_value);
+uint8_t extra_credit_light(int i2c_fd);
 
 
 #endif /* INCLUDE_APDS_9301_LIGHT_SENSOR_H_ */

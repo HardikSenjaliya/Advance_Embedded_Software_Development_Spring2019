@@ -7,7 +7,7 @@
 
 #include "../include/main.h"
 
-#define LETS_EXIT
+//#define LETS_EXIT
 
 int heartbeat_request = 0;
 
@@ -25,7 +25,7 @@ int main(int argc, char **argv) {
 	pthread_t light_sensor, temperature_sensor, logger_task, socket_task;
 
 	log_message_t msg;
-	request_type_t request;
+	request_t request;
 	heartbeat_response_t response;
 
 	logfile_attr_t logfile;
@@ -51,6 +51,9 @@ int main(int argc, char **argv) {
 	mqd_t qDesLogger = create_logger_mq();
 	mqd_t qDesLight = create_light_mq();
 	mqd_t qDesTemp = create_temp_mq();
+
+	/*Initializes user leds*/
+	init_leds();
 
 	/*Spwan new threads*/
 	INFO_STDOUT("Creating new threads\n");
@@ -80,6 +83,8 @@ int main(int argc, char **argv) {
 		return 1;
 	}
 
+	/*Start timer for periodic execution of temp and
+	 * light threads*/
 	if (start_timer()) {
 		ERROR_STDOUT("ERROR: starting timer");
 		exit(1);
@@ -186,6 +191,12 @@ int main(int argc, char **argv) {
 		if (light_status < 1 || temp_status < 1 || logger_status < 1) {
 			ERROR_STDOUT("One or More thread died...SENDING EXIT COMMNAD\n");
 
+			/*Blink LEDs to indicate an error*/
+			set_led_on(USER_LED0);
+			set_led_on(USER_LED1);
+			set_led_on(USER_LED2);
+			set_led_on(USER_LED3);
+
 			/*Request status from light thread*/
 			request.req_type = TIME_TO_EXIT;
 			clock_gettime(CLOCK_MONOTONIC, &request.time_stamp);
@@ -214,7 +225,7 @@ int main(int argc, char **argv) {
 			log_message_t message;
 			message.req_type = TIME_TO_EXIT;
 			clock_gettime(CLOCK_MONOTONIC, &message.time_stamp);
-			message.log_level = CRTICAL;
+			message.log_level = L_CRTICAL;
 			strcpy(message.thread_name, MAIN_THREAD_NAME);
 			strcpy(message.message,
 					"One or More thread died...Program is exiting...");
@@ -266,7 +277,7 @@ int main(int argc, char **argv) {
 	log_message_t message;
 	message.req_type = TIME_TO_EXIT;
 	clock_gettime(CLOCK_MONOTONIC, &message.time_stamp);
-	message.log_level = CRTICAL;
+	message.log_level = L_CRTICAL;
 	strcpy(message.thread_name, MAIN_THREAD_NAME);
 	strcpy(message.message, "User Defined Exit...Program is exiting...");
 

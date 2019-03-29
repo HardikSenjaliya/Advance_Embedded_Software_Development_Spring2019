@@ -156,7 +156,7 @@ mqd_t create_light_mq(void) {
 
 	attr.mq_flags = 0;
 	attr.mq_maxmsg = 10;
-	attr.mq_msgsize = sizeof(request_type_t);
+	attr.mq_msgsize = sizeof(request_t);
 
 	/*Open a new posix queue*/
 	qDes = mq_open(Q_NAME_LIGHT, O_CREAT | O_RDWR | O_NONBLOCK , 0666, &attr);
@@ -183,7 +183,7 @@ mqd_t create_temp_mq(void) {
 
 	attr.mq_flags = 0;
 	attr.mq_maxmsg = 10;
-	attr.mq_msgsize = sizeof(request_type_t);
+	attr.mq_msgsize = sizeof(request_t);
 
 	/*Open a new posix queue*/
 	qDes = mq_open(Q_NAME_TEMP, O_CREAT | O_RDWR | O_NONBLOCK , 0666, &attr);
@@ -251,3 +251,57 @@ mqd_t create_main_mq(void) {
 
 	return qDes;
 }
+
+/**
+ * @brief this function creates a POSIX message queue for the main
+ * thread. The purpose of this queue is to receive messages sent by all the child threads when
+ * heartbeat status is requested
+ * @return 0 if succesful, 1 otherwise
+ */
+mqd_t create_socket_mq(void) {
+
+	mqd_t qDes;
+
+	struct mq_attr attr;
+
+	attr.mq_flags = 0;
+	attr.mq_maxmsg = 10;
+	attr.mq_msgsize = sizeof(client_request_response_t);
+
+	/*Open a new posix queue*/
+	qDes = mq_open(Q_NAME_SOCKET, O_CREAT | O_RDWR, 0666, &attr);
+
+	if (qDes == -1) {
+
+		perror("ERROR: mq_open\n");
+		exit(1);
+	}
+
+	return qDes;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

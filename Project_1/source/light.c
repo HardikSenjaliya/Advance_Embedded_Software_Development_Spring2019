@@ -20,10 +20,12 @@ void *run_light_sensor(void *params) {
 	mqd_t qDesLight = create_light_mq();
 	mqd_t qDesLogger = create_logger_mq();
 	mqd_t qDesMain = create_main_mq();
+	mqd_t qDesSocket = create_socket_mq();
 
 	log_message_t msg;
-	request_type_t request;
+	request_t request;
 	heartbeat_response_t response;
+	client_request_response_t client_response;
 
 	static bool prev_state = NIGHT;
 	bool curr_state = NIGHT;
@@ -37,6 +39,8 @@ void *run_light_sensor(void *params) {
 
 	int i2c_fd = init_light_sensor();
 
+	extra_credit_light(i2c_fd);
+
 	send_status = mq_send(qDesLogger, (const char*) &msg, sizeof(msg), 0);
 	if (send_status < 0) {
 		//perror("LIGHT THREAD");
@@ -48,17 +52,18 @@ void *run_light_sensor(void *params) {
 
 		sem_wait(&sem_light);
 
-		/*Read Light sensor data and log the data*/
+		//Read Light sensor data and log the data
 		double lux_value = read_lux_data(i2c_fd);
 		curr_state = day_or_night(lux_value);
 
 		if (curr_state != prev_state) {
 			prev_state = curr_state;
 			snprintf(msg.message, MESSAGE_SIZE, "%s %d",
-					"** State Changed ** Current State(0 = Day; 1 = NIGHT) = ", curr_state);
-		}else{
-			snprintf(msg.message, MESSAGE_SIZE, "%s -> %f", "Current Lux Reading",
-						lux_value);
+					"** State Changed ** Current State(0 = Day; 1 = NIGHT) = ",
+					curr_state);
+		} else {
+			snprintf(msg.message, MESSAGE_SIZE, "%s -> %f",
+					"Current Lux Reading", lux_value);
 		}
 
 		msg.log_level = L_INFO;
@@ -68,7 +73,7 @@ void *run_light_sensor(void *params) {
 		send_status = mq_send(qDesLogger, (const char*) &msg, sizeof(msg),
 				P_INFO);
 		if (send_status < 0) {
-			perror("ERROR: sending temperature read log");
+			//perror("ERROR: sending lux read log");
 		}
 
 		/*Read any received request from other tasks and act accordingly*/
@@ -94,6 +99,36 @@ void *run_light_sensor(void *params) {
 
 				break;
 
+			case GET_LUX:
+				strcpy(client_response.message, "Requested Lux Data");
+				//client_response.data = lux_value;
+
+				send_status = mq_send(qDesSocket, (const char*) &client_response,
+						sizeof(client_response), P_INFO);
+				if (send_status < 0) {
+					perror("LIGHT THREAD: sending socket response");
+				} else {
+					//INFO_STDOUT("Light-response to hearbeat request sent\n");
+					request.req_type = 0;
+				}
+
+				break;
+
+			case GET_LIGHT_STATUS:
+				strcpy(client_response.message, "Requested Light Data");
+				client_response.data = curr_state;
+
+				send_status = mq_send(qDesSocket, (const char*) &client_response,
+						sizeof(client_response), P_INFO);
+				if (send_status < 0) {
+					perror("LIGHT THREAD: sending socket response");
+				} else {
+					//INFO_STDOUT("Light-response to hearbeat request sent\n");
+					request.req_type = 0;
+				}
+
+				break;
+
 			case TIME_TO_EXIT:
 				INFO_STDOUT("LIGHT_THREAD: Request to Exit received\n");
 				goto EXIT;
@@ -106,6 +141,7 @@ void *run_light_sensor(void *params) {
 	}
 
 	EXIT: mq_unlink(Q_NAME_LIGHT);
+	close(i2c_fd);
 	INFO_STDOUT("LIGHT_THREAD...EXITING\n");
 
 	return NULL;

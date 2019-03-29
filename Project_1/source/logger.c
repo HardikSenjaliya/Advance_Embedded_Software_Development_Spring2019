@@ -76,7 +76,7 @@ void *run_logger(void *params) {
 	 * if not present -> create a new file*/
 	if (0 == access("logfile.txt", F_OK)) {
 		INFO_STDOUT("Given logfile name already present in the directory\n");
-		INFO_STDOUT("Started Back up...");
+		INFO_STDOUT("Started Back up...\n");
 		file_backup("logfile.txt");
 		INFO_STDOUT("Backup Done\n");
 	}

@@ -12,29 +12,8 @@
 #include <netdb.h>
 #include <sys/socket.h>
 
-typedef enum {
-	DAY, NIGHT
-} day_or_night_t;
-
-typedef enum {
-
-	GET_TEMP_C,
-	GET_TEMP_F,
-	GET_TEMP_K,
-	GET_LUX,
-	GET_LIGHT_STATUS,
-	CLOSE_CONNECTION
-
-} client_request_t;
-
-typedef struct {
-
-	double temp;
-	day_or_night_t day_or_night;
-
-} client_request_response_t;
 
 /*function prototypes*/
 void *run_socket(void *params);
-client_request_response_t handle_client_request(client_request_t request);
+client_request_response_t handle_client_request(int request_type, mqd_t qDesLight, mqd_t qDesTemp, mqd_t qDesSocket);
 #endif /* INCLUDE_SOCKET_H_ */

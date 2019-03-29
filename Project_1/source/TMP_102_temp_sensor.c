@@ -8,17 +8,43 @@
 #include "../include/TMP_102_temp_sensor.h"
 
 #define I2C_SLAVE_ADDRESS				(0x48)
-#define CONFIG_REG_DEFAULT				(0xA060) /*TODO check for the correctness of the MSB and LSB order*/
+#define CONFIG_REG_DEFAULT				(0x60A0) /*TODO check for the correctness of the MSB and LSB order*/
+
+
+uint8_t extra_credit_temp(int i2c_fd){
+
+	uint8_t ret = 0;
+	uint16_t read_temp = 0;
+
+	write_tlow_register(i2c_fd, TLOW_VALUE);
+	//read_temp = read_tlow_register(i2c_fd);
+	//printf("TLOW values is %d : ", read_temp);
+
+	write_thigh_register(i2c_fd, THIGH_VALUE);
+	//read_temp = read_thigh_register(i2c_fd);
+	//printf("THIGH values is %d : ", read_temp);
+
+	/*Set Number of Fault bits*/
+	configure_fault_bits(i2c_fd, FAULTS_SIX);
+
+	read_temp = read_config_register(i2c_fd);
+	printf("Faults bits %x\n", read_temp);
+
+	//configure_EM_operation(i2c_fd, EXTENDED_MODE_OPERATION);
+
+	return ret;
+
+}
 
 /**
  * @brief this functino reads the temperature value of the TLOW register
  * @param i2c_fd
  * @return tlow temperature value
  */
-int16_t read_tlow_register(int i2c_fd) {
+uint16_t read_tlow_register(int i2c_fd) {
 
-	int8_t read_Buffer[NBYTES_2];
-	int8_t read_bytes = 0;
+	uint8_t read_Buffer[NBYTES_2];
+	uint8_t read_bytes = 0;
 	double read_temp = 0;
 
 	if (write_pointer_register(i2c_fd, TLOW_REGISTER)) {
@@ -41,18 +67,20 @@ int16_t read_tlow_register(int i2c_fd) {
  * @param t_value value to be written into the register
  * @return no of bytes written
  */
-int8_t write_tlow_register(int i2c_fd, int16_t t_value) {
+uint8_t write_tlow_register(int i2c_fd, uint16_t t_value) {
 
-	int8_t ret = 0;
+	uint8_t ret = 0;
 
 	if (write_pointer_register(i2c_fd, TLOW_REGISTER)) {
 		perror("ERROR: while writing to the pointer register\n");
 	}
 
-	int8_t write_buffer[NBYTES_3];
-	write_buffer[0] = CONFIGURATION_REGISTER;
-	write_buffer[1] = (t_value >> 8);
-	write_buffer[2] = (t_value & 0xFF);
+	uint16_t digital_value = t_value/0.0625;
+
+	uint8_t write_buffer[NBYTES_3];
+	write_buffer[0] = TLOW_REGISTER;
+	write_buffer[1] = (digital_value >> 4);
+	write_buffer[2] = (digital_value << 8);
 
 	ret = write(i2c_fd, &write_buffer, NBYTES_3);
 	if (ret < 0) {
@@ -68,10 +96,10 @@ int8_t write_tlow_register(int i2c_fd, int16_t t_value) {
  * @param i2c_fd
  * @return thigh temp value
  */
-int16_t read_thigh_register(int i2c_fd) {
+uint16_t read_thigh_register(int i2c_fd) {
 
-	int8_t read_Buffer[NBYTES_2];
-	int8_t read_bytes = 0;
+	uint8_t read_Buffer[NBYTES_2];
+	uint8_t read_bytes = 0;
 	double read_temp = 0;
 
 	if (write_pointer_register(i2c_fd, THIGH_REGISTER)) {
@@ -95,18 +123,20 @@ int16_t read_thigh_register(int i2c_fd) {
  * @return no of bytes written
  */
 
-int8_t write_thigh_register(int i2c_fd, int16_t t_value) {
+uint8_t write_thigh_register(int i2c_fd, uint16_t t_value) {
 
-	int8_t ret = 0;
+	uint8_t ret = 0;
 
 	if (write_pointer_register(i2c_fd, THIGH_REGISTER)) {
 		perror("ERROR: while writing to the pointer register\n");
 	}
 
-	int8_t write_buffer[NBYTES_3];
-	write_buffer[0] = CONFIGURATION_REGISTER;
-	write_buffer[1] = (t_value >> 8);
-	write_buffer[2] = (t_value & 0xFF);
+	uint16_t digital_value = t_value/0.0625;
+
+	uint8_t write_buffer[NBYTES_3];
+	write_buffer[0] = THIGH_REGISTER;
+	write_buffer[1] = (digital_value >> 4);
+	write_buffer[2] = (digital_value << 8);
 
 	ret = write(i2c_fd, &write_buffer, NBYTES_3);
 	if (ret < 0) {
@@ -122,9 +152,9 @@ int8_t write_thigh_register(int i2c_fd, int16_t t_value) {
  * @param required_mode
  * @return no of bytes written
  */
-int8_t configure_thermostate_mode(int i2c_fd, bool required_mode) {
+uint8_t configure_thermostate_mode(int i2c_fd, bool required_mode) {
 
-	int16_t current_config = 0;
+	uint16_t current_config = 0;
 	int ret = 0;
 
 	if (write_pointer_register(i2c_fd, CONFIGURATION_REGISTER)) {
@@ -134,9 +164,9 @@ int8_t configure_thermostate_mode(int i2c_fd, bool required_mode) {
 	current_config = read_config_register(i2c_fd);
 
 	if (required_mode == INTERRUPT_MODE) {
-		current_config |= (1 << CR_THERMOSTAT_MASK);
+		current_config |= (uint16_t)(1 << CR_THERMOSTAT_MASK);
 	} else {
-		current_config &= ~(1 << CR_THERMOSTAT_MASK);
+		current_config &= (uint16_t)~(1 << CR_THERMOSTAT_MASK);
 	}
 
 	if (write_pointer_register(i2c_fd, CONFIGURATION_REGISTER)) {
@@ -158,22 +188,18 @@ int8_t configure_thermostate_mode(int i2c_fd, bool required_mode) {
  * @param required_faults required number of faults bits
  * @return no of bytes written
  */
-int8_t configure_fault_bits(int i2c_fd, int8_t required_faults) {
+uint8_t configure_fault_bits(int i2c_fd, uint8_t required_faults) {
 
-	int16_t current_config = 0;
+	uint16_t current_config = 0;
 	int ret = 0;
-
-	if (write_pointer_register(i2c_fd, CONFIGURATION_REGISTER)) {
-		perror("ERROR: while writing to the pointer register\n");
-	}
 
 	current_config = read_config_register(i2c_fd);
 
-	current_config |= (required_faults << CR_FAULT_BIT_MASK);
+	printf("Read config before setting faults bits : %x\n", current_config);
 
-	if (write_pointer_register(i2c_fd, CONFIGURATION_REGISTER)) {
-		perror("ERROR: while writing to the pointer register\n");
-	}
+	current_config |= (((uint16_t)required_faults) << CR_FAULT_BIT_MASK);
+
+	printf("Read config left shifted : %x\n", current_config);
 
 	ret = write_config_register(i2c_fd, current_config);
 	if (ret < 0) {
@@ -190,22 +216,14 @@ int8_t configure_fault_bits(int i2c_fd, int8_t required_faults) {
  * @param required_rate conversion rate to be configured
  * @return no of bytes written
  */
-int8_t configure_conversion_rate(int i2c_fd, int8_t required_rate) {
+uint8_t configure_conversion_rate(int i2c_fd, uint8_t required_rate) {
 
-	int16_t current_config = 0;
+	uint16_t current_config = 0;
 	int ret = 0;
-
-	if (write_pointer_register(i2c_fd, CONFIGURATION_REGISTER)) {
-		perror("ERROR: while writing to the pointer register\n");
-	}
 
 	current_config = read_config_register(i2c_fd);
 
 	current_config |= (required_rate << CR_CONVERSION_RATE_MASK);
-
-	if (write_pointer_register(i2c_fd, CONFIGURATION_REGISTER)) {
-		perror("ERROR: while writing to the pointer register\n");
-	}
 
 	ret = write_config_register(i2c_fd, current_config);
 	if (ret < 0) {
@@ -222,14 +240,10 @@ int8_t configure_conversion_rate(int i2c_fd, int8_t required_rate) {
  * @param required_operation 1 = extended mode, 0 = normal mode
  * @return no of bytes written
  */
-int8_t configure_EM_operation(int i2c_fd, bool required_operation) {
+uint8_t configure_EM_operation(int i2c_fd, bool required_operation) {
 
-	int16_t current_config = 0;
+	uint16_t current_config = 0;
 	int ret = 0;
-
-	if (write_pointer_register(i2c_fd, CONFIGURATION_REGISTER)) {
-		perror("ERROR: while writing to the pointer register\n");
-	}
 
 	current_config = read_config_register(i2c_fd);
 
@@ -237,10 +251,6 @@ int8_t configure_EM_operation(int i2c_fd, bool required_operation) {
 		current_config |= (1 << CR_EXTENDED_MODE_MASK);
 	} else {
 		current_config &= ~(1 << CR_EXTENDED_MODE_MASK);
-	}
-
-	if (write_pointer_register(i2c_fd, CONFIGURATION_REGISTER)) {
-		perror("ERROR: while writing to the pointer register\n");
 	}
 
 	ret = write_config_register(i2c_fd, current_config);
@@ -259,15 +269,11 @@ int8_t configure_EM_operation(int i2c_fd, bool required_operation) {
  * @return read resolution value
  */
 
-int8_t configure_sensor_resolution(int i2c_fd) {
+uint8_t configure_sensor_resolution(int i2c_fd) {
 
-	int16_t read_data = 0;
-	int8_t resolution = 0;
-	int8_t msb = 0; //lsb = 0;
-
-	if (write_pointer_register(i2c_fd, CONFIGURATION_REGISTER)) {
-		perror("ERROR: while writing to the pointer register\n");
-	}
+	uint16_t read_data = 0;
+	uint8_t resolution = 0;
+	uint8_t msb = 0; //lsb = 0;
 
 	read_data = read_config_register(i2c_fd);
 
@@ -286,22 +292,14 @@ int8_t configure_sensor_resolution(int i2c_fd) {
  * @param required_mode
  * @return no of bytes written
  */
-int8_t configure_shutdown_mode(int i2c_fd, bool required_mode) {
+uint8_t configure_shutdown_mode(int i2c_fd, bool required_mode) {
 
-	int16_t current_config = 0;
+	uint16_t current_config = 0;
 	int ret = 0;
-
-	if (write_pointer_register(i2c_fd, CONFIGURATION_REGISTER)) {
-		perror("ERROR: while writing to the pointer register\n");
-	}
 
 	current_config = read_config_register(i2c_fd);
 
-	current_config |= (required_mode << CR_SHUTDOWN_MODE_MASK);
-
-	if (write_pointer_register(i2c_fd, CONFIGURATION_REGISTER)) {
-		perror("ERROR: while writing to the pointer register\n");
-	}
+	current_config |= (uint16_t)(required_mode << CR_SHUTDOWN_MODE_MASK);
 
 	ret = write_config_register(i2c_fd, current_config);
 	if (ret < 0) {
@@ -311,23 +309,35 @@ int8_t configure_shutdown_mode(int i2c_fd, bool required_mode) {
 	return ret;
 }
 
-int8_t write_config_register(int i2c_fd, int16_t data) {
+uint8_t write_config_register(int i2c_fd, uint16_t data) {
 
-	int8_t ret = 0;
+	uint8_t ret = 0;
+
+
+	uint8_t write_buffer[NBYTES_3];
+	write_buffer[0] = CONFIGURATION_REGISTER;
+
+	write_buffer[2] = (uint8_t)(data & 0xFF);
+
+	printf("data %x & ", data);
+
+	write_buffer[1] = (uint8_t)(data >> 8);
+
+	printf("data %x\n", data);
+
+	printf("MSB and LSB - %x and %x\n", write_buffer[1], write_buffer[2]);
 
 	if (write_pointer_register(i2c_fd, CONFIGURATION_REGISTER)) {
 		perror("ERROR: while writing to the pointer register\n");
 	}
 
-	int8_t write_buffer[NBYTES_3];
-	write_buffer[0] = CONFIGURATION_REGISTER;
-	write_buffer[1] = (data >> 8);
-	write_buffer[2] = (data & 0xFF);
-
-	ret = write(i2c_fd, &write_buffer, NBYTES_3);
+	ret = write(i2c_fd, &write_buffer, sizeof(write_buffer));
 	if (ret < 0) {
 		perror("ERROR: while writing data to configuration register\n");
 	}
+
+	uint16_t read_config = read_config_register(i2c_fd);
+	printf("Config register after writing %x\n", read_config);
 
 	return ret;
 }
@@ -337,9 +347,9 @@ int8_t write_config_register(int i2c_fd, int16_t data) {
  * @param i2c_fd file descriptor of the opened i2c module
  * @return read value
  */
-int16_t read_config_register(int i2c_fd) {
+uint16_t read_config_register(int i2c_fd) {
 
-	int16_t read_buffer = 0;
+	uint16_t read_buffer = 0;
 	int read_bytes = 0;
 
 	if (write_pointer_register(i2c_fd, CONFIGURATION_REGISTER)) {
@@ -389,13 +399,13 @@ double convert_temp_farenheit(int i2c_fd) {
  * @param binary_data
  * @return decimal temperature value
  */
-double binary_to_decimal(int8_t binary_data[]) {
+double binary_to_decimal(uint8_t binary_data[]) {
 
 	double decimal_temp = 0;
-	int16_t temp = 0;
+	uint16_t temp = 0;
 
-	int8_t msb_byte = binary_data[0];
-	int8_t lsb_byte = binary_data[1];
+	uint8_t msb_byte = binary_data[0];
+	uint8_t lsb_byte = binary_data[1];
 
 
 	temp = ((((uint16_t) msb_byte) << 4) | (lsb_byte >> 4)) & 0xFFF;
@@ -423,8 +433,8 @@ double read_temperature_register(int i2c_fd) {
 
 	double temp_read = 0;
 
-	int8_t read_buffer[NBYTES_2] = {0,0};
-	int8_t read_bytes = 0;
+	uint8_t read_buffer[NBYTES_2] = {0,0};
+	uint8_t read_bytes = 0;
 
 	if (write_pointer_register(i2c_fd, TEMPERATURE_REGISTER)) {
 		ERROR_STDOUT("ERROR: while writing to the pointer register\n");
@@ -446,7 +456,7 @@ double read_temperature_register(int i2c_fd) {
  * @param reg register to be writtten/read
  * @return 0 if successful, 1 otherwise
  */
-int8_t write_pointer_register(int i2c_fd, int8_t reg) {
+uint8_t write_pointer_register(int i2c_fd, uint8_t reg) {
 
 	int ret = 0;
 	ret = write(i2c_fd, &reg, sizeof(reg));
@@ -477,6 +487,12 @@ int init_temp_sensor() {
 		perror("ERROR: i2c_ioctl");
 		exit(1);
 	}
+
+	uint16_t read_config = read_config_register(i2c_fd);
+	printf("Config register in init sensor writing %x\n", read_config);
+
+/*	Write default values to config register
+	write_config_register(i2c_fd, 0xA0A0);*/
 
 	return i2c_fd;
 

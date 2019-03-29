@@ -37,7 +37,7 @@
 #define SOCKET_THREAD_ALIVE					(4444)
 #define MSEC_TO_NSEC						(1000000)
 #define NSEC_TO_SEC							(1000000000)
-#define MESSAGE_SIZE						(50)
+#define MESSAGE_SIZE						(60)
 #define THREAD_NAME_SIZE					(13)
 
 
@@ -49,10 +49,16 @@ sem_t sem_light, sem_temp, sem_heartbeat;
 
 typedef enum{
 
-	SEND_ALIVE_STATUS = 11,
-	TIME_TO_EXIT = 21
+	GET_TEMP_C = 1,
+	GET_TEMP_F,
+	GET_TEMP_K,
+	GET_LUX,
+	GET_LIGHT_STATUS,
+	CLOSE_CONNECTION,
+	SEND_ALIVE_STATUS,
+	TIME_TO_EXIT
 
-}request_from_main;
+}request_type_t;
 
 typedef enum{
 
@@ -71,7 +77,7 @@ typedef struct {
 	struct timespec time_stamp;
 	char thread_name[THREAD_NAME_SIZE];
 	char message[MESSAGE_SIZE];
-	request_from_main req_type;
+	request_type_t req_type;
 
 } log_message_t;
 
@@ -94,10 +100,11 @@ typedef struct{
 
 typedef struct{
 
+	char message[30];
 	struct timespec time_stamp;
-	request_from_main req_type;
+	request_type_t req_type;
 
-}request_type_t;
+}request_t;
 
 typedef enum{
 
@@ -109,12 +116,27 @@ typedef enum{
 }message_priority;
 
 
+typedef enum{
+	DAY = 0,
+	NIGHT
+}day_or_night_t;
+
+
+typedef struct {
+
+	char message[30];
+	double data;
+
+} client_request_response_t;
+
+
 /*function prototypes*/
 
 mqd_t create_light_mq(void);
 mqd_t create_temp_mq(void);
 mqd_t create_logger_mq(void);
 mqd_t create_main_mq(void);
+mqd_t create_socket_mq(void);
 int initialize_semaphores(void);
 int destroy_semaphores(void);
 int start_timer(void);

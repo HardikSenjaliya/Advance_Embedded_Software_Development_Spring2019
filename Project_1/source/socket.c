@@ -17,26 +17,73 @@ int request_received = 0;
  * @return response to be sent
  */
 
-client_request_response_t handle_client_request(client_request_t request) {
+client_request_response_t handle_client_request(int request_type,
+		mqd_t qDesLight, mqd_t qDesTemp, mqd_t qDesSocket) {
 
 	client_request_response_t response = { 0 };
 
-	switch (request) {
+	request_t request;
+
+	double requested_data = 0;
+	int send_status = 0, received_bytes = 0;
+
+	switch (request_type) {
 
 	case GET_TEMP_C: {
+
+		request.req_type = GET_TEMP_C;
+		send_status = mq_send(qDesTemp, (const char*) &request, sizeof(request),
+				P_INFO);
+		if (send_status < 0) {
+			perror("SOCKET: Requesting temp in C");
+		}
+
 		break;
 	}
 
 	case GET_TEMP_F: {
+
+		request.req_type = GET_TEMP_F;
+		send_status = mq_send(qDesTemp, (const char*) &request, sizeof(request),
+				P_INFO);
+		if (send_status < 0) {
+			perror("SOCKET: Requesting temp in F");
+		}
+
+
 		break;
 	}
 	case GET_TEMP_K: {
+
+		request.req_type = GET_TEMP_K;
+		send_status = mq_send(qDesTemp, (const char*) &request, sizeof(request),
+				P_INFO);
+		if (send_status < 0) {
+			perror("SOCKET: Requesting temp in K");
+		}
+
 		break;
 	}
 	case GET_LUX: {
+
+		request.req_type = GET_LUX;
+		send_status = mq_send(qDesLight, (const char*) &request,
+				sizeof(request), P_INFO);
+		if (send_status < 0) {
+			perror("SOCKET: Requesting LUX");
+		}
+
 		break;
 	}
 	case GET_LIGHT_STATUS: {
+
+		request.req_type = GET_LUX;
+		send_status = mq_send(qDesLight, (const char*) &request,
+				sizeof(request), P_INFO);
+		if (send_status < 0) {
+			perror("SOCKET: Requesting LUX");
+		}
+
 		break;
 	}
 	case CLOSE_CONNECTION: {
@@ -48,6 +95,12 @@ client_request_response_t handle_client_request(client_request_t request) {
 		break;
 	}
 
+	}
+
+	received_bytes = mq_receive(qDesSocket, (char*) &response, sizeof(response),
+			0);
+	if (received_bytes < 0) {
+		perror("SOCKET: reading response");
 	}
 
 	return response;
@@ -65,8 +118,9 @@ void *run_socket(void *params) {
 
 	INFO_STDOUT("Socket Task started running\n");
 
-	client_request_t request = 0;
-	client_request_response_t response = { 0 };
+	//request_t request;
+	char c_request[50];
+	client_request_response_t response;
 
 	int bytes_read = 0;
 
@@ -78,6 +132,11 @@ void *run_socket(void *params) {
 	struct sockaddr_in client;
 
 	socklen_t client_address_len;
+
+	/*Open Light and Temp queues for sending request for the data*/
+	mqd_t qDesLight = create_light_mq();
+	mqd_t qDesTemp = create_temp_mq();
+	mqd_t qDesSocket = create_socket_mq();
 
 	/*create a new socket
 	 * domain - IPv4, stream based socket, protocol - 0 single type
@@ -131,16 +190,31 @@ void *run_socket(void *params) {
 		request_received = 1;
 	}
 
+	/*Read the request from the client socket*/
 	if (request_received) {
 
-		bytes_read = read(client_socket_fd, (char*) request, sizeof(request));
+		/*Reading the request*/
+		bytes_read = read(client_socket_fd, c_request, sizeof(c_request));
 		if (bytes_read < 0) {
 			ERROR_STDOUT("ERROR: reading request from client\n");
 		} else {
-			response = handle_client_request(request);
+
+			request_t *request = (request_t*) c_request;
+
+			printf("Client Requested: %s %d\n", request->message,
+					request->req_type);
+
+			/*Handling the request via a function call*/
+			response = handle_client_request(request->req_type, qDesLight,
+					qDesTemp, qDesSocket);
+
+			strcpy(request->message, "Test Data");
+			request->req_type = GET_LUX;
+
+			/*Sending response to the client socket*/
 			if (-1
-					== send(client_socket_fd, (void*) &response,
-							sizeof(response), 0)) {
+					== send(client_socket_fd, (void*) &request,
+							sizeof(request), 0)) {
 				ERROR_STDOUT("ERROR: sending response to the client");
 			}
 		}

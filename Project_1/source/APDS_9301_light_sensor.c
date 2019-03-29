@@ -9,6 +9,40 @@
 
 #define I2C_SLAVE_ADDRESS					(0x39)
 #define SELECT_COMMAND_REGISTER				(0x80)
+#define LOWER_THRESHOLD_VALUE				(0x64)
+#define UPPER_THRESHOLD_VALUE				(0x4E20)
+
+uint8_t extra_credit_light(int i2c_fd) {
+
+	uint8_t ret = 0;
+	uint16_t read_value = 0;
+
+	/*Set Lower and Upper threshold value*/
+	write_low_interrupt_threshold_register(i2c_fd, LOWER_THRESHOLD_VALUE);
+	write_high_interrupt_threshold_register(i2c_fd, UPPER_THRESHOLD_VALUE);
+	/*
+
+	 uint16_t low_value = read_low_interrupt_threshold_register(i2c_fd);
+	 uint16_t upper_value = read_high_interrupt_threshold_register(i2c_fd);
+
+	 //printf("Light: low threshold and high threshold - %x and %x\n", low_value, upper_value);
+	 */
+
+	/*Enable interrupt*/
+	enable_inerrupt(i2c_fd);
+
+	/*Set Persist value*/
+	set_interrupt_persitentancy(i2c_fd, 5);
+
+	/*uint8_t read = read_interrupt_control_register(i2c_fd);
+	 printf("Interrupt Controller - %x\n", read);
+	 */
+
+
+
+
+	return ret;
+}
 
 /**
  * @brief this function reads to the lower byte and uppper byte
@@ -231,7 +265,7 @@ double read_lux_data(int i2c_fd) {
 	uint16_t adc_channel1 = read_data1_register(i2c_fd);
 	uint16_t adc_channle0 = read_data0_register(i2c_fd);
 
-	//printf("ADC1 : %d, ADC0 : %d", adc_channel1, adc_channle0);
+	//printf("ADC1 : %d, ADC0 : %d\n", adc_channel1, adc_channle0);
 
 	double ratio = (double) adc_channel1 / (double) adc_channle0;
 	double lux_value = 0;
@@ -280,7 +314,7 @@ uint8_t read_id_register(int i2c_fd) {
 		perror("ERROR: reading ID register");
 	}
 
-	return ret;
+	return read_data;
 }
 
 /**
@@ -305,6 +339,22 @@ uint8_t set_interrupt_persitentancy(int i2c_fd, uint8_t persist) {
 
 	return ret;
 
+}
+
+/**
+ * @brief this function clears interrupt
+ * @param i2c_fd
+ * @return
+ */
+uint8_t clear_interrupt(int i2c_fd) {
+
+	uint8_t ret = 0;
+
+	uint8_t command = 0xC0;
+
+	ret = write_command_register(i2c_fd, command);
+
+	return ret;
 }
 
 /**
@@ -608,6 +658,8 @@ int init_light_sensor(void) {
 	}
 
 	power_up_sensor(i2c_fd);
+	int id = read_id_register(i2c_fd);
+	printf("Id is %d", id);
 
 	return i2c_fd;
 }
