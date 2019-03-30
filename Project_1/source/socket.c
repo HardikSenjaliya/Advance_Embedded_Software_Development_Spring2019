@@ -24,7 +24,6 @@ client_request_response_t handle_client_request(int request_type,
 
 	request_t request;
 
-	double requested_data = 0;
 	int send_status = 0, received_bytes = 0;
 
 	switch (request_type) {
@@ -50,7 +49,6 @@ client_request_response_t handle_client_request(int request_type,
 			perror("SOCKET: Requesting temp in F");
 		}
 
-
 		break;
 	}
 	case GET_TEMP_K: {
@@ -65,6 +63,8 @@ client_request_response_t handle_client_request(int request_type,
 		break;
 	}
 	case GET_LUX: {
+
+		printf("Requesting Lux Data\n");
 
 		request.req_type = GET_LUX;
 		send_status = mq_send(qDesLight, (const char*) &request,
@@ -92,6 +92,9 @@ client_request_response_t handle_client_request(int request_type,
 
 	default: {
 		ERROR_STDOUT("Invalid Request from client\n");
+		strcpy(response.message, "Send valid Request");
+		mq_send(qDesSocket, (const char*) &response, sizeof(response),
+				P_WARNING);
 		break;
 	}
 
@@ -100,9 +103,11 @@ client_request_response_t handle_client_request(int request_type,
 	received_bytes = mq_receive(qDesSocket, (char*) &response, sizeof(response),
 			0);
 	if (received_bytes < 0) {
-		perror("SOCKET: reading response");
+		//perror("SOCKET: reading response");
 	}
 
+/*	printf("Response received from required task is : %s %f\n",
+			response.message, response.data);*/
 	return response;
 }
 
@@ -118,8 +123,10 @@ void *run_socket(void *params) {
 
 	INFO_STDOUT("Socket Task started running\n");
 
+	int ACCEPT_CONNECTION = 1;
+
 	//request_t request;
-	char c_request[50];
+	int c_request;
 	client_request_response_t response;
 
 	int bytes_read = 0;
@@ -167,54 +174,55 @@ void *run_socket(void *params) {
 		exit(1);
 	}
 
-	/*Listen on the socket, maximum pending connection 1*/
-	if (0 > listen(socket_fd, 1)) {
-		perror("ERROR: listen");
-		INFO_STDOUT("Exiting...\n");
-		exit(1);
-	} else {
-		INFO_STDOUT("Server Started Listening on the port\n");
-	}
 
-	client_address_len = sizeof(client);
 
-	/*Accept a new connection*/
-	if (0
-			> (client_socket_fd = accept(socket_fd, (struct sockaddr*) &client,
-					&client_address_len))) {
-		perror("ERROR: accept");
-		INFO_STDOUT("Exiting...");
-		exit(1);
-	} else {
-		INFO_STDOUT("Connection with client established\n");
-		request_received = 1;
-	}
 
-	/*Read the request from the client socket*/
-	if (request_received) {
+
+
+
+
+
+	while (ACCEPT_CONNECTION) {
+
+		/*Listen on the socket, maximum pending connection 1*/
+		if (0 > listen(socket_fd, 1)) {
+			perror("ERROR: listen");
+			INFO_STDOUT("Exiting...\n");
+			exit(1);
+		} else {
+			INFO_STDOUT("Server Started Listening on the port\n");
+		}
+
+		client_address_len = sizeof(client);
+
+		/*Accept a new connection*/
+		if (0
+				> (client_socket_fd = accept(socket_fd,
+						(struct sockaddr*) &client, &client_address_len))) {
+			perror("ERROR: accept");
+			INFO_STDOUT("Exiting...");
+			exit(1);
+		} else {
+			INFO_STDOUT("Connection with client established\n");
+			request_received = 1;
+		}
+
+		/*Read the request from the client socket*/
 
 		/*Reading the request*/
-		bytes_read = read(client_socket_fd, c_request, sizeof(c_request));
+		bytes_read = read(client_socket_fd, (void*) &c_request,
+				sizeof(c_request));
 		if (bytes_read < 0) {
 			ERROR_STDOUT("ERROR: reading request from client\n");
 		} else {
-
-			request_t *request = (request_t*) c_request;
-
-			printf("Client Requested: %s %d\n", request->message,
-					request->req_type);
-
-			/*Handling the request via a function call*/
-			response = handle_client_request(request->req_type, qDesLight,
-					qDesTemp, qDesSocket);
-
-			strcpy(request->message, "Test Data");
-			request->req_type = GET_LUX;
-
+			//fflush(stdout);
+			response = handle_client_request(c_request, qDesLight, qDesTemp,
+					qDesSocket);
 			/*Sending response to the client socket*/
+
 			if (-1
-					== send(client_socket_fd, (void*) &request,
-							sizeof(request), 0)) {
+					== send(client_socket_fd, (void*) &response,
+							sizeof(response), 0)) {
 				ERROR_STDOUT("ERROR: sending response to the client");
 			}
 		}
