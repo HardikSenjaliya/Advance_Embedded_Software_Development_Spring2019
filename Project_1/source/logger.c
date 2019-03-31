@@ -7,6 +7,9 @@
 
 #include "../include/logger.h"
 
+extern int startup_request;
+extern pthread_mutex_t startup_mutex;
+
 pthread_mutex_t fileMutex = PTHREAD_MUTEX_INITIALIZER;
 
 /**
@@ -75,10 +78,10 @@ void *run_logger(void *params) {
 	 * if present -> create a backfile and write to the new file
 	 * if not present -> create a new file*/
 	if (0 == access("logfile.txt", F_OK)) {
-		INFO_STDOUT("Given logfile name already present in the directory\n");
-		INFO_STDOUT("Started Back up...\n");
+		//INFO_STDOUT("Given logfile name already present in the directory\n");
+		//INFO_STDOUT("Started Back up...\n");
 		file_backup("logfile.txt");
-		INFO_STDOUT("Backup Done\n");
+		//INFO_STDOUT("Backup Done\n");
 	}
 
 	/*Create a new logfile*/
@@ -120,6 +123,26 @@ void *run_logger(void *params) {
 				}
 				break;
 
+			case STARTUP_TEST:
+
+				pthread_mutex_lock(&startup_mutex);
+				startup_request |= (1 << 0);
+				pthread_mutex_unlock(&startup_mutex);
+
+				strcpy(response.thread_name, LOGGER_THREAD_NAME);
+				response.alive_status = LOGGER_THREAD_ALIVE;
+
+				send_status = mq_send(qDesMain, (const char*) &response,
+						sizeof(response), 1);
+				if (send_status < 0) {
+					//perror("LOGGER THREAD");
+				} else {
+					//INFO_STDOUT("LOGGER-response to hearbeat request sent\n");
+					request.req_type = 0;
+				}
+
+				break;
+
 			case TIME_TO_EXIT:
 				//INFO_STDOUT("LOGGER_THREAD: Request to Exit received\n");
 				fprintf(p_logfile,
@@ -138,11 +161,17 @@ void *run_logger(void *params) {
 
 			pthread_mutex_lock(&fileMutex);
 			//INFO_STDOUT("logging data into logfile\n");
+
+			if(request.log_level == 0){
+
 			fprintf(p_logfile,
 					"[%ld] *** From : %s *** Log Level : %d *** Received Message : %s\n",
 					(request.time_stamp.tv_sec) * NSEC_TO_SEC
 							+ (request.time_stamp.tv_nsec), request.thread_name,
 					request.log_level, request.message);
+			}else if(request.log_level == L_ERROR){
+				INFO_STDOUT(request.message);
+			}
 
 			pthread_mutex_unlock(&fileMutex);
 		}

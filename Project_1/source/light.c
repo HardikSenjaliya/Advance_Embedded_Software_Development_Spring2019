@@ -7,6 +7,8 @@
 
 #include "../include/light.h"
 
+extern int startup_request;
+extern pthread_mutex_t startup_mutex;
 /**
  * @brief this function is the thread function for the thread light_sensor
  * @param params
@@ -103,8 +105,9 @@ void *run_light_sensor(void *params) {
 				strcpy(client_response.message, "Requested Lux Data");
 				//client_response.data = lux_value;
 
-				send_status = mq_send(qDesSocket, (const char*) &client_response,
-						sizeof(client_response), P_INFO);
+				send_status = mq_send(qDesSocket,
+						(const char*) &client_response, sizeof(client_response),
+						P_INFO);
 				if (send_status < 0) {
 					perror("LIGHT THREAD: sending socket response");
 				} else {
@@ -118,8 +121,9 @@ void *run_light_sensor(void *params) {
 				strcpy(client_response.message, "Requested Light Data");
 				client_response.data = curr_state;
 
-				send_status = mq_send(qDesSocket, (const char*) &client_response,
-						sizeof(client_response), P_INFO);
+				send_status = mq_send(qDesSocket,
+						(const char*) &client_response, sizeof(client_response),
+						P_INFO);
 				if (send_status < 0) {
 					perror("LIGHT THREAD: sending socket response");
 				} else {
@@ -127,6 +131,29 @@ void *run_light_sensor(void *params) {
 					request.req_type = 0;
 				}
 
+				break;
+
+			case STARTUP_TEST:{
+
+
+
+				int8_t read = read_id_register(i2c_fd);
+
+				if (read == 0x50) {
+
+					pthread_mutex_lock(&startup_mutex);
+					startup_request |= (1 << 1);
+					pthread_mutex_unlock(&startup_mutex);
+				}
+				send_status = mq_send(qDesMain, (const char*) &response,
+						sizeof(response), 1);
+				if (send_status < 0) {
+					perror("LIGHT THREAD: sending heartbeat response");
+				} else {
+					//INFO_STDOUT("Light-response to hearbeat request sent\n");
+					request.req_type = 0;
+				}
+			}
 				break;
 
 			case TIME_TO_EXIT:

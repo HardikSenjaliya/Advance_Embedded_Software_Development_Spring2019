@@ -8,6 +8,8 @@
 #include "../include/temperature.h"
 #include "../include/TMP_102_temp_sensor.h"
 
+extern int startup_request;
+extern pthread_mutex_t startup_mutex;
 /**
  * @brief this function is the thread function for the thread temperature_sensor
  * @param params
@@ -52,20 +54,20 @@ void *run_temperature_sensor(void *params) {
 
 		sem_wait(&sem_temp);
 
+		temperature = read_temperature_register(i2c_fd);
+		msg.log_level = L_INFO;
+		strcpy(msg.thread_name, TEMP_THREAD_NAME);
+		clock_gettime(CLOCK_MONOTONIC, &msg.time_stamp);
+		snprintf(msg.message, MESSAGE_SIZE, "%s -> %f",
+				"Current Temperature Reading", temperature);
 
-		 temperature = read_temperature_register(i2c_fd);
-		 msg.log_level = L_INFO;
-		 strcpy(msg.thread_name, TEMP_THREAD_NAME);
-		 clock_gettime(CLOCK_MONOTONIC,  &msg.time_stamp);
-		 snprintf(msg.message, MESSAGE_SIZE, "%s -> %f", "Current Temperature Reading", temperature);
-
-		 send_status = mq_send(qDesLogger, (const char*) &msg, sizeof(msg), P_INFO);
-		 if(send_status < 0){
-			 //perror("ERROR: sending temperature read log");
-		 }
+		send_status = mq_send(qDesLogger, (const char*) &msg, sizeof(msg),
+				P_INFO);
+		if (send_status < 0) {
+			//perror("ERROR: sending temperature read log");
+		}
 
 		// printf("Temperature read - %f\n", temperature);
-
 
 		received_bytes = mq_receive(qDesTemp, (char*) &request, sizeof(request),
 				0);
@@ -131,6 +133,33 @@ void *run_temperature_sensor(void *params) {
 
 				break;
 
+			case STARTUP_TEST:
+			{
+
+
+				int8_t write = 30;
+				write_tlow_register(i2c_fd, write);
+				int8_t read = read_tlow_register(i2c_fd);
+				if (write == read) {
+					response.alive_status = TEMP_THREAD_ALIVE;
+
+					pthread_mutex_lock(&startup_mutex);
+					startup_request |= (1 << 2);
+					pthread_mutex_unlock(&startup_mutex);
+
+				}
+
+				send_status = mq_send(qDesMain, (const char*) &response,
+						sizeof(response), 1);
+				if (send_status < 0) {
+					//perror("TEMP THREAD");
+				} else {
+					//INFO_STDOUT("TEMP_THREAD: Response to hearbeat request sent\n");
+					request.req_type = 0;
+				}
+			}
+				break;
+
 			case TIME_TO_EXIT:
 				INFO_STDOUT("TEMP_THREAD: Request to Exit received\n");
 				goto EXIT;
@@ -147,7 +176,6 @@ void *run_temperature_sensor(void *params) {
 	mq_unlink(Q_NAME_TEMP);
 	close(i2c_fd);
 	INFO_STDOUT("TEMP_THREAD...EXITING\n");
-
 
 	return NULL;
 }
