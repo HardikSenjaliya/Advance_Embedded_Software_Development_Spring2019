@@ -33,6 +33,20 @@ void *run_temperature_sensor(void *params) {
 	int send_status = 0, received_bytes = 0;
 	double temperature = 0;
 
+	struct pollfd fdset[2];
+
+	int gpio120_fd = open("/sys/class/gpio/gpio120/value",
+			O_RDONLY | O_NONBLOCK);
+	if (gpio120_fd < 0) {
+		perror("gpio fd open");
+	}
+
+	int gpio121_fd = open("/sys/class/gpio/gpio121/value",
+			O_RDONLY | O_NONBLOCK);
+	if (gpio121_fd < 0) {
+		perror("gpio fd open");
+	}
+
 	msg.log_level = 0;
 	strcpy(msg.thread_name, TEMP_THREAD_NAME);
 	clock_gettime(CLOCK_MONOTONIC, &msg.time_stamp);
@@ -81,61 +95,58 @@ void *run_temperature_sensor(void *params) {
 				response.alive_status = TEMP_THREAD_ALIVE;
 
 				send_status = mq_send(qDesMain, (const char*) &response,
-						sizeof(response), 1);
+						sizeof(response), P_WARNING);
 				if (send_status < 0) {
 					//perror("TEMP THREAD");
 				} else {
-					//INFO_STDOUT("TEMP_THREAD: Response to hearbeat request sent\n");
 					request.req_type = 0;
 				}
 				break;
 
 			case GET_TEMP_C:
-				//client_response.data = read_temperature_register(i2c_fd);
+				client_response.data = read_temperature_register(i2c_fd);
 				strcpy(client_response.message, "Requested Temp in C");
 
 				send_status = mq_send(qDesSocket,
 						(const char*) &client_response, sizeof(client_response),
 						P_INFO);
 				if (send_status < 0) {
-					perror("Sending Response to Socket");
+					//perror("Sending Response to Socket");
 				} else {
 					request.req_type = 0;
 				}
 
 				break;
 			case GET_TEMP_F:
-				//client_response.data = convert_temp_farenheit(i2c_fd);
+				client_response.data = convert_temp_farenheit(i2c_fd);
 				strcpy(client_response.message, "Requested Temp in Farenheit");
 
 				send_status = mq_send(qDesSocket,
 						(const char*) &client_response, sizeof(client_response),
 						P_INFO);
 				if (send_status < 0) {
-					perror("Sending Response to Socket");
+					//perror("Sending Response to Socket");
 				} else {
 					request.req_type = 0;
 				}
 
 				break;
 			case GET_TEMP_K:
-				//client_response.data = convert_temp_kelvin(i2c_fd);
+				client_response.data = convert_temp_kelvin(i2c_fd);
 				strcpy(client_response.message, "Requested Temp in Kelvin");
 
 				send_status = mq_send(qDesSocket,
 						(const char*) &client_response, sizeof(client_response),
 						P_INFO);
 				if (send_status < 0) {
-					perror("Sending Response to Socket");
+					//perror("Sending Response to Socket");
 				} else {
 					request.req_type = 0;
 				}
 
 				break;
 
-			case STARTUP_TEST:
-			{
-
+			case STARTUP_TEST: {
 
 				int8_t write = 30;
 				write_tlow_register(i2c_fd, write);
@@ -169,6 +180,28 @@ void *run_temperature_sensor(void *params) {
 
 			}
 		}
+
+/*		memset((void*) fdset, 0, sizeof(fdset));
+
+		fdset[0].fd = gpio120_fd;
+		fdset[0].events = POLLPRI;
+
+		fdset[0].fd = gpio121_fd;
+		fdset[0].events = POLLPRI;
+
+		int rc = poll(fdset, 2, -1);
+
+		if (rc < 0) {
+			printf("Poll failed\n");
+		}
+
+		if (fdset[0].revents & POLLPRI) {
+			printf("GPIO 120 interrupt occoured");
+		}
+
+		if (fdset[1].revents & POLLPRI) {
+			printf("GPIO 121 interrupt occoured");
+		}*/
 	}
 
 	EXIT:

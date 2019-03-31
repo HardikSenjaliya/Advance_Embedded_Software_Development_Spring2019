@@ -21,6 +21,8 @@
 #include <semaphore.h>
 #include <sys/syscall.h>
 
+#include "user_led.h"
+
 #define Q_NAME_MAIN							"/qMain"
 #define Q_NAME_LIGHT						"/qLight"
 #define Q_NAME_TEMP							"/qTemperature"
@@ -39,6 +41,18 @@
 #define NSEC_TO_SEC							(1000000000)
 #define MESSAGE_SIZE						(60)
 #define THREAD_NAME_SIZE					(13)
+#define LIGHT_TASK_PERIOD					(25)
+#define TEMP_TASK_PERIOD					(10)
+#define LCM									(50)
+#define Q_MAIN_ID							(1)
+#define Q_LIGHT_ID							(2)
+#define Q_TEMP_ID							(3)
+#define Q_LOGGER_ID							(4)
+#define Q_SOCKET_ID							(5)
+
+#define NBYTES_1							(0x01)
+#define NBYTES_2							(0x02)
+#define NBYTES_3							(0x03)
 
 
 /*Macro functions to print information and error messages on the console*/
@@ -56,7 +70,8 @@ typedef enum{
 	GET_LIGHT_STATUS,
 	CLOSE_CONNECTION,
 	SEND_ALIVE_STATUS,
-	TIME_TO_EXIT
+	TIME_TO_EXIT,
+	STARTUP_TEST
 
 }request_type_t;
 
@@ -94,6 +109,7 @@ typedef struct{
 	mqd_t qDesLight;
 	mqd_t qDesTemp;
 	mqd_t qDesLogger;
+	mqd_t qDesSocket;
 
 }queue_descriptors_t;
 
@@ -126,6 +142,7 @@ typedef struct {
 
 	char message[30];
 	double data;
+	request_type_t req_type;
 
 } client_request_response_t;
 
@@ -141,5 +158,6 @@ int initialize_semaphores(void);
 int destroy_semaphores(void);
 int start_timer(void);
 int stop_timer(void);
+uint8_t send_message(int queue_id, char *message, int log_level, int priority, int qDes);
 
 #endif /* SOURCE_UTILS_H_ */

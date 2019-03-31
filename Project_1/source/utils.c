@@ -7,6 +7,8 @@
 
 #include "../include/utils.h"
 
+pthread_mutex_t startup_mutex = PTHREAD_MUTEX_INITIALIZER;
+pthread_mutex_t heartbeat_mutex = PTHREAD_MUTEX_INITIALIZER;
 pthread_mutex_t sendMutex = PTHREAD_MUTEX_INITIALIZER;
 timer_t timer_id;
 
@@ -36,7 +38,7 @@ int initialize_semaphores(void) {
 	return 0;
 }
 
-int destroy_semaphores(void){
+int destroy_semaphores(void) {
 
 	sem_destroy(&sem_light);
 	sem_destroy(&sem_light);
@@ -63,16 +65,16 @@ void timer_handler(union sigval arg) {
 
 	heartbeat_count += 1;
 
-	count = (count + 1) % 50;
+	count = (count + 1) % LCM;
 
-	if ((count % 10) == 1) {
+	if ((count % TEMP_TASK_PERIOD) == 1) {
 		//INFO_STDOUT("Releasing Light Semaphore\n");
-		sem_post(&sem_light);
+		sem_post(&sem_temp);
 	}
 
-	if ((count % 25) == 0) {
+	if ((count % LIGHT_TASK_PERIOD) == 0) {
 		//INFO_STDOUT("Releasing Temp Semaphores\n");
-		sem_post(&sem_temp);
+		sem_post(&sem_light);
 	}
 
 	if (heartbeat_count == 5000) {
@@ -105,7 +107,7 @@ int stop_timer() {
  */
 int start_timer(void) {
 
-	INFO_STDOUT("Creating and Arming the timer\n");
+	//INFO_STDOUT("Creating and Arming the timer\n");
 
 	struct itimerspec ts;
 	struct sigevent se;
@@ -137,7 +139,7 @@ int start_timer(void) {
 		return 1;
 	}
 
-	INFO_STDOUT("Timer Setting Done\n");
+	//INFO_STDOUT("Timer Setting Done\n");
 
 	return 0;
 }
@@ -159,7 +161,7 @@ mqd_t create_light_mq(void) {
 	attr.mq_msgsize = sizeof(request_t);
 
 	/*Open a new posix queue*/
-	qDes = mq_open(Q_NAME_LIGHT, O_CREAT | O_RDWR | O_NONBLOCK , 0666, &attr);
+	qDes = mq_open(Q_NAME_LIGHT, O_CREAT | O_RDWR | O_NONBLOCK, 0666, &attr);
 
 	if (qDes == -1) {
 
@@ -186,7 +188,7 @@ mqd_t create_temp_mq(void) {
 	attr.mq_msgsize = sizeof(request_t);
 
 	/*Open a new posix queue*/
-	qDes = mq_open(Q_NAME_TEMP, O_CREAT | O_RDWR | O_NONBLOCK , 0666, &attr);
+	qDes = mq_open(Q_NAME_TEMP, O_CREAT | O_RDWR | O_NONBLOCK, 0666, &attr);
 
 	if (qDes == -1) {
 
@@ -281,27 +283,97 @@ mqd_t create_socket_mq(void) {
 }
 
 
+/**
+ * @brief this function is a common utility function to send a message to
+ * the POSIX message queue
+ * @param queue_id Message Queue ID
+ * @param message message to be sent
+ * @param log_level log level of the message
+ * @param priority priority of the message
+ * @param qDes Queue descriptor of the message queue
+ * @return return send status
+ */
 
+uint8_t send_message(int queue_id, char *message, int log_level, int priority,
+		int qDes) {
 
+	uint8_t send_status = 0;
 
+	switch (queue_id) {
 
+	case Q_MAIN_ID: {
 
+		heartbeat_response_t *response = (heartbeat_response_t*) message;
 
+		send_status = mq_send(qDes, (const char*) response,
+				sizeof(heartbeat_response_t), 1);
+		if (send_status < 0) {
+			//perror("TEMP THREAD");
+		} else {
+			//INFO_STDOUT("TEMP_THREAD: Heartbeat request sent\n");
+		}
+	}
+		break;
+	case Q_LIGHT_ID: {
+		request_t *request = (request_t*) message;
 
+		send_status = mq_send(qDes, (const char*) request, sizeof(request_t),
+				1);
+		if (send_status < 0) {
+			//perror("LIGHT: send message error\n");
+		} else {
+			//INFO_STDOUT("LIGHT: message sent\n");
+		}
+	}
+		break;
+	case Q_TEMP_ID: {
 
+		request_t *request = (request_t*) message;
 
+		send_status = mq_send(qDes, (const char*) request, sizeof(request_t),
+				1);
+		if (send_status < 0) {
+			//perror("MAIN_THREAD: heartbeat request");
+		} else {
+			//INFO_STDOUT("Heartbeat request to Light thread sent\n");
+		}
+	}
+		break;
+	case Q_LOGGER_ID: {
 
+		log_message_t log_message;
 
+		log_message.log_level = log_level, strcpy(log_message.message,
+				message);
 
+		//printf("%s", message);
 
+		send_status = mq_send(qDes, (const char*) & log_message,
+				sizeof(log_message_t), priority);
+		if (send_status < 0) {
+			//perror("MAIN THREAD");
+		} else {
+			//INFO_STDOUT("MAIN_THREAD: message to logger sent\n");
+		}
+	}
+		break;
+	case Q_SOCKET_ID: {
 
+		heartbeat_response_t *response = (heartbeat_response_t*) message;
 
+		send_status = mq_send(qDes, (const char*) response,
+				sizeof(heartbeat_response_t), P_INFO);
+		if (send_status < 0) {
+			//perror("Sending Response to Socket");
+		} else {
+		}
+	}
+		break;
+	default:
+		break;
 
+	}
 
-
-
-
-
-
-
+	return send_status;
+}
 

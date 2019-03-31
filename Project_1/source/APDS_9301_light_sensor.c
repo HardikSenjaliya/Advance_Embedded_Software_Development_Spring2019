@@ -9,13 +9,14 @@
 
 #define I2C_SLAVE_ADDRESS					(0x39)
 #define SELECT_COMMAND_REGISTER				(0x80)
-#define LOWER_THRESHOLD_VALUE				(0x64)
-#define UPPER_THRESHOLD_VALUE				(0x4E20)
+#define LOWER_THRESHOLD_VALUE				(0x1F4)
+#define UPPER_THRESHOLD_VALUE				(0x1200)
 
 uint8_t extra_credit_light(int i2c_fd) {
 
 	uint8_t ret = 0;
-	uint16_t read_value = 0;
+
+	//configure_gpio();
 
 	/*Set Lower and Upper threshold value*/
 	write_low_interrupt_threshold_register(i2c_fd, LOWER_THRESHOLD_VALUE);
@@ -32,14 +33,14 @@ uint8_t extra_credit_light(int i2c_fd) {
 	enable_inerrupt(i2c_fd);
 
 	/*Set Persist value*/
-	set_interrupt_persitentancy(i2c_fd, 5);
+	set_interrupt_persitentancy(i2c_fd, INTERRUPT_PERSI_10);
+
+	/*set integration time*/
+	set_integration_time(i2c_fd, INTEGRATION_TIME_402MS);
 
 	/*uint8_t read = read_interrupt_control_register(i2c_fd);
 	 printf("Interrupt Controller - %x\n", read);
 	 */
-
-
-
 
 	return ret;
 }
@@ -293,6 +294,38 @@ double read_lux_data(int i2c_fd) {
 	}
 
 	return lux_value;
+}
+
+uint8_t convert_lumen_to_lux(uint16_t adc0_data, uint16_t adc1_data) {
+
+	double ratio = (double) adc1_data / (double) adc0_data;
+
+	double lux_value = 0;
+
+	if (0 < ratio && ratio <= 0.50) {
+
+		lux_value = (0.0304 * adc0_data)
+				- (0.062 * adc0_data * pow(ratio, 1.4));
+
+	} else if (0.50 < ratio && ratio <= 0.61) {
+
+		lux_value = (0.024 * adc0_data) - (0.031 * adc1_data);
+
+	} else if (0.61 < ratio && ratio <= 0.80) {
+
+		lux_value = (0.0128 * adc0_data) - (0.0153 * adc1_data);
+
+	} else if (0.80 < ratio && ratio <= 1.30) {
+
+		lux_value = (0.00146 * adc0_data) - (0.00112 * adc1_data);
+
+	} else {
+
+		lux_value = 0;
+	}
+
+	return lux_value;
+
 }
 
 /**
@@ -658,8 +691,8 @@ int init_light_sensor(void) {
 	}
 
 	power_up_sensor(i2c_fd);
-	int id = read_id_register(i2c_fd);
-	printf("Id is %d", id);
+	//int id = read_id_register(i2c_fd);
+	//printf("Id is %d", id);
 
 	return i2c_fd;
 }

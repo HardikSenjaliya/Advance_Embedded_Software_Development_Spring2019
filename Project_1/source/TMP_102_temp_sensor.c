@@ -8,29 +8,29 @@
 #include "../include/TMP_102_temp_sensor.h"
 
 #define I2C_SLAVE_ADDRESS				(0x48)
-#define CONFIG_REG_DEFAULT				(0x60A0) /*TODO check for the correctness of the MSB and LSB order*/
-
 
 uint8_t extra_credit_temp(int i2c_fd){
 
 	uint8_t ret = 0;
-	uint16_t read_temp = 0;
 
 	write_tlow_register(i2c_fd, TLOW_VALUE);
 	//read_temp = read_tlow_register(i2c_fd);
-	//printf("TLOW values is %d : ", read_temp);
+	//printf("TLOW values is %d : \n", read_temp);
 
 	write_thigh_register(i2c_fd, THIGH_VALUE);
 	//read_temp = read_thigh_register(i2c_fd);
-	//printf("THIGH values is %d : ", read_temp);
+	//printf("THIGH values is %d : \n", read_temp);
 
 	/*Set Number of Fault bits*/
 	configure_fault_bits(i2c_fd, FAULTS_SIX);
 
-	read_temp = read_config_register(i2c_fd);
-	printf("Faults bits %x\n", read_temp);
+	//read_temp = read_config_register(i2c_fd);
+	//printf("Faults bits %x\n", read_temp);
 
-	//configure_EM_operation(i2c_fd, EXTENDED_MODE_OPERATION);
+	configure_thermostate_mode(i2c_fd, INTERRUPT_MODE);
+
+
+	printf("Read Config Register Value: %d", read_config_register(i2c_fd));
 
 	return ret;
 
@@ -195,11 +195,11 @@ uint8_t configure_fault_bits(int i2c_fd, uint8_t required_faults) {
 
 	current_config = read_config_register(i2c_fd);
 
-	printf("Read config before setting faults bits : %x\n", current_config);
+	//printf("Read config before setting faults bits : %x\n", current_config);
 
 	current_config |= (((uint16_t)required_faults) << CR_FAULT_BIT_MASK);
 
-	printf("Read config left shifted : %x\n", current_config);
+	//printf("Read config left shifted : %x\n", current_config);
 
 	ret = write_config_register(i2c_fd, current_config);
 	if (ret < 0) {
@@ -223,7 +223,7 @@ uint8_t configure_conversion_rate(int i2c_fd, uint8_t required_rate) {
 
 	current_config = read_config_register(i2c_fd);
 
-	current_config |= (required_rate << CR_CONVERSION_RATE_MASK);
+	current_config |= (uint16_t)(required_rate << CR_CONVERSION_RATE_MASK);
 
 	ret = write_config_register(i2c_fd, current_config);
 	if (ret < 0) {
@@ -248,9 +248,9 @@ uint8_t configure_EM_operation(int i2c_fd, bool required_operation) {
 	current_config = read_config_register(i2c_fd);
 
 	if (required_operation == EXTENDED_MODE_OPERATION) {
-		current_config |= (1 << CR_EXTENDED_MODE_MASK);
+		current_config |= (uint16_t)(1 << CR_EXTENDED_MODE_MASK);
 	} else {
-		current_config &= ~(1 << CR_EXTENDED_MODE_MASK);
+		current_config &= (uint16_t) ~(1 << CR_EXTENDED_MODE_MASK);
 	}
 
 	ret = write_config_register(i2c_fd, current_config);
@@ -317,15 +317,15 @@ uint8_t write_config_register(int i2c_fd, uint16_t data) {
 	uint8_t write_buffer[NBYTES_3];
 	write_buffer[0] = CONFIGURATION_REGISTER;
 
-	write_buffer[2] = (uint8_t)(data & 0xFF);
+	write_buffer[1] = (uint8_t)(data & 0xFF);
 
-	printf("data %x & ", data);
+	//printf("data %x & ", data);
 
-	write_buffer[1] = (uint8_t)(data >> 8);
+	write_buffer[2] = (uint8_t)(data >> 8);
 
-	printf("data %x\n", data);
+	//printf("data %x\n", data);
 
-	printf("MSB and LSB - %x and %x\n", write_buffer[1], write_buffer[2]);
+	//printf("MSB and LSB - %x and %x\n", write_buffer[1], write_buffer[2]);
 
 	if (write_pointer_register(i2c_fd, CONFIGURATION_REGISTER)) {
 		perror("ERROR: while writing to the pointer register\n");
@@ -335,9 +335,6 @@ uint8_t write_config_register(int i2c_fd, uint16_t data) {
 	if (ret < 0) {
 		perror("ERROR: while writing data to configuration register\n");
 	}
-
-	uint16_t read_config = read_config_register(i2c_fd);
-	printf("Config register after writing %x\n", read_config);
 
 	return ret;
 }
@@ -487,12 +484,6 @@ int init_temp_sensor() {
 		perror("ERROR: i2c_ioctl");
 		exit(1);
 	}
-
-	uint16_t read_config = read_config_register(i2c_fd);
-	printf("Config register in init sensor writing %x\n", read_config);
-
-/*	Write default values to config register
-	write_config_register(i2c_fd, 0xA0A0);*/
 
 	return i2c_fd;
 

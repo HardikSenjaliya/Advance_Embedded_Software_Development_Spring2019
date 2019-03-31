@@ -7,6 +7,8 @@
 
 #include "../include/logger.h"
 
+#define DEBUG_MODE
+
 extern int startup_request;
 extern pthread_mutex_t startup_mutex;
 
@@ -114,7 +116,7 @@ void *run_logger(void *params) {
 				response.alive_status = LOGGER_THREAD_ALIVE;
 
 				send_status = mq_send(qDesMain, (const char*) &response,
-						sizeof(response), 1);
+						sizeof(response), P_WARNING);
 				if (send_status < 0) {
 					//perror("LOGGER THREAD");
 				} else {
@@ -133,7 +135,7 @@ void *run_logger(void *params) {
 				response.alive_status = LOGGER_THREAD_ALIVE;
 
 				send_status = mq_send(qDesMain, (const char*) &response,
-						sizeof(response), 1);
+						sizeof(response), P_WARNING);
 				if (send_status < 0) {
 					//perror("LOGGER THREAD");
 				} else {
@@ -162,14 +164,22 @@ void *run_logger(void *params) {
 			pthread_mutex_lock(&fileMutex);
 			//INFO_STDOUT("logging data into logfile\n");
 
-			if(request.log_level == 0){
+			if (request.log_level != L_WARN) {
+				fprintf(p_logfile,
+						"[%ld] *** From : %s *** Log Level : %d *** Received Message : %s\n",
+						(request.time_stamp.tv_sec) * NSEC_TO_SEC
+								+ (request.time_stamp.tv_nsec),
+						request.thread_name, request.log_level,
+						request.message);
+			}
 
-			fprintf(p_logfile,
-					"[%ld] *** From : %s *** Log Level : %d *** Received Message : %s\n",
-					(request.time_stamp.tv_sec) * NSEC_TO_SEC
-							+ (request.time_stamp.tv_nsec), request.thread_name,
-					request.log_level, request.message);
-			}else if(request.log_level == L_ERROR){
+#ifdef INFO_MODE
+			if (request.log_level == L_INFO) {
+				printf("%s\n", request.message);
+			}
+#endif
+
+			if (request.log_level == L_ERROR) {
 				INFO_STDOUT(request.message);
 			}
 

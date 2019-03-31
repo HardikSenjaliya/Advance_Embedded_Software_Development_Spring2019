@@ -10,13 +10,17 @@
 #define SERVER_PORT						(2345)
 
 int request_received = 0;
+extern int startup_request;
+extern pthread_mutex_t startup_mutex;
 
 /**
- * @brief this function handles requests recevied from the remote socket
- * @param request type of request from the remote client
- * @return response to be sent
+ * @brief this function handles requests received from the client
+ * @param request_type type of the request
+ * @param qDesLight queue descriptor of light queue
+ * @param qDesTemp queue descriptor of temp queue
+ * @param qDesSocket queue descriptor of socket queue
+ * @return response received from the light or temp thread
  */
-
 client_request_response_t handle_client_request(int request_type,
 		mqd_t qDesLight, mqd_t qDesTemp, mqd_t qDesSocket) {
 
@@ -106,8 +110,8 @@ client_request_response_t handle_client_request(int request_type,
 		//perror("SOCKET: reading response");
 	}
 
-/*	printf("Response received from required task is : %s %f\n",
-			response.message, response.data);*/
+		printf("Response received from required task is : %s %f\n",
+	 response.message, response.data);
 	return response;
 }
 
@@ -128,8 +132,9 @@ void *run_socket(void *params) {
 	//request_t request;
 	int c_request;
 	client_request_response_t response;
+	heartbeat_response_t hb_response;
 
-	int bytes_read = 0;
+	int bytes_read = 0, send_status = 0;
 
 	int socket_fd = 0;
 	int client_socket_fd = 0;
@@ -144,7 +149,7 @@ void *run_socket(void *params) {
 	mqd_t qDesLight = create_light_mq();
 	mqd_t qDesTemp = create_temp_mq();
 	mqd_t qDesSocket = create_socket_mq();
-
+	mqd_t qDesMain = create_main_mq();
 	/*create a new socket
 	 * domain - IPv4, stream based socket, protocol - 0 single type
 	 * */
@@ -174,13 +179,23 @@ void *run_socket(void *params) {
 		exit(1);
 	}
 
-
-
-
-
-
-
-
+	/*Respond to BIST test before accepting connections*/
+	bytes_read = mq_receive(qDesSocket, (char*) &response, sizeof(response), 0);
+	if (bytes_read < 0) {
+		//perror("SOCKET: mq_receive");
+	} else {
+		if (response.req_type == STARTUP_TEST) {
+			pthread_mutex_lock(&startup_mutex);
+			startup_request |= (1 << 3);
+			pthread_mutex_unlock(&startup_mutex);
+			hb_response.alive_status = SOCKET_THREAD_ALIVE;
+			send_status = mq_send(qDesMain, (const char*) &hb_response,
+					sizeof(hb_response), 1);
+			if (send_status < 0) {
+				perror("ERROR: mq_send");
+			}
+		}
+	}
 
 	while (ACCEPT_CONNECTION) {
 

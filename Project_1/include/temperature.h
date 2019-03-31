@@ -11,6 +11,7 @@
 
 
 #include "utils.h"
+#include <poll.h>
 
 
 /*function prototypes*/

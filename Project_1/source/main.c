@@ -332,8 +332,6 @@ int main(int argc, char **argv) {
 	obj.qDesTemp = qDesTemp;
 	obj.qDesSocket = qDesSocket;
 
-	//send_message(Q_LOGGER_ID, "ERROR: creating light sensor thread\n", L_ERROR, P_ERROR, qDesLogger);
-
 	/*Initializes user leds*/
 	init_leds();
 
@@ -341,7 +339,7 @@ int main(int argc, char **argv) {
 	//INFO_STDOUT("Creating new threads\n");
 	/*1. light sensor thread*/
 	if (pthread_create(&light_sensor, NULL, run_light_sensor, NULL)) {
-		ERROR_STDOUT("ERROR: creating light sensor thread\n");
+		//ERROR_STDOUT("ERROR: creating light sensor thread\n");
 		send_message(Q_LOGGER_ID, "ERROR: creating light sensor thread\n",
 				L_ERROR, P_ERROR, qDesLogger);
 		return 1;
@@ -350,26 +348,30 @@ int main(int argc, char **argv) {
 	/*2. temperature sensor task*/
 	if (pthread_create(&temperature_sensor, NULL, run_temperature_sensor,
 	NULL)) {
-		ERROR_STDOUT("ERROR: creating temperature sensor thread\n");
+		send_message(Q_LOGGER_ID, "ERROR: creating temp sensor thread\n",
+				L_ERROR, P_ERROR, qDesLogger);
 		return 1;
 	}
 
 	/*3. Logger task*/
 	if (pthread_create(&logger_task, NULL, run_logger, (void*) &logfile)) {
-		ERROR_STDOUT("ERROR: creating logger task thread\n");
+		send_message(Q_LOGGER_ID, "ERROR: creating logger thread\n", L_ERROR,
+				P_ERROR, qDesLogger);
 		return 1;
 	}
 
 	/*3. Socket task*/
 	if (pthread_create(&socket_task, NULL, run_socket, NULL)) {
-		ERROR_STDOUT("ERROR: creating socket task thread\n");
+		send_message(Q_LOGGER_ID, "ERROR: creating socket thread\n", L_ERROR,
+				P_ERROR, qDesLogger);
 		return 1;
 	}
 
 	/*Start timer for periodic execution of temp and
 	 * light threads*/
 	if (start_timer()) {
-		ERROR_STDOUT("ERROR: starting timer");
+		send_message(Q_LOGGER_ID, "ERROR: setting up timer\n", L_ERROR, P_ERROR,
+				qDesLogger);
 		exit(1);
 	}
 
@@ -378,6 +380,8 @@ int main(int argc, char **argv) {
 	int status = startup_test(&obj);
 
 	if (!status) {
+		send_message(Q_LOGGER_ID, "ERROR: Startup Test Failed\n", L_ERROR,
+				P_ERROR, qDesLogger);
 		exit(1);
 	}
 
@@ -388,9 +392,13 @@ int main(int argc, char **argv) {
 
 	send_status = mq_send(qDesLogger, (const char*) &msg, sizeof(msg), 0);
 	if (send_status < 0) {
-		perror("MAIN THREAD");
+		send_message(Q_LOGGER_ID,
+				"WARN: mq_send from main queue to logger queue\n", L_WARN,
+				P_WARNING, qDesLogger);
 	} else {
-		//INFO_STDOUT("MAIN_THREAD: message to logger sent\n");
+		send_message(Q_LOGGER_ID,
+				"INFO: mq_send message sent from main queue to logger queue",
+				L_INFO, P_INFO, qDesLogger);
 	}
 
 	/**TODO use mq_timedreceive() for reading heartbeat responses from all threads
@@ -407,18 +415,26 @@ int main(int argc, char **argv) {
 		send_status = mq_send(qDesLight, (const char*) &request,
 				sizeof(request), 1);
 		if (send_status < 0) {
-			perror("MAIN_THREAD: heartbeat request");
+			send_message(Q_LOGGER_ID,
+					"WARN: mq_send requesting alive status from light\n",
+					L_WARN, P_WARNING, qDesLogger);
 		} else {
-			//INFO_STDOUT("Heartbeat request to Light thread sent\n");
+			send_message(Q_LOGGER_ID,
+					"INFO: mq_send alive status request send to light\n",
+					L_INFO, P_INFO, qDesLogger);
 		}
 
 		/*Read status sent by the light thread*/
 		received_bytes = mq_receive(qDesMain, (char*) &response,
 				sizeof(response), 0);
 		if (received_bytes < 0) {
-			//perror("MAIN THREAD: reading heartbeat response");
+			send_message(Q_LOGGER_ID,
+					"WARN: mq_receive receiving heartbeat response from light\n",
+					L_WARN, P_WARNING, qDesLogger);
 		} else {
-			//printf("Response Received -> %d\n", response.alive_status);
+			send_message(Q_LOGGER_ID,
+					"INFO: mq_receive heartbeat resposne received from light\n",
+					L_INFO, P_INFO, qDesLogger);
 			if (response.alive_status == LIGHT_THREAD_ALIVE) {
 				light_status = 1;
 			}
@@ -431,18 +447,26 @@ int main(int argc, char **argv) {
 		send_status = mq_send(qDesTemp, (const char*) &request, sizeof(request),
 				1);
 		if (send_status < 0) {
-			perror("MAIN_THREAD: heartbeat request");
+			send_message(Q_LOGGER_ID,
+					"WARN: mq_send requesting alive status from temp\n", L_WARN,
+					P_WARNING, qDesLogger);
 		} else {
-			//INFO_STDOUT("Heartbeat request to Temp thread sent\n");
+			send_message(Q_LOGGER_ID,
+					"INFO: mq_send alive status request send to temp\n\n",
+					L_INFO, P_INFO, qDesLogger);
 		}
 
 		/*Read status sent by the temp thread*/
 		received_bytes = mq_receive(qDesMain, (char*) &response,
 				sizeof(response), 0);
 		if (received_bytes < 0) {
-			//perror("MAIN THREAD: reading heartbeat response");
+			send_message(Q_LOGGER_ID,
+					"WARN: mq_receive receiving heartbeat response from temp\n",
+					L_WARN, P_WARNING, qDesLogger);
 		} else {
-			//printf("Response Received -> %d\n", response.alive_status);
+			send_message(Q_LOGGER_ID,
+					"INFO: mq_receive heartbeat resposne received from temp\n",
+					L_INFO, P_INFO, qDesLogger);
 			if (response.alive_status == TEMP_THREAD_ALIVE) {
 				temp_status = 1;
 			}
@@ -456,18 +480,26 @@ int main(int argc, char **argv) {
 		send_status = mq_send(qDesLogger, (const char*) &message,
 				sizeof(message), 1);
 		if (send_status < 0) {
-			perror("MAIN_THREAD: heartbeat request");
+			send_message(Q_LOGGER_ID,
+					"WARN: mq_send requesting alive status from logger\n",
+					L_WARN, P_WARNING, qDesLogger);
 		} else {
-			//INFO_STDOUT("Heartbeat request to Logger thread sent\n");
+			send_message(Q_LOGGER_ID,
+					"INFO: mq_send heartbeat request sent to logger\n", L_INFO,
+					P_INFO, qDesLogger);
 		}
 
 		/*Read status sent by the temp thread*/
 		received_bytes = mq_receive(qDesMain, (char*) &response,
 				sizeof(response), 0);
 		if (received_bytes < 0) {
-			//perror("MAIN THREAD: reading heartbeat response");
+			send_message(Q_LOGGER_ID,
+					"WARN: mq_receive receiving heartbeat response from logger\n",
+					L_WARN, P_WARNING, qDesLogger);
 		} else {
-			//printf("Response Received -> %d\n", response.alive_status);
+			send_message(Q_LOGGER_ID,
+					"INFO: mq_receive heartbeat resposne received from logger\n",
+					L_INFO, P_INFO, qDesLogger);
 			if (response.alive_status == LOGGER_THREAD_ALIVE) {
 				logger_status = 1;
 			}
@@ -495,9 +527,13 @@ int main(int argc, char **argv) {
 			send_status = mq_send(qDesLight, (const char*) &request,
 					sizeof(request), 1);
 			if (send_status < 0) {
-				//perror("MAIN_THREAD: exit request");
+				send_message(Q_LOGGER_ID,
+						"WARN: mq_send requesting exit status from light\n",
+						L_WARN, P_WARNING, qDesLogger);
 			} else {
-				INFO_STDOUT("EXIT request to Light thread sent\n");
+				send_message(Q_LOGGER_ID,
+						"WARN: mq_send exit request send to light\n", L_WARN,
+						P_WARNING, qDesLogger);
 			}
 
 			/*Request status from temp thread*/
@@ -507,9 +543,13 @@ int main(int argc, char **argv) {
 			send_status = mq_send(qDesTemp, (const char*) &request,
 					sizeof(request), 1);
 			if (send_status < 0) {
-				//perror("MAIN_THREAD: exit request");
+				send_message(Q_LOGGER_ID,
+						"WARN: mq_send requesting exit status from temp\n",
+						L_WARN, P_WARNING, qDesLogger);
 			} else {
-				INFO_STDOUT("EXIT request to Temp thread sent\n");
+				send_message(Q_LOGGER_ID,
+						"WARN: mq_send exit request send to temp\n", L_WARN,
+						P_WARNING, qDesLogger);
 			}
 
 			/*Request status from Logger thread*/
@@ -524,9 +564,13 @@ int main(int argc, char **argv) {
 			send_status = mq_send(qDesLogger, (const char*) &message,
 					sizeof(message), 1);
 			if (send_status < 0) {
-				//perror("MAIN_THREAD: exit request");
+				send_message(Q_LOGGER_ID,
+						"WARN: mq_send requesting exit status from logger\n",
+						L_WARN, P_WARNING, qDesLogger);
 			} else {
-				INFO_STDOUT("EXIT request to Logger thread sent\n");
+				send_message(Q_LOGGER_ID,
+						"WARN: mq_send exit request send to logger\n", L_WARN,
+						P_WARNING, qDesLogger);
 			}
 
 			heartbeat = 0;
@@ -536,7 +580,9 @@ int main(int argc, char **argv) {
 			goto EXIT;
 
 		} else {
-			INFO_STDOUT("All threads are running...THANK GOD\n");
+			send_message(Q_LOGGER_ID,
+								"INFO: All threads are running...Thank God\n",
+								L_INFO, P_INFO, qDesLogger);
 		}
 	}
 
@@ -588,7 +634,7 @@ int main(int argc, char **argv) {
 	//pthread_join(socket_task, NULL);
 
 	EXIT:
-	INFO_STDOUT("Main thread Exiting...Bye Bye...\n");
+	send_message(Q_LOGGER_ID, "Exiting Main...Bye Bye...\n", L_CRTICAL, P_CRITICAL, qDesLogger);
 
 	return 0;
 }

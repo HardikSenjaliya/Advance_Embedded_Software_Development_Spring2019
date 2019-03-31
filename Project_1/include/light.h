@@ -9,6 +9,7 @@
 #define SOURCE_LIGHT_H_
 
 
+#include <poll.h>
 
 #include "utils.h"
 #include "../include/APDS_9301_light_sensor.h"

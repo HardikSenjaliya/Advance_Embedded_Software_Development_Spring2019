@@ -19,9 +19,7 @@
 #include <linux/i2c.h>
 #include <linux/i2c-dev.h>
 
-#define NBYTES_1							(1)
-#define NBYTES_2							(2)
-#define NBYTES_3							(3)
+
 #define NEGATIVE_CHECK						(0x10000000)
 
 #define TEMPERATURE_REGISTER 				(0)
@@ -29,13 +27,13 @@
 #define TLOW_REGISTER						(2)
 #define THIGH_REGISTER						(3)
 
-#define CR_EXTENDED_MODE_MASK				(4)
-#define CR_ALERT_PIN_MASK					(5)
-#define CR_CONVERSION_RATE_MASK				(6)
-#define CR_RESOLUTION_MASK					(13)
-#define CR_SHUTDOWN_MODE_MASK				(8)
-#define CR_THERMOSTAT_MASK					(9)
-#define CR_FAULT_BIT_MASK					(11)
+#define CR_EXTENDED_MODE_MASK				(12)
+#define CR_ALERT_PIN_MASK					(13)
+#define CR_CONVERSION_RATE_MASK				(14)
+#define CR_RESOLUTION_MASK					(5)
+#define CR_SHUTDOWN_MODE_MASK				(0)
+#define CR_THERMOSTAT_MASK					(1)
+#define CR_FAULT_BIT_MASK					(3)
 
 #define FAULTS_ONE							(0)
 #define FAULTS_TWO							(1)
@@ -57,7 +55,7 @@
 #define EXTENDED_MODE_OPERATION				(1)
 
 #define TLOW_VALUE							(20)
-#define THIGH_VALUE							(25)
+#define THIGH_VALUE							(28)
 
 /*Function Prototypes*/
 int init_temp_sensor(void);
