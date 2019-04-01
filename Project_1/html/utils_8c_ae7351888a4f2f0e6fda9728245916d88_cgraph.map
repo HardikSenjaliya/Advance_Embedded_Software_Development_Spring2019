@@ -1,0 +1,3 @@
+<map id="start_timer" name="start_timer">
+<area shape="rect" id="node2" href="$utils_8c.html#aed9069ee6cf677df08d3999b77bd483e" title="this function executes whenever timer expires and releaes semaphores for light and temp threads..." alt="" coords="137,5,237,32"/>
+</map>

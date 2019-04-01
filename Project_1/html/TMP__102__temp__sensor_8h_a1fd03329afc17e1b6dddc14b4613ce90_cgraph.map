@@ -1,0 +1,12 @@
+<map id="extra_credit_temp" name="extra_credit_temp">
+<area shape="rect" id="node2" href="$TMP__102__temp__sensor_8c.html#a5efb2b77d1e03f3f9cccf344ae791be6" title="this function writes the required value of the tlow " alt="" coords="425,5,555,32"/>
+<area shape="rect" id="node4" href="$TMP__102__temp__sensor_8c.html#ade48ff197532b07127d1315f4e559820" title="this functino reads the temperature value of the TLOW register " alt="" coords="211,81,339,108"/>
+<area shape="rect" id="node6" href="$TMP__102__temp__sensor_8c.html#a81007dcb95b5b21613ceb0ccdbf7cf82" title="this function writes requrired thigh value into the register " alt="" coords="423,208,557,235"/>
+<area shape="rect" id="node7" href="$TMP__102__temp__sensor_8c.html#a0929a3edea5f75a7df1e9f771558795f" title="this function reads the value of the THIGH register " alt="" coords="209,132,341,159"/>
+<area shape="rect" id="node8" href="$TMP__102__temp__sensor_8c.html#afc96af5ccdee0176a6bedaa74a3eaa5a" title="this function sets the requied number of consecutive faults bits configurable into four modes &#45; 1..." alt="" coords="208,284,343,311"/>
+<area shape="rect" id="node9" href="$TMP__102__temp__sensor_8c.html#a077c46402c29d565462f97b388684a8c" title="this function reads the Configuration Register " alt="" coords="421,259,559,285"/>
+<area shape="rect" id="node11" href="$TMP__102__temp__sensor_8c.html#a60da7a6e1828bd21193cc90c5b882f12" title="this function sets the mode of opearation either comparator or interrupt mode " alt="" coords="180,335,371,361"/>
+<area shape="rect" id="node3" href="$TMP__102__temp__sensor_8c.html#ae948d311cbcf04446b6e56da30887d87" title="this function writes to the pointer register " alt="" coords="609,208,756,235"/>
+<area shape="rect" id="node5" href="$TMP__102__temp__sensor_8c.html#a75e24fc0be00111808af3a712ee265ca" title="this function converts digital(binary) temp data read from the register into decimal value ..." alt="" coords="427,107,553,133"/>
+<area shape="rect" id="node10" href="$TMP__102__temp__sensor_8c.html#aba6b55eb2ecc9fb88c9e020ae06baa9e" title="write_config_register" alt="" coords="419,309,561,336"/>
+</map>

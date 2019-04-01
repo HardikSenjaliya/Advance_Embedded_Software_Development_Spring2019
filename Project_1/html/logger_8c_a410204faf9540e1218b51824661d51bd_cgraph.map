@@ -1,0 +1,5 @@
+<map id="run_logger" name="run_logger">
+<area shape="rect" id="node2" href="$logger_8c.html#a887bb231fe88f0d4a54f1ce56542e43f" title="this function creates a backup/copy of the source file " alt="" coords="155,5,243,32"/>
+<area shape="rect" id="node3" href="$utils_8c.html#a2ef0366b41433a3034c2ff4017a6fdc8" title="this function creates a POSIX message queue for the logger thread thread. The purpose of this queue i..." alt="" coords="136,56,261,83"/>
+<area shape="rect" id="node4" href="$utils_8c.html#a76059e1f00a2ea55ddd94f1885198f9c" title="this function creates a POSIX message queue for the main thread. The purpose of this queue is to rece..." alt="" coords="139,107,258,133"/>
+</map>

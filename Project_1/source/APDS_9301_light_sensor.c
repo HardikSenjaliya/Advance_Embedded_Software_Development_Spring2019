@@ -1,6 +1,8 @@
 /*
  * APDS_9301_light_sensor.c
- *
+ *  @brief this file is the i2c driver for light sensor and
+ *  contains all the functions to read and write register related to
+ *  light sensor.
  *  Created on: Mar 25, 2019
  *      Author: hardyk
  */
@@ -9,8 +11,8 @@
 
 #define I2C_SLAVE_ADDRESS					(0x39)
 #define SELECT_COMMAND_REGISTER				(0x80)
-#define LOWER_THRESHOLD_VALUE				(0x1F4)
-#define UPPER_THRESHOLD_VALUE				(0x1200)
+#define LOWER_THRESHOLD_VALUE				(0x200)
+#define UPPER_THRESHOLD_VALUE				(0x300)
 
 uint8_t extra_credit_light(int i2c_fd) {
 
@@ -21,14 +23,11 @@ uint8_t extra_credit_light(int i2c_fd) {
 	/*Set Lower and Upper threshold value*/
 	write_low_interrupt_threshold_register(i2c_fd, LOWER_THRESHOLD_VALUE);
 	write_high_interrupt_threshold_register(i2c_fd, UPPER_THRESHOLD_VALUE);
-	/*
 
-	 uint16_t low_value = read_low_interrupt_threshold_register(i2c_fd);
-	 uint16_t upper_value = read_high_interrupt_threshold_register(i2c_fd);
+	/* uint16_t low_value = read_low_interrupt_threshold_register(i2c_fd);
+	 uint16_t upper_value = read_high_interrupt_threshold_register(i2c_fd);*/
 
-	 //printf("Light: low threshold and high threshold - %x and %x\n", low_value, upper_value);
-	 */
-
+	//printf("Light: low threshold and high threshold - %d and %d\n", low_value, upper_value);
 	/*Enable interrupt*/
 	enable_inerrupt(i2c_fd);
 
@@ -38,9 +37,12 @@ uint8_t extra_credit_light(int i2c_fd) {
 	/*set integration time*/
 	set_integration_time(i2c_fd, INTEGRATION_TIME_402MS);
 
-	/*uint8_t read = read_interrupt_control_register(i2c_fd);
-	 printf("Interrupt Controller - %x\n", read);
+	/*uint8_t read = read_timing_register(i2c_fd);
+	 printf("Timing register read %x\n", read);
+
+
 	 */
+
 
 	return ret;
 }
@@ -53,8 +55,8 @@ uint8_t extra_credit_light(int i2c_fd) {
  */
 uint16_t read_low_interrupt_threshold_register(int i2c_fd) {
 
-	uint16_t low_threshold_value = 0;
-	uint8_t msb_byte = 0, lsb_byte = 0, ret = 0;
+	uint16_t msb_byte = 0, low_threshold_value = 0;
+	uint8_t lsb_byte = 0, ret = 0;
 
 	uint8_t command = SELECT_COMMAND_REGISTER | INTERRUPT_THRES_LOW_LOW;
 	write_command_register(i2c_fd, command);
@@ -88,8 +90,13 @@ uint8_t write_low_interrupt_threshold_register(int i2c_fd, uint16_t th_value) {
 
 	uint8_t msb_byte = 0, lsb_byte = 0, ret = 0;
 
-	msb_byte = (th_value & 0xFF00) >> 8;
-	lsb_byte = (th_value & 0x00FF);
+	/*	msb_byte = (th_value & 0xFF00) >> 8;
+	 lsb_byte = (th_value & 0x00FF);*/
+
+	lsb_byte = th_value & 0xFF;
+	msb_byte = th_value >> 8;
+
+	//printf("Low - msb and lsb %x and %x\n", msb_byte, lsb_byte);
 
 	uint8_t command = SELECT_COMMAND_REGISTER | INTERRUPT_THRES_LOW_LOW;
 	write_command_register(i2c_fd, command);
@@ -100,6 +107,7 @@ uint8_t write_low_interrupt_threshold_register(int i2c_fd, uint16_t th_value) {
 	}
 
 	command = SELECT_COMMAND_REGISTER | INTERRUPT_THRES_LOW_HIGH;
+
 	write_command_register(i2c_fd, command);
 
 	ret = write(i2c_fd, &msb_byte, NBYTES_1);
@@ -124,6 +132,8 @@ uint8_t write_high_interrupt_threshold_register(int i2c_fd, uint16_t th_value) {
 
 	msb_byte = (th_value & 0xFF00) >> 8;
 	lsb_byte = (th_value & 0x00FF);
+
+	//printf("High - msb and lsb %x and %x\n", msb_byte, lsb_byte);
 
 	uint8_t command = SELECT_COMMAND_REGISTER | INTERRUPT_THRES_HIGH_LOW;
 	write_command_register(i2c_fd, command);
@@ -153,8 +163,8 @@ uint8_t write_high_interrupt_threshold_register(int i2c_fd, uint16_t th_value) {
  */
 uint16_t read_high_interrupt_threshold_register(int i2c_fd) {
 
-	uint16_t high_threshold_value = 0;
-	uint8_t msb_byte = 0, lsb_byte = 0, ret = 0;
+	uint16_t high_threshold_value = 0, msb_byte = 0;
+	uint8_t lsb_byte = 0, ret = 0;
 
 	uint8_t command = SELECT_COMMAND_REGISTER | INTERRUPT_THRES_HIGH_LOW;
 	write_command_register(i2c_fd, command);
@@ -198,7 +208,8 @@ uint8_t day_or_night(double lux_value) {
  */
 uint16_t read_data0_register(int i2c_fd) {
 
-	uint8_t lsb_byte = 0, msb_byte = 0, ret = 0;
+	uint8_t lsb_byte = 0, ret = 0;
+	uint16_t msb_byte = 0;
 	uint16_t adc_channel0 = 0;
 
 	uint8_t command = SELECT_COMMAND_REGISTER | DATA0_LOW_REGISTER;
@@ -230,7 +241,8 @@ uint16_t read_data0_register(int i2c_fd) {
  */
 uint16_t read_data1_register(int i2c_fd) {
 
-	uint8_t lsb_byte = 0, msb_byte = 0, ret = 0;
+	uint8_t lsb_byte = 0, ret = 0;
+	uint16_t msb_byte = 0;
 	uint16_t adc_channel1 = 0;
 
 	uint8_t command = SELECT_COMMAND_REGISTER | DATA1_LOW_REGISTER;
@@ -266,7 +278,7 @@ double read_lux_data(int i2c_fd) {
 	uint16_t adc_channel1 = read_data1_register(i2c_fd);
 	uint16_t adc_channle0 = read_data0_register(i2c_fd);
 
-	//printf("ADC1 : %d, ADC0 : %d\n", adc_channel1, adc_channle0);
+	printf("ADC1 : %x, ADC0 : %x\n", adc_channel1, adc_channle0);
 
 	double ratio = (double) adc_channel1 / (double) adc_channle0;
 	double lux_value = 0;
@@ -292,6 +304,8 @@ double read_lux_data(int i2c_fd) {
 
 		lux_value = 0;
 	}
+
+	//printf("Lux value %f\n", lux_value);
 
 	return lux_value;
 }
@@ -691,8 +705,9 @@ int init_light_sensor(void) {
 	}
 
 	power_up_sensor(i2c_fd);
-	//int id = read_id_register(i2c_fd);
-	//printf("Id is %d", id);
+
+	/*int id = read_id_register(i2c_fd);
+	 printf("Id is %d", id);*/
 
 	return i2c_fd;
 }

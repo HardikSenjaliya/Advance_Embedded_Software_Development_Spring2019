@@ -1,0 +1,11 @@
+<map id="extra_credit_light" name="extra_credit_light">
+<area shape="rect" id="node2" href="$APDS__9301__light__sensor_8c.html#ade49b339da0cf0151a2a2d99d59c56f9" title="this function writes lower byte and upper byte of the low interrupt threshold register ..." alt="" coords="411,5,543,47"/>
+<area shape="rect" id="node4" href="$APDS__9301__light__sensor_8c.html#a2e812faebc52d523be61b7df37b57a27" title="this function writes lower byte and upper byte of the high interrupt threshold register ..." alt="" coords="197,61,331,103"/>
+<area shape="rect" id="node5" href="$APDS__9301__light__sensor_8c.html#aaf8ad20b05f40f8cb01c0cd9e8424d43" title="this function enabels leel interrupt output " alt="" coords="209,178,319,205"/>
+<area shape="rect" id="node6" href="$APDS__9301__light__sensor_8c.html#a7ebcb1351517ec8bed4c0f2e6639b286" title="this function reads the interrupt control registers which reads mode of interrupt and interrupt persi..." alt="" coords="403,128,550,169"/>
+<area shape="rect" id="node8" href="$APDS__9301__light__sensor_8c.html#a8abda2658037eee28bb6682044fe244b" title="this function sets the value of the interrupt persitency in the interrup control register ..." alt="" coords="175,229,353,255"/>
+<area shape="rect" id="node9" href="$APDS__9301__light__sensor_8c.html#aac67e7af41e97e9e0c42c50f9f8ae749" title="this function sets integration time for ADC " alt="" coords="195,279,333,306"/>
+<area shape="rect" id="node3" href="$APDS__9301__light__sensor_8c.html#a2a2eba7e1bb5d5c24b1c3b9185eaecb1" title="this function writes to the commnad register " alt="" coords="600,135,764,162"/>
+<area shape="rect" id="node7" href="$APDS__9301__light__sensor_8c.html#acfb60bfdf489b9d08b449579e51e687a" title="this function writes to the interrupt control register to set the mode of interrupt and persistency o..." alt="" coords="401,193,552,235"/>
+<area shape="rect" id="node10" href="$APDS__9301__light__sensor_8c.html#a0a65ddc91756631fa0730e2658413c7a" title="this function writes to the timing register which is used for setting gain and integration time for A..." alt="" coords="405,266,548,293"/>
+</map>

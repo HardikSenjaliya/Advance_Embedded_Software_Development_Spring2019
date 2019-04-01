@@ -1,0 +1,11 @@
+<map id="source/main.c" name="source/main.c">
+<area shape="rect" id="node2" href="$main_8h.html" title="../include/main.h" alt="" coords="941,80,1059,107"/>
+<area shape="rect" id="node3" href="$utils_8h.html" title="../include/utils.h" alt="" coords="648,319,763,345"/>
+<area shape="rect" id="node19" href="$light_8h.html" title="../include/light.h" alt="" coords="1104,155,1219,181"/>
+<area shape="rect" id="node21" href="$APDS__9301__light__sensor_8h.html" title="../include/APDS_9301\l_light_sensor.h" alt="" coords="1514,229,1665,271"/>
+<area shape="rect" id="node27" href="$temperature_8h.html" title="../include/temperature.h" alt="" coords="921,155,1079,181"/>
+<area shape="rect" id="node28" href="$logger_8h.html" title="../include/logger.h" alt="" coords="524,155,649,181"/>
+<area shape="rect" id="node29" href="$socket_8h.html" title="../include/socket.h" alt="" coords="767,155,897,181"/>
+<area shape="rect" id="node32" href="$TMP__102__temp__sensor_8h.html" title="../include/TMP_102\l_temp_sensor.h" alt="" coords="1186,229,1321,271"/>
+<area shape="rect" id="node16" href="$user__led_8h.html" title="user_led.h" alt="" coords="941,393,1024,420"/>
+</map>

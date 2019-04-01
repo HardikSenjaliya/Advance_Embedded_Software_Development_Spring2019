@@ -12,8 +12,7 @@
 
 typedef struct {
 
-	char file_name[10];
-	char file_path[50];
+	char file_name[100];
 
 } logfile_attr_t;
 

@@ -1,5 +1,7 @@
 /*
  * temperature.c
+ *	@brief this file is a thread function of the temperature sensor thread.
+ *	It handles all the requests and provides required response.
  *
  *  Created on: Mar 12, 2019
  *      Author: hardyk
@@ -33,18 +35,23 @@ void *run_temperature_sensor(void *params) {
 	int send_status = 0, received_bytes = 0;
 	double temperature = 0;
 
-	struct pollfd fdset[2];
+	struct pollfd fdset[1];
+	char value[4];
 
-	int gpio120_fd = open("/sys/class/gpio/gpio120/value",
-			O_RDONLY | O_NONBLOCK);
+	int gpio120_fd = open("/sys/class/gpio/gpio60/value",
+	O_RDONLY);
 	if (gpio120_fd < 0) {
-		perror("gpio fd open");
+		send_message(Q_LOGGER_ID, "ERROR: opening GPIO 120\n", L_CRTICAL,
+				P_CRITICAL, qDesLogger);
 	}
 
-	int gpio121_fd = open("/sys/class/gpio/gpio121/value",
-			O_RDONLY | O_NONBLOCK);
-	if (gpio121_fd < 0) {
-		perror("gpio fd open");
+	fdset[0].fd = gpio120_fd;
+	fdset[0].events = POLLPRI;
+
+	int n = read(gpio120_fd, &value, sizeof(value));
+	if (n > 0) {
+		printf("Initial value %c\n", value[0]);
+		lseek(gpio120_fd, 0, SEEK_SET);
 	}
 
 	msg.log_level = 0;
@@ -181,27 +188,24 @@ void *run_temperature_sensor(void *params) {
 			}
 		}
 
-/*		memset((void*) fdset, 0, sizeof(fdset));
-
-		fdset[0].fd = gpio120_fd;
-		fdset[0].events = POLLPRI;
-
-		fdset[0].fd = gpio121_fd;
-		fdset[0].events = POLLPRI;
-
-		int rc = poll(fdset, 2, -1);
+		/*Handle the interrupt*/
+		int rc = poll(fdset, 1, 50);
 
 		if (rc < 0) {
 			printf("Poll failed\n");
 		}
 
-		if (fdset[0].revents & POLLPRI) {
-			printf("GPIO 120 interrupt occoured");
-		}
+		if (rc > 0) {
 
-		if (fdset[1].revents & POLLPRI) {
-			printf("GPIO 121 interrupt occoured");
-		}*/
+			if (fdset[0].revents & POLLPRI) {
+				n = read(gpio120_fd, &value, sizeof(value));
+			//	printf("Current temp is %f New value %c\n", temperature, value[0]);
+
+				printf("Temp Sensor interrupt occoured\n");
+				lseek(gpio120_fd, 0, SEEK_SET);
+
+			}
+		}
 	}
 
 	EXIT:

@@ -1,0 +1,5 @@
+<map id="convert_temp_farenheit" name="convert_temp_farenheit">
+<area shape="rect" id="node2" href="$TMP__102__temp__sensor_8c.html#a3bdb1595e562416f129a8faa5cf532f3" title="this function reads the temperature value in binary format from the register " alt="" coords="212,31,385,57"/>
+<area shape="rect" id="node3" href="$TMP__102__temp__sensor_8c.html#ae948d311cbcf04446b6e56da30887d87" title="this function writes to the pointer register " alt="" coords="433,5,580,32"/>
+<area shape="rect" id="node4" href="$TMP__102__temp__sensor_8c.html#a75e24fc0be00111808af3a712ee265ca" title="this function converts digital(binary) temp data read from the register into decimal value ..." alt="" coords="443,56,570,83"/>
+</map>

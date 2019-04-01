@@ -1,0 +1,4 @@
+<map id="read_tlow_register" name="read_tlow_register">
+<area shape="rect" id="node2" href="$TMP__102__temp__sensor_8c.html#ae948d311cbcf04446b6e56da30887d87" title="this function writes to the pointer register " alt="" coords="181,5,328,32"/>
+<area shape="rect" id="node3" href="$TMP__102__temp__sensor_8c.html#a75e24fc0be00111808af3a712ee265ca" title="this function converts digital(binary) temp data read from the register into decimal value ..." alt="" coords="191,56,318,83"/>
+</map>

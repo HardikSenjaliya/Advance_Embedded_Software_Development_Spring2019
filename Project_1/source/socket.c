@@ -1,5 +1,8 @@
 /*
  * socket.c
+ *  @brief this function is the thread function for the socket task.
+ *  It accepts connection for the remote client and responds to the request
+ *  by sending data as requested.
  *
  *  Created on: Mar 14, 2019
  *      Author: hardyk
@@ -110,8 +113,8 @@ client_request_response_t handle_client_request(int request_type,
 		//perror("SOCKET: reading response");
 	}
 
-		printf("Response received from required task is : %s %f\n",
-	 response.message, response.data);
+	printf("Response received from required task is : %s %f\n",
+			response.message, response.data);
 	return response;
 }
 

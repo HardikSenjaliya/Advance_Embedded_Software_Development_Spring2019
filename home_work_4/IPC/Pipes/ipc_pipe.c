@@ -55,14 +55,14 @@ typedef struct {
 
 } processData_t;
 
-/*
+/**
  * @brief: this function generates random string from the predefined list of characters
  * 			and given size of the string
  * @param randomString: pointer to store generated random string
  * @param stringLength: length of the string to be generated
  * @return void
  *
- * */
+ */
 
 void randomStringGenerator(char *randomString, int stringLength) {
 

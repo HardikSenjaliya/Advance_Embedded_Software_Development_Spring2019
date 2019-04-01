@@ -1,0 +1,51 @@
+<map id="main" name="main">
+<area shape="rect" id="node2" href="$utils_8c.html#adfbbf2589abd15d0283cb1f48b9bb262" title="this function initializes all the semaphores to be used in the program at global level ..." alt="" coords="112,5,259,32"/>
+<area shape="rect" id="node3" href="$utils_8c.html#a76059e1f00a2ea55ddd94f1885198f9c" title="this function creates a POSIX message queue for the main thread. The purpose of this queue is to rece..." alt="" coords="335,157,453,184"/>
+<area shape="rect" id="node4" href="$utils_8c.html#a2ef0366b41433a3034c2ff4017a6fdc8" title="this function creates a POSIX message queue for the logger thread thread. The purpose of this queue i..." alt="" coords="331,56,457,83"/>
+<area shape="rect" id="node5" href="$utils_8c.html#a2b69bc4390d9e4b2cc7f32f90fad3be4" title="this function creates a POSIX message queue for the light thread. The purpose of this queue is to rec..." alt="" coords="337,208,451,235"/>
+<area shape="rect" id="node6" href="$utils_8c.html#aa3ebadd718dc2210bf5bb6552fe06ed5" title="this function creates a POSIX message queue for the temp thread. The purpose of this queue is to rece..." alt="" coords="335,259,453,285"/>
+<area shape="rect" id="node7" href="$utils_8c.html#aae4f54c1783db7f75ce7899d2897656c" title="this function creates a POSIX message queue for the main thread. The purpose of this queue is to rece..." alt="" coords="329,512,459,539"/>
+<area shape="rect" id="node8" href="$user__led_8c.html#a43c125246b7277ba81b556c927774345" title="this function initialized user leds " alt="" coords="150,1247,221,1273"/>
+<area shape="rect" id="node9" href="$light_8c.html#aa74a1336c8c774d9118a524a4690fe64" title="this function is the thread function for the thread light_sensor " alt="" coords="127,411,244,437"/>
+<area shape="rect" id="node10" href="$utils_8c.html#aac2ba8cafb40ab8372ba13a3c7cbbc23" title="this function is a common utility function to send a message to the POSIX message queue ..." alt="" coords="339,613,449,640"/>
+<area shape="rect" id="node22" href="$temperature_8c.html#a8ed691b8525b8c563454765bf963e1ff" title="this function is the thread function for the thread temperature_sensor " alt="" coords="104,664,267,691"/>
+<area shape="rect" id="node37" href="$user__led_8c.html#a25ccdecf9c600a14badb61e6a10d50d6" title="this function turns given user led on " alt="" coords="574,1145,659,1172"/>
+<area shape="rect" id="node38" href="$logger_8c.html#a410204faf9540e1218b51824661d51bd" title="this function is the thread function for the thread logger it enters all the logs recevied from other..." alt="" coords="144,56,227,83"/>
+<area shape="rect" id="node40" href="$socket_8c.html#ae4505689a9f03728cadcb14778228510" title="this function is the thread function for the socket task It accepts socket requrests from the remote ..." alt="" coords="142,259,229,285"/>
+<area shape="rect" id="node42" href="$utils_8c.html#ae7351888a4f2f0e6fda9728245916d88" title="this function sets the period of the thread by adding a POSIX timer and arming it to the specified pe..." alt="" coords="143,1297,227,1324"/>
+<area shape="rect" id="node44" href="$main_8c.html#a7084917670f8708b5da9d7c7ed1a582e" title="startup_test" alt="" coords="140,1120,231,1147"/>
+<area shape="rect" id="node49" href="$utils_8c.html#a2bfd54d0b2b7b694b7ad5436d13e2104" title="destroy_semaphores" alt="" coords="114,1348,257,1375"/>
+<area shape="rect" id="node50" href="$utils_8c.html#a6fd788c4a629c764c97490abc0a00f26" title="this function deletes the timer in case of error or exit " alt="" coords="144,1399,227,1425"/>
+<area shape="rect" id="node12" href="$APDS__9301__light__sensor_8c.html#a95e210a96061f681a1965bfcfe08c753" title="this function initializes I2C module for light sensor " alt="" coords="336,461,452,488"/>
+<area shape="rect" id="node16" href="$APDS__9301__light__sensor_8c.html#a40f4463a98eff7588da3a328e6d9dec1" title="this function reads the ADC0 and ADC1 channel values and converts the value into lux value ..." alt="" coords="565,411,668,437"/>
+<area shape="rect" id="node19" href="$APDS__9301__light__sensor_8c.html#a6978dbd3276c927e367b10b06191d666" title="this function checks for the stae of day as day or night " alt="" coords="346,360,442,387"/>
+<area shape="rect" id="node20" href="$APDS__9301__light__sensor_8c.html#a22b5c79a1998026ca2c330f9cbf93526" title="this function reads the value of the parts and silicon revision of that part number ..." alt="" coords="776,309,891,336"/>
+<area shape="rect" id="node21" href="$APDS__9301__light__sensor_8c.html#ac215e9aa41bdc3ec0631888eee5c1d4e" title="this function clears interrupt " alt="" coords="342,563,446,589"/>
+<area shape="rect" id="node11" href="$logger_8c.html#ae87770333ef3efad4be8d1293a9e9723" title="this function logs informative messages from the logger thread into the logfile " alt="" coords="567,563,666,589"/>
+<area shape="rect" id="node13" href="$APDS__9301__light__sensor_8c.html#aaa9c90bd236ad3b0d660b555ad23076e" title="this function turns sensor OFF " alt="" coords="555,461,679,488"/>
+<area shape="rect" id="node14" href="$APDS__9301__light__sensor_8c.html#a5b7b49494137e786f25e49e281378183" title="this function writes to the control register which is used for powering the sensor ON or OFF ..." alt="" coords="760,461,907,488"/>
+<area shape="rect" id="node15" href="$APDS__9301__light__sensor_8c.html#a2a2eba7e1bb5d5c24b1c3b9185eaecb1" title="this function writes to the commnad register " alt="" coords="955,411,1119,437"/>
+<area shape="rect" id="node17" href="$APDS__9301__light__sensor_8c.html#aa88301af6c97181943b796631684d471" title="this function reads ADC1 channel value " alt="" coords="765,411,901,437"/>
+<area shape="rect" id="node18" href="$APDS__9301__light__sensor_8c.html#a3121942597af728f23d80a9896c50854" title="this function reads ADC0 channel value " alt="" coords="765,360,901,387"/>
+<area shape="rect" id="node23" href="$TMP__102__temp__sensor_8c.html#a25ff74ab2170c01fdfb3d695c721a8ef" title="this function initializes temperature sensor for I2C operations " alt="" coords="333,968,455,995"/>
+<area shape="rect" id="node24" href="$TMP__102__temp__sensor_8c.html#a1fd03329afc17e1b6dddc14b4613ce90" title="extra_credit_temp" alt="" coords="331,715,457,741"/>
+<area shape="rect" id="node25" href="$TMP__102__temp__sensor_8c.html#a5efb2b77d1e03f3f9cccf344ae791be6" title="this function writes the required value of the tlow " alt="" coords="551,613,682,640"/>
+<area shape="rect" id="node27" href="$TMP__102__temp__sensor_8c.html#ade48ff197532b07127d1315f4e559820" title="this functino reads the temperature value of the TLOW register " alt="" coords="553,917,681,944"/>
+<area shape="rect" id="node34" href="$TMP__102__temp__sensor_8c.html#a3bdb1595e562416f129a8faa5cf532f3" title="this function reads the temperature value in binary format from the register " alt="" coords="530,968,703,995"/>
+<area shape="rect" id="node35" href="$TMP__102__temp__sensor_8c.html#a29033d2d1c87fb34e322635af69c629a" title="this function returns temperature in farenheit unit " alt="" coords="315,917,473,944"/>
+<area shape="rect" id="node36" href="$TMP__102__temp__sensor_8c.html#a2d1ba23d619a27bb5faef0d618b2a49c" title="this function returns temperature in kelvin unit " alt="" coords="323,816,465,843"/>
+<area shape="rect" id="node29" href="$TMP__102__temp__sensor_8c.html#a81007dcb95b5b21613ceb0ccdbf7cf82" title="this function writes requrired thigh value into the register " alt="" coords="766,664,901,691"/>
+<area shape="rect" id="node30" href="$TMP__102__temp__sensor_8c.html#a0929a3edea5f75a7df1e9f771558795f" title="this function reads the value of the THIGH register " alt="" coords="551,867,683,893"/>
+<area shape="rect" id="node31" href="$TMP__102__temp__sensor_8c.html#afc96af5ccdee0176a6bedaa74a3eaa5a" title="this function sets the requied number of consecutive faults bits configurable into four modes &#45; 1..." alt="" coords="549,816,684,843"/>
+<area shape="rect" id="node32" href="$TMP__102__temp__sensor_8c.html#a077c46402c29d565462f97b388684a8c" title="this function reads the Configuration Register " alt="" coords="764,765,903,792"/>
+<area shape="rect" id="node33" href="$TMP__102__temp__sensor_8c.html#a60da7a6e1828bd21193cc90c5b882f12" title="this function sets the mode of opearation either comparator or interrupt mode " alt="" coords="521,715,712,741"/>
+<area shape="rect" id="node26" href="$TMP__102__temp__sensor_8c.html#ae948d311cbcf04446b6e56da30887d87" title="this function writes to the pointer register " alt="" coords="963,765,1110,792"/>
+<area shape="rect" id="node28" href="$TMP__102__temp__sensor_8c.html#a75e24fc0be00111808af3a712ee265ca" title="this function converts digital(binary) temp data read from the register into decimal value ..." alt="" coords="770,867,897,893"/>
+<area shape="rect" id="node39" href="$logger_8c.html#a887bb231fe88f0d4a54f1ce56542e43f" title="this function creates a backup/copy of the source file " alt="" coords="350,5,438,32"/>
+<area shape="rect" id="node41" href="$socket_8c.html#ae7cf986ab35f60da716bf0ed05c367af" title="this function handles requests received from the client " alt="" coords="320,107,468,133"/>
+<area shape="rect" id="node43" href="$utils_8c.html#aed9069ee6cf677df08d3999b77bd483e" title="this function executes whenever timer expires and releaes semaphores for light and temp threads..." alt="" coords="344,1323,444,1349"/>
+<area shape="rect" id="node45" href="$main_8c.html#ab47286971be97215b90a770031cf9d46" title="light_startup_test" alt="" coords="333,1069,455,1096"/>
+<area shape="rect" id="node46" href="$main_8c.html#ae0bfe5dfbc35b6ae04eb4cc5e8c15ddb" title="temp_startup_test" alt="" coords="331,1120,457,1147"/>
+<area shape="rect" id="node47" href="$main_8c.html#a45d71467a098fd2ff43dc43f3b2c281f" title="logger_startup_test" alt="" coords="327,1171,461,1197"/>
+<area shape="rect" id="node48" href="$main_8c.html#aadcc46f9727d6d841c5976ff02662e87" title="socket_startup_test" alt="" coords="325,1221,463,1248"/>
+</map>

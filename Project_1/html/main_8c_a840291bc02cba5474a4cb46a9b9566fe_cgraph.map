@@ -1,0 +1,8 @@
+<map id="main" name="main">
+<area shape="rect" id="node2" href="$utils_8c.html#a6a490b17039c61c827d2ec885d312d65" title="this function creates a new posix message queue OR opens already created to sned and receive messages..." alt="" coords="315,34,436,61"/>
+<area shape="rect" id="node3" href="$light_8c.html#aa74a1336c8c774d9118a524a4690fe64" title="this function is the thread function for the thread light_sensor " alt="" coords="127,85,244,111"/>
+<area shape="rect" id="node4" href="$utils_8c.html#a82df8ee893e995765f0324b2fe8c3198" title="this function sends messages to the message queue identified by the qDes " alt="" coords="320,85,431,111"/>
+<area shape="rect" id="node5" href="$temperature_8c.html#a8ed691b8525b8c563454765bf963e1ff" title="this function is the thread function for the thread temperature_sensor " alt="" coords="104,34,267,61"/>
+<area shape="rect" id="node6" href="$logger_8c.html#a410204faf9540e1218b51824661d51bd" title="this function is the thread function for the thread logger it enters all the logs recevied from other..." alt="" coords="144,186,227,213"/>
+<area shape="rect" id="node7" href="$logger_8c.html#ae87770333ef3efad4be8d1293a9e9723" title="this function logs informative messages from the logger thread into the logfile " alt="" coords="326,186,425,213"/>
+</map>

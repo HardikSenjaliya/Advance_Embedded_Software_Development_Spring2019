@@ -1,0 +1,19 @@
+<map id="include/user_led.h" name="include/user_led.h">
+<area shape="rect" id="node2" href="$utils_8h.html" title="include/utils.h" alt="" coords="512,80,615,107"/>
+<area shape="rect" id="node18" href="$user__led_8c.html" title="source/user_led.c" alt="" coords="639,80,765,107"/>
+<area shape="rect" id="node3" href="$APDS__9301__light__sensor_8h.html" title="include/APDS_9301_light\l_sensor.h" alt="" coords="159,155,330,196"/>
+<area shape="rect" id="node5" href="$light_8h.html" title="include/light.h" alt="" coords="5,251,108,278"/>
+<area shape="rect" id="node7" href="$main_8h.html" title="include/main.h" alt="" coords="386,333,493,360"/>
+<area shape="rect" id="node9" href="$logger_8h.html" title="include/logger.h" alt="" coords="437,162,551,189"/>
+<area shape="rect" id="node11" href="$temperature_8h.html" title="include/temperature.h" alt="" coords="733,162,879,189"/>
+<area shape="rect" id="node13" href="$socket_8h.html" title="include/socket.h" alt="" coords="575,162,693,189"/>
+<area shape="rect" id="node15" href="$TMP__102__temp__sensor_8h.html" title="include/TMP_102_temp\l_sensor.h" alt="" coords="904,155,1063,196"/>
+<area shape="rect" id="node17" href="$utils_8c.html" title="source/utils.c" alt="" coords="1087,162,1187,189"/>
+<area shape="rect" id="node4" href="$APDS__9301__light__sensor_8c.html" title="source/APDS_9301_light\l_sensor.c" alt="" coords="133,244,301,285"/>
+<area shape="rect" id="node6" href="$light_8c.html" title="source/light.c" alt="" coords="7,333,107,360"/>
+<area shape="rect" id="node8" href="$main_8c.html" title="source/main.c" alt="" coords="387,408,491,435"/>
+<area shape="rect" id="node10" href="$logger_8c.html" title="source/logger.c" alt="" coords="477,251,588,278"/>
+<area shape="rect" id="node12" href="$temperature_8c.html" title="source/temperature.c" alt="" coords="853,251,999,278"/>
+<area shape="rect" id="node14" href="$socket_8c.html" title="source/socket.c" alt="" coords="663,251,778,278"/>
+<area shape="rect" id="node16" href="$TMP__102__temp__sensor_8c.html" title="source/TMP_102_temp\l_sensor.c" alt="" coords="1074,244,1231,285"/>
+</map>

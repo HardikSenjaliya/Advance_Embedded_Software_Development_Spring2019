@@ -1,0 +1,4 @@
+<map id="power_up_sensor" name="power_up_sensor">
+<area shape="rect" id="node2" href="$APDS__9301__light__sensor_8c.html#a5b7b49494137e786f25e49e281378183" title="this function writes to the control register which is used for powering the sensor ON or OFF ..." alt="" coords="177,5,324,32"/>
+<area shape="rect" id="node3" href="$APDS__9301__light__sensor_8c.html#a2a2eba7e1bb5d5c24b1c3b9185eaecb1" title="this function writes to the commnad register " alt="" coords="372,5,536,32"/>
+</map>

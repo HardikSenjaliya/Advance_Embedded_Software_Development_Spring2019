@@ -1,6 +1,9 @@
 /*
  * light.c
  *
+ *  @brief this file is the thread function for light sensor. It responds to all
+ *  the requests from the main and socket task with logging data into the logfile by sending
+ *  messages to the loggeer task
  *  Created on: Mar 12, 2019
  *      Author: hardyk
  */
@@ -23,7 +26,8 @@ void *run_light_sensor(void *params) {
 	mqd_t qDesMain = create_main_mq();
 	mqd_t qDesSocket = create_socket_mq();
 
-	send_message(Q_LOGGER_ID, "INFO: Light Sensor Thread Started Running\n", L_INFO, P_INFO, qDesLogger);
+	send_message(Q_LOGGER_ID, "INFO: Light Sensor Thread Started Running\n",
+			L_INFO, P_INFO, qDesLogger);
 
 	log_message_t msg;
 	request_t request;
@@ -33,19 +37,26 @@ void *run_light_sensor(void *params) {
 	static bool prev_state = NIGHT;
 	bool curr_state = NIGHT;
 
-	struct pollfd fdset[2];
+	struct pollfd fdset[1];
+	char value[4];
 
-	int gpio120_fd = open("/sys/class/gpio/gpio120/value", O_RDONLY | O_NONBLOCK);
-	if (gpio120_fd < 0) {
-		send_message(Q_LOGGER_ID, "ERROR: opening GPIO 120\n", L_CRTICAL, P_CRITICAL, qDesLogger);
-	}
-
-	int gpio121_fd = open("/sys/class/gpio/gpio121/value", O_RDONLY | O_NONBLOCK);
+	int gpio121_fd = open("/sys/class/gpio/gpio66/value",
+	O_RDONLY);
 	if (gpio121_fd < 0) {
-		send_message(Q_LOGGER_ID, "ERROR: opening GPIO 121\n", L_CRTICAL, P_CRITICAL, qDesLogger);
+		send_message(Q_LOGGER_ID, "ERROR: opening GPIO 120\n", L_CRTICAL,
+				P_CRITICAL, qDesLogger);
 	}
 
- 	strcpy(msg.thread_name, LIGHT_THREAD_NAME);
+	fdset[0].fd = gpio121_fd;
+	fdset[0].events = POLLPRI;
+
+	int n = read(gpio121_fd, &value, sizeof(value));
+	if (n > 0) {
+		printf("Initial value %c\n", value[0]);
+		lseek(gpio121_fd, 0, SEEK_SET);
+	}
+
+	strcpy(msg.thread_name, LIGHT_THREAD_NAME);
 	clock_gettime(CLOCK_MONOTONIC, &msg.time_stamp);
 	strcpy(msg.message, " Hello From Light Sensor task");
 
@@ -54,7 +65,6 @@ void *run_light_sensor(void *params) {
 	int i2c_fd = init_light_sensor();
 
 	extra_credit_light(i2c_fd);
-
 
 	send_status = mq_send(qDesLogger, (const char*) &msg, sizeof(msg), 0);
 	if (send_status < 0) {
@@ -67,11 +77,11 @@ void *run_light_sensor(void *params) {
 
 		sem_wait(&sem_light);
 
-		//Read Light sensor data and log the data
 		double lux_value = read_lux_data(i2c_fd);
 		curr_state = day_or_night(lux_value);
 
 		if (curr_state != prev_state) {
+			printf("State Chnaged\n");
 			prev_state = curr_state;
 			snprintf(msg.message, MESSAGE_SIZE, "%s %d",
 					"** State Changed ** Current State(0 = Day; 1 = NIGHT) = ",
@@ -170,29 +180,23 @@ void *run_light_sensor(void *params) {
 			}
 		}
 
-	/*	memset((void*) fdset, 0, sizeof(fdset));
-
-		fdset[0].fd = gpio120_fd;
-		fdset[0].events = POLLPRI;
-
-		fdset[0].fd = gpio121_fd;
-		fdset[0].events = POLLPRI;
-
-		int rc = poll(fdset, 2, -1);
+		/*Handle the interrupt*/
+		int rc = poll(fdset, 1, 50);
 
 		if (rc < 0) {
 			printf("Poll failed\n");
 		}
 
-		if (fdset[0].revents & POLLPRI) {
-			printf("GPIO 120 interrupt occoured");
-			clear_interrupt(i2c_fd);
-		}
+		if (rc > 0) {
 
-		if (fdset[1].revents & POLLPRI) {
-			printf("GPIO 121 interrupt occoured");
+			if (fdset[0].revents & POLLPRI) {
+				n = read(gpio121_fd, &value, sizeof(value));
+				printf("New value %c\n", value[0]);
+				//printf("GPIO 120 interrupt occoured");
+				lseek(gpio121_fd, 0, SEEK_SET);
+				clear_interrupt(i2c_fd);
+			}
 		}
-*/
 	}
 
 	EXIT: mq_unlink(Q_NAME_LIGHT);

@@ -1,5 +1,7 @@
 /*
  * utils.c
+ *	@brief this file contains all the common utility functions
+ *	and variables used by all other tasks.
  *
  *  Created on: Mar 12, 2019
  *      Author: hardyk
@@ -69,12 +71,12 @@ void timer_handler(union sigval arg) {
 
 	if ((count % TEMP_TASK_PERIOD) == 1) {
 		//INFO_STDOUT("Releasing Light Semaphore\n");
-		sem_post(&sem_temp);
+		sem_post(&sem_light);
 	}
 
 	if ((count % LIGHT_TASK_PERIOD) == 0) {
 		//INFO_STDOUT("Releasing Temp Semaphores\n");
-		sem_post(&sem_light);
+		sem_post(&sem_temp);
 	}
 
 	if (heartbeat_count == 5000) {
@@ -282,7 +284,6 @@ mqd_t create_socket_mq(void) {
 	return qDes;
 }
 
-
 /**
  * @brief this function is a common utility function to send a message to
  * the POSIX message queue
@@ -343,12 +344,11 @@ uint8_t send_message(int queue_id, char *message, int log_level, int priority,
 
 		log_message_t log_message;
 
-		log_message.log_level = log_level, strcpy(log_message.message,
-				message);
+		log_message.log_level = log_level, strcpy(log_message.message, message);
 
 		//printf("%s", message);
 
-		send_status = mq_send(qDes, (const char*) & log_message,
+		send_status = mq_send(qDes, (const char*) &log_message,
 				sizeof(log_message_t), priority);
 		if (send_status < 0) {
 			//perror("MAIN THREAD");

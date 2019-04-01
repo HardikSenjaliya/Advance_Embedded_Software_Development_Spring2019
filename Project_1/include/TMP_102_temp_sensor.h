@@ -1,5 +1,6 @@
 /*
  * TMP_102_temp_sensor.h
+ *  @brief header file for the temperature sensor i2c driver
  *
  *  Created on: Mar 25, 2019
  *      Author: hardyk
@@ -54,8 +55,8 @@
 #define NORMAL_MODE_OPERATION				(0)
 #define EXTENDED_MODE_OPERATION				(1)
 
-#define TLOW_VALUE							(20)
-#define THIGH_VALUE							(28)
+#define TLOW_VALUE							(25)
+#define THIGH_VALUE							(31)
 
 /*Function Prototypes*/
 int init_temp_sensor(void);

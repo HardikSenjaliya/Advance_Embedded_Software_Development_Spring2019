@@ -1,6 +1,7 @@
 /*
  * logger.c
- *
+ *  @brief this file is the thread function for logger task. It accepts all
+ *  the messages from tasks and logs them into the logfile.
  *  Created on: Mar 12, 2019
  *      Author: hardyk
  */
@@ -74,20 +75,20 @@ void *run_logger(void *params) {
 
 	INFO_STDOUT("Logger thread started running...\n");
 
-	//logfile_attr_t logfile = (logfile_attr_t*)params;
+	logfile_attr_t *logfile = (logfile_attr_t*) params;
 
 	/*Check if logfile with the given name is already present or not.
 	 * if present -> create a backfile and write to the new file
 	 * if not present -> create a new file*/
-	if (0 == access("logfile.txt", F_OK)) {
+	if (0 == access(logfile->file_name, F_OK)) {
 		//INFO_STDOUT("Given logfile name already present in the directory\n");
 		//INFO_STDOUT("Started Back up...\n");
-		file_backup("logfile.txt");
+		file_backup(logfile->file_name);
 		//INFO_STDOUT("Backup Done\n");
 	}
 
 	/*Create a new logfile*/
-	FILE *p_logfile = fopen("logfile.txt", "a");
+	FILE *p_logfile = fopen(logfile->file_name, "a");
 	if (p_logfile == NULL) {
 		INFO_STDOUT("Error in opening new logfile\n");
 	}
@@ -164,24 +165,41 @@ void *run_logger(void *params) {
 			pthread_mutex_lock(&fileMutex);
 			//INFO_STDOUT("logging data into logfile\n");
 
-			if (request.log_level != L_WARN) {
-				fprintf(p_logfile,
-						"[%ld] *** From : %s *** Log Level : %d *** Received Message : %s\n",
-						(request.time_stamp.tv_sec) * NSEC_TO_SEC
-								+ (request.time_stamp.tv_nsec),
-						request.thread_name, request.log_level,
-						request.message);
-			}
+			fprintf(p_logfile,
+					"[%ld] *** From : %s *** Log Level : %d *** Received Message : %s\n",
+					(request.time_stamp.tv_sec) * NSEC_TO_SEC
+							+ (request.time_stamp.tv_nsec), request.thread_name,
+					request.log_level, request.message);
 
-#ifdef INFO_MODE
-			if (request.log_level == L_INFO) {
-				printf("%s\n", request.message);
-			}
-#endif
+			/*
+			 printf(
+			 "[%ld] *** From : %s *** Log Level : %d *** Received Message : %s\n",
+			 (request.time_stamp.tv_sec) * NSEC_TO_SEC
+			 + (request.time_stamp.tv_nsec), request.thread_name,
+			 request.log_level, request.message);
+			 */
 
-			if (request.log_level == L_ERROR) {
-				INFO_STDOUT(request.message);
-			}
+			/*
+
+			 if (request.log_level != L_WARN) {
+			 fprintf(p_logfile,
+			 "[%ld] *** From : %s *** Log Level : %d *** Received Message : %s\n",
+			 (request.time_stamp.tv_sec) * NSEC_TO_SEC
+			 + (request.time_stamp.tv_nsec),
+			 request.thread_name, request.log_level,
+			 request.message);
+			 }
+
+			 #ifdef INFO_MODE
+			 if (request.log_level == L_INFO) {
+			 printf("%s\n", request.message);
+			 }
+			 #endif
+
+			 if (request.log_level == L_ERROR) {
+			 INFO_STDOUT(request.message);
+			 }
+			 */
 
 			pthread_mutex_unlock(&fileMutex);
 		}

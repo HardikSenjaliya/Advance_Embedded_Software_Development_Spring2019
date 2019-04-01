@@ -1,0 +1,5 @@
+<map id="read_lux_data" name="read_lux_data">
+<area shape="rect" id="node2" href="$APDS__9301__light__sensor_8c.html#aa88301af6c97181943b796631684d471" title="this function reads ADC1 channel value " alt="" coords="156,5,292,32"/>
+<area shape="rect" id="node4" href="$APDS__9301__light__sensor_8c.html#a3121942597af728f23d80a9896c50854" title="this function reads ADC0 channel value " alt="" coords="156,56,292,83"/>
+<area shape="rect" id="node3" href="$APDS__9301__light__sensor_8c.html#a2a2eba7e1bb5d5c24b1c3b9185eaecb1" title="this function writes to the commnad register " alt="" coords="340,31,504,57"/>
+</map>

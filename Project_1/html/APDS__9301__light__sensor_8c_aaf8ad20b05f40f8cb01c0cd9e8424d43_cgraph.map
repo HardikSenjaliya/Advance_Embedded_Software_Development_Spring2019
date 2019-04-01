@@ -1,0 +1,5 @@
+<map id="enable_inerrupt" name="enable_inerrupt">
+<area shape="rect" id="node2" href="$APDS__9301__light__sensor_8c.html#a7ebcb1351517ec8bed4c0f2e6639b286" title="this function reads the interrupt control registers which reads mode of interrupt and interrupt persi..." alt="" coords="166,5,313,47"/>
+<area shape="rect" id="node4" href="$APDS__9301__light__sensor_8c.html#acfb60bfdf489b9d08b449579e51e687a" title="this function writes to the interrupt control register to set the mode of interrupt and persistency o..." alt="" coords="164,71,315,112"/>
+<area shape="rect" id="node3" href="$APDS__9301__light__sensor_8c.html#a2a2eba7e1bb5d5c24b1c3b9185eaecb1" title="this function writes to the commnad register " alt="" coords="363,46,527,73"/>
+</map>

@@ -25,9 +25,9 @@
 #define POWER_ON_SENSOR						(0x03)
 #define POWER_OFF_SENSOR					(0x00)
 
-#define INTEGRATION_TIME_13MS				(0x00)
-#define INTEGRATION_TIME_101MS				(0x01)
-#define INTEGRATION_TIME_402MS				(0x10)
+#define INTEGRATION_TIME_13MS				(0x1)
+#define INTEGRATION_TIME_101MS				(0x2)
+#define INTEGRATION_TIME_402MS				(0x3)
 
 #define SET_HIGH_GAIN						(0x01)
 #define SET_LOW_GAIN						(0x00)

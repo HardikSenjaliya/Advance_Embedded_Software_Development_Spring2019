@@ -1,0 +1,4 @@
+<map id="set_gain_high" name="set_gain_high">
+<area shape="rect" id="node2" href="$APDS__9301__light__sensor_8c.html#a0a65ddc91756631fa0730e2658413c7a" title="this function writes to the timing register which is used for setting gain and integration time for A..." alt="" coords="156,5,299,32"/>
+<area shape="rect" id="node3" href="$APDS__9301__light__sensor_8c.html#a2a2eba7e1bb5d5c24b1c3b9185eaecb1" title="this function writes to the commnad register " alt="" coords="347,5,511,32"/>
+</map>

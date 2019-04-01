@@ -1,0 +1,5 @@
+<map id="configure_conversion_rate" name="configure_conversion_rate">
+<area shape="rect" id="node2" href="$TMP__102__temp__sensor_8c.html#a077c46402c29d565462f97b388684a8c" title="this function reads the Configuration Register " alt="" coords="230,5,369,32"/>
+<area shape="rect" id="node4" href="$TMP__102__temp__sensor_8c.html#aba6b55eb2ecc9fb88c9e020ae06baa9e" title="write_config_register" alt="" coords="228,56,371,83"/>
+<area shape="rect" id="node3" href="$TMP__102__temp__sensor_8c.html#ae948d311cbcf04446b6e56da30887d87" title="this function writes to the pointer register " alt="" coords="419,31,565,57"/>
+</map>

@@ -1,0 +1,5 @@
+<map id="init_light_sensor" name="init_light_sensor">
+<area shape="rect" id="node2" href="$APDS__9301__light__sensor_8c.html#aaa9c90bd236ad3b0d660b555ad23076e" title="this function turns sensor OFF " alt="" coords="169,5,293,32"/>
+<area shape="rect" id="node3" href="$APDS__9301__light__sensor_8c.html#a5b7b49494137e786f25e49e281378183" title="this function writes to the control register which is used for powering the sensor ON or OFF ..." alt="" coords="341,5,488,32"/>
+<area shape="rect" id="node4" href="$APDS__9301__light__sensor_8c.html#a2a2eba7e1bb5d5c24b1c3b9185eaecb1" title="this function writes to the commnad register " alt="" coords="536,5,700,32"/>
+</map>

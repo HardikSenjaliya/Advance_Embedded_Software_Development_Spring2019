@@ -1,0 +1,7 @@
+<map id="run_socket" name="run_socket">
+<area shape="rect" id="node2" href="$utils_8c.html#a2b69bc4390d9e4b2cc7f32f90fad3be4" title="this function creates a POSIX message queue for the light thread. The purpose of this queue is to rec..." alt="" coords="157,5,271,32"/>
+<area shape="rect" id="node3" href="$utils_8c.html#aa3ebadd718dc2210bf5bb6552fe06ed5" title="this function creates a POSIX message queue for the temp thread. The purpose of this queue is to rece..." alt="" coords="155,56,273,83"/>
+<area shape="rect" id="node4" href="$utils_8c.html#aae4f54c1783db7f75ce7899d2897656c" title="this function creates a POSIX message queue for the main thread. The purpose of this queue is to rece..." alt="" coords="149,107,279,133"/>
+<area shape="rect" id="node5" href="$utils_8c.html#a76059e1f00a2ea55ddd94f1885198f9c" title="this function creates a POSIX message queue for the main thread. The purpose of this queue is to rece..." alt="" coords="155,157,273,184"/>
+<area shape="rect" id="node6" href="$socket_8c.html#ae7cf986ab35f60da716bf0ed05c367af" title="this function handles requests received from the client " alt="" coords="140,208,288,235"/>
+</map>
