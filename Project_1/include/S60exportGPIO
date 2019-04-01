@@ -1,0 +1,22 @@
+#!/bin/sh
+
+echo "Exporting GPIOs - Started"
+
+echo 53 > /sys/class/gpio/export
+echo 54 > /sys/class/gpio/export
+echo 55 > /sys/class/gpio/export
+echo 56 > /sys/class/gpio/export
+echo 60 > /sys/class/gpio/export
+echo 66 > /sys/class/gpio/export
+
+echo "out" > /sys/class/gpio/gpio53/direction
+echo "out" > /sys/class/gpio/gpio54/direction
+echo "out" > /sys/class/gpio/gpio55/direction
+echo "out" > /sys/class/gpio/gpio56/direction
+
+
+echo "rising" > /sys/class/gpio/gpio56/edge
+echo "rising" > /sys/class/gpio/gpio56/edge
+
+
+echo "Exporting GPIOs - Done"
